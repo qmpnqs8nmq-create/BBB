@@ -19,6 +19,8 @@
 
 - 当前优先沿用浏览器版 Dashboard + 本地 Gateway 的使用方式。
 - 先把核心功能跑通，再补原生 app / 更高级权限与系统集成。
+- CEO 阵列的默认入口是 `chief`；`main` 保留为系统主脑 / 平台维护脑 / 回退入口。
+- 经营与决策类问题优先走 `chief`，OpenClaw / Docker / 配置 / 修复类问题优先走 `main`。
 
 ## Important Notes
 
