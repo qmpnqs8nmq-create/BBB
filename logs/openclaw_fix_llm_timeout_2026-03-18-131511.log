@@ -1,0 +1,364 @@
+[2026-03-18 13:15:11] Starting LLM timeout triage (mode=auto)
+[2026-03-18 13:15:11] > openclaw health --json
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_chat: Registered feishu_chat tool
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered bitable tools
+{
+  "ok": true,
+  "ts": 1773810913676,
+  "durationMs": 422,
+  "channels": {
+    "feishu": {
+      "configured": false,
+      "running": false,
+      "lastStartAt": null,
+      "lastStopAt": null,
+      "lastError": null,
+      "port": null,
+      "lastProbeAt": null,
+      "accountId": "default",
+      "accounts": {
+        "default": {
+          "configured": false,
+          "running": false,
+          "lastStartAt": null,
+          "lastStopAt": null,
+          "lastError": null,
+          "port": null,
+          "lastProbeAt": null,
+          "accountId": "default"
+        },
+        "admin": {
+          "configured": true,
+          "running": false,
+          "lastStartAt": null,
+          "lastStopAt": null,
+          "lastError": null,
+          "port": null,
+          "probe": {
+            "ok": true,
+            "appId": "cli_a93875ac3d38dcc9",
+            "botOpenId": "ou_ec1eb7643ecdc5788f7ec6fef8435d73"
+          },
+          "lastProbeAt": 1773810913676,
+          "accountId": "admin"
+        }
+      }
+    }
+  },
+  "channelOrder": [
+    "feishu"
+  ],
+  "channelLabels": {
+    "feishu": "Feishu"
+  },
+  "heartbeatSeconds": 1800,
+  "defaultAgentId": "chief-user",
+  "agents": [
+    {
+      "agentId": "main",
+      "name": "main",
+      "isDefault": false,
+      "heartbeat": {
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/main/sessions/sessions.json",
+        "count": 6,
+        "recent": [
+          {
+            "key": "agent:main:main",
+            "updatedAt": 1773810863569,
+            "age": 49685
+          },
+          {
+            "key": "agent:main:archive-b21986b5-2026-03-16T16-10-04-973Z",
+            "updatedAt": 1773677304978,
+            "age": 133608276
+          },
+          {
+            "key": "agent:main:archive-37ff5331-2026-03-16T13-36-40-252Z",
+            "updatedAt": 1773542687255,
+            "age": 268225999
+          },
+          {
+            "key": "agent:main:archive-8d02e21e-2026-03-15T02-27-02-286Z",
+            "updatedAt": 1773469369719,
+            "age": 341543535
+          },
+          {
+            "key": "agent:main:archive-5fc848e8-2026-03-14T05-20-58-398Z",
+            "updatedAt": 1773383597351,
+            "age": 427315903
+          }
+        ]
+      }
+    },
+    {
+      "agentId": "chief",
+      "name": "chief",
+      "isDefault": false,
+      "heartbeat": {
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/chief/sessions/sessions.json",
+        "count": 2,
+        "recent": [
+          {
+            "key": "agent:chief:feishu:direct:ou_2057df7422741af99b3f14f79fd527f6",
+            "updatedAt": 1773805462617,
+            "age": 5450637
+          },
+          {
+            "key": "agent:chief:main",
+            "updatedAt": 1773750359207,
+            "age": 60554047
+          }
+        ]
+      }
+    },
+    {
+      "agentId": "chief-user",
+      "name": "chief-user",
+      "isDefault": true,
+      "heartbeat": {
+        "enabled": true,
+        "every": "30m",
+        "everyMs": 1800000,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/chief-user/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      }
+    },
+    {
+      "agentId": "api-worker",
+      "name": "api-worker",
+      "isDefault": false,
+      "heartbeat": {
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/api-worker/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      }
+    },
+    {
+      "agentId": "strategy",
+      "name": "strategy",
+      "isDefault": false,
+      "heartbeat": {
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/strategy/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      }
+    },
+    {
+      "agentId": "market",
+      "name": "market",
+      "isDefault": false,
+      "heartbeat": {
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/market/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      }
+    },
+    {
+      "agentId": "execution",
+      "name": "execution",
+      "isDefault": false,
+      "heartbeat": {
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/execution/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      }
+    },
+    {
+      "agentId": "coach",
+      "name": "coach",
+      "isDefault": false,
+      "heartbeat": {
+        "enabled": false,
+        "every": "disabled",
+        "everyMs": null,
+        "prompt": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "target": "none",
+        "ackMaxChars": 300
+      },
+      "sessions": {
+        "path": "/Users/bruce/.openclaw/agents/coach/sessions/sessions.json",
+        "count": 0,
+        "recent": []
+      }
+    }
+  ],
+  "sessions": {
+    "path": "/Users/bruce/.openclaw/agents/chief-user/sessions/sessions.json",
+    "count": 0,
+    "recent": []
+  }
+}
+[2026-03-18 13:15:15] > openclaw gateway status
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_chat: Registered feishu_chat tool
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered bitable tools
+Service: LaunchAgent (loaded)
+File logs: /tmp/openclaw/openclaw-2026-03-18.log
+Command: /opt/homebrew/opt/node@22/bin/node /opt/homebrew/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+Service file: ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+Service env: OPENCLAW_GATEWAY_PORT=18789
+
+Config (cli): ~/.openclaw/openclaw.json
+Config (service): ~/.openclaw/openclaw.json
+
+Gateway: bind=loopback (127.0.0.1), port=18789 (service args)
+Probe target: ws://127.0.0.1:18789
+Dashboard: http://127.0.0.1:18789/
+Probe note: Loopback-only gateway; only local clients can connect.
+
+Runtime: running (pid 22956, state active)
+RPC probe: ok
+
+Listening: 127.0.0.1:18789
+Other gateway-like services detected (best effort):
+- ai.openclaw.lan8888-proxy (user, plist: /Users/bruce/Library/LaunchAgents/ai.openclaw.lan8888-proxy.plist)
+Cleanup hint: launchctl bootout gui/$UID/ai.openclaw.gateway
+Cleanup hint: rm ~/Library/LaunchAgents/ai.openclaw.gateway.plist
+
+Recommendation: run a single gateway per machine for most setups. One gateway supports multiple agents (see docs: /gateway#multiple-gateways-same-host).
+If you need multiple gateways (e.g., a rescue bot on the same host), isolate ports + config/state (see docs: /gateway#multiple-gateways-same-host).
+
+Troubles: run openclaw status
+Troubleshooting: https://docs.openclaw.ai/troubleshooting
+[2026-03-18 13:15:18] > openclaw status --deep
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_chat: Registered feishu_chat tool
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered bitable tools
+[plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+[plugins] feishu_chat: Registered feishu_chat tool
+[plugins] feishu_wiki: Registered feishu_wiki tool
+[plugins] feishu_drive: Registered feishu_drive tool
+[plugins] feishu_bitable: Registered bitable tools
+OpenClaw status
+
+Overview
+┌─────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Item            │ Value                                                                                              │
+├─────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Dashboard       │ http://127.0.0.1:18789/                                                                            │
+│ OS              │ macos 26.3.1 (arm64) · node 22.22.1                                                                │
+│ Tailscale       │ serve · bruces-macbook-air.tail37d682.ts.net · https://bruces-macbook-air.tail37d682.ts.net        │
+│ Channel         │ stable (default)                                                                                   │
+│ Update          │ pnpm · npm latest 2026.3.13                                                                        │
+│ Gateway         │ local · ws://127.0.0.1:18789 (local loopback) · unreachable (missing scope: operator.read)         │
+│ Gateway service │ LaunchAgent installed · loaded · running (pid 22956, state active)                                 │
+│ Node service    │ LaunchAgent not installed                                                                          │
+│ Agents          │ 8 · no bootstrap files · sessions 8 · default chief-user active unknown                            │
+│ Memory          │ 0 files · 0 chunks · dirty · sources memory · plugin memory-core · vector ready · fts ready ·      │
+│                 │ cache on (0)                                                                                       │
+│ Probes          │ enabled                                                                                            │
+│ Events          │ none                                                                                               │
+│ Heartbeat       │ 30m (chief-user), disabled (api-worker), disabled (chief), disabled (coach), disabled              │
+│                 │ (execution), disabled (main), disabled (market), disabled (strategy)                               │
+│ Last heartbeat  │ unavailable                                                                                        │
+│ Sessions        │ 8 active · default gpt-5.4 (200k ctx) · 8 stores                                                   │
+└─────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+Security audit
+Summary: 0 critical · 2 warn · 2 info
+  WARN Reverse proxy headers are not trusted
+    gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client c…
+    Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.
+  WARN Feishu doc create can grant requester permissions
+    channels.feishu tools include "doc"; feishu_doc action "create" can grant document access to the trusted requesting Feishu user.
+    Fix: Disable channels.feishu.tools.doc when not needed, and restrict tool access for untrusted prompts.
+Full report: openclaw security audit
+Deep probe: openclaw security audit --deep
+
+Channels
+┌──────────┬─────────┬────────┬────────────────────────────────────────────────────────────────────────────────────────┐
+│ Channel  │ Enabled │ State  │ Detail                                                                                 │
+├──────────┼─────────┼────────┼────────────────────────────────────────────────────────────────────────────────────────┤
+│ Feishu   │ ON      │ OK     │ configured · accounts 1/2                                                              │
+└──────────┴─────────┴────────┴────────────────────────────────────────────────────────────────────────────────────────┘
+
+Sessions
+┌──────────────────────────────────────────────────┬────────┬─────────┬──────────────┬─────────────────────────────────┐
+│ Key                                              │ Kind   │ Age     │ Model        │ Tokens                          │
+├──────────────────────────────────────────────────┼────────┼─────────┼──────────────┼─────────────────────────────────┤
+│ agent:main:main                                  │ direct │ 1m ago  │ gpt-5.4      │ 81k/272k (30%) · 🗄️ 100% cached │
+│ agent:chief:feishu:direct:ou_20…                 │ direct │ 2h ago  │ gpt-5.4      │ 11k/272k (4%)                   │
+│ agent:chief:main                                 │ direct │ 17h ago │ gpt-5.4      │ 122k/272k (45%) · 🗄️ 95% cached │
+│ agent:main:archive-b21986b5-202…                 │ direct │ 37h ago │ gpt-5.4      │ unknown/200k (?%)               │
+│ agent:main:archive-37ff5331-202…                 │ direct │ 3d ago  │ gpt-5.4      │ unknown/200k (?%)               │
+│ agent:main:archive-8d02e21e-202…                 │ direct │ 4d ago  │ gpt-5.4      │ unknown/200k (?%)               │
+│ agent:main:archive-5fc848e8-202…                 │ direct │ 5d ago  │ gpt-5.4      │ unknown/200k (?%)               │
+│ agent:main:archive-7ebdb3ae-202…                 │ direct │ 5d ago  │ gpt-5.4      │ unknown/200k (?%)               │
+└──────────────────────────────────────────────────┴────────┴─────────┴──────────────┴─────────────────────────────────┘
+
+Health
+┌──────────┬───────────┬───────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Item     │ Status    │ Detail                                                                                        │
+├──────────┼───────────┼───────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Gateway  │ reachable │ 0ms                                                                                           │
+│ Feishu   │ OFF       │ not configured                                                                                │
+└──────────┴───────────┴───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+FAQ: https://docs.openclaw.ai/faq
+Troubleshooting: https://docs.openclaw.ai/troubleshooting
+
+Next steps:
+  Need to share?      openclaw status --all
+  Need to debug live? openclaw logs --follow
+  Fix reachability first: openclaw gateway probe
