@@ -24,6 +24,15 @@
 - CEO 阵列的默认入口是 `chief`；`main` 保留为系统主脑 / 平台维护脑 / 回退入口。
 - 经营与决策类问题优先走 `chief`，OpenClaw / Docker / 配置 / 修复类问题优先走 `main`。
 
+## 8888 端口代理架构（定稿）
+
+- :8888 HTTPS 代理 → 直接转发到主 Gateway :18789（不再使用独立 team gateway :8899）
+- 代理脚本通过 JS 注入强制绑定 chief-user agent + 每浏览器独立 session 隔离
+- 设备 pairing 统一走主 Gateway 的 device store，不再维护两套
+- 不再需要 ai.openclaw.team LaunchAgent
+- 代理脚本路径：`~/.openclaw/workspace/scripts/https_lan_proxy_8888.js`
+- 证书路径：`~/.openclaw-team/certs/`
+
 ## Important Notes
 
 - Bruce 希望我每天上午 8 点做一次自检；如发现问题先进行安全范围内的自我修复，再汇报；正常则不打扰。

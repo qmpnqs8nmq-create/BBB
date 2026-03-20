@@ -239,8 +239,8 @@ const server = https.createServer(options, (req, res) => {
     ...req.headers,
     host: req.headers.host,
     'x-forwarded-proto': 'https',
-    'x-forwarded-for': req.socket.remoteAddress || '',
-    'x-real-ip': req.socket.remoteAddress || '',
+    'x-forwarded-for': '127.0.0.1',
+    'x-real-ip': '127.0.0.1',
     'accept-encoding': 'identity',
   };
 
@@ -300,8 +300,8 @@ server.on('upgrade', (req, socket, head) => {
       ...req.headers,
       host: req.headers.host,
       'x-forwarded-proto': 'https',
-      'x-forwarded-for': req.socket.remoteAddress || '',
-      'x-real-ip': req.socket.remoteAddress || '',
+      'x-forwarded-for': '127.0.0.1',
+      'x-real-ip': '127.0.0.1',
     };
     for (const [k, v] of Object.entries(merged)) headers += `${k}: ${v}\r\n`;
     headers += '\r\n';
