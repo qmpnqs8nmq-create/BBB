@@ -6,7 +6,7 @@ const crypto = require('crypto');
 
 const LISTEN_PORT = 8888;
 const TARGET_HOST = '127.0.0.1';
-const TARGET_PORT = 18789;
+const TARGET_PORT = 8899;
 const AGENT_ID = 'chief-user';
 const GATEWAY_TOKEN = '3df0380ec882129ba80681cb818ae1056ebff9c9be77a184';
 const BROWSER_ID_KEY = 'openclaw.lan8888.browser-id.v1';
@@ -193,10 +193,42 @@ function buildInitScript() {
     } catch {}
   }
 
+  function lockdownUi() {
+    try {
+      // AGGRESSIVE: hide entire nav/sidebar, only show chat area
+      const styleId = 'openclaw-lan8888-lockdown';
+      if (!document.getElementById(styleId)) {
+        const style = document.createElement('style');
+        style.id = styleId;
+        style.textContent = 'nav, aside, [class*="sidebar"], [class*="Sidebar"], [class*="nav-"], [class*="Nav"] { display: none !important; width: 0 !important; min-width: 0 !important; overflow: hidden !important; }';
+        (document.head || document.documentElement).appendChild(style);
+      }
+
+      // Remove nav elements from DOM entirely (catches shadow DOM leaks)
+      document.querySelectorAll('nav, aside').forEach(function(el) {
+        // Don't remove the chat input area
+        if (!el.closest('[class*="chat"], [class*="Chat"], [class*="message"], [class*="Message"]')) {
+          el.style.display = 'none';
+          el.style.width = '0';
+          el.style.minWidth = '0';
+          el.style.overflow = 'hidden';
+        }
+      });
+
+      // If there's a sidebar/drawer toggle, force it closed
+      const app = document.querySelector('openclaw-app');
+      if (app) {
+        if (app.navDrawerOpen !== undefined) app.navDrawerOpen = false;
+        if (app.navCollapsed !== undefined) app.navCollapsed = true;
+      }
+    } catch {}
+  }
+
   function sync() {
     restoreCriticalIdentity();
     ensureGatewayBootstrap();
     pushSessionIntoUi();
+    lockdownUi();
   }
 
   if (document.readyState === 'loading') {
