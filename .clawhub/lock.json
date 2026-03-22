@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "skills": {
+    "news-aggregator-skill": {
+      "version": "0.1.0",
+      "installedAt": 1774066326073
+    }
+  }
+}
