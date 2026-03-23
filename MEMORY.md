@@ -28,7 +28,20 @@
 - 先把核心功能跑通，再补原生 app / 更高级权限与系统集成。
 - 当前阶段优先按“企业微信私聊”场景来设计和推进使用方式。
 - CEO 阵列的默认入口是 `chief`；`main` 保留为系统主脑 / 平台维护脑 / 回退入口。
+- main 是平台治理 owner，负责每周日平台层复盘（cron health、agent 配置、基础设施），追踪文件为 `PLATFORM_ITERATION_LOG.md`。
+- CEO 业务系统层（数据一致性、规则执行、文件质量）由 chief 负责，追踪文件为 `workspace-chief/SYSTEM_ITERATION_LOG.md`。
+- 两层共享同一个周日节奏（main 05:00 平台层，chief 10:00 业务层），各有 owner，互不越权。
 - 经营与决策类问题优先走 `chief`，OpenClaw / Docker / 配置 / 修复类问题优先走 `main`。
+- 安全巡检 (healthcheck) 归 main，不归 chief（2026-03-22 定稿迁移）。
+
+## Session 延续机制（2026-03-22 定稿）
+
+- 核心文件：`memory/HANDOFF.md`（≤15行覆盖写）+ `memory/tasks/`（复杂任务详情）
+- 写入规则：边聊边存，5 轮未写入强制检查，memoryFlush 在 compaction 前自动存档
+- 切换判断：context% 是第一标准，空闲不是切换理由。60-70% 通知建议 /new，70%+ 必须切
+- session.reset = idle 24h（纯兜底），真正靠 CTX-CONTROL-RULES.md 行为规则控制
+- 详细规则见 `CTX-CONTROL-RULES.md`（全 agent 共享，绝对路径引用）
+- 归档：14 天日志 → archive.md（heartbeat 执行），MEMORY.md ≤ 80 行，archive 6 个月轮替
 
 ## 8888 端口代理架构（定稿）
 

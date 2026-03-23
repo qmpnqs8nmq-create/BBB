@@ -10,10 +10,11 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 Before doing anything else:
 
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+1. Read `memory/HANDOFF.md` — 接力卡，恢复上一次会话状态（≤15 行，极低开销）
+2. Read `SOUL.md` — this is who you are
+3. Read `USER.md` — this is who you're helping
+4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
 
@@ -25,6 +26,36 @@ You wake up fresh each session. These files are your continuity:
 - **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
+
+### 📌 HANDOFF.md — 会话接力卡（核心延续机制）
+
+- 路径：`memory/HANDOFF.md`
+- **覆盖写，不追加。永远 ≤15 行。**
+- 每次对话中出现重要结论、决策、状态变化时立即更新
+- 内容：最后活跃时间、当前话题、关键上下文、待办、今日笔记指针
+- 新 session 启动时第一个读取的文件（成本 < 1KB）
+- 这是"无痛切换"的关键：即使 session 突然断开，HANDOFF.md 已经保存了最新状态
+- **复杂任务指针**：如果当前在执行多步骤任务，HANDOFF.md 中用 `→ task: memory/tasks/xxx.md` 指向任务详情文件
+
+### 📂 memory/tasks/ — 进行中任务的完整上下文
+
+- 每个复杂任务（多步骤、跨 session、需要技术细节）单独建一个文件
+- 文件名：`memory/tasks/{简短描述}.md`
+- 内容：目标、已完成步骤、当前状态、关键路径/命令/错误信息、下一步
+- **任务完成后删除文件**（关键结论已写入当日笔记或 archive）
+- HANDOFF.md 只放指针，不放详情——职责分离，各自不膨胀
+- 同时进行的任务不超过 3 个（超出说明该收尾了）
+
+### 📝 增量写入规则
+
+- **边聊边存**：重要信息产生时立即写入当日 `memory/YYYY-MM-DD.md`，不等对话结束
+- **不依赖会话存活**：文件是唯一可靠的记忆，会话随时可能中断
+- **更新 HANDOFF.md 的时机**：话题切换时、重要决策达成时、对话即将结束时
+- **硬规则：连续 5 轮对话未写入任何文件 → 必须暂停检查是否有该存的内容**
+- 这不是建议，是强制中断。宁可多写一次空的"无重要更新"，也不能连续 5 轮不落盘
+- **日志归档**：14 天以上的 daily notes，在 heartbeat 空闲时自动执行：提取关键结论写入 `memory/archive.md`（按月分段），然后删除原文件
+- **MEMORY.md 上限**：控制在 80 行 / 3KB 以内。超出时精简旧条目，不无限追加
+- **archive.md 上限**：每月段 ≤ 20 行摘要。超过 6 个月的段落可删除
 
 ### 🧠 MEMORY.md - Your Long-Term Memory
 
@@ -210,3 +241,9 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## Global Context Governance
+
+Read and apply the single source of truth at `/Users/bruce/.openclaw/workspace/CTX-CONTROL-RULES.md`.
+This rule is global across all Bruce workspaces and sessions, not chief-only.
+Do not maintain divergent workspace copies of this policy.
