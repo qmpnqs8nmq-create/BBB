@@ -34,6 +34,25 @@
 - 经营与决策类问题优先走 `chief`，OpenClaw / Docker / 配置 / 修复类问题优先走 `main`。
 - 安全巡检 (healthcheck) 归 main，不归 chief（2026-03-22 定稿迁移）。
 
+## 单 Gateway 架构（2026-03-23 定稿）
+
+- 只跑一个 Gateway :18789，所有渠道通过 bindings 做 per-user 路由
+- 企业微信：Bruce (QiuHongYue) → chief，其他 → chief-user
+- 飞书：Bruce (ou_2057df7422741af99b3f14f79fd527f6) → chief，其他 → chief-user
+- 微信/本地浏览器 → chief
+- 已废弃：team gateway (:8899)、8888 HTTPS 代理、ai.openclaw.team / ai.openclaw.lan8888-proxy LaunchAgent（全部已删除 2026-03-23）
+- 飞书 peer binding 必须带 `accountId: "*"`（飞书消息走 admin 账户，不带则只匹配 default）
+
+## CEO 5-Agent 文件同步（2026-03-23 重构）
+
+- 同步机制从文件复制（sync-shared.sh）改为 symlink（setup-symlinks.sh）
+- chief workspace 是 single source of truth，其他 workspace 通过 symlink 引用
+- 业务知识文件 → 所有 workspace（symlink）
+- 路由/治理文件（ROUTING.md/WORKFLOWS.md/GOVERNANCE.md）→ chief-user only
+- 旧文件归档到 chief/archive/
+- 完整性检查：symlink-integrity-check cron 每天 03:00（main 负责）
+- 如需新增共享文件：编辑 setup-symlinks.sh 并重跑
+
 ## Session 延续机制（2026-03-22 定稿）
 
 - 核心文件：`memory/HANDOFF.md`（≤15行覆盖写）+ `memory/tasks/`（复杂任务详情）
@@ -42,15 +61,6 @@
 - session.reset = idle 24h（纯兜底），真正靠 CTX-CONTROL-RULES.md 行为规则控制
 - 详细规则见 `CTX-CONTROL-RULES.md`（全 agent 共享，绝对路径引用）
 - 归档：14 天日志 → archive.md（heartbeat 执行），MEMORY.md ≤ 80 行，archive 6 个月轮替
-
-## 8888 端口代理架构（定稿）
-
-- :8888 HTTPS 代理 → 直接转发到主 Gateway :18789（不再使用独立 team gateway :8899）
-- 代理脚本通过 JS 注入强制绑定 chief-user agent + 每浏览器独立 session 隔离
-- 设备 pairing 统一走主 Gateway 的 device store，不再维护两套
-- 不再需要 ai.openclaw.team LaunchAgent
-- 代理脚本路径：`~/.openclaw/workspace/scripts/https_lan_proxy_8888.js`
-- 证书路径：`~/.openclaw-team/certs/`
 
 ## Important Notes
 

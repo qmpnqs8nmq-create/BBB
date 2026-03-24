@@ -141,3 +141,20 @@ Each weekly platform review should answer:
 - **Decision**: 刻意保留。8888 端口是局域网浏览器访问入口，强制路由到 chief-user，是系统设计的一部分
 - **不需要修复**。后续 governance review 遇到此警告可忽略
 - **Status**: ✅ Resolved (by design)
+
+### 2026-03-23 | CRON | market:weekly-intel-scan 全模型超时
+- **Issue**: 上次运行全部 7 个模型超时（含 anthropic 直连无 key 是正常 fallback）
+- **Root cause**: 临时性网络问题，非配置问题。重跑后 152 秒正常完成
+- **Fix**: 无需配置修改。delivery 统一修为 feishu + Bruce openId
+- **Status**: ✅ Fixed
+
+### 2026-03-23 | CRON | healthcheck:update-status 839秒超时
+- **Issue**: 任务 839 秒后被 kill，timeout 600 秒
+- **Root cause**: prompt 含模糊指令（"检查兼容性风险"），agent 做了不必要的 web search 导致卡住
+- **Fix**: prompt 简化为只跑 openclaw update status + node --version，timeout 改为 120 秒。重跑后 13 秒完成
+- **Status**: ✅ Fixed
+
+### 2026-03-23 | CRON | 全部 cron job delivery 统一配置
+- **Issue**: 多个 cron 的 delivery 缺少 channel/to，导致多 channel 环境下无法投递
+- **Fix**: 所有 9 个 cron job 统一设为 delivery.channel=feishu, to=user:ou_2057df7422741af99b3f14f79fd527f6
+- **Status**: ✅ Fixed
