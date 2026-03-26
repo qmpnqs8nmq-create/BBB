@@ -111,6 +111,51 @@ Categories:
 
 ---
 
+### Week of 2026-03-24 — Platform Governance Review
+
+**Reviewer:** main (automated weekly cron) | **Time:** 2026-03-24 23:04 CST
+
+#### Cron Health
+
+| Job | Agent | Status | Notes |
+|-----|-------|--------|-------|
+| daily-self-check-8am | main | ✅ OK | consecutiveErrors=0 |
+| symlink-integrity-check | main | ✅ OK | consecutiveErrors=0 |
+| 每日新闻简报 22:30 | chief | ✅ OK | Fixed since last review, consecutiveErrors=0 |
+| market:weekly-intel-scan | chief | ✅ OK | consecutiveErrors=0, last delivered successfully |
+| coach:biweekly-decision-review | chief | ✅ OK | Never run yet, next Wed 10:00 |
+| weekly-system-review | chief | ✅ OK | Never run yet, next Sun 10:00 |
+| monthly-system-simplification | chief | ✅ OK | Never run yet, next Apr 1 10:00 |
+| healthcheck:security-audit | main | ⚠️ ERROR | consecutiveErrors=1, error: "Channel is required when multiple channels are configured" — delivery config was updated AFTER last run; should auto-clear on next Mon 10:00 run |
+| healthcheck:update-status | main | ⚠️ ERROR | consecutiveErrors=2, error: "Delivering to Feishu requires target" — same: delivery config fixed after last run; should auto-clear Mon 10:30 |
+| weekly-platform-governance-review | main | ⚠️ ERROR | consecutiveErrors=1 from last week's run; this run is the validation |
+| auto-approve-lan-pairing | main | ⚪ DISABLED | Intentional |
+| sync-shared-files [RETIRED] | chief | ⚪ DISABLED | Replaced by symlinks + symlink-integrity-check |
+
+**Cron summary:**
+- 3 jobs with errors, all from delivery config issues that were fixed on 3/21 but haven't had a chance to re-run yet. Expected to auto-clear this week.
+- No new failures. 每日新闻简报 timeout fix (300s→600s) validated — running clean since 3/22.
+- **Action needed:** None. Monitor Mon 3/30 runs for healthcheck jobs to confirm error clearing.
+
+#### Agent Configuration
+
+- main workspace: AGENTS.md / SOUL.md / IDENTITY.md ✅
+- chief workspace: AGENTS.md / SOUL.md / IDENTITY.md ✅
+- **Boundary check:** Platform ops (healthcheck, self-check, symlink, governance) → main ✅; CEO business (news, market, coach, system review, simplification) → chief ✅
+- No cross-boundary drift detected
+
+#### Infrastructure
+
+- **Gateway:** running (pid 66086, state active, RPC probe: ok) ✅
+- **New warning:** Duplicate plugin id for `openclaw-weixin` — "global plugin will be overridden by global plugin." Cosmetic/config duplication, not affecting functionality.
+- **Previous findings status:**
+  - plugins.allow 未配置 → ⏳ Still open (needs Bruce decision)
+  - lan8888-proxy 并存 → ✅ Resolved by design (per 3/22 decision)
+
+**Overall: No new issues requiring attention. All existing issues tracking as expected.**
+
+---
+
 ## Weekly Review Template
 
 Each weekly platform review should answer:
