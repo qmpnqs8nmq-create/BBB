@@ -1,9 +1,10 @@
 # HANDOFF.md — 会话接力卡
 
-- **最后活跃:** 2026-03-26 21:08 (Asia/Shanghai)
-- **当前话题:** Zenmux 3-key 轮换系统性修复（三级保障方案，已完成代码改动，待 gateway restart 验证）
-- **上下文:** Level1 MRU sticky + Level2 冷却1h + Level3 fallback openrouter sonnet → openai oauth
-- **monkey-patch 文件:** auth-profiles-DRuJBw5y.js（MRU排序 line1178 + 去bypass line708）
-- **配置改动:** openclaw.json — 删 auth.order、加 billingBackoffHoursByProvider=1h、fallback 改 openrouter sonnet
-- **遗留:** (1) gateway restart 后验证 /new 不再 402 (2) 升级 OpenClaw 后需重打 monkey-patch (3) upstream issue 待提
-- **今日笔记:** `memory/2026-03-26.md`
+- **最后活跃:** 2026-03-28 01:21 (Asia/Shanghai)
+- **当前话题:** main 治理体系完善 + key 切换
+- **上下文:** 今晚完成 WORKING_RULES.md 重构、INCIDENT_LOG 变更模板、patch-openclaw.sh 自动化脚本、上游 issue #55897，并将规则4补成含蓝军挑战的循环流程。刚按 Bruce 要求把 zenmux 活跃配置从 key1 切到 key2。
+- **待办:**
+  - Bruce 执行 `openclaw gateway restart`（让升级+patch+key2 生效）
+  - 跟踪 openclaw/openclaw#55897
+  - chief 业务层可改善项（启动流程、探索熔断、Exploration Discipline 具体化）待推进
+- **今日笔记:** `memory/2026-03-27.md`

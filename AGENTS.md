@@ -13,8 +13,9 @@ Before doing anything else:
 1. Read `memory/HANDOFF.md` — 接力卡，恢复上一次会话状态（≤15 行，极低开销）
 2. Read `SOUL.md` — this is who you are
 3. Read `USER.md` — this is who you're helping
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+4. Read `WORKING_RULES.md` — 执行纪律，防止头痛医头
+5. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+6. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
 
