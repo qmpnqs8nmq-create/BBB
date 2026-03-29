@@ -1,10 +1,11 @@
 # HANDOFF.md — 会话接力卡
 
-- **最后活跃:** 2026-03-28 12:00 (Asia/Shanghai)
-- **当前话题:** 记忆系统重构（main + CEO 双系统）
-- **上下文:** 完成 main 记忆重构（单日单文件/150行/14天归档）+ CEO 记忆重构（MEMORY.md 瘦身/操作规程迁 AGENTS.md/200行/30天归档/内容三分类）
+- **最后活跃:** 2026-03-29 13:05 (Asia/Shanghai)
+- **当前话题:** OpenClaw 2026.3.28 升级 + 全面文件检查清理
+- **上下文:** 升级完成，patch 重打，飞书配置修复，35 topic-split + 20 废弃脚本已清理，cron 超时 job 已修复
 - **待办:**
-  - Bruce 执行 `openclaw gateway restart`（让升级+patch+key2 生效）— 遗留
+  - git push 被 repo rule 拦截（patch-backup 大文件），需 .gitignore 或删除
+  - runbook 文件评估（LLM_TIMEOUT_AUTO_FIX / EMERGENCY_RECOVERY / PAIRING_8888）
   - 跟踪 openclaw/openclaw#55897
-  - 观察新规则执行效果，评估后续推广
+  - 每日新闻简报 + 每日使用总结 delivery=not-delivered 待观察（今晚验证）
 - **今日笔记:** `memory/2026-03-28.md`
