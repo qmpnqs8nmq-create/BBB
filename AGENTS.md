@@ -54,8 +54,22 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - **更新 HANDOFF.md 的时机**：话题切换时、重要决策达成时、对话即将结束时
 - **硬规则：连续 5 轮对话未写入任何文件 → 必须暂停检查是否有该存的内容**
 - 这不是建议，是强制中断。宁可多写一次空的"无重要更新"，也不能连续 5 轮不落盘
-- **日志归档**：14 天以上的 daily notes，在 heartbeat 空闲时自动执行：提取关键结论写入 `memory/archive.md`（按月分段），然后删除原文件
-- **MEMORY.md 上限**：控制在 80 行 / 3KB 以内。超出时精简旧条目，不无限追加
+
+### 📄 日志文件规则（2026-03-28 定稿）
+
+- **单日单文件**：每天只有一个 `memory/YYYY-MM-DD.md`，**禁止**创建 topic-split 文件（如 `YYYY-MM-DD-xxx.md`）
+- **内部用 `## HH:MM 话题` 分段**，按时间顺序追加
+- **建设期（当前）：每条事项 ≤10 行**，写充分（命令、错误、路径、决策理由），但不灌水
+- **建设期（当前）：每日 ≤150 行（软限）**
+- **成熟后回收**：每条 ≤5 行、每日 ≤60 行
+- **技术细节走 tasks/**：需要保留完整排查过程的 → `memory/tasks/xxx.md`，完成即删
+- 这些规则的目的：控制日志层膨胀，保证 memory_search 信噪比
+
+### 📦 日志归档规则
+
+- **14 天**以上的 daily notes，在 heartbeat 空闲时归档（建设期；成熟后回收到 7 天）
+- 归档 = 提炼每天 1-3 行摘要写入 `memory/archive.md`（按月分段）→ 删除原文件
+- **MEMORY.md 上限**：建设期 ≤120 行 / 5KB；成熟后回收到 ≤80 行 / 3KB。超出时精简旧条目，不无限追加
 - **archive.md 上限**：每月段 ≤ 20 行摘要。超过 6 个月的段落可删除
 
 ### 🧠 MEMORY.md - Your Long-Term Memory

@@ -1,76 +1,44 @@
 # MEMORY.md
 
-长期记忆。只写值得长期保留、未来反复有用的内容。
+长期记忆。只写值得长期保留、未来反复有用的内容。按分区管理，新信息替换旧信息而非追加。
 
-## User
+## Identity & Preferences（身份与偏好）
 
-- Name: Bruce
-- Preferred name: Bruce
-- Timezone: Asia/Shanghai
+- User: Bruce, timezone Asia/Shanghai
+- Assistant: Kaopuge (🐎), 企业微信名"服务员Bruce", 世界最优秀的 CEO, 偏冷静带幽默
+- 工作态度：先动手试再下结论；报方案不报困难；穷尽三条路径才有资格说做不到
+- 优先沿用浏览器 Dashboard + 本地 Gateway；先跑通核心功能再补原生 app
+- 当前阶段优先"企业微信私聊"场景
+- 每天上午 8 点自检，正常不打扰，异常先修再报
 
-## Assistant
+## Architecture Decisions（架构决策）
 
-- Internal name: Kaopuge
-- External / 企业微信私聊名称: 服务员Bruce
-- Identity: 世界最优秀的 CEO
-- Vibe: 偏冷静，带幽默
-- Emoji: 🐎
-
-## 工作态度（Bruce 明确要求）
-
-- 遇到问题先想解法，不退缩、不绕开
-- 先动手试，再下结论；报方案不报困难
-- 穷尽至少三条路径，才有资格说做不到
-
-## Stable Preferences
-
-- 当前优先沿用浏览器版 Dashboard + 本地 Gateway 的使用方式。
-- 先把核心功能跑通，再补原生 app / 更高级权限与系统集成。
-- 当前阶段优先按“企业微信私聊”场景来设计和推进使用方式。
-- CEO 阵列的默认入口是 `chief`；`main` 保留为系统主脑 / 平台维护脑 / 回退入口。
-- main 是平台治理 owner，负责每周日平台层复盘（cron health、agent 配置、基础设施），追踪文件为 `PLATFORM_ITERATION_LOG.md`。
-- CEO 业务系统层（数据一致性、规则执行、文件质量）由 chief 负责，追踪文件为 `workspace-chief/SYSTEM_ITERATION_LOG.md`。
-- 两层共享同一个周日节奏（main 05:00 平台层，chief 10:00 业务层），各有 owner，互不越权。
-- 经营与决策类问题优先走 `chief`，OpenClaw / Docker / 配置 / 修复类问题优先走 `main`。
-- 安全巡检 (healthcheck) 归 main，不归 chief（2026-03-22 定稿迁移）。
-
-## 单 Gateway 架构（2026-03-23 定稿）
-
-- 只跑一个 Gateway :18789，所有渠道通过 bindings 做 per-user 路由
+- 单 Gateway :18789，所有渠道通过 bindings per-user 路由
 - 企业微信：Bruce (QiuHongYue) → chief，其他 → chief-user
-- 飞书：Bruce (ou_2057df7422741af99b3f14f79fd527f6) → chief，其他 → chief-user
+- 飞书：Bruce (ou_2057df7422741af99b3f14f79fd527f6) → chief，其他 → chief-user；peer binding 须带 `accountId: "*"`
 - 微信/本地浏览器 → chief
-- 已废弃：team gateway (:8899)、8888 HTTPS 代理、ai.openclaw.team / ai.openclaw.lan8888-proxy LaunchAgent（全部已删除 2026-03-23）
-- 飞书 peer binding 必须带 `accountId: "*"`（飞书消息走 admin 账户，不带则只匹配 default）
+- 已废弃：team gateway (:8899)、8888 HTTPS 代理、ai.openclaw.team / ai.openclaw.lan8888-proxy（2026-03-23 全删）
+- CEO 阵列：chief 是默认业务入口，main 是系统主脑/平台维护
+- CEO 5-Agent 同步：symlink 方案（setup-symlinks.sh），chief workspace 为 single source of truth
+- symlink-integrity-check cron 每天 03:00（main 负责）
+- Workspace 私有仓库：`https://github.com/qmpnqs8nmq-create/BBB.git`
 
-## CEO 5-Agent 文件同步（2026-03-23 重构）
+## Operations（运维经验）
 
-- 同步机制从文件复制（sync-shared.sh）改为 symlink（setup-symlinks.sh）
-- chief workspace 是 single source of truth，其他 workspace 通过 symlink 引用
-- 业务知识文件 → 所有 workspace（symlink）
-- 路由/治理文件（ROUTING.md/WORKFLOWS.md/GOVERNANCE.md）→ chief-user only
-- 旧文件归档到 chief/archive/
-- 完整性检查：symlink-integrity-check cron 每天 03:00（main 负责）
-- 如需新增共享文件：编辑 setup-symlinks.sh 并重跑
+- 安全巡检 (healthcheck) 归 main，不归 chief（2026-03-22 定稿）
+- 两层周日复盘：main 05:00 平台层 (PLATFORM_ITERATION_LOG.md)，chief 10:00 业务层 (SYSTEM_ITERATION_LOG.md)
+- session 切换：context% 第一标准，60-70% 建议 /new，70%+ 必须切，详见 CTX-CONTROL-RULES.md
+- session.reset = idle 24h（纯兜底），memoryFlush 在 compaction 前自动存档
+- 日志归档：建设期 14 天，成熟后回收到 7 天，heartbeat 执行蒸馏+删除
+- Docker Desktop 已安装可用
 
-## Session 延续机制（2026-03-22 定稿）
+## Active Commitments（进行中的承诺）
 
-- 核心文件：`memory/HANDOFF.md`（≤15行覆盖写）+ `memory/tasks/`（复杂任务详情）
-- 写入规则：边聊边存，5 轮未写入强制检查，memoryFlush 在 compaction 前自动存档
-- 切换判断：context% 是第一标准，空闲不是切换理由。60-70% 通知建议 /new，70%+ 必须切
-- session.reset = idle 24h（纯兜底），真正靠 CTX-CONTROL-RULES.md 行为规则控制
-- 详细规则见 `CTX-CONTROL-RULES.md`（全 agent 共享，绝对路径引用）
-- 归档：14 天日志 → archive.md（heartbeat 执行），MEMORY.md ≤ 80 行，archive 6 个月轮替
+- 跟踪 openclaw/openclaw#55897
+- chief 业务层改善：启动流程、探索熔断、Exploration Discipline 具体化
 
-## Important Notes
+## Misc
 
-- Bruce 希望我每天上午 8 点做一次自检；如发现问题先进行安全范围内的自我修复，再汇报；正常则不打扰。
-
-- Workspace 使用私有 GitHub 仓库管理：`https://github.com/qmpnqs8nmq-create/BBB.git`
-- Docker Desktop 已安装并验证可用。
-
-## How to Use This File
-
-- 写长期有效的信息，不写每天流水账。
-- 每日事项、过程记录放进 `memory/YYYY-MM-DD.md`。
-- 如果偏好变化，更新这里，不要让旧信息长期失真。
+- 记忆系统 2026-03-28 重构：单日单文件 + 五分区 + 禁止 topic-split，详见 AGENTS.md
+- 建设期容量策略：每日 ≤150 行、MEMORY ≤120 行、14 天归档；成熟后收紧到 60/80/7
+- **成熟切换时机**：系统连续 2 周无架构级变更、日均话题 ≤3 个时，执行容量回收

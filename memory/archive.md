@@ -4,9 +4,14 @@
 
 ## 2026-03（至今）
 
-- 初始设定完成：OpenClaw Gateway + webchat + 企业微信私聊
-- 8888 端口代理架构定稿
-- CEO 阵列（chief / main 分工）建立
-- Session 延续机制上线（HANDOFF.md + 增量写入 + 归档闭环）
-- Bruce 工作态度要求写入长期记忆
-- 03-13: 身份设定(Kaopuge/🐎)、Docker安装、模型切换至openai-codex/gpt-5.4 OAuth、飞书通道启用(私聊投递问题未解)
+- 03-13: 身份设定(Kaopuge/🐎)、Docker安装、模型切换至openai-codex/gpt-5.4 OAuth、飞书通道启用
+- 03-14: 企业微信私聊场景确定，助手名"服务员Bruce"，默认简洁风格
+- 03-16: 三套 Gateway 入口架构（local/team/remote），8888 局域网 HTTPS 代理 + session 隔离上线
+- 03-17: 三套 token 核清，pairing 批准流程确立，发现 WebChat 默认共享主会话问题
+- 03-18: 每日 8 点自检 cron 创建，安全自查修复无效字段，应急修复资料建立，8888 pairing watcher 上线
+- 03-19: 自检正常运行，pairing-required 反复排查（WebSocket 代理 + trustedProxies），scope 基线不完整待修
+- 03-20: 8888 代理架构定稿（直连主 Gateway :18789），废弃独立 team gateway :8899
+- 03-21: Bruce 明确工作态度要求（先试再说、报方案不报困难、穷尽三条路径），写入长期记忆
+- 03-22: Session 延续机制定稿（HANDOFF + 增量写入 + 归档闭环），安全巡检归 main
+- 03-23: 单 Gateway 架构定稿，5-Agent symlink 同步重构，废弃 8888/8899/team 全套
+- 03-28: 记忆系统重构——单日单文件、60行预算、7天归档、MEMORY.md 五分区

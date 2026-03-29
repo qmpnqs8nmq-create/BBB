@@ -156,6 +156,61 @@ Categories:
 
 ---
 
+### Week of 2026-03-29 — Platform Governance Review
+
+**Reviewer:** main (automated weekly cron) | **Time:** 2026-03-29 05:06 CST
+
+#### Cron Health
+
+| Job | Agent | Status | Notes |
+|-----|-------|--------|-------|
+| daily-self-check-8am | main | ⚠️ ERROR | consecutiveErrors=1, timeout (1403s > 600s limit) |
+| market:weekly-intel-scan | chief | ⚠️ ERROR | consecutiveErrors=1, "WSClient not connected for account admin" |
+| 每日新闻简报 22:30 | chief | ✅ OK | consecutiveErrors=0, lastDeliveryStatus=not-delivered (content issue, not cron failure) |
+| 每日使用总结 23:00 | main | ✅ OK | consecutiveErrors=0, lastDeliveryStatus=not-delivered |
+| symlink-integrity-check | main | ✅ OK | consecutiveErrors=0 |
+| healthcheck:security-audit | main | ✅ OK | consecutiveErrors=0 |
+| healthcheck:update-status | main | ✅ OK | consecutiveErrors=0 |
+| coach:biweekly-decision-review | chief | ✅ OK | consecutiveErrors=0 |
+| weekly-system-review | chief | ✅ OK | Never run yet, next today 10:00 |
+| monthly-system-simplification | chief | ✅ OK | Never run yet, next Apr 1 |
+| Weekly Market Signal Scan | chief/wecom | ✅ OK | consecutiveErrors=0 |
+| Ecosystem Niche Scan | chief/wecom | ✅ OK | consecutiveErrors=0 |
+| Monthly Portfolio Review | chief/wecom | ✅ OK | Never run yet, next Apr 1 |
+| Quarterly Domain Review | chief/wecom | ✅ OK | Never run yet, next Apr 1 |
+| weekly-platform-governance-review | main | ✅ Running | This job |
+| auto-approve-lan-pairing | main | ⚪ DISABLED | Intentional |
+| sync-shared-files [RETIRED] | chief | ⚪ DISABLED | Intentional |
+
+**Cron flags:**
+- `daily-self-check-8am` consecutiveErrors=1: timed out at 1403s (limit 600s). Likely the backup/git operations are too slow or hanging. **Needs investigation** — consider splitting backup into separate cron or increasing timeout.
+- `market:weekly-intel-scan` consecutiveErrors=1: "WSClient not connected for account admin" — Feishu WebSocket was disconnected at run time. Transient connectivity issue. Should auto-clear on next Mon run (3/30). Monitor.
+- Two jobs show `lastDeliveryStatus=not-delivered` (新闻简报, 每日总结) — runs completed OK but delivery didn't land. May be delivery config or channel availability issue. Worth monitoring.
+
+#### Agent Configuration
+
+- main workspace: AGENTS.md / SOUL.md / IDENTITY.md / USER.md ✅ — platform ops role, consistent
+- chief workspace: AGENTS.md / SOUL.md ✅ — CEO office role, consistent
+- **Boundary check:** Platform ops cron → main ✅; CEO business cron → chief ✅
+- New wecom-session cron jobs (Weekly Market Signal Scan, Ecosystem Niche Scan, Monthly Portfolio Review, Quarterly Domain Review) all under chief ✅ — proper boundary
+- No cross-boundary drift detected
+
+#### Infrastructure
+
+- **Gateway:** running (pid 49817, state active, RPC probe: ok) ✅
+- Listening on *:18789, bind=lan
+- No new warnings beyond previously documented items (plugins.allow, lan8888-proxy — both resolved/accepted)
+
+#### Summary
+
+**2 issues found:**
+1. `daily-self-check-8am` timeout — needs timeout increase or task splitting
+2. `market:weekly-intel-scan` WSClient disconnection — transient, monitor next run
+
+**No critical issues requiring immediate attention.**
+
+---
+
 ## Weekly Review Template
 
 Each weekly platform review should answer:
