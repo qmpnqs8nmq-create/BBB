@@ -6,7 +6,23 @@
 
 set -e
 
-DIST="/opt/homebrew/lib/node_modules/openclaw/dist"
+# Auto-detect: macOS homebrew vs Linux global npm
+if [ -d "/opt/homebrew/lib/node_modules/openclaw/dist" ]; then
+  DIST="/opt/homebrew/lib/node_modules/openclaw/dist"
+elif [ -d "/usr/lib/node_modules/openclaw/dist" ]; then
+  DIST="/usr/lib/node_modules/openclaw/dist"
+else
+  echo "❌ Cannot find openclaw dist directory"
+  exit 1
+fi
+
+# sed -i portability: macOS needs '', Linux does not
+if [[ "$OSTYPE" == darwin* ]]; then
+  SED_I=("${SED_I[@]}")
+else
+  SED_I=(sed -i)
+fi
+
 BACKUP="$HOME/.openclaw/workspace/patch-backup"
 mkdir -p "$BACKUP"
 
@@ -35,7 +51,7 @@ echo "✅ Backed up to $BACKUP/"
 
 # --- Patch 1: MRU sticky sort (auth-profiles) ---
 if grep -q "return a\.lastUsed - b\.lastUsed" "$AUTH"; then
-  sed -i '' 's/return a\.lastUsed - b\.lastUsed/return b.lastUsed - a.lastUsed/' "$AUTH"
+  "${SED_I[@]}" 's/return a\.lastUsed - b\.lastUsed/return b.lastUsed - a.lastUsed/' "$AUTH"
   echo "✅ Patch 1 applied: MRU sticky sort"
 elif grep -q "return b\.lastUsed - a\.lastUsed" "$AUTH"; then
   echo "⏭️  Patch 1 already applied: MRU sticky sort"
@@ -52,7 +68,7 @@ else
     echo "⏭️  Patch 2 already applied: Extended 402 regex"
   elif grep -q "RAW_402_MARKER_RE" "$DEDUPE"; then
     # Append our pattern before the closing /i;
-    sed -i '' 's|used up your points\\b/i;|used up your points\\b|^\\s*402\\s*[\\{\\[]/i;|' "$DEDUPE"
+    "${SED_I[@]}" 's#used up your points\\b/i;#used up your points\\b|^\\s*402\\s*[\\{\\[]/i;#' "$DEDUPE"
     if grep -qF '402\s*[\{\[]' "$DEDUPE"; then
       echo "✅ Patch 2 applied: Extended 402 regex"
     else

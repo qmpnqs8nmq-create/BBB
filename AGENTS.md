@@ -70,6 +70,8 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - **14 天**以上的 daily notes，在 heartbeat 空闲时归档（建设期；成熟后回收到 7 天）
 - 归档 = 提炼每天 1-3 行摘要写入 `memory/archive.md`（按月分段）→ 删除原文件
 - **MEMORY.md 上限**：建设期 ≤120 行 / 5KB；成熟后回收到 ≤80 行 / 3KB。超出时精简旧条目，不无限追加
+- **写入前检查**：写 MEMORY.md 前先问——这条信息 14 天后每次对话都要看到吗？否 → 写 daily log
+- **超限压缩**：MEMORY.md 超 100 行时主动压缩——具体事实下沉 memory/*.md，Hot 层只留模式和结论
 - **archive.md 上限**：每月段 ≤ 20 行摘要。超过 6 个月的段落可删除
 
 ### 🧠 MEMORY.md - Your Long-Term Memory
