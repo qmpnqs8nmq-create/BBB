@@ -38,3 +38,9 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### Model Fallback
+
+- fallback 只当保险丝，不当稳定性方案
+- 主模型只保留 1 个最可靠 fallback，尽量跨 provider 异构
+- 认证问题与模型问题分开诊断
