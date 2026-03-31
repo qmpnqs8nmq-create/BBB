@@ -31,7 +31,7 @@
 - session 切换：context% 第一标准，60-70% 建议 /new，70%+ 必须切，详见 CTX-CONTROL-RULES.md
 - session.reset = idle 24h（纯兜底），memoryFlush 在 compaction 前自动存档
 - 日志归档：建设期 14 天，成熟后回收到 7 天，heartbeat 执行蒸馏+删除
-- Docker Desktop 已安装可用
+- Docker: docker.io 28.2.2 (apt)，用于 agent sandbox
 
 ## Active Commitments（进行中的承诺）
 

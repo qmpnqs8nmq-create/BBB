@@ -22,7 +22,7 @@ from pathlib import Path
 home = Path.home() / '.openclaw'
 config = json.loads((home / 'openclaw.json').read_text())
 main_ws = home / 'workspace'
-section = '''\n\n## Global Context Governance\n\nAll sessions in this workspace must follow the single source of truth at `/Users/bruce/.openclaw/workspace/CTX-CONTROL-RULES.md`.\n\n### Session Startup addition\nAfter reading the standard startup files, read `/Users/bruce/.openclaw/workspace/CTX-CONTROL-RULES.md` if it exists, and apply it as a mandatory global rule.\n\n### Scope\nThis rule is global across all Bruce workspaces and sessions, not chief-only. Do not maintain separate divergent copies in this workspace.\n'''
+section = '''\n\n## Global Context Governance\n\nAll sessions in this workspace must follow the single source of truth at `/root/.openclaw/workspace/CTX-CONTROL-RULES.md`.\n\n### Session Startup addition\nAfter reading the standard startup files, read `/root/.openclaw/workspace/CTX-CONTROL-RULES.md` if it exists, and apply it as a mandatory global rule.\n\n### Scope\nThis rule is global across all Bruce workspaces and sessions, not chief-only. Do not maintain separate divergent copies in this workspace.\n'''
 
 seen = set()
 for agent in config.get('agents', {}).get('list', []):

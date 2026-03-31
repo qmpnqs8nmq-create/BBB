@@ -261,6 +261,6 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 ## Global Context Governance
 
-Read and apply the single source of truth at `/Users/bruce/.openclaw/workspace/CTX-CONTROL-RULES.md`.
+Read and apply the single source of truth at `/root/.openclaw/workspace/CTX-CONTROL-RULES.md`.
 This rule is global across all Bruce workspaces and sessions, not chief-only.
 Do not maintain divergent workspace copies of this policy.

@@ -13,8 +13,8 @@ const BROWSER_ID_KEY = 'openclaw.lan8888.browser-id.v1';
 const INIT_JS_PATH = '/__lan8888/init.js';
 
 const options = {
-  key: fs.readFileSync('/Users/bruce/.openclaw-team/certs/lan-https.key'),
-  cert: fs.readFileSync('/Users/bruce/.openclaw-team/certs/lan-https.crt'),
+  key: fs.readFileSync('/root/.openclaw-team/certs/lan-https.key'),
+  cert: fs.readFileSync('/root/.openclaw-team/certs/lan-https.crt'),
 };
 
 function buildInitScript() {
