@@ -6,6 +6,7 @@
 
 - 03-13: 身份设定(Kaopuge/🐎)、Docker安装、模型切换至openai-codex/gpt-5.4 OAuth、飞书通道启用
 - 03-14: 企业微信私聊场景确定，助手名"服务员Bruce"，默认简洁风格
+- 03-22: Session延续机制上线（HANDOFF+边聊边写+tasks/+5轮强制检查）；OpenClaw原生能力启用；weekly-governance-review cron创建；OpenRouter key异常→临时切gpt-5.4
 - 03-16: 三套 Gateway 入口架构（local/team/remote），8888 局域网 HTTPS 代理 + session 隔离上线
 - 03-17: 三套 token 核清，pairing 批准流程确立，发现 WebChat 默认共享主会话问题
 - 03-18: 每日 8 点自检 cron 创建，安全自查修复无效字段，应急修复资料建立，8888 pairing watcher 上线
