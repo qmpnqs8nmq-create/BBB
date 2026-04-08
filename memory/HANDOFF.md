@@ -1,12 +1,18 @@
-# HANDOFF.md — 会话接力卡
+# HANDOFF — 2026-04-07 14:28
 
-- **最后活跃:** 2026-04-04 13:14 (Asia/Shanghai)
-- **当前话题:** 3D打印机配件 Route 2 机会发现项目已完成 Phase 1，等待是否进入 Phase 2
-- **上下文:** 完整分析已整理为 `/root/.openclaw/workspace/3D打印机配件-Route2-机会发现与验证报告.md`；用户要求转成企业微信文档链接；当前会话先完成资料整理与状态落盘
-- **待办:**
-  - 在可用企业微信文档工具的会话中创建文档并把链接发给 Bruce
-  - 将 Phase 2 保持在 pending / on-hold 列表，等待 Bruce 决策
-  - 观察第一次实际拦截日志格式，确认 heartbeat 扫描关键词有效
-  - 反馈系统端到端验证（需真实用户点击反馈卡）
-  - 4 个安全 WARN 可后续优化（飞书 doc create、strictInlineEval、market agent tool policy、weixin 插件未锁版本）
-- **今日笔记:** `memory/2026-04-04.md`
+## 最后活跃
+- 与 Bruce 完成 v2026.4.5 升级后全面审计+修复
+
+## 当前状态
+- UFW ✅ SSH ✅ 插件 ✅ 渠道全通
+- openclaw-weixin 已升级 2.0.1→2.1.6
+- market agent 已收紧 (minimal profile)
+- Gateway bind 重置问题：UFW 兜底，不再改 bind
+- openai-codex OAuth token 待 Bruce 手动刷新
+
+## 待办
+- Bruce 决定是否重新登录 openai-codex
+- Dashboard 模型选择框数量少的问题待进一步确认
+
+## 今日笔记
+→ memory/2026-04-07.md
