@@ -15,4 +15,6 @@
 - 03-21: Bruce 明确工作态度要求（先试再说、报方案不报困难、穷尽三条路径），写入长期记忆
 - 03-22: Session 延续机制定稿（HANDOFF + 增量写入 + 归档闭环），安全巡检归 main
 - 03-23: 单 Gateway 架构定稿，5-Agent symlink 同步重构，废弃 8888/8899/team 全套
+- 03-24: Daily self-check 正常，多个 cron job 因 LLM 超时/网络报错，git push 超时
+- 03-25: Chief系统全面核查（sandbox安全矩阵定稿、weixin清除保留wecom、zenmux 402正则monkey-patch、webchat elevated不可靠→引导终端操作）
 - 03-28: 记忆系统重构——单日单文件、60行预算、7天归档、MEMORY.md 五分区
