@@ -1,18 +1,18 @@
-# HANDOFF — 2026-04-07 14:28
+# HANDOFF — 2026-04-09 08:01
 
 ## 最后活跃
-- 与 Bruce 完成 v2026.4.5 升级后全面审计+修复
+- Heartbeat 日志维护
 
 ## 当前状态
+- OpenClaw 2026.4.8 运行正常
 - UFW ✅ SSH ✅ 插件 ✅ 渠道全通
-- openclaw-weixin 已升级 2.0.1→2.1.6
-- market agent 已收紧 (minimal profile)
-- Gateway bind 重置问题：UFW 兜底，不再改 bind
+- Dreaming 启用，凌晨 5:00 调度
 - openai-codex OAuth token 待 Bruce 手动刷新
 
-## 待办
-- Bruce 决定是否重新登录 openai-codex
-- Dashboard 模型选择框数量少的问题待进一步确认
+## 已完成维护
+- 归档 3/26 日志 → archive.md
+- 清理 4 个 topic-split 文件（违反单日单文件规则），合并为正确格式
+- 企业微信 DM 白名单：无新拦截
 
 ## 今日笔记
-→ memory/2026-04-07.md
+→ memory/2026-04-09.md（待创建）
