@@ -13,4 +13,4 @@
 1. 通过企业微信通知 Bruce：「有新用户 xxx 尝试私聊 bot，是否批准？」
 2. Bruce 回复"批准"后，将该用户 ID 加入 /root/.openclaw/openclaw.json 的 channels.wecom.allowFrom 数组
 3. 重启 Gateway 生效
-当前白名单：QiuHongYue, vickyli, frankye, amyliu, taoshuaiying, peterpeng, janezhou, jashguo
+当前白名单：QiuHongYue, frankye, amyliu, taoshuaiying, peterpeng, janezhou, JashGuo
