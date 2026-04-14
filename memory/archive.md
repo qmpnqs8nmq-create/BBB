@@ -20,3 +20,4 @@
 - 03-26: Zenmux 3-key 轮换系统性重构（MRU sticky + 冷却轮换 + 跨 provider fallback 三级方案），402 仍泄露到 UI 待 upstream 修复
 - 03-27: 152 SSH 隧道自动重连方案落地（LaunchAgent+wrapper脚本）；WORKING_RULES.md+INCIDENT_LOG.md最小治理闭环上线；webchat approval链路故障止血（缩回单key）；OpenClaw升级 3.23-2→3.24+monkey-patch重打；patch-openclaw.sh自动化脚本+上游issue#55897
 - 03-28: 记忆系统重构（main+chief）——单日单文件、MEMORY.md 五分区、archive.md；OpenClaw 升级 3.24→3.28+monkey-patch重打；doctor --fix 迁移飞书配置；cron 超时修复；35个 topic-split+20个废弃脚本清理
+- 03-29: 迁移日——git secret scanning 修复(filter-repo)、model fallback 配置定稿(opus→openrouter sonnet→gpt-5.4)、models.json 是派生文件不要手改、微信 session expired 修复
