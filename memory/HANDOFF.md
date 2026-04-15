@@ -1,16 +1,11 @@
-# HANDOFF — 2026-04-12 21:50
+# HANDOFF — 2026-04-15 00:25
 
-## 最后活跃
-- 修复 webchat 图片上传（models.json 加载失败 regression）
+## 状态
+- OpenClaw 2026.4.12 运行正常
+- 全系统审计 + 文件大扫除完成（chief 228→20，全清）
 
-## 当前状态
-- OpenClaw 2026.4.11 运行正常
-- 图片上传 ✅ 已修复并验证
-- imageModel: openai-codex/gpt-5.4
-- Dreaming 启用，凌晨 5:00 调度
-
-## 待办
-- 向 OpenClaw 提 issue：codex bundled provider 导致 models.json 加载失败（#64298 regression）
-
-## 今日笔记
-→ memory/2026-04-12.md
+## 待处理
+- plugins update integrity drift（需手动确认）
+- mangba 微信 cron（channel 未 login）
+- 向 OpenClaw 提 codex provider regression issue
+→ memory/2026-04-14.md

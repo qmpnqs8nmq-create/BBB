@@ -1,6 +1,9 @@
 {
   "lastChecks": {
-    "tunnel152": 1774753000,
-    "archive": 1774753000
+    "email": null,
+    "calendar": null,
+    "weather": null,
+    "cron_health": null,
+    "gateway_health": null
   }
 }
