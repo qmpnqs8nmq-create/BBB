@@ -23,3 +23,7 @@
 - 03-29: 迁移日——git secret scanning 修复(filter-repo)、model fallback 配置定稿(opus→openrouter sonnet→gpt-5.4)、models.json 是派生文件不要手改、微信 session expired 修复
 - 03-30: WORKING_RULES精简为流程路由；双路径分裂修复(symlink统一)；Nginx反代HTTPS；反馈系统设计；权限教训+角色漂移防护
 - 03-31: Agent权限审计+sandbox加固（chief-user sandbox=all+ro，子agent deny write，间接写入攻击链切断）；Docker 28.2.2安装
+
+## 2026-04
+
+- 04-01: 企业微信 DM 白名单加固（open→allowlist, 8人白名单），heartbeat 审批机制建立
