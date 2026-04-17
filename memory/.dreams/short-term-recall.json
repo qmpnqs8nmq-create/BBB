@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-16T05:28:12.790Z",
+  "entries": {
+    "memory:memory/2026-04-16.md:1:12": {
+      "key": "memory:memory/2026-04-16.md:1:12",
+      "path": "memory/2026-04-16.md",
+      "startLine": 1,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "# 2026-04-16 ## 13:24 benben 无响应排查 - 现象：Bruce 在 benben 系统内发送指令无回复 - 根因：`agent:benben:main` 请求 `anthropic/claude-opus-4.6`，但 `/root/.openclaw/agents/benben/agent/auth-profiles.json` 为空（仅 37B，`{\"version\":1,\"profiles\":{}}`） - 回退链同时失效：日志显示 `zenmux-key1/anthropic/claude-opus-4.6` 命中 `HTTP 402 quote_exceeded` - 结果：两条模型路径都失败，日志报 `Embedded agent failed before reply: All models failed`，所以表面看起来像“没反应” - 处理：备份 benben 空 auth 文件后，用 main 的 `/root/.openclaw/agents/main/agent/auth-profiles.json` 覆盖同步 - 备份：`/root/.openclaw/agents/benben/agent/auth-profiles.json.bak-20260416-132449` - 待验证：让 Bruce 再给 benben 发一条消息，确认已恢复回复",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3763994496789599,
+      "maxScore": 0.3763994496789599,
+      "firstRecalledAt": "2026-04-16T05:28:12.790Z",
+      "lastRecalledAt": "2026-04-16T05:28:12.790Z",
+      "queryHashes": [
+        "50a788460487"
+      ],
+      "recallDays": [
+        "2026-04-16"
+      ],
+      "conceptTags": [
+        "备份",
+        "anthropic/claude-opus-4.6",
+        "quote-exceeded",
+        "benben",
+        "响应",
+        "现象",
+        "bruce",
+        "系统"
+      ]
+    }
+  }
+}

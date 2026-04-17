@@ -1,15 +1,12 @@
-# HANDOFF — 2026-04-15 20:42
+# HANDOFF — 2026-04-16 23:25
 
 ## 状态
-- OpenClaw **2026.4.14**（从 4.12 升级），Gateway running
-- session-memory hook 已关闭（路径 A）
-- 升级后全系统文件审计完成，零风险清理已执行
+- Gateway active（pid 274123）
+- Lilian 微信误路由根因已修正：benben binding 改为真实账号 `e1263c708c9c-im-bot`
+- mangba 中 Lilian 误入旧会话已清掉：session `99b0e3f0-e41b-468a-99a9-6ba4bd25c822` entry 已删，transcript 已归档
 
-## 待确认（Bruce）
-- `memory/daily-summary/` 16文件 — 每日使用总结 cron 产出，是否保留/迁移/清理？
-- chief workspace 根目录 45 文件偏多（多为业务知识库，非违规）
+## 待验证（Bruce）
+- 让 Lilian 给 bot 再发一条测试消息，确认新消息进入 benben
+- 如 benben 仍异常，下一步直接固定到 `gpt-5.4`
 
-## 待处理
-- plugins update integrity drift（需手动确认）
-- mangba 微信 cron（channel 未 login）
-→ memory/2026-04-15.md
+→ memory/2026-04-16.md
