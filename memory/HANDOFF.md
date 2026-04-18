@@ -1,12 +1,15 @@
-# HANDOFF — 2026-04-16 23:25
+# HANDOFF
 
-## 状态
-- Gateway active（pid 274123）
-- Lilian 微信误路由根因已修正：benben binding 改为真实账号 `e1263c708c9c-im-bot`
-- mangba 中 Lilian 误入旧会话已清掉：session `99b0e3f0-e41b-468a-99a9-6ba4bd25c822` entry 已删，transcript 已归档
-
-## 待验证（Bruce）
-- 让 Lilian 给 bot 再发一条测试消息，确认新消息进入 benben
-- 如 benben 仍异常，下一步直接固定到 `gpt-5.4`
-
-→ memory/2026-04-16.md
+- **最后活跃**：2026-04-17 16:12 CST
+- **当前话题**：OpenClaw 系统审计 + 修复（第一轮已完成）
+- **关键上下文**：
+  - Bruce 拍板：Gateway 公网暴露 **不改**（token-only 够用）
+  - 完成的修复：mangba/mangba-guest auth 空文件、孤立目录清理、sub-agent model allowlist bug（清空 agents.defaults.models）、权限/配置小项
+  - 实测 sub-agent spawn `zenmux-key1/opus-4.7` 已 modelApplied:true
+- **等 Bruce 决策的项**（都不紧急）：
+  - chief tools.deny 兜底
+  - memory-core dreaming plugin 是否启用
+  - main agent 目录权限 700
+  - 把 auth-profiles 空文件检查加到 healthcheck skill（防复发）
+- **今日笔记**：memory/2026-04-17.md
+- **完整报告**：memory/tasks/openclaw-system-audit-2026-04-17.md（待我追加修复记录）

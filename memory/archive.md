@@ -27,3 +27,4 @@
 ## 2026-04
 
 - 04-01: 企业微信 DM 白名单加固（open→allowlist, 8人白名单），heartbeat 审批机制建立
+- 04-02: 升级 openclaw 2026.4.1 全面审计通过；systemd user-level+Linger确认；Control UI 保存报错（chief allowlist 旧 source 字段不兼容新 schema）
