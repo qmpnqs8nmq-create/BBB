@@ -1,15 +1,13 @@
 # HANDOFF
-
-- **最后活跃**：2026-04-17 16:12 CST
-- **当前话题**：OpenClaw 系统审计 + 修复（第一轮已完成）
+- **最后活跃**：2026-04-18 17:35 CST
+- **当前话题**：mangba schema 400 修复事故收尾
 - **关键上下文**：
-  - Bruce 拍板：Gateway 公网暴露 **不改**（token-only 够用）
-  - 完成的修复：mangba/mangba-guest auth 空文件、孤立目录清理、sub-agent model allowlist bug（清空 agents.defaults.models）、权限/配置小项
-  - 实测 sub-agent spawn `zenmux-key1/opus-4.7` 已 modelApplied:true
-- **等 Bruce 决策的项**（都不紧急）：
-  - chief tools.deny 兜底
-  - memory-core dreaming plugin 是否启用
-  - main agent 目录权限 700
-  - 把 auth-profiles 空文件检查加到 healthcheck skill（防复发）
-- **今日笔记**：memory/2026-04-17.md
-- **完整报告**：memory/tasks/openclaw-system-audit-2026-04-17.md（待我追加修复记录）
+  - zenmux 升级 schema → opus-4.7 发 `thinking.type=enabled` 被 400 拒绝；官方 2026.4.15 `supportsAdaptiveThinking` 漏认 4.7（官方 bug）
+  - 我今天两次把 gateway 搞停（一次 restart 打断自己、一次 stop 杀掉自己 session）
+  - Bruce 明确"收手"，所有补丁已回滚，dist 是干净的官方 4.15
+  - 系统靠内置 `retrying with off` fallback 跑着，mangba 可用但不带 thinking
+- **新铁律**：**永远不要在 main session 里动 gateway 生命周期**（stop/start/restart）
+- **不做的事**：不重启 gateway；不开 GitHub issue（除非 Bruce 问起）；不改配置
+- **Bruce 新指示（待排期）**：所有 agent 的主/备模型链配成**完全一样**（在 `agents.defaults.models` 里统一填），而且这条统一链必须**异构**（primary zenmux + fallback 不同家），避免一个 provider 出事全员倒。今天不做，改天清醒时/chief 审计日做
+- **今日笔记**：memory/2026-04-18.md
+- **gateway 现状**：pid 347495，正常运行
