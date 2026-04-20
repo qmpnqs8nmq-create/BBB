@@ -29,3 +29,4 @@
 - 04-01: 企业微信 DM 白名单加固（open→allowlist, 8人白名单），heartbeat 审批机制建立
 - 04-02: 升级 openclaw 2026.4.1 全面审计通过；systemd user-level+Linger确认；Control UI 保存报错（chief allowlist 旧 source 字段不兼容新 schema）
 - 04-03: Daily self-check——WSClient admin 未连导致新闻简报 4 晚投递失败；symlink-integrity-check 超时修复(60s→120s)
+- 04-04: Daily self-check——新闻简报 consecutiveErrors=5（WSClient 断连）；3D 打印机配件 Route2 机会发现报告完成 Phase 1 验证（关键词量+毛利成立）
