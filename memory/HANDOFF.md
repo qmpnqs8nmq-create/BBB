@@ -1,13 +1,15 @@
 # HANDOFF
-- **最后活跃**：2026-04-18 17:35 CST
-- **当前话题**：mangba schema 400 修复事故收尾
-- **关键上下文**：
-  - zenmux 升级 schema → opus-4.7 发 `thinking.type=enabled` 被 400 拒绝；官方 2026.4.15 `supportsAdaptiveThinking` 漏认 4.7（官方 bug）
-  - 我今天两次把 gateway 搞停（一次 restart 打断自己、一次 stop 杀掉自己 session）
-  - Bruce 明确"收手"，所有补丁已回滚，dist 是干净的官方 4.15
-  - 系统靠内置 `retrying with off` fallback 跑着，mangba 可用但不带 thinking
-- **新铁律**：**永远不要在 main session 里动 gateway 生命周期**（stop/start/restart）
-- **不做的事**：不重启 gateway；不开 GitHub issue（除非 Bruce 问起）；不改配置
-- **Bruce 新指示（待排期）**：所有 agent 的主/备模型链配成**完全一样**（在 `agents.defaults.models` 里统一填），而且这条统一链必须**异构**（primary zenmux + fallback 不同家），避免一个 provider 出事全员倒。今天不做，改天清醒时/chief 审计日做
-- **今日笔记**：memory/2026-04-18.md
-- **gateway 现状**：pid 347495，正常运行
+
+- 最后活跃：2026-04-21 00:26
+- 当前话题：修复 mangba 微信 cron delivery 账号漂移
+- 关键上下文：
+  - mangba 4 个 cron delivery.accountId 旧 `08a8c78d3ebe-im-bot` → 新 `5814497b5df4-im-bot`（已切并验证投递成功）
+  - Bruce 个人微信 peer id（OpenID）：`o9cq80zPDVZ65x_dc91XzBkQUvr0@im.wechat`
+  - accountId = bot 侧收件账号；peer.id = 用户侧 OpenID；两者非对应关系
+- 教训：self-check "同 channel 其他 cron 正常 = 瞬时" 是错的。lastError 含 `weixin not configured` / `Unsupported channel` 时必须核对 accountId 是否仍有效
+- 待办：
+  - 把上面这条判据写进 daily-self-check cron 的异常分支
+  - 5/2 coach 双周审计 execution wecom_mcp 灰度
+  - 5/17 Tier 2 ADR 治理试点复盘
+  - 排期：统一各 agent agents.defaults.models 主/备链跨 provider 异构
+- 今日笔记：memory/2026-04-20.md
