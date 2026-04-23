@@ -32,3 +32,4 @@
 - 04-04: Daily self-check——新闻简报 consecutiveErrors=5（WSClient 断连）；3D 打印机配件 Route2 机会发现报告完成 Phase 1 验证（关键词量+毛利成立）
 - 04-06: Memory Dreaming 评估——默认关闭，不与现有体系冲突；v2026.4.5 新功能分级（立即用/自动生效/可配置/暂缓）
 - 04-07: v2026.4.5 升级后全面审计——UFW 启用、SSH 禁 root 密码登录、Gateway bind 被重置回 lan（UFW 兑底）、market agent profile 收紧；openclaw-weixin 2.0.1→2.1.6（与 v4.5 不兼容）；Dreaming 手动开启+调度改 05:00；openai-codex OAuth 过期待 Bruce 重登
+- 04-08: Mac 配对批准（operator.admin）；OpenClaw 4.5→4.8 升级平稳（新增 infer CLI/Memory Wiki/Webhook/Session 压缩检查点/媒体 fallback），全面审计无新问题
