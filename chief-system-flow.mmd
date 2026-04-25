@@ -1,0 +1,89 @@
+%% Chief CEO 业务系统总体流程图
+%% 生成日期：2026-04-24
+%% 渲染方式：https://mermaid.live/ 或 VS Code Mermaid 插件
+
+flowchart TB
+    %% ========== 入口层 ==========
+    Bruce([👤 Bruce / CEO])
+
+    subgraph Channels [用户入口通道]
+        direction LR
+        WeCom[📱 WeCom<br/>企业微信]
+        Feishu[🪶 Feishu<br/>飞书]
+        Browser[🌐 Browser<br/>Dashboard]
+    end
+
+    Bruce --> Channels
+
+    %% ========== 网关层 ==========
+    Gateway{{🦞 OpenClaw Gateway<br/>:18789}}
+    Channels --> Gateway
+
+    %% ========== Chief 主脑 ==========
+    subgraph Chief [Chief Agent · 业务入口]
+        direction TB
+        Routing[Step 1<br/>问题分类<br/>ROUTING.md]
+        Calibration[Step 2<br/>Calibration Rules<br/>13 条校准]
+        Gates[Step 3<br/>Explore Gate /<br/>Commit Gate]
+        Routing --> Calibration --> Gates
+    end
+
+    Gateway --> Chief
+
+    %% ========== 熔断 ==========
+    Fuse([🔴 熔断规则<br/>Route 1 / 2 / Strategic Reflection<br/>已暂停 2026-04-17])
+    Chief -. 触发即拦截 .-> Fuse
+
+    %% ========== 四脑专家 ==========
+    subgraph Specialists [CEO 五脑阵列 · 专家子 agent]
+        direction LR
+        Strategy[🧠 Strategy<br/>战略<br/>值不值得做 / 取舍]
+        Market[🔍 Market<br/>市场<br/>信号 / 机会 / 竞争]
+        Execution[⚙️ Execution<br/>执行<br/>拆解 / owner / 里程碑]
+        Coach[🎯 Coach<br/>复盘<br/>偏差 / 节奏 / 惯性]
+    end
+
+    Chief --派发 sub-agent--> Specialists
+    Specialists -. 结果回灌 / 收口综合 .-> Chief
+
+    %% ========== 知识库底盘 ==========
+    subgraph Memory [知识库 · Memory Layer]
+        direction LR
+        M1[MEMORY.md]
+        M2[DECISION_LOG.md]
+        M3[NORTH_STAR.md]
+        M4[CAPABILITY_MAP.md]
+        M5[OPPORTUNITY_MAP.md]
+        M6[CUSTOMER_SEGMENTS.md]
+    end
+
+    Chief <-.读写.-> Memory
+    Specialists <-.只读.-> Memory
+
+    %% ========== 输出回路 ==========
+    Chief ==最终收口==> Gateway
+    Gateway ==回复==> Channels
+    Channels ==回复==> Bruce
+
+    %% ========== 样式 ==========
+    classDef userLayer fill:#ffe9a8,stroke:#c19a00,stroke-width:2px,color:#000
+    classDef channelLayer fill:#d4e8ff,stroke:#1f6feb,stroke-width:1.5px,color:#000
+    classDef gatewayLayer fill:#3a3a3a,stroke:#000,color:#fff
+    classDef chiefLayer fill:#fff2cc,stroke:#d79b00,stroke-width:2px,color:#000
+    classDef specialistStrat fill:#dae8fc,stroke:#6c8ebf,color:#000
+    classDef specialistMarket fill:#d5e8d4,stroke:#82b366,color:#000
+    classDef specialistExec fill:#ffe6cc,stroke:#d79b00,color:#000
+    classDef specialistCoach fill:#e1d5e7,stroke:#9673a6,color:#000
+    classDef memLayer fill:#f5f5f5,stroke:#666,color:#000
+    classDef fuseLayer fill:#f8cecc,stroke:#b85450,stroke-width:2px,color:#000
+
+    class Bruce userLayer
+    class WeCom,Feishu,Browser channelLayer
+    class Gateway gatewayLayer
+    class Routing,Calibration,Gates chiefLayer
+    class Strategy specialistStrat
+    class Market specialistMarket
+    class Execution specialistExec
+    class Coach specialistCoach
+    class M1,M2,M3,M4,M5,M6 memLayer
+    class Fuse fuseLayer
