@@ -1,7 +1,7 @@
-Last active: 2026-04-29 03:00 Asia/Shanghai
-Current topic: Daily cron integrity/security check.
-Key context: Broken chief-user symlink remains: FEEDBACK_PROTOCOL.md -> missing /root/.openclaw/workspace-chief/FEEDBACK_PROTOCOL.md.
-Action taken: Ran setup-symlinks.sh; it reported success but did not resolve the missing target.
-Audit OK: CTX rules synced; no rogue remotes observed; benben/kefu docker.network=none; openclaw-sbx image current.
-Todo: Decide whether to restore/create FEEDBACK_PROTOCOL.md or remove it from setup-symlinks routing list.
+Last active: 2026-04-29 08:00 Asia/Shanghai
+Current topic: Daily 8am self-check.
+Key context: Gateway healthy; recent gateway log tail has no real errors.
+Open issues: cron failures remain: mangba openclaw-weixin delivery ret=-2 for daily learning + evening report; chief Route 3 biweekly check timed out once.
+Action taken: Auto-committed workspace snapshots; main commits include 6cfe0da + 02ccb7b; workspace-chief produced no output.
+Todo: Decide safe fix for mangba delivery target/channel and whether to raise timeout for chief Route 3 job.
 Today note: memory/2026-04-29.md
