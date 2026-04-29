@@ -33,5 +33,6 @@
 - 04-06: Memory Dreaming 评估——默认关闭，不与现有体系冲突；v2026.4.5 新功能分级（立即用/自动生效/可配置/暂缓）
 - 04-07: v2026.4.5 升级后全面审计——UFW 启用、SSH 禁 root 密码登录、Gateway bind 被重置回 lan（UFW 兑底）、market agent profile 收紧；openclaw-weixin 2.0.1→2.1.6（与 v4.5 不兼容）；Dreaming 手动开启+调度改 05:00；openai-codex OAuth 过期待 Bruce 重登
 - 04-08: Mac 配对批准（operator.admin）；OpenClaw 4.5→4.8 升级平稳（新增 infer CLI/Memory Wiki/Webhook/Session 压缩检查点/媒体 fallback），全面审计无新问题
+- 04-14: 自检——mangba 2 个 cron 报 weixin not configured（需登录）。OpenClaw 4.12 升级后全面审计（doctor --fix/文件清理/Linger 确认）。**全系统文件大扇除**：chief 228→20 文件（138 session dump 删除+36 topic-split 合并+12 超龄3月归档+29 非日期文件分类+8 战略反思合并），main+子 workspace 同步清理。AGENTS.md 新增 tasks/ 深度调试正式通道规则
 - 04-12: webchat 图片上传修复——OpenClaw 4.10 bundled codex provider 导致 pi-sdk validateConfig 失败→zenmux 模型消失→附件被丢；根因在 openclaw.json（不要改 models.json，违反规则3）；配置 codex provider 占位 apiKey + imageModel + 9 agent 同步。mangba-guest agent 创建（微信双账户路由 4d5b→guest），价值投资学习系统+cron
 - 04-10⇢11: 纪律事件——未经确认执行 Gateway restart 违反规则8，批评后识别根因：exec.security=full + allowlist 含 openclaw/systemctl → 无强制拦截；方案：从 allowlist 移除 openclaw/systemctl（使 ask=on-miss 生效）；从企业微信白名单删除 vickyli；OpenClaw 4.8→4.10 升级成功（遇 npm 锁+OOM 重试）；新增 agent mangba
