@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-16T05:28:12.790Z",
+  "updatedAt": "2026-04-29T05:10:13.539Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -31,6 +31,224 @@
         "现象",
         "bruce",
         "系统"
+      ]
+    },
+    "memory:memory/daily-summary/2026-04-20.md:1:20": {
+      "key": "memory:memory/daily-summary/2026-04-20.md:1:20",
+      "path": "memory/daily-summary/2026-04-20.md",
+      "startLine": 1,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "# 日报 2026-04-20 ## 🏢 业务进展（chief） - 今日 chief 无新增日志（`memory/2026-04-20.md` 未创建）。 - 最新状态快照仍停在 2026-04-18：P1 cron 瘦身、P2 execution wecom_mcp 权限灰度、P3 治理试点 ADR-20260417-001 / ADR-20260418-002 全部落地并已 gateway restart 续接。 - 无新决策、无新业务动作。 ## 🔧 系统运维（main） - 08:00 daily self-check：Gateway 正常（pid 399130，RPC ok），日志 50 行内无错误。 - Cron 异常：mangba 的\"每日价值投资学习提醒\"在 2026-04-19 20:00 报 `Unsupported channel: openclaw-weixin`，同 channel 其他 cron 正常 → 判为瞬时，继续观察。 - Auto-commit：workspace 已推送（4 文件），chief 无变更。 ## ⏳ 遗留 / 待办 - 2026-05-02：coach 双周审计，评估 execution wecom_mcp 灰度使用率。 - 2026-05-17：Tier 2 ADR 治理试点复盘。 - 待排期（Bruce 指示）：统一所有 agent 的 `agents.defaults.models` 主/备模型链，并保证跨 provider 异构，避免单 provider 故障全线倒。 - 继续观察 mangba \"每日价",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8263767451047896,
+      "maxScore": 0.44770333766937254,
+      "firstRecalledAt": "2026-04-29T03:53:24.726Z",
+      "lastRecalledAt": "2026-04-29T03:57:14.048Z",
+      "queryHashes": [
+        "b9b05b56717c",
+        "35f81ad2b491"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "memory/2026-04-20.md",
+        "wecom-mcp",
+        "adr-20260417-001",
+        "adr-20260418-002",
+        "self-check",
+        "openclaw-weixin",
+        "auto-commit"
+      ]
+    },
+    "memory:memory/daily-summary/2026-04-21.md:1:19": {
+      "key": "memory:memory/daily-summary/2026-04-21.md:1:19",
+      "path": "memory/daily-summary/2026-04-21.md",
+      "startLine": 1,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "# 日报 2026-04-21 ## 🏢 业务进展（chief） - 今日 chief 无新增日志（`workspace-chief/memory/2026-04-21.md` 不存在）。 - HANDOFF 仍停留在 2026-04-18：P1 cron 瘦身、P2 execution wecom_mcp 权限收紧（灰度至 2026-05-02）、P3 治理试点（System Mode + Tier 2 ADR，试行至 2026-05-17）三大事项已全部落地，等待双周审计与 Tier 2 复盘节点。 - 近 3 天业务侧无新决策产出，处于执行/观察窗口。 ## 🔧 系统运维（main） - 08:00 daily-self-check：gateway 正常（pid 438621），今日日志无 error，workspace git 已推送（9fefc7d）。 - 芒巴晚报 cron lastStatus=error：提示 weixin 通道未配置，内容已生成但投递失败；标注为非紧急，留 Bruce 手动处理。 - 但昨日（04-20）已修复 mangba 4 个 cron 的 delivery.accountId 漂移问题，今天再次出现 weixin 相关错误，需确认是否同一根因或新回归。 ## ⏳ 遗留 / 待办 - 芒巴晚报投递失败复核（今日 08:00 报错 vs 昨日 accountId 修复是否同一问题）。 - 把\"lastError 含 weixin not configured / Unsupported channel 时必须核对 accoun",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4273558676242828,
+      "maxScore": 0.4273558676242828,
+      "firstRecalledAt": "2026-04-29T03:53:24.726Z",
+      "lastRecalledAt": "2026-04-29T03:53:24.726Z",
+      "queryHashes": [
+        "b9b05b56717c"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "wecom-mcp",
+        "处于执行/观察窗口",
+        "daily-self-check",
+        "04-20",
+        "delivery.accountid",
+        "日报",
+        "业务"
+      ]
+    },
+    "memory:memory/daily-summary/2026-04-22.md:1:14": {
+      "key": "memory:memory/daily-summary/2026-04-22.md:1:14",
+      "path": "memory/daily-summary/2026-04-22.md",
+      "startLine": 1,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "# 日报 2026-04-22 > 注：今日 chief 和 main 的 daily note 均未生成（`memory/2026-04-22.md` 不存在）。以下内容基于两侧 HANDOFF.md 最新状态快照整理，非当日新增活动。 ## 🏢 业务进展（chief） - 无当日新记录。chief HANDOFF 停留在 2026-04-18 17:15：P1+P2+P3 治理三件套已全部执行完成。 - **P1 cron 瘦身**：Auto-Deep-Research / Quarterly Domain Review / 季度战略反思提醒 已 disable；Route 3 周检推送调至 09:00；Monthly Portfolio Review → Monthly Process Review 并启用；chief AGENTS.md 加\"流程改造派发 Profile\"。 - **P2 execution wecom_mcp 灰度**：execution 侧允许\"读 + 文档写\"，禁止发消息/建待办/建会议/发卡片；灰度至 2026-05-02 评估。 - **P3 治理试点**：AGENTS.md 补 System Mode + Pre-change Gate Tier 2；新增 ADR-20260417-001 / ADR-20260418-002；试行至 2026-05-17。 - 今日空档 4 天，未见新业务决策或项目推进记录。 ## 🔧 系统运维（main） - 无当日新记录。最后活跃 2026-04-21 00:26，主题是修复 ma",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4194424897432327,
+      "maxScore": 0.4194424897432327,
+      "firstRecalledAt": "2026-04-29T03:53:24.726Z",
+      "lastRecalledAt": "2026-04-29T03:53:24.726Z",
+      "queryHashes": [
+        "b9b05b56717c"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "memory/2026-04-22.md",
+        "handoff.md",
+        "auto-deep-research",
+        "agents.md",
+        "wecom-mcp",
+        "禁止发消息/建待办/建会议/发卡片",
+        "pre-change",
+        "adr-20260417-001"
+      ]
+    },
+    "memory:memory/daily-summary/2026-04-24.md:1:17": {
+      "key": "memory:memory/daily-summary/2026-04-24.md:1:17",
+      "path": "memory/daily-summary/2026-04-24.md",
+      "startLine": 1,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "# 日报 2026-04-24 ## 🏢 业务进展（chief） - 今日无 chief 侧日志（`workspace-chief/memory/2026-04-24.md` 不存在），无新业务决策、经营动作或项目进展记录。 - 上下文快照仍停留在 2026-04-18 的 P1/P2/P3 治理改造收尾：cron 瘦身、execution wecom_mcp 权限收敛、ADR 治理试点（试行至 2026-05-17）。 - 跟进节点提醒： - 2026-05-02 execution wecom 灰度评估 + coach 双周审计（盯 execution 使用率）。 - 2026-05-17 Tier 2 ADR 复盘。 ## 🔧 系统运维（main） - 修复 Codex GPT-5.5 fallback 误触发：纠正\"缺 OAuth\"误判，实为 `openclaw.json` provider 块配置问题；统一为 `models.providers.openai-codex` 并声明 `gpt-5.5`，备份 `.bak.20260424-1917`，Gateway 热重载 + 重启 (pid 547883)。端到端 subagent 验证返回 `CODEX55_OK`，fallback 消失。 - 切换图像生成主模型到 Google Gemini 3.1 flash（免费）：追加 `google:default` auth profile，改 `agents.defaults.imageGenerationModel.primary`，遵循\"只留单一最可",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4209360152482986,
+      "maxScore": 0.4209360152482986,
+      "firstRecalledAt": "2026-04-29T03:53:24.726Z",
+      "lastRecalledAt": "2026-04-29T03:53:24.726Z",
+      "queryHashes": [
+        "b9b05b56717c"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "gpt",
+        "openai",
+        "备份",
+        "p1/p2/p3",
+        "wecom-mcp",
+        "gpt-5.5",
+        "openclaw.json"
+      ]
+    },
+    "memory:memory/daily-summary/2026-04-20.md:17:22": {
+      "key": "memory:memory/daily-summary/2026-04-20.md:17:22",
+      "path": "memory/daily-summary/2026-04-20.md",
+      "startLine": 17,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "- 继续观察 mangba \"每日价值投资学习提醒\" cron 是否今晚 20:00 复发。 ## 💡 洞察 - 周一工作日 chief 侧零业务落笔，说明 cron 瘦身后推送噪音下降，但也提示 chief 主动记录的触发点偏少——可考虑在 heartbeat 里加一个\"今日是否有值得 chief 记录的决策\"的轻量提示。 - main 侧只有 self-check，符合\"系统稳定则安静\"的目标，但单条 cron 错误如果再出现一次就应升级为正式排查（channel 注册或 profile 缺失）。",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.44287203550338744,
+      "maxScore": 0.44287203550338744,
+      "firstRecalledAt": "2026-04-29T03:57:14.048Z",
+      "lastRecalledAt": "2026-04-29T03:57:14.048Z",
+      "queryHashes": [
+        "35f81ad2b491"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "self-check",
+        "继续",
+        "观察",
+        "mangba",
+        "每日",
+        "价值",
+        "投资",
+        "学习"
+      ]
+    },
+    "memory:memory/2026-04-25.md:1:15": {
+      "key": "memory:memory/2026-04-25.md:1:15",
+      "path": "memory/2026-04-25.md",
+      "startLine": 1,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "# 2026-04-25 ## 01:01 mangba 4/24 投递失败复盘（含自我纠错） **Bruce 诉求**：排查 mangba 4/24 晚 20:00 学习提醒 + 22:00 芒巴晚报都没收到的原因。 ### 调查时间线 - 00:32-00:40 第一版结论：归因于 19:17 起 hot-reload 触发的 `openclaw-weixin` crash-restart loop 覆盖了 20:00 和 22:00 —— Bruce 指出 22:00 没有 reload 干扰，否决 - 00:40-00:55 第二版结论（tasks/mangba-delivery-20260424.md）：20:00 = channel crash-loop；22:00 = pid 550041 进入\"活着但 cron/delivery 子系统半死\"状态（22:18/22:48 \"cron service unavailable\" 告警）；cron `delivered=true` 是可观测性误报 - 00:55 Bruce 提供**关键对照组**：4/22、4/23 晚报 + 学习**都正常收到** - 01:00 重新核验 4/22 日志：**4/22 的 cron 主动推送在日志里同样没有 `outbound:` 行**（只有 22:02 Bruce 主动发 inbound 触发的 agent 回复带 outbound log）→ 推翻第二版的\"无 outbound 日志=发送失败\"前提 ### 决定性事实 - cron announce 路径（`fall",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.36714978439863943,
+      "maxScore": 0.36714978439863943,
+      "firstRecalledAt": "2026-04-29T03:57:14.048Z",
+      "lastRecalledAt": "2026-04-29T03:57:14.048Z",
+      "queryHashes": [
+        "35f81ad2b491"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "4/24",
+        "32-00",
+        "hot-reload",
+        "openclaw-weixin",
+        "crash-restart",
+        "40-00",
+        "crash-loop",
+        "cron/delivery"
+      ]
+    },
+    "memory:memory/daily-summary/2026-04-25.md:19:30": {
+      "key": "memory:memory/daily-summary/2026-04-25.md:19:30",
+      "path": "memory/daily-summary/2026-04-25.md",
+      "startLine": 19,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "- 验证结果：直接调用 iLink `getConfig` 成功；no-token 与 stale-token sendMessage 测试消息 Bruce 均收到；getConfig warm-up 后再次触发原 mangba cron，runs 显示 ok/delivered=true，Bruce 微信侧收到测试推送。 - Gateway 01:46 重启成功，5 plugins loaded，weixin bots auto-restart 后 monitor started。 ## ⏳ 遗留 / 待办 - chief：M1 行动待启动——填入 HYPOTHESES v1（8-10 条 IT 分销未来假设）、2026 年度 KIQs（5-7 个关键情报问题）、INTERVIEW_NETWORK 初始 5-8 人。 - chief：M3（2026-07）做影子回测、T2 阈值评估、Observe 池 / 跨引擎污染防护复评；M6（2026-10）做首次样本回测、T2 定版、T3 草拟、雷达参数校准。 - chief：首次 T1 触发时需立即拉 Bruce 同步。 - main：明晚 20:00 自然观察 mangba cron 是否稳定投递。 - main：后续给上游 openclaw-weixin 提 issue/PR；另查 weixin 启动时偶发 `Cannot read properties of undefined (reading 'logger')`。 ## 💡 洞察 - 今天最重要的系统洞察是：OpenClaw 中 agent 是 stateless",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3699374139308929,
+      "maxScore": 0.3699374139308929,
+      "firstRecalledAt": "2026-04-29T05:10:13.539Z",
+      "lastRecalledAt": "2026-04-29T05:10:13.539Z",
+      "queryHashes": [
+        "b0dc23bcae6b"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "network",
+        "no-token",
+        "stale-token",
+        "warm-up",
+        "ok/delivered",
+        "auto-restart",
+        "8-10"
       ]
     }
   }
