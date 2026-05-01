@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-29T05:10:13.539Z",
+  "updatedAt": "2026-04-30T02:44:11.114Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -227,18 +227,20 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "- 验证结果：直接调用 iLink `getConfig` 成功；no-token 与 stale-token sendMessage 测试消息 Bruce 均收到；getConfig warm-up 后再次触发原 mangba cron，runs 显示 ok/delivered=true，Bruce 微信侧收到测试推送。 - Gateway 01:46 重启成功，5 plugins loaded，weixin bots auto-restart 后 monitor started。 ## ⏳ 遗留 / 待办 - chief：M1 行动待启动——填入 HYPOTHESES v1（8-10 条 IT 分销未来假设）、2026 年度 KIQs（5-7 个关键情报问题）、INTERVIEW_NETWORK 初始 5-8 人。 - chief：M3（2026-07）做影子回测、T2 阈值评估、Observe 池 / 跨引擎污染防护复评；M6（2026-10）做首次样本回测、T2 定版、T3 草拟、雷达参数校准。 - chief：首次 T1 触发时需立即拉 Bruce 同步。 - main：明晚 20:00 自然观察 mangba cron 是否稳定投递。 - main：后续给上游 openclaw-weixin 提 issue/PR；另查 weixin 启动时偶发 `Cannot read properties of undefined (reading 'logger')`。 ## 💡 洞察 - 今天最重要的系统洞察是：OpenClaw 中 agent 是 stateless",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.3699374139308929,
-      "maxScore": 0.3699374139308929,
+      "totalScore": 0.7836253494024277,
+      "maxScore": 0.4136879354715347,
       "firstRecalledAt": "2026-04-29T05:10:13.539Z",
-      "lastRecalledAt": "2026-04-29T05:10:13.539Z",
+      "lastRecalledAt": "2026-04-30T02:44:11.114Z",
       "queryHashes": [
-        "b0dc23bcae6b"
+        "b0dc23bcae6b",
+        "d514ec4a9a4d"
       ],
       "recallDays": [
-        "2026-04-29"
+        "2026-04-29",
+        "2026-04-30"
       ],
       "conceptTags": [
         "gateway",
