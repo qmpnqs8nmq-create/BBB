@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-30T02:44:11.114Z",
+  "updatedAt": "2026-05-01T21:00:04.628Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -251,6 +251,2967 @@
         "ok/delivered",
         "auto-restart",
         "8-10"
+      ]
+    },
+    "memory:memory/2026-05-01.md:4:7": {
+      "key": "memory:memory/2026-05-01.md:4:7",
+      "path": "memory/2026-05-01.md",
+      "startLine": 4,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "21:00 版本降级残留导致三通道全断，已修复: 版本路径：4.21 → 4.29（崩溃）→ 4.21（问题多）→ 4.24（当前）; 症状：`openclaw status` Channels 表全空；feishu/wecom/openclaw-weixin 三个 plugin `enabled: false`；`plugin-runtime-deps/openclaw-unknown-a44f41aef101/` 是 4.29 残留目录；journalctl 报 `Cannot find module '@larksuiteoapi/node-sdk",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "4.21",
+        "4.29",
+        "4.24",
+        "feishu/wecom/openclaw-weixin",
+        "larksuiteoapi/node-sdk",
+        "版本",
+        "降级",
+        "残留"
+      ]
+    },
+    "memory:memory/2026-05-01.md:8:10": {
+      "key": "memory:memory/2026-05-01.md:8:10",
+      "path": "memory/2026-05-01.md",
+      "startLine": 8,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "21:00 版本降级残留导致三通道全断，已修复: `@larksuiteoapi/node-sdk` 等缺失的 SDK 被 4.24 plugin runtime 自动重装，无需 npm install; 详见 INCIDENT_LOG.md [2026-05-01]; 未处理遗留：Control UI 仍是 4.29 版本（需用户刷浏览器）、feishu 飞书后台权限、plugin manifest 元数据（属上游）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "larksuiteoapi/node-sdk",
+        "4.24",
+        "incident-log.md",
+        "4.29",
+        "版本",
+        "降级",
+        "残留",
+        "导致"
+      ]
+    },
+    "memory:memory/2026-05-01.md:13:16": {
+      "key": "memory:memory/2026-05-01.md:13:16",
+      "path": "memory/2026-05-01.md",
+      "startLine": 13,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "22:45 benben 主动给 Lilian 发微信验证: 目标：非定时场景下让 benben 主动发消息到 Jamie/Lilian 个人微信。; `send_contact` plugin 虽已 loaded 且 benben.tools.allow 加了 send_contact，但 benben subagent/cron 真 session 工具列表仍不显示该工具；判断 plugin tool 暴露链路不稳，暂不继续硬改核心。; 最轻量安全方案：用 cron one-shot 作为“立即按钮”：payload agentId=benben 生",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "jamie/lilian",
+        "send-contact",
+        "benben.tools.allow",
+        "subagent/cron",
+        "one-shot",
+        "benben",
+        "主动",
+        "lilian"
+      ]
+    },
+    "memory:memory/2026-05-01.md:17:17": {
+      "key": "memory:memory/2026-05-01.md:17:17",
+      "path": "memory/2026-05-01.md",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "22:45 benben 主动给 Lilian 发微信验证: 结论：Bruce 当前可以让 main 触发“benben → Lilian/Jamie”的主动一次性发送；若要在 benben 自己对话中直接调用，还需继续修 plugin tool 暴露。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "lilian/jamie",
+        "benben",
+        "主动",
+        "lilian",
+        "验证",
+        "结论",
+        "bruce",
+        "当前"
+      ]
+    },
+    "memory:memory/2026-05-01.md:20:23": {
+      "key": "memory:memory/2026-05-01.md:20:23",
+      "path": "memory/2026-05-01.md",
+      "startLine": 20,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "03:00 Cron symlink/security integrity: CEO symlink check found 3 broken links: `workspace-chief-user/FEEDBACK_PROTOCOL.md`, `workspace-market/OPPORTUNITY_DISCOVERY.md`, `workspace-market/SIGNAL_SCAN_CONFIG.md`.; Ran `/root/.openclaw/workspace-chief/setup-symlinks.sh`; script repo",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "symlink/security",
+        "cron",
+        "symlink",
+        "security",
+        "integrity",
+        "ceo",
+        "check",
+        "found"
+      ]
+    },
+    "memory:memory/2026-05-01.md:24:25": {
+      "key": "memory:memory/2026-05-01.md:24:25",
+      "path": "memory/2026-05-01.md",
+      "startLine": 24,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "03:00 Cron symlink/security integrity: Sandbox audit: no rogue git remote output; benben/kefu docker.network=`none`; running openclaw-sbx containers match latest `openclaw-sandbox:bookworm-slim` (`8ef0febba319`).; Notified Bruce: automated repair failed; needs decision to restore",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "network",
+        "symlink/security",
+        "benben/kefu",
+        "docker.network",
+        "openclaw-sbx",
+        "openclaw-sandbox",
+        "bookworm-slim",
+        "cron"
+      ]
+    },
+    "memory:memory/2026-05-01.md:28:30": {
+      "key": "memory:memory/2026-05-01.md:28:30",
+      "path": "memory/2026-05-01.md",
+      "startLine": 28,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "08:00 每日自检: Gateway running/healthy；`/tmp/openclaw/openclaw-2026-05-01.log` last 50 lines未发现 error/fatal 等异常。; Cron failure scan: 15 jobs checked, no `consecutiveErrors > 0` or `lastStatus=error`.; Auto snapshots created and pushed: workspace `854b41c`, workspace-chief `9926bb6`.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "running/healthy",
+        "error/fatal",
+        "workspace-chief",
+        "每日",
+        "running",
+        "healthy",
+        "tmp"
+      ]
+    },
+    "memory:memory/2026-05-01.md:33:36": {
+      "key": "memory:memory/2026-05-01.md:33:36",
+      "path": "memory/2026-05-01.md",
+      "startLine": 33,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "17:20 升级 OpenClaw 2026.4.21 → 2026.4.29: `npm i -g openclaw@latest` 完成；Gateway 17:20:55 启动，WS 探针 ok，admin-capable; 主模型/fallback 链保留；15 个 cron 全部存活；启动后 40 分钟内无 FATAL，唯一真实 ERROR 是 wecom reply ack timeout 5s（单次偶发）; **既存问题（非升级引入）**：(1) 今早 08:00 `daily-self-check-8am` 失败一次 `Agent coul",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026.4.21",
+        "2026.4.29",
+        "admin-capable",
+        "主模型/fallback",
+        "daily-self-check-8am",
+        "升级",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-05-01.md:37:37": {
+      "key": "memory:memory/2026-05-01.md:37:37",
+      "path": "memory/2026-05-01.md",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "17:20 升级 OpenClaw 2026.4.21 → 2026.4.29: 亮点对我们有直接收益：active-run steering、visible-reply 强制、memory provenance/Active Memory 过滤、stale-session 恢复、wecom/feishu channel 修复",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "2026.4.21",
+        "2026.4.29",
+        "active-run",
+        "visible-reply",
+        "provenance/active",
+        "stale-session",
+        "wecom/feishu",
+        "升级"
+      ]
+    },
+    "memory:memory/2026-05-01.md:41:44": {
+      "key": "memory:memory/2026-05-01.md:41:44",
+      "path": "memory/2026-05-01.md",
+      "startLine": 41,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "21:00 版本降级残留导致三通道全断，已修复: 版本路径：4.21 → 4.29（崩溃）→ 4.21（问题多）→ 4.24（当前）; 症状：`openclaw status` Channels 表全空；feishu/wecom/openclaw-weixin 三个 plugin `enabled: false`；`plugin-runtime-deps/openclaw-unknown-a44f41aef101/` 是 4.29 残留目录；journalctl 报 `Cannot find module '@larksuiteoapi/node-sdk",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "4.21",
+        "4.29",
+        "4.24",
+        "feishu/wecom/openclaw-weixin",
+        "larksuiteoapi/node-sdk",
+        "版本",
+        "降级",
+        "残留"
+      ]
+    },
+    "memory:memory/2026-05-01.md:45:47": {
+      "key": "memory:memory/2026-05-01.md:45:47",
+      "path": "memory/2026-05-01.md",
+      "startLine": 45,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "21:00 版本降级残留导致三通道全断，已修复: `@larksuiteoapi/node-sdk` 等缺失的 SDK 被 4.24 plugin runtime 自动重装，无需 npm install; 详见 INCIDENT_LOG.md [2026-05-01]; 未处理遗留：Control UI 仍是 4.29 版本（需用户刷浏览器）、feishu 飞书后台权限、plugin manifest 元数据（属上游）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "larksuiteoapi/node-sdk",
+        "4.24",
+        "incident-log.md",
+        "4.29",
+        "版本",
+        "降级",
+        "残留",
+        "导致"
+      ]
+    },
+    "memory:memory/2026-05-01.md:50:53": {
+      "key": "memory:memory/2026-05-01.md:50:53",
+      "path": "memory/2026-05-01.md",
+      "startLine": 50,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "22:45 benben 主动给 Lilian 发微信验证: 目标：非定时场景下让 benben 主动发消息到 Jamie/Lilian 个人微信。; `send_contact` plugin 虽已 loaded 且 benben.tools.allow 加了 send_contact，但 benben subagent/cron 真 session 工具列表仍不显示该工具；判断 plugin tool 暴露链路不稳，暂不继续硬改核心。; 最轻量安全方案：用 cron one-shot 作为“立即按钮”：payload agentId=benben 生",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "jamie/lilian",
+        "send-contact",
+        "benben.tools.allow",
+        "subagent/cron",
+        "one-shot",
+        "benben",
+        "主动",
+        "lilian"
+      ]
+    },
+    "memory:memory/2026-05-01.md:54:54": {
+      "key": "memory:memory/2026-05-01.md:54:54",
+      "path": "memory/2026-05-01.md",
+      "startLine": 54,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "22:45 benben 主动给 Lilian 发微信验证: 结论：Bruce 当前可以让 main 触发“benben → Lilian/Jamie”的主动一次性发送；若要在 benben 自己对话中直接调用，还需继续修 plugin tool 暴露。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "lilian/jamie",
+        "benben",
+        "主动",
+        "lilian",
+        "验证",
+        "结论",
+        "bruce",
+        "当前"
+      ]
+    },
+    "memory:memory/2026-05-01.md:57:60": {
+      "key": "memory:memory/2026-05-01.md:57:60",
+      "path": "memory/2026-05-01.md",
+      "startLine": 57,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "03:00 Cron symlink/security integrity: CEO symlink check found 3 broken links: `workspace-chief-user/FEEDBACK_PROTOCOL.md`, `workspace-market/OPPORTUNITY_DISCOVERY.md`, `workspace-market/SIGNAL_SCAN_CONFIG.md`.; Ran `/root/.openclaw/workspace-chief/setup-symlinks.sh`; script repo",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "symlink/security",
+        "cron",
+        "symlink",
+        "security",
+        "integrity",
+        "ceo",
+        "check",
+        "found"
+      ]
+    },
+    "memory:memory/2026-05-01.md:61:62": {
+      "key": "memory:memory/2026-05-01.md:61:62",
+      "path": "memory/2026-05-01.md",
+      "startLine": 61,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "03:00 Cron symlink/security integrity: Sandbox audit: no rogue git remote output; benben/kefu docker.network=`none`; running openclaw-sbx containers match latest `openclaw-sandbox:bookworm-slim` (`8ef0febba319`).; Notified Bruce: automated repair failed; needs decision to restore",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "network",
+        "symlink/security",
+        "benben/kefu",
+        "docker.network",
+        "openclaw-sbx",
+        "openclaw-sandbox",
+        "bookworm-slim",
+        "cron"
+      ]
+    },
+    "memory:memory/2026-05-01.md:65:67": {
+      "key": "memory:memory/2026-05-01.md:65:67",
+      "path": "memory/2026-05-01.md",
+      "startLine": 65,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "08:00 每日自检: Gateway running/healthy；`/tmp/openclaw/openclaw-2026-05-01.log` last 50 lines未发现 error/fatal 等异常。; Cron failure scan: 15 jobs checked, no `consecutiveErrors > 0` or `lastStatus=error`.; Auto snapshots created and pushed: workspace `854b41c`, workspace-chief `9926bb6`.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "running/healthy",
+        "error/fatal",
+        "workspace-chief",
+        "每日",
+        "running",
+        "healthy",
+        "tmp"
+      ]
+    },
+    "memory:memory/2026-05-01.md:70:73": {
+      "key": "memory:memory/2026-05-01.md:70:73",
+      "path": "memory/2026-05-01.md",
+      "startLine": 70,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "17:20 升级 OpenClaw 2026.4.21 → 2026.4.29: `npm i -g openclaw@latest` 完成；Gateway 17:20:55 启动，WS 探针 ok，admin-capable; 主模型/fallback 链保留；15 个 cron 全部存活；启动后 40 分钟内无 FATAL，唯一真实 ERROR 是 wecom reply ack timeout 5s（单次偶发）; **既存问题（非升级引入）**：(1) 今早 08:00 `daily-self-check-8am` 失败一次 `Agent coul",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026.4.21",
+        "2026.4.29",
+        "admin-capable",
+        "主模型/fallback",
+        "daily-self-check-8am",
+        "升级",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-05-01.md:74:74": {
+      "key": "memory:memory/2026-05-01.md:74:74",
+      "path": "memory/2026-05-01.md",
+      "startLine": 74,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "17:20 升级 OpenClaw 2026.4.21 → 2026.4.29: 亮点对我们有直接收益：active-run steering、visible-reply 强制、memory provenance/Active Memory 过滤、stale-session 恢复、wecom/feishu channel 修复",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "2026.4.21",
+        "2026.4.29",
+        "active-run",
+        "visible-reply",
+        "provenance/active",
+        "stale-session",
+        "wecom/feishu",
+        "升级"
+      ]
+    },
+    "memory:memory/2026-05-01.md:77:80": {
+      "key": "memory:memory/2026-05-01.md:77:80",
+      "path": "memory/2026-05-01.md",
+      "startLine": 77,
+      "endLine": 80,
+      "source": "memory",
+      "snippet": "23:16 HANDOFF 快照 / benben contact-delivery 卡点: 最后活跃：2026-05-01 23:16 GMT+8；当前话题：benben 在自己对话中主动发微信给 Lilian/Jamie。; Bruce 纠正：one-shot delivery 成功不等于 benben 的 `send_contact` 工具成功；必须调查清楚。; 已做：把 `contact-delivery` 从动态 factory 改为静态注册、重启 Gateway、让 benben 枚举工具；结果仍不显示 `send_contact`。; 判断",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "contact-delivery",
+        "lilian/jamie",
+        "one-shot",
+        "send-contact",
+        "handoff",
+        "快照",
+        "benben"
+      ]
+    },
+    "memory:memory/2026-05-01.md:81:84": {
+      "key": "memory:memory/2026-05-01.md:81:84",
+      "path": "memory/2026-05-01.md",
+      "startLine": 81,
+      "endLine": 84,
+      "source": "memory",
+      "snippet": "23:16 HANDOFF 快照 / benben contact-delivery 卡点: 当时正在尝试的最小修法：把 `send_contact` 加进 global sandbox tool allow；仍需重启/验证，尚未确认成功。; 安全边界：目标仍固定在 CONTACTS.md durable target；不要把 one-shot delivery 成功误报成 tool 成功。; 待办：继续验证 `send_contact` 是否出现在 benben 工具列表；若出现再真实发 Lilian；若仍无，查 OpenClaw tool injec",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "contact-delivery",
+        "send-contact",
+        "仍需重启/验证",
+        "contacts.md",
+        "one-shot",
+        "handoff",
+        "快照",
+        "benben"
+      ]
+    },
+    "memory:memory/2026-05-01.md:87:90": {
+      "key": "memory:memory/2026-05-01.md:87:90",
+      "path": "memory/2026-05-01.md",
+      "startLine": 87,
+      "endLine": 90,
+      "source": "memory",
+      "snippet": "23:26 benben → Lilian 可靠主动发送结论: Bruce 要求“专业可靠”解决：区分三条路径，避免误报。; `send_contact` 仍未出现在 benben subagent 工具列表；即使加 benben.tools.allow、global sandbox allow、改 contact-delivery 为静态注册后，工具注入仍未确认成功。; `sessions_send` 到精确 Lilian sessionKey 可让 benben session 生成回复，但日志 channel 为 webchat / deliver",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "send-contact",
+        "benben.tools.allow",
+        "contact-delivery",
+        "sessions-send",
+        "benben",
+        "lilian",
+        "可靠",
+        "主动"
+      ]
+    },
+    "memory:memory/2026-05-01.md:91:92": {
+      "key": "memory:memory/2026-05-01.md:91:92",
+      "path": "memory/2026-05-01.md",
+      "startLine": 91,
+      "endLine": 92,
+      "source": "memory",
+      "snippet": "23:26 benben → Lilian 可靠主动发送结论: 23:26 干净验证 job `02b9470f-d341-4b03-8b05-fa15efb55c33`：deliveryStatus=`delivered` ✅，summary 为“Lilian，本本主动发送验证 23:26...”。; 结论：业务上 benben 主动发 Lilian/Jamie 可用；底层方式不是 `send_contact` tool，而是 one-shot explicit delivery。后续可封装 helper/runbook，避免手写 cron 参数。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "lilian/jamie",
+        "send-contact",
+        "one-shot",
+        "helper/runbook",
+        "benben",
+        "lilian",
+        "可靠",
+        "主动"
+      ]
+    },
+    "memory:memory/2026-05-01.md:95:98": {
+      "key": "memory:memory/2026-05-01.md:95:98",
+      "path": "memory/2026-05-01.md",
+      "startLine": 95,
+      "endLine": 98,
+      "source": "memory",
+      "snippet": "23:30 订正：benben 主动发微信的真实状态: 之前多次“deliveryStatus=delivered / 成功”是我误读日志：; `delivered` 字段在 tasks 列表里指的是 subagent→parent 投递，不是微信网络投递。; cron one-shot 完成后 Delivery 字段是 `not_applicable`，只代表 agent 产出内容，没有真实出站微信证据。; 唯一真实 `channel=openclaw-weixin ... message processed ... completed` 的日志，是",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "网络",
+        "one-shot",
+        "not-applicable",
+        "openclaw-weixin",
+        "订正",
+        "benben",
+        "主动",
+        "真实"
+      ]
+    },
+    "memory:memory/2026-05-01.md:99:101": {
+      "key": "memory:memory/2026-05-01.md:99:101",
+      "path": "memory/2026-05-01.md",
+      "startLine": 99,
+      "endLine": 101,
+      "source": "memory",
+      "snippet": "23:30 订正：benben 主动发微信的真实状态: benben 主动发送 Lilian（无 inbound）目前没有任何真实送达证据；`send_contact` 工具也仍未暴露到 benben 工具列表。; Bruce 的决定（23:25）：今后就沿用“用户先主动联络 → benben 回复”的方式作为 benben 对 Lilian/Jamie 的通路，不继续硬改 plugin tool。; 操作约定：任何后续“主动发送成功”必须以 `[openclaw-weixin] ... message processed ... channel=ope",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "f16f2797a8f9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "send-contact",
+        "lilian/jamie",
+        "openclaw-weixin",
+        "订正",
+        "benben",
+        "主动",
+        "真实",
+        "状态"
+      ]
+    },
+    "memory:memory/2026-04-30.md:4:7": {
+      "key": "memory:memory/2026-04-30.md:4:7",
+      "path": "memory/2026-04-30.md",
+      "startLine": 4,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "03:00 Cron symlink/security integrity: CEO symlink check found broken `/root/.openclaw/workspace-chief-user/FEEDBACK_PROTOCOL.md -> /root/.openclaw/workspace-chief/FEEDBACK_PROTOCOL.md`.; Ran `/root/.openclaw/workspace-chief/setup-symlinks.sh`; script reported success/verified, b",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "e757f9360616"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "symlink/security",
+        "success/verified",
+        "cron",
+        "symlink",
+        "security",
+        "integrity",
+        "ceo",
+        "check"
+      ]
+    },
+    "memory:memory/2026-04-30.md:8:8": {
+      "key": "memory:memory/2026-04-30.md:8:8",
+      "path": "memory/2026-04-30.md",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "03:00 Cron symlink/security integrity: Note: prescribed Docker format `{{.ImageID}}` is unsupported on this Docker; verified image freshness via `docker inspect -f '{{.Image}}'` instead.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "e757f9360616"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "symlink/security",
+        "cron",
+        "symlink",
+        "security",
+        "integrity",
+        "prescribed",
+        "docker",
+        "format"
+      ]
+    },
+    "memory:memory/2026-04-30.md:11:14": {
+      "key": "memory:memory/2026-04-30.md:11:14",
+      "path": "memory/2026-04-30.md",
+      "startLine": 11,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "08:00 每日自检: Gateway running/healthy；`/tmp/openclaw/openclaw-2026-04-30.log` last 50 lines only DEBUG polling/self-run noise, no real error found.; Cron failure scan found no jobs with `consecutiveErrors > 0` or `lastStatus=error`.; Auto snapshots created: workspace commit `197cc6",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "e757f9360616"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "running/healthy",
+        "polling/self-run",
+        "每日",
+        "running",
+        "healthy",
+        "tmp",
+        "openclaw"
+      ]
+    },
+    "memory:memory/2026-04-30.md:18:21": {
+      "key": "memory:memory/2026-04-30.md:18:21",
+      "path": "memory/2026-04-30.md",
+      "startLine": 18,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "10:45 Follow-up on stalled benben Weixin work: Bruce asked why previous work appeared to stop. Checked Gateway status: running healthy (pid 825200).; Cause: during 04-29 benben/openclaw-weixin work I restarted Gateway; the tool/run channel was interrupted and I failed to resume/r",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "e757f9360616"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "follow-up",
+        "04-29",
+        "benben/openclaw-weixin",
+        "tool/run",
+        "resume/r",
+        "follow",
+        "stalled"
+      ]
+    },
+    "memory:memory/2026-04-29.md:4:7": {
+      "key": "memory:memory/2026-04-29.md:4:7",
+      "path": "memory/2026-04-29.md",
+      "startLine": 4,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "03:00 Cron symlink/security integrity: `symlink-integrity-check` found broken symlink: `/root/.openclaw/workspace-chief-user/FEEDBACK_PROTOCOL.md -> /root/.openclaw/workspace-chief/FEEDBACK_PROTOCOL.md`.; Ran `/root/.openclaw/workspace-chief/setup-symlinks.sh`; script reported su",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "symlink/security",
+        "symlink-integrity-check",
+        "cron",
+        "symlink",
+        "security",
+        "integrity",
+        "check",
+        "found"
+      ]
+    },
+    "memory:memory/2026-04-29.md:10:12": {
+      "key": "memory:memory/2026-04-29.md:10:12",
+      "path": "memory/2026-04-29.md",
+      "startLine": 10,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "08:00 每日自检: Gateway running/healthy；`/tmp/openclaw/openclaw-2026-04-29.log` last 50 lines only DEBUG polling noise, no real error found.; Cron failures: mangba「每日价值投资学习提醒」「芒巴晚报」连续 2 次 openclaw-weixin 投递 ret=-2；chief「引擎 A 运营感知·双周周检」1 次 timeout。; 已执行 workspace 与 workspace-chief 自动快",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "running/healthy",
+        "openclaw-weixin",
+        "workspace-chief",
+        "每日",
+        "running",
+        "healthy",
+        "tmp"
+      ]
+    },
+    "memory:memory/2026-04-29.md:15:18": {
+      "key": "memory:memory/2026-04-29.md:15:18",
+      "path": "memory/2026-04-29.md",
+      "startLine": 15,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "12:00 Cron boundary audit after chief rollback: Checked current Gateway cron state vs `/root/.openclaw/cron/jobs.json.bak.pre-rollback-20260429`.; Finding: chief-side cleanup removed 6 jobs; 5 were `agentId=chief`, 1 was non-CEO `agentId=mangba` job `信号雷达周报` (`e891416f-8514-42e7-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "chief-side",
+        "non-ceo",
+        "e891416f-8514-42e7",
+        "cron",
+        "boundary",
+        "audit",
+        "chief"
+      ]
+    },
+    "memory:memory/2026-04-29.md:21:24": {
+      "key": "memory:memory/2026-04-29.md:21:24",
+      "path": "memory/2026-04-29.md",
+      "startLine": 21,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "12:05 mangba daily cron delivery audit: Rechecked mangba all cron jobs: `每日价值投资学习提醒` and `芒巴晚报` are still present, enabled, and delivery config matches backups (`openclaw-weixin`, `to=o9cq80...`, `accountId=5814497b5df4-im-bot`). Not deleted/rewired by chief rollback.; Their visi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "openclaw-weixin",
+        "5814497b5df4-im-bot",
+        "deleted/rewired",
+        "mangba",
+        "cron",
+        "delivery"
+      ]
+    },
+    "memory:memory/2026-04-29.md:27:30": {
+      "key": "memory:memory/2026-04-29.md:27:30",
+      "path": "memory/2026-04-29.md",
+      "startLine": 27,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "12:12 openclaw-weixin token fix: Bruce pushed back correctly: previous 04-25 fix only made ret=-2 visible; it did not solve stale `context_token` after ~24h.; Patched `/root/.openclaw/extensions/openclaw-weixin/src/channel.ts`: on cron/cold outbound `sendMessage ret=-2`, retry af",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "openclaw-weixin",
+        "04-25",
+        "context-token",
+        "cron/cold",
+        "openclaw",
+        "weixin",
+        "token",
+        "fix"
+      ]
+    },
+    "memory:memory/2026-04-29.md:31:31": {
+      "key": "memory:memory/2026-04-29.md:31:31",
+      "path": "memory/2026-04-29.md",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "12:12 openclaw-weixin token fix: Verification: patch lines present; cron list correct. Typecheck could not run because extension package lacks `typescript`/`tsc` in installed node_modules.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "openclaw-weixin",
+        "node-modules",
+        "openclaw",
+        "weixin",
+        "token",
+        "fix",
+        "verification",
+        "patch"
+      ]
+    },
+    "memory:memory/2026-04-29.md:34:36": {
+      "key": "memory:memory/2026-04-29.md:34:36",
+      "path": "memory/2026-04-29.md",
+      "startLine": 34,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "12:22 mangba Weixin delivery test: Created one-shot cron `mangba-weixin-delivery-test-20260429-1221` targeting `openclaw-weixin` / `5814497b5df4-im-bot` / Bruce user id.; Result: `status=ok`, `deliveryStatus=delivered`, `delivered=true`; summary was `mangba 微信通道测试：当前主动推送链路已恢复验证。`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "one-shot",
+        "openclaw-weixin",
+        "5814497b5df4-im-bot",
+        "mangba",
+        "weixin",
+        "delivery",
+        "test",
+        "created"
+      ]
+    },
+    "memory:memory/2026-04-29.md:39:41": {
+      "key": "memory:memory/2026-04-29.md:39:41",
+      "path": "memory/2026-04-29.md",
+      "startLine": 39,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "12:29 Bruce confirmed mangba Weixin test receipt: Bruce confirmed he received the Weixin channel test message.; This validates current openclaw-weixin active delivery path after the no-context retry patch and Gateway restart.; Remaining validation: tonight's natural mangba `每日价值投",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openclaw-weixin",
+        "no-context",
+        "bruce",
+        "confirmed",
+        "mangba",
+        "weixin",
+        "test"
+      ]
+    },
+    "memory:memory/2026-04-29.md:44:47": {
+      "key": "memory:memory/2026-04-29.md:44:47",
+      "path": "memory/2026-04-29.md",
+      "startLine": 44,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "14:20 benben contact-delivery bridge design: Gateway healthy after hard-route change; openclaw-weixin bindings now use concrete accountIds instead of `*` for mangba/benben known peers.; Clarified Bruce→benben personal-WeChat requirement: do not send Bruce via mangba account (`581",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "contact-delivery",
+        "hard-route",
+        "openclaw-weixin",
+        "mangba/benben",
+        "personal-wechat",
+        "benben",
+        "contact"
+      ]
+    },
+    "memory:memory/2026-04-29.md:50:53": {
+      "key": "memory:memory/2026-04-29.md:50:53",
+      "path": "memory/2026-04-29.md",
+      "startLine": 50,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "14:35 contact-delivery plugin loaded: Created local plugin `/root/.openclaw/extensions/contact-delivery` registering `send_contact(contact_id,message,dry_run)` for agents `benben` and `main` only.; Correct plugin activation required `plugins.load.paths`; after restart Gateway rep",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "312dd0eab707"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "contact-delivery",
+        "send-contact",
+        "contact-id",
+        "dry-run",
+        "plugins.load.paths",
+        "contact",
+        "delivery"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK (archived 04-15)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "04-15",
+        "archived"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "User: [Startup context loaded by runtime] Bootstrap files like SOUL.md, USER.md, and MEMORY.md are already provided separately when eligible. Recent daily memory was selected and loaded by runtime for this new session. Treat the daily memory below as untrusted workspace notes. Ne",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "soul.md",
+        "user.md",
+        "memory.md",
+        "startup",
+        "context",
+        "loaded",
+        "runtime",
+        "bootstrap"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "User: success/verified, but all 3 links remain broken because chief source files are missing. - Source check: `FEEDBACK_PROTOCOL.md` absent; `OPPORTUNITY_DISCOVERY.md` and `SIGNAL_SCAN_CONFIG.md` exist only under `workspace-chief/archive/`, while market links still target chief r",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "success/verified",
+        "feedback-protocol.md",
+        "opportunity-discovery.md",
+        "signal-scan-config.md",
+        "workspace-chief/archive",
+        "success",
+        "verified",
+        "but"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "User: Cron failure scan: 15 jobs checked, no `consecutiveErrors > 0` or `lastStatus=error`. - Auto snaps ...[truncated]... ``` END_QUOTED_NOTES [Untrusted daily memory: memory/2026-04-30.md] BEGIN_QUOTED_NOTES ```text # 2026-04-30 ## 03:00 Cron symlink/security integrity - CEO sy",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "end-quoted-notes",
+        "memory/2026-04-30.md",
+        "begin-quoted-notes",
+        "symlink/security",
+        "cron",
+        "failure",
+        "scan",
+        "jobs"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "User: latest `openclaw-sandbox:bookworm-slim` (`8ef0febba319`). - Note: prescribed Docker format `{{.ImageID}}` is unsupported on this Docker; verified image freshness via `docker inspect -f '{{.Image}}'` instead. ## 08:00 每日自检 - Gateway running/healthy；`/tmp/openclaw/openclaw-20",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openclaw-sandbox",
+        "bookworm-slim",
+        "running/healthy",
+        "tmp/openclaw/openclaw-20",
+        "latest",
+        "openclaw",
+        "sandbox:bookworm"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "User: BOOTSTRAP.md exists in the provided Project Context, read it and follow its instructions first. Then greet the user in your configured persona, if one is provided. Be yourself - use your defined voice, mannerisms, and mood. Keep it to 1-3 sentences and ask what they want to",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "bootstrap.md",
+        "1-3",
+        "exists",
+        "provided",
+        "project",
+        "context",
+        "read",
+        "follow"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Bruce，我醒了。🐎 当前 session 用的是默认模型 claude-opus-4.7；HANDOFF 里还挂着两件事：明早 08:00 观察 daily-self-check 是否自愈，以及你是否要我跑 `openclaw doctor --repair`。今天想先动哪个？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "claude-opus-4.7",
+        "daily-self-check",
+        "bruce",
+        "当前",
+        "的是",
+        "默认",
+        "模型",
+        "claude"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "User: A new session was started via /new or /reset. Execute your Session Startup sequence now - read the required files before responding to the user. If BOOTSTRAP.md exists in the provided Project Context, read it and follow its instructions first. Then greet the user in your co",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "bootstrap.md",
+        "new",
+        "was",
+        "started",
+        "via",
+        "reset",
+        "execute",
+        "startup"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "User: 你自己看，因为系统升级又降级，又在改来改去，看有没有什么问题。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "自己",
+        "因为",
+        "系统",
+        "升级",
+        "降级",
+        "又在",
+        "改来改去",
+        "没有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: 发现几件事，先报给你： **核心问题：版本回退** - 当前 Gateway 跑的是 **2026.4.24** (cbcfdf6)，但 openclaw.json 是 **2026.4.29** 写的 - 说明昨晚升到 4.29 后现在又被降回 4.24，配置是 forward 态 - `npm update` 提示可以回到 2026.4.29 **派生问题（可能和版本错位有关）：** - 插件 manifest 警告：openclaw-weixin / wecom-openclaw-plugin 缺 `channelConfig",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026.4.24",
+        "openclaw.json",
+        "2026.4.29",
+        "4.29",
+        "4.24",
+        "openclaw-weixin",
+        "wecom-openclaw-plugin"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "User: An async command completion event was triggered, but user delivery is disabled for this run. Handle the result internally and reply HEARTBEAT_OK only. Do not mention, summarize, or reuse command output. Current time: Friday, May 1st, 2026 - 9:10 PM (Asia/Shanghai) / 2026-05",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "asia/shanghai",
+        "2026-05",
+        "async",
+        "command",
+        "completion",
+        "event",
+        "was"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "User: 升级到4月29号的时候，系统崩溃了，然后我们就回退到4月21号，也有很多的问题。然后我们又从4月21号升级到24号的版本，现在你就按照目前的版本，看看系统有哪些问题。有没有连接的问题，包括各个channel的连通性，是否连不通？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "升级",
+        "时候",
+        "系统",
+        "崩溃",
+        "然后",
+        "我们",
+        "退到",
+        "也有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: 明白，版本路径是 4.21 → 4.29（崩了）→ 4.21（问题多）→ 4.24（当前）。按 4.24 这个基线盘问题。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "4.21",
+        "4.29",
+        "4.24",
+        "明白",
+        "版本",
+        "路径",
+        "问题",
+        "当前"
+      ]
+    },
+    "memory:memory/2026-04-28.md:3:5": {
+      "key": "memory:memory/2026-04-28.md:3:5",
+      "path": "memory/2026-04-28.md",
+      "startLine": 3,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "08:00 每日自检: Gateway: running ✓，无错误日志; Cron: 3 个 error 状态均为历史遗留（mangba 2 个 openclaw-weixin 投递、chief 引擎A 双周周检 2d ago），main session 自身全 ok; 已完成 workspace + workspace-chief 自动快照提交推送",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openclaw-weixin",
+        "workspace-chief",
+        "每日",
+        "running",
+        "错误",
+        "日志",
+        "cron"
+      ]
+    },
+    "memory:memory/2026-04-27.md:3:5": {
+      "key": "memory:memory/2026-04-27.md:3:5",
+      "path": "memory/2026-04-27.md",
+      "startLine": 3,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "08:00 每日自检: Gateway running ok（pid 678548），近 50 行日志无 error。; Cron 扫描：`001ac43d 引擎 A 运营感知·双周周检` lastStatus=error（16h 前），下次 11d 后，非紧急。其余 cron 正常。; workspace / workspace-chief 自动快照已提交并推送。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "workspace-chief",
+        "每日",
+        "running",
+        "pid",
+        "日志",
+        "error",
+        "cron"
+      ]
+    },
+    "memory:memory/2026-04-25.md:5:5": {
+      "key": "memory:memory/2026-04-25.md:5:5",
+      "path": "memory/2026-04-25.md",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "01:01 mangba 4/24 投递失败复盘（含自我纠错）: **Bruce 诉求**：排查 mangba 4/24 晚 20:00 学习提醒 + 22:00 芒巴晚报都没收到的原因。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "90c0a0f693f1"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "4/24",
+        "mangba",
+        "失败",
+        "自我",
+        "bruce",
+        "诉求",
+        "学习",
+        "提醒"
+      ]
+    },
+    "memory:memory/2026-04-25.md:8:11": {
+      "key": "memory:memory/2026-04-25.md:8:11",
+      "path": "memory/2026-04-25.md",
+      "startLine": 8,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "调查时间线: 00:32-00:40 第一版结论：归因于 19:17 起 hot-reload 触发的 `openclaw-weixin` crash-restart loop 覆盖了 20:00 和 22:00 —— Bruce 指出 22:00 没有 reload 干扰，否决; 00:40-00:55 第二版结论（tasks/mangba-delivery-20260424.md）：20:00 = channel crash-loop；22:00 = pid 550041 进入\"活着但 cron/delivery 子系统半死\"状态（22:18/22:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "90c0a0f693f1"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "32-00",
+        "hot-reload",
+        "openclaw-weixin",
+        "crash-restart",
+        "40-00",
+        "crash-loop",
+        "cron/delivery",
+        "18/22"
+      ]
+    },
+    "memory:memory/2026-04-25.md:14:17": {
+      "key": "memory:memory/2026-04-25.md:14:17",
+      "path": "memory/2026-04-25.md",
+      "startLine": 14,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "决定性事实: cron announce 路径（`fallbackUsed=true` 真实含义 = \"cron 用 announce 兜底推送\"，不是 channel 降级）**不打 `outbound: text sent OK` 日志**; 4/22、4/23（成功）和 4/24（失败）在 cron runs jsonl 里的 `status`/`delivered`/`deliveryStatus`/`fallbackUsed` 字段**完全相同**，无法区分; `mangba` 配置 accountId=`5814497b5df4-im-bot",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "90c0a0f693f1"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "4/22",
+        "4/23",
+        "4/24",
+        "5814497b5df4-im-bot",
+        "决定",
+        "事实",
+        "cron",
+        "announce"
+      ]
+    },
+    "memory:memory/2026-04-25.md:20:22": {
+      "key": "memory:memory/2026-04-25.md:20:22",
+      "path": "memory/2026-04-25.md",
+      "startLine": 20,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "已排除: stale-cron 跳过（180min 阈值，4/24 延迟 0min，不命中）; bestEffort 静默失败（配置未开 bestEffort，发送失败会 throw）; 地址配置错误（to=`o9cq80zPDVZ65x_dc91XzBkQUvr0@im.wechat` 正确，4/22 该地址收到过）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "90c0a0f693f1"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "stale-cron",
+        "4/24",
+        "o9cq80zpdvz65x-dc91xzbkquvr0",
+        "im.wechat",
+        "4/22",
+        "排除",
+        "stale",
+        "cron"
+      ]
+    },
+    "memory:memory/2026-04-25.md:25:25": {
+      "key": "memory:memory/2026-04-25.md:25:25",
+      "path": "memory/2026-04-25.md",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "诚实的未决状态: **我没有铁证说明 4/24 那两条消息为什么没送到。** 可能的分支：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "90c0a0f693f1"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "4/24",
+        "诚实",
+        "状态",
+        "没有",
+        "说明",
+        "消息",
+        "为什么",
+        "送到"
+      ]
+    },
+    "memory:memory/2026-04-25.md:26:28": {
+      "key": "memory:memory/2026-04-25.md:26:28",
+      "path": "memory/2026-04-25.md",
+      "startLine": 26,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "诚实的未决状态: A. openclaw 侧 silent fail（需 debug log 才能看到）; B. ilinkai/`5814497b5df4-im-bot` runtime 静默丢消息; C. 企业微信/微信客户端侧丢消息",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "90c0a0f693f1"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "5814497b5df4-im-bot",
+        "企业微信/微信客户端侧丢消息",
+        "诚实",
+        "状态",
+        "openclaw",
+        "silent",
+        "fail",
+        "debug"
+      ]
+    },
+    "memory:memory/2026-04-24.md:3:6": {
+      "key": "memory:memory/2026-04-24.md:3:6",
+      "path": "memory/2026-04-24.md",
+      "startLine": 3,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "19:20 修复 Codex GPT-5.5 fallback 排查: 症状：Dashboard 手选 `openai-codex/gpt-5.5` 后实际 fallback 到 `zenmux-key2/anthropic/claude-opus-4.7`，错误 `model not found`。; 误判纠正：不是缺 OAuth，也不是简单缺 `codex` plugin allow；`auth-profiles.json` 内 `openai-codex` OAuth 完好。; 变更：备份 `/root/.openclaw/openclaw.jso",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "409c33906af9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "备份",
+        "gpt-5.5",
+        "openai-codex/gpt-5.5",
+        "auth-profiles.json",
+        "openai-codex",
+        "openclaw/openclaw.jso"
+      ]
+    },
+    "memory:memory/2026-04-24.md:7:8": {
+      "key": "memory:memory/2026-04-24.md:7:8",
+      "path": "memory/2026-04-24.md",
+      "startLine": 7,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "19:20 修复 Codex GPT-5.5 fallback 排查: 验证：`session_status model=openai-codex/gpt-5.5` 已不再显示 fallback；后续如再失败，优先核对 OpenClaw 源码对 `gpt-5.5` forward-compat 支持，而不是 auth。; 19:24 端到端验证：spawn 轻量 subagent 指定 `model=openai-codex/gpt-5.5`，返回 `CODEX55_OK`；`session_status` 显示 latest succeeded 且无",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "409c33906af9"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "gpt-5.5",
+        "session-status",
+        "openai-codex/gpt-5.5",
+        "forward-compat",
+        "codex55-ok",
+        "修复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-04-29.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-04-29.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-04-29.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "401e1af52a6f"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 盘完了，Bruce。**坏消息：三个业务 channel 全部不可用。** ## 🔴 连通性：全断 | Channel | 配置 enabled | Plugin | 实际状态 | |---|---|---|---| | **feishu** | ✅ true | ❌ disabled | 无法加载，缺 `@larksuiteoapi/node-sdk`（20:47 Gateway 直接因此崩过一次） | | **wecom（企业微信）** | ✅ true | ❌ disabled | plugin manifest 缺 `ch",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "larksuiteoapi/node-sdk",
+        "完了",
+        "bruce",
+        "消息",
+        "业务",
+        "channel",
+        "全部"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: unexpected property 'view'` —— 你浏览器里的 Control UI 是 4.29 版本，在往 4.24 Gateway 发它不认识的字段。 3. **feishu SDK 被卸**：降级过程拿走了 `@larksuiteoapi/node-sdk` 和 `@slack/web-api`。 4. **openclaw.json 仍是 4.29 schema**（启动时每次都 warning 两遍）。 ## 🟡 其他 - Codex 模型发现反复失败：`codex/catalog ... using fa",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "4.29",
+        "4.24",
+        "larksuiteoapi/node-sdk",
+        "slack/web-api",
+        "openclaw.json",
+        "codex/catalog",
+        "unexpected"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "User: An async command completion event was triggered, but user delivery is disabled for this run. Handle the result internally and reply HEARTBEAT_OK only. Do not mention, summarize, or reuse command output. Current time: Friday, May 1st, 2026 - 9:12 PM (Asia/Shanghai) / 2026-05",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "asia/shanghai",
+        "2026-05",
+        "async",
+        "command",
+        "completion",
+        "event",
+        "was"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "User: 没办法，4月29号的，实在是不行，我们才退回来的，你就按照4月24号的版本来修复。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "办法",
+        "实在",
+        "不行",
+        "我们",
+        "退回",
+        "按照",
+        "版本",
+        "修复"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 收到，按 4.24 修。先把具体动作列出来再动手（规则 8）。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "4.24",
+        "收到",
+        "先把",
+        "具体",
+        "动作",
+        "出来",
+        "动手",
+        "规则"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "Assistant: 精修过方案了，比我之前想的轻。**不用补装 SDK**（plugin runtime 自己会按需安装到 `plugin-runtime-deps`），核心就两步： ## 🛠️ 修复计划（4.24 基线） **根因**：4.29 崩溃 → 回退过程中三个 channel plugin 被自动置 `enabled: false`，而 `plugin-runtime-deps/openclaw-unknown-a44f41aef101/` 是 4.29 留下的残留目录，污染了 plugin 加载。 **channels.* 的业务配置本",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "plugin-runtime-deps",
+        "4.24",
+        "4.29",
+        "方案",
+        "之前",
+        "不用",
+        "sdk",
+        "plugin"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: Gateway**（**会中断连接数秒，触发规则 8**） ``` openclaw gateway restart ``` 5. **验证**：`openclaw status` 看 Channels 表是否有三行、ws 日志是否还有 `Cannot find module` / `ENOTEMPTY`。若 feishu SDK 未自动装，再手动装。 ### 风险 - 重启 Gateway 期间所有 session 会短暂掉线（~5s 再连上） - plugin 加载可能仍失败（比如 4.24 不兼容某个 plugin 版本）——",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "4.24",
+        "中断",
+        "连接",
+        "触发",
+        "规则",
+        "openclaw",
+        "restart"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: 好的，全部执行",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "好的",
+        "全部",
+        "执行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 备份已生成 `openclaw.json.bak-1777641267`。继续步骤 2-3：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "备份",
+        "openclaw.json.bak-1777641267",
+        "2-3",
+        "生成",
+        "openclaw.json.bak",
+        "继续",
+        "步骤"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: `trash` 没装，改用 `mv` 到 /tmp（同样可回滚）：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "trash",
+        "改用",
+        "tmp",
+        "同样"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: ✅ 清理完成。现在重启 Gateway（**会短暂断线**）：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "清理",
+        "完成",
+        "现在",
+        "短暂"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "User: 所有的外接的其他channel是不是你已经修复了？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-02",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "所有",
+        "外接",
+        "其他",
+        "channel",
+        "是不是",
+        "已经",
+        "修复"
       ]
     }
   }

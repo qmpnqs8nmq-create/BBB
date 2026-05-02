@@ -79,3 +79,33 @@
 - **影响**：两次短暂服务中断（企业微信/微信/webchat 连接断线）
 - **根因层级**：执行纪律——规则已存在但未遵守
 - **纠正**：Gateway restart / stop / 任何 systemd 服务操作前，必须先向 Bruce 说明原因并等待明确确认
+
+---
+
+### [2026-05-01] 版本升降级残留导致三通道全断
+
+- **现象**：升级 4.21→4.29 崩溃 → 回退到 4.21 问题多 → 再升到 4.24，status 表 Channels 全空；journalctl 报 `Cannot find module '@larksuiteoapi/node-sdk'`（Gateway 20:47 因此崩过一次）、`Cannot find module '@slack/web-api'`、`ENOTEMPTY ... rmdir .../plugin-sdk`（mattermost/nostr 加载失败）
+- **影响**：企业微信、个人微信、飞书三个业务入口全部不可达；持续约 2 小时（~19:00 升 4.24 至 21:16 修复）
+- **根因层级**：状态层——4.29 → 4.24 降级不干净
+  1. `plugins.entries.feishu / wecom-openclaw-plugin / openclaw-weixin` 三个 plugin 的 `enabled` 在崩溃过程中被自动置 false
+  2. `plugin-runtime-deps/openclaw-unknown-a44f41aef101/`（4.29 残留目录）污染 plugin 加载
+  3. `openclaw.json` 仍是 4.29 schema（每次启动 warn 两遍，但不致命）
+  4. Control UI 仍是 4.29 版本，往 4.24 Gateway 发 `models.list` 带 `view` 字段被拒（刷浏览器解决）
+- **临时止血**：无需——业务已通。
+- **永久修复**：
+  1. 备份 openclaw.json → `openclaw.json.bak-1777641267`
+  2. `mv /root/.openclaw/plugin-runtime-deps/openclaw-unknown-a44f41aef101 /tmp/openclaw-4.29-residue-<ts>`
+  3. 脚本回写三个 plugin `enabled: true`
+  4. `openclaw gateway restart`
+  5. Bruce 端到端验证：企业微信 + 个人微信 + 飞书均可连通 ✅
+- **plugin-runtime-deps 自愈**：4.24 runtime 自动重装依赖（含 `@larksuiteoapi/node-sdk`），无需手动 npm install
+- **遗留项**（非阻塞业务）：
+  - Control UI 版本与 Gateway 错位 → 用户刷新浏览器
+  - Feishu `contact:contact*` 权限域缺失 → 飞书开发者后台授权，plugin 已 ignore
+  - `wecom` / `openclaw-weixin` plugin manifest 缺 `channelConfigs` 元数据 → 不进 status Channels 表，但 runtime 正常
+  - `codex/catalog` 走 fallback → 不关键
+- **预防 / 学到的**：
+  1. **降级 = 也要做清理工作**。升级有 migration，降级没有；`plugin-runtime-deps/openclaw-<version>-<hash>/` 目录必须和当前版本对齐，残留目录会污染 plugin loader
+  2. **status Channels 表 ≠ runtime 状态全貌**。manifest 缺元数据的 channel 不会显示但可能在跑；反之亦然。判断连通性要看 journalctl + 端到端测试，不能只看 status 表
+  3. **插件 `enabled` 在崩溃恢复中可能被自动翻成 false**。降级后要复查 `plugins.entries.*.enabled`
+  4. **版本错位后 Control UI 也要刷**，不然 API 协议不匹配

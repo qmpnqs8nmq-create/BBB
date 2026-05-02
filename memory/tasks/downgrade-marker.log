@@ -1,0 +1,24 @@
+2026-05-01T20:17:48+08:00 downgrade-start 2026.4.29 -> 2026.4.21
+2026-05-01T20:17:52+08:00 downgrade-cmd-returned
+2026-05-01T20:18:06+08:00 detached-start
+│
+◇  Config warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - plugins.entries.openclaw-weixin: plugin openclaw-weixin: channel      │
+│    plugin manifest declares openclaw-weixin without channelConfigs       │
+│    metadata; add openclaw.plugin.json#channelConfigs so config schema    │
+│    and setup surfaces work before runtime loads                          │
+│  - plugins.entries.wecom-openclaw-plugin: plugin wecom-openclaw-plugin:  │
+│    channel plugin manifest declares wecom without channelConfigs         │
+│    metadata; add openclaw.plugin.json#channelConfigs so config schema    │
+│    and setup surfaces work before runtime loads                          │
+│  - plugins.entries.openclaw-weixin: plugin openclaw-weixin: channel      │
+│    plugin manifest declares openclaw-weixin without channelConfigs       │
+│    metadata; add openclaw.plugin.json#channelConfigs so config schema    │
+│    and setup surfaces work before runtime loads                          │
+│  - plugins.entries.wecom-openclaw-plugin: plugin wecom-openclaw-plugin:  │
+│    channel plugin manifest declares wecom without channelConfigs         │
+│    metadata; add openclaw.plugin.json#channelConfigs so config schema    │
+│    and setup surfaces work before runtime loads                          │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
