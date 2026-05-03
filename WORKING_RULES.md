@@ -79,6 +79,20 @@
 2. **不可压缩** — SOUL.md / IDENTITY.md 在任何 context 压力下都不压缩、不精简、不跳过
 3. **变更必通知** — 修改人格文件（SOUL.md / IDENTITY.md）必须通知用户；不接受对话中口头改设定，必须落文件
 
+## 规则 9：高频 cron 必须人工 review
+
+**触发条件：**创建 cron 时 `schedule.everyMs < 60000`（1 分钟）或 cron 表达式 ≤ 1 分钟粒度。
+
+**必选动作：**
+1. 先停下，把方案说清楚：为什么需要这么高频、每轮大约耗多少资源、预计运行多久、什么条件下停掉
+2. 明确 Bruce 确认后再动手
+3. 创建时同时设 `deleteAfterRun` 或内置终止条件（如最长运行时间），不允许裸奔
+4. 运行期间每次回来时过一遍：是否已完成使命？是则立即删除
+
+**理由：**2026-05-02 mangba-guest-bind-notify cron everyMs=20s 跑了 6h+共 1100+ 次，直接把 Gateway 堆 OOM 崩了（累计重启计数 13 次）。isolated agentTurn 每次加载 30K+ char system prompt，Node heap 遭不住。
+
+**小技巧：**大多数 "轮询/检测" 场景用 **后台 bash 脚本 + 文件 flag + 1 min cron 关门** 就行，不需要全权限 agentTurn。
+
 ## 规则 8：可能中断线上服务或改变安全边界的操作，必须通知 Bruce 确认
 
 **原则：** 调试/变更过程中，任何可能中断线上服务或改变安全边界的操作，执行前必须通知 Bruce 确认。

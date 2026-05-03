@@ -109,3 +109,25 @@
   2. **status Channels 表 ≠ runtime 状态全貌**。manifest 缺元数据的 channel 不会显示但可能在跑；反之亦然。判断连通性要看 journalctl + 端到端测试，不能只看 status 表
   3. **插件 `enabled` 在崩溃恢复中可能被自动翻成 false**。降级后要复查 `plugins.entries.*.enabled`
   4. **版本错位后 Control UI 也要刷**，不然 API 协议不匹配
+
+---
+
+## [2026-05-03 00:03] Gateway OOM 崩溃（第 13 次），mangba-guest-bind-notify cron 失控
+
+**现象：** Gateway JavaScript heap out of memory → code=dumped → systemd 自动重启，5s 窗口 Bruce 侧显示连不上。restart counter=13。
+
+**根因：** 2026-05-02 17:55 为"朋友扫码绑 mangba-guest"设的 `mangba-guest-bind-notify` cron，schedule.everyMs=20s，payload=isolated agentTurn（每次加载 30K+ char system prompt）。Bruce 5 分钟内意识到朋友不会马上点后让我清理，但我**只清了当时那批**，后续 17:55 重做时又起了一条新的同名 cron，之后朋友一直没扫码，也没设超时，cron 跑了 6h14min ≈ 1100+ 次。每次 agentTurn 启动/销毁在 Node heap 留渣，累积 OOM。
+
+**修复：**
+1. 删 cron `126f22b4-3c46-4f3e-ae19-d31889738129`
+2. 清 /tmp/mangba-guest-* 残留
+3. WORKING_RULES.md 加规则 9：everyMs < 60s 必须人工 review + 必带终止条件
+
+**副产物 ✅：** 崩溃前的 23:46 日志证实 mangba binding（f602b628790d-im-bot → Bruce 个人微信）已经热加载生效，无需 gateway restart。
+
+**预防：**
+- 规则 9（已落）
+- OOM restart counter 13 次是慢性泄漏信号，后续 heartbeat 定期观察 gateway 内存峰值；如果 >2GB 就调查
+- mangba cron 的 accountId 从 5814 → f602 同步修好了（今晚 23:15 那次）
+
+**同类前例：** 2026-05-01 升级后遗症（mangba binding/cron 的 accountId 指向已失效 im-bot），本次是同一根源的再发。
