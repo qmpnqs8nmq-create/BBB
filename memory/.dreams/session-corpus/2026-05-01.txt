@@ -22,3 +22,8 @@
 [main/sessions/a36ecc30-3b87-4f24-ae0a-ddb354e0d52c.jsonl#L83] Assistant: `trash` 没装，改用 `mv` 到 /tmp（同样可回滚）：
 [main/sessions/a36ecc30-3b87-4f24-ae0a-ddb354e0d52c.jsonl#L85] Assistant: ✅ 清理完成。现在重启 Gateway（**会短暂断线**）：
 [main/sessions/a36ecc30-3b87-4f24-ae0a-ddb354e0d52c.jsonl#L87] User: 所有的外接的其他channel是不是你已经修复了？
+[main/sessions/d58694b3-0728-482e-8342-885228c32fef.jsonl#L1644] Assistant: HEARTBEAT_OK (archived 04-17)
+[main/sessions/d58694b3-0728-482e-8342-885228c32fef.jsonl#L1694] User: [OpenClaw heartbeat poll]
+[main/sessions/d58694b3-0728-482e-8342-885228c32fef.jsonl#L1698] User: [OpenClaw heartbeat poll]
+[main/sessions/d58694b3-0728-482e-8342-885228c32fef.jsonl#L1702] User: [OpenClaw heartbeat poll]
+[main/sessions/d58694b3-0728-482e-8342-885228c32fef.jsonl#L1706] User: [OpenClaw heartbeat poll]

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-02T21:02:11.363Z",
+  "updatedAt": "2026-05-03T21:00:09.928Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -1029,18 +1029,20 @@
       "source": "memory",
       "snippet": "03:00 Cron symlink/security integrity: CEO symlink check found broken `/root/.openclaw/workspace-chief-user/FEEDBACK_PROTOCOL.md -> /root/.openclaw/workspace-chief/FEEDBACK_PROTOCOL.md`.; Ran `/root/.openclaw/workspace-chief/setup-symlinks.sh`; script reported success/verified, b",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "symlink/security",
@@ -1061,18 +1063,20 @@
       "source": "memory",
       "snippet": "03:00 Cron symlink/security integrity: Note: prescribed Docker format `{{.ImageID}}` is unsupported on this Docker; verified image freshness via `docker inspect -f '{{.Image}}'` instead.",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "symlink/security",
@@ -1093,18 +1097,20 @@
       "source": "memory",
       "snippet": "08:00 每日自检: Gateway running/healthy；`/tmp/openclaw/openclaw-2026-04-30.log` last 50 lines only DEBUG polling/self-run noise, no real error found.; Cron failure scan found no jobs with `consecutiveErrors > 0` or `lastStatus=error`.; Auto snapshots created: workspace commit `197cc6",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "gateway",
@@ -1125,18 +1131,20 @@
       "source": "memory",
       "snippet": "10:45 Follow-up on stalled benben Weixin work: Bruce asked why previous work appeared to stop. Checked Gateway status: running healthy (pid 825200).; Cause: during 04-29 benben/openclaw-weixin work I restarted Gateway; the tool/run channel was interrupted and I failed to resume/r",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-01T21:00:03.091Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "e757f9360616"
       ],
       "recallDays": [
         "2026-05-02",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-03"
       ],
       "conceptTags": [
         "gateway",
@@ -1157,19 +1165,20 @@
       "source": "memory",
       "snippet": "03:00 Cron symlink/security integrity: `symlink-integrity-check` found broken symlink: `/root/.openclaw/workspace-chief-user/FEEDBACK_PROTOCOL.md -> /root/.openclaw/workspace-chief/FEEDBACK_PROTOCOL.md`.; Ran `/root/.openclaw/workspace-chief/setup-symlinks.sh`; script reported su",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "symlink/security",
@@ -1190,19 +1199,20 @@
       "source": "memory",
       "snippet": "08:00 每日自检: Gateway running/healthy；`/tmp/openclaw/openclaw-2026-04-29.log` last 50 lines only DEBUG polling noise, no real error found.; Cron failures: mangba「每日价值投资学习提醒」「芒巴晚报」连续 2 次 openclaw-weixin 投递 ret=-2；chief「引擎 A 运营感知·双周周检」1 次 timeout。; 已执行 workspace 与 workspace-chief 自动快",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "gateway",
@@ -1223,19 +1233,20 @@
       "source": "memory",
       "snippet": "12:00 Cron boundary audit after chief rollback: Checked current Gateway cron state vs `/root/.openclaw/cron/jobs.json.bak.pre-rollback-20260429`.; Finding: chief-side cleanup removed 6 jobs; 5 were `agentId=chief`, 1 was non-CEO `agentId=mangba` job `信号雷达周报` (`e891416f-8514-42e7-",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "gateway",
@@ -1256,19 +1267,20 @@
       "source": "memory",
       "snippet": "12:05 mangba daily cron delivery audit: Rechecked mangba all cron jobs: `每日价值投资学习提醒` and `芒巴晚报` are still present, enabled, and delivery config matches backups (`openclaw-weixin`, `to=o9cq80...`, `accountId=5814497b5df4-im-bot`). Not deleted/rewired by chief rollback.; Their visi",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "backup",
@@ -1289,19 +1301,20 @@
       "source": "memory",
       "snippet": "12:12 openclaw-weixin token fix: Bruce pushed back correctly: previous 04-25 fix only made ret=-2 visible; it did not solve stale `context_token` after ~24h.; Patched `/root/.openclaw/extensions/openclaw-weixin/src/channel.ts`: on cron/cold outbound `sendMessage ret=-2`, retry af",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "openclaw-weixin",
@@ -1322,19 +1335,20 @@
       "source": "memory",
       "snippet": "12:12 openclaw-weixin token fix: Verification: patch lines present; cron list correct. Typecheck could not run because extension package lacks `typescript`/`tsc` in installed node_modules.",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "312dd0eab707"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "openclaw-weixin",
@@ -2202,19 +2216,20 @@
       "source": "memory",
       "snippet": "08:00 每日自检: Gateway: running ✓，无错误日志; Cron: 3 个 error 状态均为历史遗留（mangba 2 个 openclaw-weixin 投递、chief 引擎A 双周周检 2d ago），main session 自身全 ok; 已完成 workspace + workspace-chief 自动快照提交推送",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "1174d07d7efc"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "gateway",
@@ -2235,19 +2250,20 @@
       "source": "memory",
       "snippet": "08:00 每日自检: Gateway running ok（pid 678548），近 50 行日志无 error。; Cron 扫描：`001ac43d 引擎 A 运营感知·双周周检` lastStatus=error（16h 前），下次 11d 后，非紧急。其余 cron 正常。; workspace / workspace-chief 自动快照已提交并推送。",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-01T21:00:03.091Z",
-      "lastRecalledAt": "2026-05-02T21:01:45.829Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
       "queryHashes": [
         "6c24d11cf4d7"
       ],
       "recallDays": [
         "2026-05-02",
         "2026-05-01",
-        "2026-05-03"
+        "2026-05-03",
+        "2026-05-04"
       ],
       "conceptTags": [
         "gateway",
@@ -4711,6 +4727,1048 @@
         "这个",
         "功能",
         "sonar"
+      ]
+    },
+    "memory:memory/2026-05-03.md:3:5": {
+      "key": "memory:memory/2026-05-03.md:3:5",
+      "path": "memory/2026-05-03.md",
+      "startLine": 3,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "08:00 daily self-check: Gateway healthy (pid 1264103, active). Log clean.; Cron errors持续：mangba 的「每日价值投资学习提醒」(20:00) 与「信号雷达周报」(周六22:00)，delivery 到 openclaw-weixin。需 Bruce 侧诊断 mangba agent / 微信通道。; workspace + chief 已 commit+push。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "c2bf0c07fdd1"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "gateway",
+        "self-check",
+        "openclaw-weixin",
+        "self",
+        "check",
+        "healthy",
+        "pid",
+        "active"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK (archived 04-17)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "04-17",
+        "archived"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: [OpenClaw heartbeat poll]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "heartbeat",
+        "poll"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "User: [OpenClaw heartbeat poll]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "heartbeat",
+        "poll"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "User: [OpenClaw heartbeat poll]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "heartbeat",
+        "poll"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-01.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-01.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-01.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "User: [OpenClaw heartbeat poll]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "23c989536796"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openclaw",
+        "heartbeat",
+        "poll"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: 找到了，配置就在 `/root/.openclaw/openclaw.json` 两处： ## 一、工具层（算 web_search 设置） ``` tools.web.search.enabled = true tools.web.search.provider = \"perplexity\" ``` 这决定了 `web_search` 工具**用谁的后端**。你选了 perplexity。 ## 二、插件层（perplexity 的具体参数） ``` plugins.entries.perplexity: enabled: tru",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "openclaw/openclaw.json",
+        "web-search",
+        "tools.web.search.enabled",
+        "tools.web.search.provider",
+        "plugins.entries.perplexity",
+        "找到",
+        "配置",
+        "就在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: 我不清楚我什么时候会用到工具层，有什么时候用到插件层这种东西。？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "我不",
+        "清楚",
+        "什么时候",
+        "用到",
+        "工具",
+        "这种",
+        "东西"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: 用白话说，不用记\"层\"这个词，记**场景**： ## 插件层（`plugins.entries.perplexity`）——**设\"用谁家、用哪个模型、拿哪把 key\"** 你啥时候会动它： - 想从 `sonar-pro` 换成 `sonar-reasoning`（更会推理）或 `sonar-deep-research`（深度调研） - Perplexity API key 换了、快到配额了、想换一把 - 想给 perplexity 调参（温度、返回条数等——如果插件支持） - 想临时把 perplexity 整个关掉（`enab",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "plugins.entries.perplexity",
+        "sonar-pro",
+        "sonar-reasoning",
+        "sonar-deep-research",
+        "话说",
+        "不用",
+        "这个",
+        "场景"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 那一行。工具层几乎是一次性配完就不碰了。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "那一",
+        "工具",
+        "几乎是",
+        "一次",
+        "就不"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "User: 我想问清楚的是。我在用。perplexity， 什么时候用的是web search？什么时候用的是？sonar-pro ？有什么不同？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "sonar-pro",
+        "我想",
+        "清楚",
+        "的是",
+        "我在",
+        "perplexity",
+        "什么时候",
+        "web"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: **它们其实是同一件事，只是叫法不同。** ## 流程图（我每次搜网时发生了什么） ``` 我调用 web_search(\"查 xxx\") ↓ OpenClaw 看到 provider=perplexity ↓ 转给 perplexity 插件 ↓ 插件带着 apiKey 去调 Perplexity API ↓ 模型：sonar-pro ↓ 返回结果 ``` **所以\"用 web_search\"和\"用 sonar-pro\"是同一次调用**——一个是入口名字，一个是背后实际干活的模型。 ## 打个比方 就像\"叫出租车 vs 开了一辆比",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "web-search",
+        "sonar-pro",
+        "它们",
+        "其实是",
+        "一件事",
+        "只是",
+        "不同",
+        "流程"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 但没用 sonar-pro\"或反过来的情况，它俩永远一起出现。 清楚了吗？还是哪里还绕？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "sonar-pro",
+        "没用",
+        "sonar",
+        "pro",
+        "反过来",
+        "情况",
+        "永远",
+        "一起"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "User: 用perplexity， 如何改 改 model（sonar-pro → sonar-reasoning / sonar-deep-research）？？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "sonar-pro",
+        "sonar-reasoning",
+        "sonar-deep-research",
+        "perplexity",
+        "如何",
+        "model",
+        "sonar",
+        "pro"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 改一行 + 重启 Gateway。 ## 要改的位置 `/root/.openclaw/openclaw.json` 里这段： ```json \"perplexity\": { \"enabled\": true, \"config\": { \"webSearch\": { \"apiKey\": \"***\", \"model\": \"sonar-pro\" ← 改这里 } } } ``` ## 可选值（Perplexity 当前产品线） | model | 适合场景 | 速度/成本 | |---|---|---| | `sonar` | 快问快答、日常",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openclaw/openclaw.json",
+        "sonar-pro",
+        "速度/成本",
+        "一行",
+        "位置",
+        "root",
+        "openclaw"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "User: 新流程：朋友准备好手机微信、人就在旁边能立刻点击时，你跟我说一声\"发链接\"，我当场生成 + 起监听 + 自动绑定，他 3 分钟内点掉就稳。 请发链接。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "流程",
+        "朋友",
+        "准备",
+        "手机",
+        "就在",
+        "旁边",
+        "立刻",
+        "一声"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: 链接来了（**3 分钟内让朋友点**）： https://liteapp.weixin.qq.com/q/7GiQu1?qrcode=90ccab8b937e4042b123fbd1f5c34abd&bot_type=3 监听+自动绑定+自动重启已就位，绑完我会主动回复你。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "liteapp.weixin.qq.com/q/7giqu1",
+        "bot-type",
+        "分钟",
+        "朋友",
+        "https",
+        "liteapp.weixin.qq.com",
+        "7giqu1",
+        "qrcode"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "User: 你在排队，就玩一玩这个学习模块。？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "你在",
+        "排队",
+        "这个",
+        "学习"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK (archived 04-18: gateway 自毁事故，铁律已记录)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "gateway",
+        "heartbeat-ok",
+        "04-18",
+        "archived",
+        "事故",
+        "记录"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "User: [Queued user message that arrived while the previous turn was still active] Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK. When reading HEARTBEAT.md,",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "heartbeat.md",
+        "heartbeat-ok",
+        "queued",
+        "message",
+        "arrived",
+        "while",
+        "previous",
+        "turn"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "User: 2026 - 10:48 PM (Asia/Shanghai) / 2026-05-02 14:48 UTC",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "asia/shanghai",
+        "asia",
+        "shanghai",
+        "utc"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-03.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-03.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-03.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: HEARTBEAT_OK (archived 04-19)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "b2bd51325196"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "04-19",
+        "archived"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: 哈，我懒下来要玩啥你得给我个提示 🐎 —— 你说的\"学习模块\"是指： 1. **memory-core / dreaming**（昨夜的 `memory.recall.recorded` 那套，记忆巩固）？ 2. **memory-wiki**（wiki 索引+编译）？ 3. **skills** 库里随便挑一个跑通？ 4. 还是你心里有某个具体工具/文档想让我啃一下？ 你说哪个我就哪个。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "memory-core",
+        "memory.recall.recorded",
+        "memory-wiki",
+        "还是你心里有某个具体工具/文档想让我啃一下",
+        "下来",
+        "提示",
+        "说的",
+        "学习"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "User: An async command completion event was triggered, but user delivery is disabled for this run. Handle the result internally and reply HEARTBEAT_OK only. Do not mention, summarize, or reuse command output. Current time: Saturday, May 2nd, 2026 - 5:32 PM (Asia/Shanghai) / 2026-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "asia/shanghai",
+        "async",
+        "command",
+        "completion",
+        "event",
+        "was",
+        "triggered"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "User: 那个时间已经过时了，请重新生成一下。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "那个",
+        "时间",
+        "已经",
+        "过时",
+        "重新",
+        "生成",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: 新链接 🚀（**3 分钟窗口，催一下朋友**）： https://liteapp.weixin.qq.com/q/7GiQu1?qrcode=f1c4c37104c79313de0d064fe1d0baf5&bot_type=3 监听+自动绑定就位，点完我主动回你。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "liteapp.weixin.qq.com/q/7giqu1",
+        "bot-type",
+        "分钟",
+        "窗口",
+        "一下",
+        "朋友",
+        "https",
+        "liteapp.weixin.qq.com"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "User: 如果有人点击，你，马上要去把它binding 到 mangba-guest的账号上去。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "mangba-guest的账号上去",
+        "如果有",
+        "马上",
+        "binding",
+        "mangba",
+        "guest",
+        "上去"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: 监听跑着呢： - ✅ autobind watcher 活着（pid 1257315） - ✅ login session 活着（pid 1257292，保持二维码/链接有效） - ⏳ 还没检测到新账号文件，说明朋友还没点 **点击后的全自动链路**： 1. 新 im-bot 账号文件出现在 `/root/.openclaw/openclaw-weixin/accounts/`（watcher 每 5 秒扫一次） 2. 读出 `accountId + userId` 3. 备份 `openclaw.json` 4. 追加 bindi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "备份",
+        "保持二维码/链接有效",
+        "im-bot",
+        "openclaw.json",
+        "监听",
+        "autobind",
+        "watcher",
+        "活着"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "User: An async command completion event was triggered, but user delivery is disabled for this run. Handle the result internally and reply HEARTBEAT_OK only. Do not mention, summarize, or reuse command output. Current time: Saturday, May 2nd, 2026 - 6:01 PM (Asia/Shanghai) / 2026-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "asia/shanghai",
+        "async",
+        "command",
+        "completion",
+        "event",
+        "was",
+        "triggered"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:47:47": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:47:47",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "Assistant: 找到根因了。 ## 根因：所有 mangba cron 的 `accountId` 是**已失效**的 im-bot **04-30 以前（正常）**：Bruce 的微信走 `5814497b5df4-im-bot` **05-01 22:21**：那次\"三通道全断 + 重装\"之后，Bruce 的个人微信重新扫码，拿到了**新的 im-bot id**：`f602b628790d-im-bot` 但 cron 和 binding 还在指向老的 `5814497b5df4-im-bot`： | 名字 | delivery.accoun",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "im-bot",
+        "04-30",
+        "5814497b5df4-im-bot",
+        "05-01",
+        "f602b628790d-im-bot",
+        "delivery.accoun",
+        "找到",
+        "根因"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:48:48": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:48:48",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 48,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "Assistant: 这条也得更新，不然 Bruce 下次从微信主动找 mangba 也会走不进来（可能落到默认路由）。 ## 修复方案（一次性干掉） 1. 改 4 个 mangba cron 的 `delivery.accountId` → `f602b628790d-im-bot` 2. 改 mangba binding 的 `accountId` → `f602b628790d-im-bot` 3. 备份 `openclaw.json` 和 `cron/jobs.json` 4. 手动触发\"每日价值投资学习提醒\"验证能送到你微信 5. 落 `INC",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "备份",
+        "delivery.accountid",
+        "f602b628790d-im-bot",
+        "openclaw.json",
+        "cron/jobs.json",
+        "更新",
+        "不然",
+        "bruce"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:49:49": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:49:49",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 49,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "User: 系统问题。两个 mangba cron 都触发了但执行失败： - **每日价值投资学习提醒**（20:00）— 3h ago，状态 `error` - **信号雷达周报**（周六 22:00）— 1h ago，状态 `error` cron 有跑，不是没调度，是执行报错。具体原因得看日志。 ？？？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "系统",
+        "问题",
+        "mangba",
+        "cron",
+        "触发",
+        "执行",
+        "失败",
+        "每日"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:50:50": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:50:50",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 50,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "Assistant: 改完了（未重启）： ✅ **binding**：`mangba` 从 `5814497b5df4-im-bot` → `f602b628790d-im-bot` ✅ **4 个 mangba cron** 的 delivery.accountId 一并更新 💾 两份备份都在 `/root/.openclaw/*.bak.mangba-20260502-231555` --- ## 下一步需要 `openclaw gateway restart` 才能让 binding 生效（规则 8） - **影响**：全通道瞬断 2-5 秒（企",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "gateway",
+        "备份",
+        "5814497b5df4-im-bot",
+        "f602b628790d-im-bot",
+        "delivery.accountid",
+        "bak.mangba-20260502-231555",
+        "2-5",
+        "完了"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-02.txt:51:51": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-02.txt:51:51",
+      "path": "memory/.dreams/session-corpus/2026-05-02.txt",
+      "startLine": 51,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "User: 完了。我知道了。 我自己的微信都因为刷了新链接，连接到chief了。 请帮我转到mangba。 bruce的个人微信， bingding",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-03T21:00:00.753Z",
+      "lastRecalledAt": "2026-05-03T21:00:00.753Z",
+      "queryHashes": [
+        "815cc1934125"
+      ],
+      "recallDays": [
+        "2026-05-04",
+        "2026-05-03"
+      ],
+      "conceptTags": [
+        "完了",
+        "我知道",
+        "自己",
+        "因为",
+        "连接",
+        "chief",
+        "mangba",
+        "bruce"
       ]
     }
   }
