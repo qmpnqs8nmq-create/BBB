@@ -189,3 +189,42 @@
 4. 系统重量是成本——能不加就不加
 
 **适用范围：** 所有 agent（main、chief 及所有 specialist）。无论从哪个入口发起安装，均需过此门控。
+
+---
+
+# 八、系统级变更 DRI 与跨 agent 同步规则（2026-05-04）
+
+## 8.1 DRI
+
+OpenClaw 平台级/系统级变更统一由 **main** 负责最终核验与执行，包括：
+- OpenClaw / Gateway 升级、降级、回滚
+- 全局 cron 增删改、批量清理、从备份恢复
+- workspace 大范围恢复、归档、结构性回滚
+- 多 agent 路由、bindings、渠道账号迁移
+- symlink / shared policy / global config 变更
+
+chief / CEO array 可以提出业务需求、风险判断、回滚建议，但不得绕过 main 独立执行平台级回滚或全局资源清理。
+
+## 8.2 强制同步
+
+任何系统级变更必须同步写入：
+1. main `memory/SYSTEM_CHANGE_LEDGER.md`
+2. main 当日日志 `memory/YYYY-MM-DD.md`
+3. 受影响 workspace 的 `memory/OPS_INBOX.md` 或当日日志
+4. 如影响长期行为，再更新相关 `MEMORY.md`
+
+跨 workspace 操作必须在目标 workspace 留痕；不能只记在操作者自己的 daily log。
+
+## 8.3 Pre-change Gate
+
+执行系统级回滚/清理前必须先检查：
+- `memory/SYSTEM_CHANGE_LEDGER.md`
+- 相关 workspace `MEMORY.md` / `HANDOFF.md` / `OPS_INBOX.md`
+- 最新 cron backup 与 current cron diff
+- 影响面是否包含非当前 agent 资源
+
+若发现已有同类回滚记录，必须先 reconcile，不得重复执行。
+
+## 8.4 事故来源
+
+本规则源于 2026-04-29 chief rollback 后的 cron boundary incident：chief cleanup 删除了 6 个 cron，其中 1 个为非 CEO 的 mangba cron，后由 main 从备份恢复。2026-05-04 Bruce 发现 CEO 系统再次重复类似回滚，main/chief 定稿该 DRI 规则。

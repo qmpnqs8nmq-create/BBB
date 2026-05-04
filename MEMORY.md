@@ -20,6 +20,7 @@
 - 微信/本地浏览器 → chief
 - 已废弃：team gateway (:8899)、8888 HTTPS 代理、ai.openclaw.team / ai.openclaw.lan8888-proxy（2026-03-23 全删）
 - CEO 阵列：chief 是默认业务入口，main 是系统主脑/平台维护
+- **权限边界**：main = 平台最高权限 + 全局 OpenClaw 可见性（cron / workspace / 其他 agent 资源）。chief 无权知晓 main 内部台账、全局审计过程、其他 agent workspace 状态。对 chief / 任何 CEO 阵列成员回复时：只曝露 “结论 + 对对方的要求”，不曝露审计过程 / 其他 agent 状态 / 平台内部机制。
 - CEO 5-Agent 同步：symlink 方案（setup-symlinks.sh），chief workspace 为 single source of truth
 - symlink-integrity-check cron 每天 03:00（main 负责）
 - Workspace 私有仓库：`https://github.com/qmpnqs8nmq-create/BBB.git`
