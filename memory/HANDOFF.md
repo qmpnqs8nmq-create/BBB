@@ -1,7 +1,6 @@
-- Last active: 2026-05-04 15:09 Asia/Shanghai
-- Topic: main-chief ADR-012 sync fully closed.
-- Completed: audited main internal global state + chief scope; chief-facing details redacted to permission boundary.
-- Fixed by chief: `a69e8c3` pointer drift in `NORTH_STAR.md` + `CEO_SYSTEM_NAVIGATION.md`; then `memory/kill-criteria.md` v2.1 ADR-012口径修正。
-- Mainline confirmed: Route 1/2/3 + 5-agent; Dual-Engine/Radar Operating superseded/archived.
-- No remaining chief-scope unresolved items. Main internal audits remain main-only.
-- Today note: memory/2026-05-04.md
+- Last active: 2026-05-05 03:00 Asia/Shanghai
+- Topic: Daily symlink / CTX sync / sandbox security audit cron.
+- Result: Part A clean; Part B clean; C1 git remotes clean; C3 sandbox image fresh after rerun with docker inspect.
+- C2 specified check clean: benben=none, kefu=none.
+- Note: extended check found mangba/mangba-guest sandbox.mode=off and docker.network unset; no change made because config/security-boundary changes require Bruce.
+- Today note: memory/2026-05-05.md
