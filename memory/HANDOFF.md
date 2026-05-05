@@ -1,6 +1,8 @@
-- Last active: 2026-05-05 03:00 Asia/Shanghai
-- Topic: Daily symlink / CTX sync / sandbox security audit cron.
-- Result: Part A clean; Part B clean; C1 git remotes clean; C3 sandbox image fresh after rerun with docker inspect.
-- C2 specified check clean: benben=none, kefu=none.
-- Note: extended check found mangba/mangba-guest sandbox.mode=off and docker.network unset; no change made because config/security-boundary changes require Bruce.
+- Last active: 2026-05-05 08:04 Asia/Shanghai
+- Topic: Daily self-check 8am.
+- Gateway: healthy (pid 1286268, probe OK/admin-capable).
+- Issues: zenmux-key1 quota 402 fallback occurred; OpenClaw update 2026.5.3-1 available.
+- Cron flags: 信号雷达周报 weixin not configured; CEO Weekly Briefing timeout; healthcheck:update-status timeout.
+- Safe repair done: CEO Weekly Briefing timeout 180→300s; update-status timeout 120→180s.
+- Auto-commit: workspace 0e890e6, chief bae6eb6; both clean after push attempt.
 - Today note: memory/2026-05-05.md
