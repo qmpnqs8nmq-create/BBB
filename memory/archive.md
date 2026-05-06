@@ -42,3 +42,4 @@
 - 04-18: **木巴 schema 400 事故 + 自毁型故障**——zenmux schema 升级后 opus-4.7 的 thinking.type=enabled 被 400（官方 2026.4.15 supportsAdaptiveThinking 漏管 4.7）；两次在 main session 里直接 gateway restart/stop，**第二次 stop 把自己一同 kill**；最终 Bruce 叫停，补丁全回滚到原版 dist，靠内置 fallback 跑（每次 400 后 retry with thinking=off）。**铁律**：(1) 永远不在 main session 直接动 gateway 生命周期；(2) 必须重启→用 cron 延时一次性任务；(3) 不用补丁+reload 修 upstream bug，开 issue 等官方；(4) 容忍能用但不最优状态
 - 04-19: Daily self-check——Gateway/cron/logs/git 全正常，仅昨日 QR 登录超时需重登（非系统故障）
 - 04-20: 修复 mangba 微信 cron delivery——早上误判 Unsupported channel 为瞬时，真实根因是 4 个 mangba cron 绑定旧 weixin accountId `08a8c78d3ebe-im-bot`；切到当前账号 `5814497b5df4-im-bot` 后 force-run delivered=true，Bruce 微信确认收到。教训：lastError 含 weixin not configured/Unsupported channel 时必须核对 delivery.accountId 是否仍有效，单点错邻居正常也可能是账号失效
+- 04-21: Daily self-check——Gateway/logs/git 正常；芒巴晚报 lastStatus=error（weixin 通道未配置，内容已生成但投递失败），非紧急，需 Bruce 手动 `openclaw channels login --channel openclaw-weixin`

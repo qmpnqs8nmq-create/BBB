@@ -25,3 +25,9 @@
 [main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L47] Assistant: enabled=true，状态干净 - chief `setup-symlinks.sh` 为 SSOT ### ✅ 7. 跨 agent 协调通道 - chief→main A2A 直连：已开（本次 subagent spawn 成功） - 文件桥：`INBOX-from-chief-2026-05-04.md`（已含 Main direct reply 段） + chief `memory/OPS_INBOX.md`（已含 main 14:50 回执） - 双向通道冗余：A2A 主 + 文件桥兜底 ### 🧹 可选清理（1 项
 [main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L47] Assistant: Pre-change Gate **无须任何修复动作。** 下一次 daily self-check (明早 8:00) 会顺手扫一遍延续一致性。
 [main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L49] User: 当然是不能跨过权限。Main有最高级的权限和整个openclaw系统的权限，chief不需要知道也没有这个权利的。只解决chief的问题
+[main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L51] Assistant: 明白。权限边界：main = 平台层 SSOT，chief = 业务层，chief 无需也无权看 main 的全局审计细节。 我之前给 chief 的回复和 OPS_INBOX 回执透露了超界信息（全局 cron diff、CTX §8 多 workspace MD5、SYSTEM_CHANGE_LEDGER 路径、symlink 机制等）。收回并精简。
+[main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L65] User: 当然是不能跨过权限。Main有最高级的权限和整个openclaw系统的权限，chief不需要知道也没有这个权利的。只解决chief的问题
+[main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L72] User: 你们双方再次确认，所有的事情已经同步或者是已经处理完解决好了。
+[main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L74] Assistant: 收到。我按权限边界做最终双边确认：chief 只收到 chief 范围结论；main 内部确认全局问题已封闭。
+[main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L81] Assistant: 我发现最后一处 chief 范围内的尾巴：`kill-criteria.md` 仍用“双引擎/雷达”旧口径。这个属于 chief 自己的问题，不涉及 main 权限细节。我直接收口。
+[main/sessions/c603c312-a519-425f-962c-29b679b55f09.jsonl#L126] Assistant: 确认完毕，已经收口。 **main 侧** - 全局治理、权限边界、系统级变更 DRI 已落档。 - main 内部审计完成，无未解决项。 - 已提交：`5757745 fix: close main-chief ADR-012 governance sync` **chief 侧** - ADR-012 后的指针漂移已修正。 - `kill-criteria.md` 已改成 ADR-012 口径。 - dual-engine playbook v1/v2 已标记 archived，不再是当前有效版本。 - chief HANDOF
