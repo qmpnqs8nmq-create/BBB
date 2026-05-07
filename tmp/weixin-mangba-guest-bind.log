@@ -1,0 +1,13 @@
+[2026-05-06T04:35:38.487Z] LINK https://liteapp.weixin.qq.com/q/7GiQu1?qrcode=c84e60ef78f77b79db2b1fd322a3da9a&bot_type=3
+[2026-05-06T04:35:38.488Z] Waiting for scan/confirm; target agent=mangba-guest
+[2026-05-06T04:36:08.746Z] STATUS wait
+[2026-05-06T04:36:40.001Z] STATUS wait
+[2026-05-06T04:37:11.111Z] STATUS wait
+[2026-05-06T04:37:38.222Z] STATUS wait
+[2026-05-06T04:37:39.330Z] STATUS expired
+[2026-05-06T04:37:39.330Z] QR expired before confirm.
+[2026-05-06T04:40:51.747Z] LINK https://liteapp.weixin.qq.com/q/7GiQu1?qrcode=02abb148c09886ad63409046035a0328&bot_type=3
+[2026-05-06T04:40:51.748Z] Waiting for scan/confirm; target agent=mangba-guest
+[2026-05-06T04:41:22.007Z] STATUS wait
+[2026-05-06T04:41:26.793Z] STATUS confirmed
+[2026-05-06T04:41:26.797Z] BOUND accountId=a89efed44537-im-bot peer=o9cq80wM7ygwc_CUhNLgfW_1SDsQ@im.wechat agent=mangba-guest
