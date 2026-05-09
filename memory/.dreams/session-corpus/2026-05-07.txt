@@ -1,1 +1,7 @@
 [main/sessions/ec5ca382-edb4-43bc-8b3b-165693d573fd.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/a5f76d45-cceb-4545-8e68-512f4df2accb.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/a5f76d45-cceb-4545-8e68-512f4df2accb.jsonl#L26] Assistant: Bruce，8:00 自检发现几项非紧急问题，已做安全处理： - Gateway 正常运行，连通性 OK；最近 50 行网关日志无 ERROR。 - Cron 仍有 3 个 error 状态： - `信号雷达周报`：旧的 openclaw-weixin 未配置错误；我已复查，现在 openclaw-weixin 已 configured/enabled，等下次运行验证。 - `CEO Weekly Briefing`：上次超时；已把 timeoutSeconds 提到 360s。 - `healthcheck:update-stat
+[main/sessions/bd31c4b3-a1dd-4ccc-8a5f-2fddba25da8d.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/bd31c4b3-a1dd-4ccc-8a5f-2fddba25da8d.jsonl#L17] Assistant: 2026-05-07 日报已生成。 今天 chief 当日日志缺失，因此没有可确认的新增业务/经营/决策记录；chief 快照仍停留在 5/4，状态为 ADR-012 rollback sync 已关闭，chief 无行动项。 main 侧完成了系统安全与稳定性巡检：symlink、CTX 规则副本、git remote、sandbox 镜像均检查正常；Gateway 健康，日志无错误。cron 扫描发现 3 个 stale/error 项，并已对 CEO Weekly Briefing、update-status 做 timeou
+[main/sessions/d58694b3-0728-482e-8342-885228c32fef.jsonl#L2441] Assistant: [assistant turn failed before producing content]
+[main/sessions/d58694b3-0728-482e-8342-885228c32fef.jsonl#L2442] Assistant: [assistant turn failed before producing content]
