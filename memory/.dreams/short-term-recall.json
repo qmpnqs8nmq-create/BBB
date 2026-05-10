@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-08T21:00:04.041Z",
+  "updatedAt": "2026-05-09T21:01:06.057Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -3325,12 +3325,12 @@
       "source": "memory",
       "snippet": "12:15 mangba-guest 朋友接入流程定型: 朋友用个人微信接入 benben 旗下 `mangba-guest` agent。; 试错：`openclaw channels login --channel openclaw-weixin` 会给出 `liteapp.weixin.qq.com/q/` 链接，但**几分钟就失效**，不能提前囤。; 正确协作模式：Bruce 说\"发链接\" → 现场起 login PTY + autobind 监听脚本（diff accounts/*.json 新增）+ 通知 cron → 检测到新账号自动写 b",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T21:01:45.829Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "f110005857c9"
       ],
@@ -3341,7 +3341,8 @@
         "2026-05-05",
         "2026-05-07",
         "2026-05-08",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "mangba-guest",
@@ -3362,12 +3363,12 @@
       "source": "memory",
       "snippet": "12:15 mangba-guest 朋友接入流程定型: 已写入 MEMORY.md Misc。",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-02T21:01:45.829Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "f110005857c9"
       ],
@@ -3378,7 +3379,8 @@
         "2026-05-05",
         "2026-05-07",
         "2026-05-08",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "mangba-guest",
@@ -4820,12 +4822,12 @@
       "source": "memory",
       "snippet": "08:00 daily self-check: Gateway healthy (pid 1264103, active). Log clean.; Cron errors持续：mangba 的「每日价值投资学习提醒」(20:00) 与「信号雷达周报」(周六22:00)，delivery 到 openclaw-weixin。需 Bruce 侧诊断 mangba agent / 微信通道。; workspace + chief 已 commit+push。",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-03T21:00:00.753Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "c2bf0c07fdd1"
       ],
@@ -4835,7 +4837,8 @@
         "2026-05-07",
         "2026-05-06",
         "2026-05-08",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -5866,12 +5869,12 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part A: CEO 5-agent root symlinks checked; no broken symlink, no repair run.; Part B: CTX-CONTROL-RULES.md compared against benben/kefu/mangba/mangba-guest; all identical, no copy needed.; Part C1: git remote scan clean; no rogue remote ALERT.",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "b3222f2b9fdf"
       ],
@@ -5880,7 +5883,8 @@
         "2026-05-04",
         "2026-05-06",
         "2026-05-09",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-10"
       ],
       "conceptTags": [
         "5-agent",
@@ -5901,12 +5905,12 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part C3: original docker `{{.ImageID}}` format unsupported on this Docker output; reran via `docker inspect`. Running sandbox container `openclaw-sbx-agent-benben-4c00550b` matches latest `openclaw-sandbox:bookworm-slim` image ID `8ef0febba319",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "b3222f2b9fdf"
       ],
@@ -5915,7 +5919,8 @@
         "2026-05-04",
         "2026-05-06",
         "2026-05-09",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-10"
       ],
       "conceptTags": [
         "openclaw-sandbox",
@@ -5936,12 +5941,12 @@
       "source": "memory",
       "snippet": "08:00 daily self-check: Gateway: running (pid 1264103, active, probe ok); Logs: 1 cron delivery error 03:00 (symlink-integrity-check WSClient not connected, bestEffort) — transient; Crons: 1 error → 信号雷达周报 (mangba, weixin channel not configured), consecutiveErrors=1, 下次 6d 后。其他 m",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "ad6c7e6ef235"
       ],
@@ -5950,7 +5955,8 @@
         "2026-05-04",
         "2026-05-08",
         "2026-05-07",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -5971,12 +5977,12 @@
       "source": "memory",
       "snippet": "11:25 OpenClaw upgrade + baseline audit: Upgraded OpenClaw from 2026.4.24 (cbcfdf6) to 2026.5.2 (8b2a6e5); update status now reports stable/up to date.; Baseline audit: Ubuntu 24.04.4, Gateway service enabled/running, dashboard/gateway bound to 0.0.0.0:18789, nginx 80/443, SSH 22",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "ad6c7e6ef235"
       ],
@@ -5985,7 +5991,8 @@
         "2026-05-04",
         "2026-05-08",
         "2026-05-07",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -6006,12 +6013,12 @@
       "source": "memory",
       "snippet": "11:25 OpenClaw upgrade + baseline audit: OS updates pending: 44 packages incl. intel-microcode security; unattended-upgrades enabled/active. No remediation performed yet.",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "ad6c7e6ef235"
       ],
@@ -6020,7 +6027,8 @@
         "2026-05-04",
         "2026-05-08",
         "2026-05-07",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "intel-microcode",
@@ -6041,12 +6049,12 @@
       "source": "memory",
       "snippet": "13:02 Post-upgrade runtime log check: Rechecked gateway: 2026.5.2, systemd service enabled/running, pid 1285380, connectivity probe OK/admin-capable after transient timeout during busy audit.; System journal since 11:20: no failed units; one sshd connection-reset line only, not a",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "ad6c7e6ef235"
       ],
@@ -6055,7 +6063,8 @@
         "2026-05-04",
         "2026-05-08",
         "2026-05-07",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -6076,12 +6085,12 @@
       "source": "memory",
       "snippet": "13:02 Post-upgrade runtime log check: Conclusion: no clear upgrade-caused major incident; remaining audit findings appear pre-existing/config hardening items.",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "ad6c7e6ef235"
       ],
@@ -6090,7 +6099,8 @@
         "2026-05-04",
         "2026-05-08",
         "2026-05-07",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "post-upgrade",
@@ -6111,12 +6121,12 @@
       "source": "memory",
       "snippet": "13:14 Gateway service PATH cleanup: Bruce approved fixing service PATH warning only; avoided broad `openclaw doctor --fix` to prevent touching legacy/plugin issues.; Backed up unit to `/root/.config/systemd/user/openclaw-gateway.service.bak-20260504-1310`.; Updated service Descri",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-04T21:00:00.597Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "ad6c7e6ef235"
       ],
@@ -6125,7 +6135,8 @@
         "2026-05-04",
         "2026-05-08",
         "2026-05-07",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -7470,19 +7481,21 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part A: CEO 5-agent root symlinks checked; no broken symlink, no repair run.; Part B: CTX-CONTROL-RULES.md compared against benben/kefu/mangba/mangba-guest; all identical, no copy needed.; Part C1: git remote scan clean; no rogue remote ALERT.",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-05T21:00:00.720Z",
-      "lastRecalledAt": "2026-05-06T21:00:00.860Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "0429bc3c0eff"
       ],
       "recallDays": [
         "2026-05-06",
         "2026-05-05",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "5-agent",
@@ -7503,19 +7516,21 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part C3: running sandbox container `openclaw-sbx-agent-benben-4c00550b` matches latest `openclaw-sandbox:bookworm-slim` image ID `8ef0febba319`.",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-05T21:00:00.720Z",
-      "lastRecalledAt": "2026-05-06T21:00:00.860Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "0429bc3c0eff"
       ],
       "recallDays": [
         "2026-05-06",
         "2026-05-05",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "openclaw-sandbox",
@@ -7536,12 +7551,12 @@
       "source": "memory",
       "snippet": "08:04 daily self-check: Gateway healthy: systemd enabled/running, pid 1286268, connectivity probe OK/admin-capable.; Recent logs notable: this run first hit zenmux-key1 quota 402 then successfully fell back to openai-codex/gpt-5.5; no gateway crash.; Cron failures flagged: `信号雷达周",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-05T21:00:00.720Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "b3222f2b9fdf"
       ],
@@ -7549,7 +7564,8 @@
         "2026-05-06",
         "2026-05-05",
         "2026-05-09",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gateway",
@@ -7570,12 +7586,12 @@
       "source": "memory",
       "snippet": "08:04 daily self-check: Auto-commit: workspace `0e890e6`, chief `bae6eb6`; both status clean after push attempt.",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-05T21:00:00.720Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "b3222f2b9fdf"
       ],
@@ -7583,7 +7599,8 @@
         "2026-05-06",
         "2026-05-05",
         "2026-05-09",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-10"
       ],
       "conceptTags": [
         "self-check",
@@ -7604,12 +7621,12 @@
       "source": "memory",
       "snippet": "17:51 OpenAI Codex OAuth / imageModel 问答: Bruce 问 OpenClaw 中 `openai-codex/gpt-5.5` 的 OAuth 配法。; 结论：`openai-codex/*` 是 PI 默认 runner 走 Codex OAuth/subscription 的 provider 路由；先 `openclaw models auth login --provider openai-codex`，config 中声明 `auth.profiles`/`auth.order`，不要手填 token。",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-05T21:00:00.720Z",
-      "lastRecalledAt": "2026-05-08T21:00:01.561Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "b3222f2b9fdf"
       ],
@@ -7617,7 +7634,8 @@
         "2026-05-06",
         "2026-05-05",
         "2026-05-09",
-        "2026-05-08"
+        "2026-05-08",
+        "2026-05-10"
       ],
       "conceptTags": [
         "gpt",
@@ -8376,18 +8394,20 @@
       "source": "memory",
       "snippet": "08:00 daily self-check: Gateway running/healthy; recent gateway logs query returned no entries.; Cron scan flagged jobs with errors: `信号雷达周报` (openclaw-weixin not configured), `CEO Weekly Briefing` (timeout), `healthcheck:update-status` (timeout). Quick `openclaw update status` p",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-06T21:00:00.860Z",
-      "lastRecalledAt": "2026-05-06T21:00:00.860Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "0429bc3c0eff"
       ],
       "recallDays": [
         "2026-05-07",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "gateway",
@@ -8408,18 +8428,20 @@
       "source": "memory",
       "snippet": "12:40 mangba-guest 个人微信扫码绑定: Bruce 要给朋友生成 openclaw-weixin 链接并确保只绑定 `mangba-guest`。; 首个链接未扫码确认、过期；已启动脚本 `tmp/weixin-mangba-guest-bind.mjs` 重新生成并监听，confirmed 后写精确 binding `{channel: openclaw-weixin, accountId, peer.id} -> mangba-guest` + allowFrom + restart Gateway。",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-06T21:00:00.860Z",
-      "lastRecalledAt": "2026-05-06T21:00:00.860Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "0429bc3c0eff"
       ],
       "recallDays": [
         "2026-05-07",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "gateway",
@@ -8440,18 +8462,20 @@
       "source": "memory",
       "snippet": "12:43 刘董事长微信身份记录: Bruce 指定：刚绑定到 `mangba-guest` 的个人微信用户（peer `o9cq80wM7ygwc_CUhNLgfW_1SDsQ@im.wechat`，account `a89efed44537-im-bot`）以后称呼为「刘董事长」。",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-06T21:00:00.860Z",
-      "lastRecalledAt": "2026-05-06T21:00:00.860Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
       "queryHashes": [
         "0429bc3c0eff"
       ],
       "recallDays": [
         "2026-05-07",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-10",
+        "2026-05-09"
       ],
       "conceptTags": [
         "mangba-guest",
@@ -11034,6 +11058,198 @@
         "failed",
         "producing",
         "content"
+      ]
+    },
+    "memory:memory/2026-05-09.md:5:8": {
+      "key": "memory:memory/2026-05-09.md:5:8",
+      "path": "memory/2026-05-09.md",
+      "startLine": 5,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: Gateway running healthy（pid 1341263，probe ok）。; 最近日志无 error/fatal/panic。; workspace + chief 各完成一次 auto snapshot 并 push 成功。; ⚠️ Cron 列表里有 3 条历史 status=error（非今日触发）：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T21:01:04.843Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "gateway",
+        "daily-self-check",
+        "error/fatal/panic",
+        "self",
+        "check",
+        "running",
+        "healthy",
+        "pid"
+      ]
+    },
+    "memory:memory/2026-05-09.md:9:12": {
+      "key": "memory:memory/2026-05-09.md:9:12",
+      "path": "memory/2026-05-09.md",
+      "startLine": 9,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: `CEO Weekly Briefing`（chief，5d ago）; `healthcheck:update-st...`（main，5d ago）; `芒巴晚报`（mangba，10h ago）; 都不是今天 8:00 这个 cron 的失败，先记录，等 Bruce 到岗时再决定是否排障。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-09T21:01:04.843Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
+      "queryHashes": [
+        "f9349cbeaf46"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "daily-self-check",
+        "update-st",
+        "self",
+        "check",
+        "ceo",
+        "weekly",
+        "briefing",
+        "chief"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-09.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-09.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-09.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-05-09 ## 🏢 业务进展（chief） 今日 chief 侧**无新增日志**，没有新决策或经营动作落盘。最新状态停在 2026-05-04：ADR-012 rollback sync 关闭，Mainline 收敛到「Route 1/2/3 + 5-agent」，Dual-Engine / Radar Operating 已归档；`NORTH_STAR.md`、`CEO_SYSTEM_NAVIGATION.md`、`kill-criteria.md` 已统一为 ADR-012 兼容口径。chief 侧无待",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T21:01:04.843Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
+      "queryHashes": [
+        "962844034959"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine",
+        "north-star.md",
+        "ceo-system-navigation.md",
+        "kill-criteria.md",
+        "日报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-09.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-09.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-09.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 收敛后预期，但值得留意：要么开启新一轮决策周期，要么主动盘点是否有未记录的业务动作。main 侧建议把已知 error cron 要么消化、要么挪出每日告警面，避免噪音麻木。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T21:01:04.843Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
+      "queryHashes": [
+        "962844034959"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "预期",
+        "值得",
+        "留意",
+        "要么",
+        "开启",
+        "一轮",
+        "决策",
+        "周期"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-09.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-09.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-09.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 一切正常，无需打扰。已记录 3 条历史 cron 错误待后续处理（CEO Weekly Briefing / healthcheck:update / 芒巴晚报，均非今日触发，5–10 小时前的旧失败）。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T21:01:04.843Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
+      "queryHashes": [
+        "962844034959"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "一切",
+        "正常",
+        "打扰",
+        "记录",
+        "历史",
+        "cron",
+        "错误",
+        "处理"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-10.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-10.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-10.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: All checks passed. Nothing to report — staying quiet per notification rules. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-09T21:01:04.843Z",
+      "lastRecalledAt": "2026-05-09T21:01:04.843Z",
+      "queryHashes": [
+        "0bd2888cfb05"
+      ],
+      "recallDays": [
+        "2026-05-10",
+        "2026-05-09"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "all",
+        "checks",
+        "passed",
+        "nothing",
+        "report",
+        "staying",
+        "quiet"
       ]
     }
   }

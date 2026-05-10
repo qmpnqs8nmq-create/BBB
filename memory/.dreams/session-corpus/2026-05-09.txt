@@ -1,1 +1,4 @@
 [main/sessions/main/e8596c72-2820-4a9f-966a-1ea5ebfe85de.jsonl#L10] Assistant: All clean — symlinks intact, CTX rules already in sync, no rogue git remotes, benben/kefu egress = `none`, all running sandboxes on latest image (`8ef0febba319`). No notification needed. HEARTBEAT_OK
+[main/sessions/main/7ebed4ed-7e0b-401a-9a47-6b958621eeda.jsonl#L10] Assistant: # 日报 2026-05-09 ## 🏢 业务进展（chief） 今日 chief 侧**无新增日志**，没有新决策或经营动作落盘。最新状态停在 2026-05-04：ADR-012 rollback sync 关闭，Mainline 收敛到「Route 1/2/3 + 5-agent」，Dual-Engine / Radar Operating 已归档；`NORTH_STAR.md`、`CEO_SYSTEM_NAVIGATION.md`、`kill-criteria.md` 已统一为 ADR-012 兼容口径。chief
+[main/sessions/main/7ebed4ed-7e0b-401a-9a47-6b958621eeda.jsonl#L10] Assistant: 收敛后预期，但值得留意：要么开启新一轮决策周期，要么主动盘点是否有未记录的业务动作。main 侧建议把已知 error cron 要么消化、要么挪出每日告警面，避免噪音麻木。
+[main/sessions/main/b261e401-9dc0-4742-86b1-2b6286c4917c.jsonl#L18] Assistant: 一切正常，无需打扰。已记录 3 条历史 cron 错误待后续处理（CEO Weekly Briefing / healthcheck:update / 芒巴晚报，均非今日触发，5–10 小时前的旧失败）。
