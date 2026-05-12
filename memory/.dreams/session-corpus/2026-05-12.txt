@@ -1,0 +1,1 @@
+[main/sessions/main/a8af9b27-a595-4621-b1af-a603614ba78e.jsonl#L10] Assistant: All checks clean — symlinks intact, CTX rules already in sync, no rogue remotes, sandbox network=none, all sbx containers on latest image. No notification needed.
