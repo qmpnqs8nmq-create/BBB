@@ -71,6 +71,13 @@
       "lineCount": 50,
       "lastContentLine": 50
     },
+    "main:sessions/main/396e8bac-5eb6-4e88-ad4e-f9f889f5e84e.jsonl": {
+      "mtimeMs": 1778598050798,
+      "size": 14067,
+      "contentHash": "16dceae5518ad0fda57c0c139f4a08e63e3532dc91e844e3c0a8c4013c024d54",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
     "main:sessions/main/3f91072b-07eb-468c-9526-50b89f898969.jsonl": {
       "mtimeMs": 1778439622298,
       "size": 11293,
@@ -105,6 +112,13 @@
       "contentHash": "1fae493d7124c5466f0bcb63d2bed910d56cef1f2cd975180d9f499cdf1c3aa1",
       "lineCount": 5,
       "lastContentLine": 5
+    },
+    "main:sessions/main/6d3d78a4-8162-4189-8cfe-68e8ae48469d.jsonl": {
+      "mtimeMs": 1778544051553,
+      "size": 30700,
+      "contentHash": "ead66b701eed7240b74f5e283cbceedb7e2d3f4da916278407821028533d66c5",
+      "lineCount": 1,
+      "lastContentLine": 1
     },
     "main:sessions/main/757447c4-bd38-4cc9-9c4b-ca0875cf5297.jsonl": {
       "mtimeMs": 1778180455014,
@@ -182,6 +196,13 @@
       "contentHash": "7c597bf66f596930c14e46078394f140cbf0990e715b43f01257a6b6d96f1518",
       "lineCount": 2,
       "lastContentLine": 2
+    },
+    "main:sessions/main/a1bd6af0-9736-4657-b9af-2e60c67c6b72.jsonl": {
+      "mtimeMs": 1778612457062,
+      "size": 10756,
+      "contentHash": "3ef2d57864551cbbd8d1b6034d37e7ee2c59058531b06401cc2c2f785651d94f",
+      "lineCount": 1,
+      "lastContentLine": 1
     },
     "main:sessions/main/a36ecc30-3b87-4f24-ae0a-ddb354e0d52c.jsonl.reset.2026-05-02T02-33-40.363Z": {
       "mtimeMs": 1777689147023,
@@ -670,6 +691,16 @@
     ],
     "main:c1f714e0-9461-49cb-be7f-6a7eb9765654": [
       "c2cd238a4e5d5d73a3de6c344bd6a7602781bc02"
+    ],
+    "main:396e8bac-5eb6-4e88-ad4e-f9f889f5e84e": [
+      "9fcb51b48ad3a1e47d7b15d91ffab25222b5da22",
+      "a06ec3b132c45f9753b4e32182afabdeee84ce0f"
+    ],
+    "main:6d3d78a4-8162-4189-8cfe-68e8ae48469d": [
+      "fb86124488096bf882f4564fcc89da806aba3633"
+    ],
+    "main:a1bd6af0-9736-4657-b9af-2e60c67c6b72": [
+      "11399b70077fe8018f905df389015ab4f4924cdd"
     ]
   }
 }
