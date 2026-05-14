@@ -176,6 +176,13 @@
       "lineCount": 1,
       "lastContentLine": 1
     },
+    "main:sessions/main/966c61cb-1a30-46b0-a087-845a79ebfa00.jsonl": {
+      "mtimeMs": 1778630456233,
+      "size": 46237,
+      "contentHash": "b7967ec4d82e2ca5df1b2ed305a94b6423b3f9dd22d69546c60b54a62f7d31cc",
+      "lineCount": 1,
+      "lastContentLine": 1
+    },
     "main:sessions/main/9733efc9-5161-4e48-a078-e95572e894f2.jsonl": {
       "mtimeMs": 1778079628432,
       "size": 22143,
@@ -187,6 +194,13 @@
       "mtimeMs": 1778511629781,
       "size": 13338,
       "contentHash": "fc1c83e706e49861e3110ccbdfaca707d822b0ac45d18ea559e212413bd1cdcf",
+      "lineCount": 2,
+      "lastContentLine": 2
+    },
+    "main:sessions/main/9c269cfb-8074-4ac5-86dd-3a17ab7b99ce.jsonl": {
+      "mtimeMs": 1778684444538,
+      "size": 14618,
+      "contentHash": "e291794a0ff8b036e9d6f7ffaba613724e0da4cd74155b9d1697a392fcb3b684",
       "lineCount": 2,
       "lastContentLine": 2
     },
@@ -316,13 +330,6 @@
       "lineCount": 30,
       "lastContentLine": 30
     },
-    "main:sessions/main/d4a6b225-a7d2-42f2-bb8e-63f9453b5b38.jsonl.reset.2026-04-29T03-49-17.717Z": {
-      "mtimeMs": 1777277831055,
-      "size": 91541,
-      "contentHash": "5b6fc6eb84a9f8746f4cbf52fcc47c913bb239d418bcffcf85ba949b4363b668",
-      "lineCount": 19,
-      "lastContentLine": 19
-    },
     "main:sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl": {
       "mtimeMs": 1778251719372,
       "size": 1969207,
@@ -336,6 +343,13 @@
       "contentHash": "6a9e3a630fb32c7f92f9dbd9bd457817cc6d80051d2436a88c485e061cccc819",
       "lineCount": 4,
       "lastContentLine": 4
+    },
+    "main:sessions/main/df621ce2-9049-4b03-8767-d9d98b22a788.jsonl": {
+      "mtimeMs": 1778698850547,
+      "size": 12460,
+      "contentHash": "0aeda5f9173767017604214e92be841e3481eddccd24d18432c5398f6bfb28c6",
+      "lineCount": 1,
+      "lastContentLine": 1
     },
     "main:sessions/main/e8596c72-2820-4a9f-966a-1ea5ebfe85de.jsonl": {
       "mtimeMs": 1778266827175,
@@ -701,6 +715,16 @@
     ],
     "main:a1bd6af0-9736-4657-b9af-2e60c67c6b72": [
       "11399b70077fe8018f905df389015ab4f4924cdd"
+    ],
+    "main:966c61cb-1a30-46b0-a087-845a79ebfa00": [
+      "d7be3f62b842c7a2e8bf91ea329fe25688e73d50"
+    ],
+    "main:9c269cfb-8074-4ac5-86dd-3a17ab7b99ce": [
+      "cf507187c9ed70c21254edbb95b9847a2856d1e1",
+      "d645f94866c37d16103dd6f5a9e481500272a2ad"
+    ],
+    "main:df621ce2-9049-4b03-8767-d9d98b22a788": [
+      "f7d5c13cef14722528ce0be84770a8185a91a782"
     ]
   }
 }
