@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-13T21:00:02.206Z",
+  "updatedAt": "2026-05-14T21:00:02.091Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -8364,12 +8364,12 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part A: CEO 5-agent root symlinks checked; no broken symlink, no repair run.; Part B: CTX-CONTROL-RULES.md compared against benben/kefu/mangba/mangba-guest; all identical, no copy needed.; Part C1: git remote scan clean; no rogue remote ALERT.",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-06T21:00:00.860Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "edcbe8c19953"
       ],
@@ -8381,7 +8381,8 @@
         "2026-05-10",
         "2026-05-12",
         "2026-05-13",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "5-agent",
@@ -8402,12 +8403,12 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part C3: `docker ps --format '{{.ImageID}}'` unsupported on this Docker formatter, reran via `docker inspect`; running sandbox `openclaw-sbx-agent-benben-4c00550b` matches latest `openclaw-sandbox:bookworm-slim` image ID `8ef0febba319`.",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-06T21:00:00.860Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "edcbe8c19953"
       ],
@@ -8419,7 +8420,8 @@
         "2026-05-10",
         "2026-05-12",
         "2026-05-13",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "openclaw-sandbox",
@@ -9203,12 +9205,12 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part A: CEO 5-agent root symlinks checked; no broken symlink, no repair run.; Part B: CTX-CONTROL-RULES.md compared against benben/kefu/mangba/mangba-guest; all identical, no copy needed.; Part C1: git remote scan clean; no rogue remote ALERT.",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-07T21:00:00.993Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "e86b6551e251"
       ],
@@ -9219,7 +9221,8 @@
         "2026-05-12",
         "2026-05-11",
         "2026-05-13",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "5-agent",
@@ -9240,12 +9243,12 @@
       "source": "memory",
       "snippet": "03:00 symlink / CTX / sandbox audit: Part C3: running sandbox `openclaw-sbx-agent-benben-4c00550b` matches latest `openclaw-sandbox:bookworm-slim` image ID `8ef0febba319`.",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-07T21:00:00.993Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "e86b6551e251"
       ],
@@ -9256,7 +9259,8 @@
         "2026-05-12",
         "2026-05-11",
         "2026-05-13",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "openclaw-sandbox",
@@ -9277,12 +9281,12 @@
       "source": "memory",
       "snippet": "08:00 daily self-check: Gateway healthy; file log last 50 contained only DEBUG/INFO polling, no errors.; Cron scan still flags 3 stale/error jobs: `信号雷达周报` (old openclaw-weixin config error, channel now configured), `CEO Weekly Briefing` timeout, `healthcheck:update-status` timeo",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-07T21:00:00.993Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "edcbe8c19953"
       ],
@@ -9293,7 +9297,8 @@
         "2026-05-10",
         "2026-05-12",
         "2026-05-13",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "gateway",
@@ -9518,12 +9523,12 @@
       "source": "memory",
       "snippet": "22:39 OpenClaw 升级 2026.5.2 → 2026.5.7: `npm install -g openclaw@latest` 成功；Gateway 重启后健康（PID 1341263）; wecom 插件 2026.3.26 → 2026.5.7（最新，与主版本对齐）; `openclaw doctor --fix` 应用：plugins.bundledDiscovery=compat / messages.groupChat.visibleReplies=message_tool / 禁用 10 个未用 skill（songsee/s",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-08T21:00:01.561Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "e86b6551e251"
       ],
@@ -9533,7 +9538,8 @@
         "2026-05-12",
         "2026-05-11",
         "2026-05-13",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "gateway",
@@ -9554,12 +9560,12 @@
       "source": "memory",
       "snippet": "22:39 OpenClaw 升级 2026.5.2 → 2026.5.7: 教训：每次 doctor --fix / gateway restart 都会 SIGTERM 当前 exec 会话，要先告诉 Bruce「会被打断」再跑，并主动 poll 后续状态再汇报，不要让 Bruce 反过来催",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-08T21:00:01.561Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "e86b6551e251"
       ],
@@ -9569,7 +9575,8 @@
         "2026-05-12",
         "2026-05-11",
         "2026-05-13",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "gateway",
@@ -11147,12 +11154,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway running healthy（pid 1341263，probe ok）。; 最近日志无 error/fatal/panic。; workspace + chief 各完成一次 auto snapshot 并 push 成功。; ⚠️ Cron 列表里有 3 条历史 status=error（非今日触发）：",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T21:01:04.843Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
@@ -11161,7 +11168,8 @@
         "2026-05-09",
         "2026-05-13",
         "2026-05-12",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "gateway",
@@ -11182,12 +11190,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: `CEO Weekly Briefing`（chief，5d ago）; `healthcheck:update-st...`（main，5d ago）; `芒巴晚报`（mangba，10h ago）; 都不是今天 8:00 这个 cron 的失败，先记录，等 Bruce 到岗时再决定是否排障。",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-09T21:01:04.843Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "f9349cbeaf46"
       ],
@@ -11196,7 +11204,8 @@
         "2026-05-09",
         "2026-05-13",
         "2026-05-12",
-        "2026-05-14"
+        "2026-05-14",
+        "2026-05-15"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -11345,12 +11354,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running (pid 1341263), probe ok; Logs: no errors in last 50 lines; Cron: 3 jobs with lastStatus=error but consecutiveErrors=0 (CEO Weekly Briefing, healthcheck:update-status, 芒巴晚报) — single-run failures, not cascading; will self-retry on schedule;",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-10T21:00:01.517Z",
-      "lastRecalledAt": "2026-05-13T21:00:01.711Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "b86467cd03ca"
       ],
@@ -11358,7 +11367,8 @@
         "2026-05-11",
         "2026-05-10",
         "2026-05-14",
-        "2026-05-13"
+        "2026-05-13",
+        "2026-05-15"
       ],
       "conceptTags": [
         "gateway",
@@ -11474,18 +11484,20 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running (pid 1341263), probe ok; Logs: clean (no errors); Auto-commit: ws + chief pushed ok; Cron errors flagged (pre-existing, not new):",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-11T21:00:01.456Z",
-      "lastRecalledAt": "2026-05-11T21:00:01.456Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "28fb5afbbb34"
       ],
       "recallDays": [
         "2026-05-12",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-15",
+        "2026-05-14"
       ],
       "conceptTags": [
         "gateway",
@@ -11506,18 +11518,20 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: CEO Weekly Briefing: timeout 180s (last run 7d ago, weekly); healthcheck:update-status: timeout 120s (last run 7d ago, weekly); 芒巴晚报: delivery fallback (2d ago); No new issues; no user notification.",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-11T21:00:01.456Z",
-      "lastRecalledAt": "2026-05-11T21:00:01.456Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
       "queryHashes": [
         "28fb5afbbb34"
       ],
       "recallDays": [
         "2026-05-12",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-15",
+        "2026-05-14"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -12068,6 +12082,102 @@
         "checks",
         "pass",
         "nothing"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-05-14 ## 🏢 业务进展（chief） 今日 chief 无新增日志。最近活跃日志停在 2026-05-10，HANDOFF 仍是 2026-05-04 收口的 ADR-012 rollback sync——主线为 Route 1/2/3 + 5-agent，Dual-Engine/Radar Operating 已被 ADR-012 取代归档。业务侧今天没有新决策、没有新经营动作落盘。 ## 🔧 系统运维（main） 今日 main 也没有新日志（最近 2026-05-13）。HANDOFF 仍为 2",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T21:00:01.586Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine/radar",
+        "日报",
+        "业务",
+        "进展",
+        "chief"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-14.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-14.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-14.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: All clean. Gateway healthy, no log errors, both repos auto-snapshotted. The only `error` status cron (`healthcheck:security-audit`) is just a stale wecom delivery failure from 3 days ago — known/non-blocking, will retry on next Monday 10:00 schedule. Not appending a da",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T21:00:01.586Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
+      "queryHashes": [
+        "ebfce2d015c5"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "gateway",
+        "auto-snapshotted",
+        "security-audit",
+        "known/non-blocking",
+        "all",
+        "clean",
+        "healthy",
+        "log"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-15.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-15.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-15.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: All checks clean. Symlinks intact, CTX rules already in sync, no rogue git remotes, benben/kefu sandbox network=none, all sandbox containers on latest image. No notification needed.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-14T21:00:01.586Z",
+      "lastRecalledAt": "2026-05-14T21:00:01.586Z",
+      "queryHashes": [
+        "fd6cc5e579bc"
+      ],
+      "recallDays": [
+        "2026-05-15",
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "network",
+        "benben/kefu",
+        "all",
+        "checks",
+        "clean",
+        "symlinks",
+        "intact",
+        "ctx"
       ]
     }
   }
