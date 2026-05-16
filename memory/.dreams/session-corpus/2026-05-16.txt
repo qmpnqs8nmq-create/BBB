@@ -1,0 +1,1 @@
+[main/sessions/main/86ee047d-4209-4045-9233-fb758155696b.jsonl#L6] Assistant: [assistant turn failed before producing content]
