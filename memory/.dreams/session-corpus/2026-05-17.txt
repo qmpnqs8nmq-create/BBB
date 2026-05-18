@@ -1,1 +1,3 @@
 [main/sessions/main/5b744ecc-5f6a-482f-88b6-80e740e134e5.jsonl#L14] Assistant: All checks pass. No anomalies, no fixes needed → no notification per rules. HEARTBEAT_OK
+[main/sessions/main/6f323f4f-7b93-44f4-8b09-3e5d5d0380e7.jsonl#L10] Assistant: # 日报 2026-05-17 ## 🏢 业务进展（chief） - 今日 chief 无落盘记录（`memory/2026-05-17.md` 不存在） - HANDOFF 仍停留在 2026-05-04：ADR-012 回滚同步已收尾，主线确认为 Route 1/2/3 + 5-agent；Dual-Engine / Radar Operating 已被 ADR-012 取代归档 - chief 侧无未决待办；边界已厘清——平台/全局回滚/cron/workspace 恢复归 main DRI，chief 只接收 ch
+[main/sessions/main/e1fdc0f9-7d8e-4001-80cc-704e6fa8ff1d.jsonl#L16] Assistant: All normal. Staying quiet.

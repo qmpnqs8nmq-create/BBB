@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-16T21:00:53.168Z",
+  "updatedAt": "2026-05-17T21:00:02.250Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -11362,12 +11362,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running (pid 1341263), probe ok; Logs: no errors in last 50 lines; Cron: 3 jobs with lastStatus=error but consecutiveErrors=0 (CEO Weekly Briefing, healthcheck:update-status, 芒巴晚报) — single-run failures, not cascading; will self-retry on schedule;",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-10T21:00:01.517Z",
-      "lastRecalledAt": "2026-05-16T21:00:52.502Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
       "queryHashes": [
         "b86467cd03ca"
       ],
@@ -11378,7 +11378,8 @@
         "2026-05-13",
         "2026-05-15",
         "2026-05-16",
-        "2026-05-17"
+        "2026-05-17",
+        "2026-05-18"
       ],
       "conceptTags": [
         "gateway",
@@ -11494,12 +11495,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running (pid 1341263), probe ok; Logs: clean (no errors); Auto-commit: ws + chief pushed ok; Cron errors flagged (pre-existing, not new):",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-11T21:00:01.456Z",
-      "lastRecalledAt": "2026-05-16T21:00:52.502Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
       "queryHashes": [
         "28fb5afbbb34"
       ],
@@ -11509,7 +11510,8 @@
         "2026-05-15",
         "2026-05-14",
         "2026-05-16",
-        "2026-05-17"
+        "2026-05-17",
+        "2026-05-18"
       ],
       "conceptTags": [
         "gateway",
@@ -11530,12 +11532,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: CEO Weekly Briefing: timeout 180s (last run 7d ago, weekly); healthcheck:update-status: timeout 120s (last run 7d ago, weekly); 芒巴晚报: delivery fallback (2d ago); No new issues; no user notification.",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-11T21:00:01.456Z",
-      "lastRecalledAt": "2026-05-16T21:00:52.502Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
       "queryHashes": [
         "28fb5afbbb34"
       ],
@@ -11545,7 +11547,8 @@
         "2026-05-15",
         "2026-05-14",
         "2026-05-16",
-        "2026-05-17"
+        "2026-05-17",
+        "2026-05-18"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -11754,12 +11757,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway healthy (pid 1341263, probe ok). Logs 干净，无 error/fatal。; Cron 全部 ok，唯一异常：healthcheck:security-audit (Mon 10:00) 上次 lastDeliveryStatus=not-delivered，lastError=\"✉️ Message failed\"（仅投递失败，job 本身跑了 113s 完成）。consecutiveErrors=1，下次运行 5/18，先观察。; workspace",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-12T21:00:01.701Z",
-      "lastRecalledAt": "2026-05-16T21:00:52.502Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
       "queryHashes": [
         "a727ea7b8da3"
       ],
@@ -11768,7 +11771,8 @@
         "2026-05-12",
         "2026-05-16",
         "2026-05-15",
-        "2026-05-17"
+        "2026-05-17",
+        "2026-05-18"
       ],
       "conceptTags": [
         "gateway",
@@ -11917,12 +11921,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running OK (pid 1341263, probe ok); Logs: weixin getUpdates session-expired (errcode -14) recurring hourly — 已知问题，bot 自动暂停 60min；非健康关切。; Cron 注意：`healthcheck:security-audit` (09c6f662) lastStatus=error，原因为 delivery `Message failed`（wecom 发送失败，非 jo",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-13T21:00:01.711Z",
-      "lastRecalledAt": "2026-05-16T21:00:52.502Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
       "queryHashes": [
         "215866901dd9"
       ],
@@ -11930,7 +11934,8 @@
         "2026-05-14",
         "2026-05-13",
         "2026-05-17",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-18"
       ],
       "conceptTags": [
         "gateway",
@@ -11951,12 +11956,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: 自动快照：workspace + workspace-chief 各提交一次并 push 成功。",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-13T21:00:01.711Z",
-      "lastRecalledAt": "2026-05-16T21:00:52.502Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
       "queryHashes": [
         "215866901dd9"
       ],
@@ -11964,7 +11969,8 @@
         "2026-05-14",
         "2026-05-13",
         "2026-05-17",
-        "2026-05-16"
+        "2026-05-16",
+        "2026-05-18"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -12387,6 +12393,130 @@
         "fixes",
         "needed",
         "notification"
+      ]
+    },
+    "memory:memory/2026-05-17.md:3:5": {
+      "key": "memory:memory/2026-05-17.md:3:5",
+      "path": "memory/2026-05-17.md",
+      "startLine": 3,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: Gateway: running (pid 1341263, ok). Logs clean.; Crons: 22 total. 1 pre-existing error: `healthcheck:security-audit` (last 6d ago, \"Message failed\" delivery). Next run in 1d (Mon 10:00) — will self-resolve or surface again.; Auto-commit: workspace + worksp",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-17T21:00:01.737Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
+      "queryHashes": [
+        "ca7d365d990f"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "gateway",
+        "daily-self-check",
+        "pre-existing",
+        "security-audit",
+        "self-resolve",
+        "auto-commit",
+        "self",
+        "check"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-05-17 ## 🏢 业务进展（chief） - 今日 chief 无落盘记录（`memory/2026-05-17.md` 不存在） - HANDOFF 仍停留在 2026-05-04：ADR-012 回滚同步已收尾，主线确认为 Route 1/2/3 + 5-agent；Dual-Engine / Radar Operating 已被 ADR-012 取代归档 - chief 侧无未决待办；边界已厘清——平台/全局回滚/cron/workspace 恢复归 main DRI，chief 只接收 chief-",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T21:00:01.737Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "memory/2026-05-17.md",
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine",
+        "平台/全局回滚/cron/workspace",
+        "日报",
+        "业务"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: All normal. Staying quiet.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T21:00:01.737Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "all",
+        "normal",
+        "staying",
+        "quiet"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-18.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-18.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-18.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: All checks clean: - **Part A**: No broken symlinks across the 5 CEO workspaces. - **Part B**: CTX-CONTROL-RULES.md already in sync across benben/kefu/mangba/mangba-guest. - **Part C1**: No rogue git remotes. - **Part C2**: benben & kefu sandbox network = `none` ✓ - **P",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-17T21:00:01.737Z",
+      "lastRecalledAt": "2026-05-17T21:00:01.737Z",
+      "queryHashes": [
+        "cda70fe5512d"
+      ],
+      "recallDays": [
+        "2026-05-18",
+        "2026-05-17"
+      ],
+      "conceptTags": [
+        "network",
+        "ctx-control-rules.md",
+        "benben/kefu/mangba/mangba-guest",
+        "all",
+        "checks",
+        "clean",
+        "broken",
+        "symlinks"
       ]
     }
   }
