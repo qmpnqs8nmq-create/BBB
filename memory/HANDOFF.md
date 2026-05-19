@@ -1,8 +1,8 @@
-- Last active: 2026-05-18 22:36 Asia/Shanghai
-- Current topic: OpenClaw version/update cadence investigation
-- Key facts: local OpenClaw=2026.5.7; npm latest stable=2026.5.12; npm beta=2026.5.16-beta.7
-- Interpretation: stable release paused since 2026-05-14, but beta releases continued through 2026-05-18; not a total release stop
-- Local status: openclaw update status says stable(default), registry update available=true
-- Ops note: weekly update-status cron only checks, daily self-check does not auto-upgrade
-- Next if Bruce asks: run dry-run/update to 2026.5.12, or discuss beta channel
-- Today note: memory/2026-05-18.md
+- Last active: 2026-05-19 08:03 Asia/Shanghai
+- Current topic: daily-self-check 8am completed
+- Gateway: running/healthy on :18789; probe ok
+- Recent logs: zenmux-key1/claude-opus-4.7 quota exceeded at cron start; fallback to openai-codex/gpt-5.5 succeeded
+- Cron health: 24 jobs; no consecutiveErrors >0 or lastStatus=error
+- Auto-commit: workspace 0814640; chief e307188; pushes attempted best-effort
+- Repair note: no config repair attempted because config gateway tool is unavailable and CLI config edits are disallowed
+- Today note: memory/2026-05-19.md
