@@ -1,1 +1,14 @@
 [main/sessions/main/6938a3dc-ab7a-42c9-8b83-7091955405f9.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/174a64ce-7bdd-4885-b503-5c8da5f0d511.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/174a64ce-7bdd-4885-b503-5c8da5f0d511.jsonl#L34] Assistant: Bruce，08:00 自检发现一个小问题： - Gateway 正常：运行中，probe ok，端口 18789。 - Cron 正常：24 个任务，无 `consecutiveErrors > 0` / `lastStatus=error`。 - Git 快照已提交： - workspace: `0814640` + HANDOFF `cb7f42f` - chief: `e307188` - 异常：日志里主模型 `zenmux-key1/claude-opus-4.7` quota exceeded，系统已自动 fal
+[main/sessions/main/6f5b15d7-d284-4c70-b6ce-276568f5fdbf.jsonl#L2] Assistant: LLM error quote_exceeded: You have reached your subscription quota limit. Please wait for automatic quota refresh in the rolling time window, upgrade to a higher plan, or use a Pay-As-You-Go API Key for unlimited access. Learn more: https://zenmux.ai/docs/guide/subs
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L45] User: 请再次查一下，有没有最新的升级版本？
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L53] Assistant: 查到了，**stable 已经恢复更新了**： - **最新 stable：`2026.5.18`** - **最新 beta：`2026.5.19-beta.1`** - npm registry 更新时间：**2026-05-19 08:05 北京时间左右** - 本机当前仍是：**`2026.5.7`** - 本机 stable 通道可升级到：**`2026.5.18`** 也就是说昨晚那个“stable 卡在 5.12”的状态已经变了，今天早上 stable 推到了 5.18。
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L54] User: 好的，请帮我升级到最新的5月18号的版本。
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L56] Assistant: 好的，我先跑一次更新，完成后做版本确认和基础状态检查。升级过程可能会重启 Gateway，WebChat 可能短暂断一下。
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L62] Assistant: 更新器拒绝在 Gateway 自己的进程树里更新，这是合理保护：它不能安全地重启“承载当前对话的 Gateway”。我换一种方式让 systemd 拉起独立临时进程来升级。
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L65] User: 新的升级， 升级了哪些？ 10天内的统计
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L106] Assistant: 已发到当前 WebChat。
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L107] Assistant: 升级已经完成： - 本机 CLI：`OpenClaw 2026.5.18 (50a2481)` - Gateway：`app 2026.5.18` - stable 通道：已是最新，`openclaw status` 显示 `up to date · npm latest 2026.5.18` 这次从我们原来的 `2026.5.7` 跨到 `2026.5.18`，中间主要吃进了两个 stable 版本： - `2026.5.12` - `2026.5.18` `2026.5.18` 的重点变化按模块压缩看： - Gatew
+[main/sessions/main/a805ee16-a286-441b-816c-5b5cd37182fa.jsonl#L107] Assistant: parity、工具覆盖率、token-efficiency、release gate 等测试/发布质量门。 - Android：Talk Mode 改成 realtime Gateway relay voice sessions。 10天内统计（按 `2026-05-09 11:36` 到 `2026-05-19 11:36` 北京时间）： - 总发布：`27` 个 npm 版本 - stable：`2` 个：`2026.5.12`、`2026.5.18` - beta：`25` 个 - 最新 beta：`2026.5.1
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L2754] Assistant: Archived 11 old daily logs (04-24 → 05-05) into `memory/archive.md` and moved sources to `.trash/`. MEMORY.md is 51 lines (under 80), archive months stay within 6. No wecom blocks in last 24h. HEARTBEAT_OK

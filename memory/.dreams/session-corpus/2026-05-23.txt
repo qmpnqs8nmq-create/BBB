@@ -1,0 +1,1 @@
+[main/sessions/main/2e151196-f5d1-4f1a-aff2-e1d1a19e8328.jsonl#L10] Assistant: All checks clean — no notification needed.

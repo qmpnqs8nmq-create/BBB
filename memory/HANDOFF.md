@@ -1,8 +1,7 @@
-- Last active: 2026-05-19 08:03 Asia/Shanghai
-- Current topic: daily-self-check 8am completed
-- Gateway: running/healthy on :18789; probe ok
-- Recent logs: zenmux-key1/claude-opus-4.7 quota exceeded at cron start; fallback to openai-codex/gpt-5.5 succeeded
-- Cron health: 24 jobs; no consecutiveErrors >0 or lastStatus=error
-- Auto-commit: workspace 0814640; chief e307188; pushes attempted best-effort
-- Repair note: no config repair attempted because config gateway tool is unavailable and CLI config edits are disallowed
+- Last active: 2026-05-19 11:39 Asia/Shanghai
+- Current topic: OpenClaw upgraded to stable 2026.5.18
+- Key facts: local CLI and Gateway both report OpenClaw 2026.5.18; stable channel up to date; beta latest=2026.5.19-beta.1
+- Verification: `openclaw --version`, `openclaw update status --json`, `openclaw status`; Gateway systemd user service running
+- 10d release stats: 2026-05-09 11:36 → 2026-05-19 11:36 CST = 27 npm versions, 2 stable, 25 beta
+- Doctor after upgrade: warnings remain about plugin installs/allowlists, command owner, state permissions, LAN bind; no plugin errors
 - Today note: memory/2026-05-19.md

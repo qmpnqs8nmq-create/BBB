@@ -24,6 +24,14 @@
 - 03-30: WORKING_RULES精简为流程路由；双路径分裂修复(symlink统一)；Nginx反代HTTPS；反馈系统设计；权限教训+角色漂移防护
 - 03-31: Agent权限审计+sandbox加固（chief-user sandbox=all+ro，子agent deny write，间接写入攻击链切断）；Docker 28.2.2安装
 
+## 2026-05
+
+- 05-01: 4.21→4.29→4.21→4.24 版本振荡后三通道全断修复（清残留 plugin-runtime-deps + 回写 enabled=true + restart）；4.21→4.29 升级；symlink 3 个 broken 待 Bruce 决定（FEEDBACK_PROTOCOL/OPPORTUNITY/SIGNAL_SCAN）；**铁律**：cron one-shot delivered ≠ 微信网络送达；唯一证据是 `[openclaw-weixin] message processed outcome=completed` 出站日志。benben 主动发 Lilian/Jamie 改用「对方先发 → benben 回复」模式
+- 05-02: mangba-guest 朋友接入流程定型——`channels login` 链接几分钟即过期，必须现场起 login PTY + autobind 监听 + 通知 cron 协同
+- 05-03/04 早: 日常自检；信号雷达周报偶发 weixin not configured
+- 05-04: OpenClaw 4.24→5.2 升级（systemd PATH 收窄至标准目录）；**跨 agent 治理重大决策**——平台/全局 cron/workspace-wide rollback DRI 归 main，chief 仅可 propose；CTX-CONTROL-RULES §8 新增并下发到所有 workspace；chief ADR-012 收口（NORTH_STAR/CEO_NAV pointer drift 修复 + kill-criteria.md v2.2 抽象为 Route 1/2/3 通用框架）；权限边界收紧：main 全局可见，chief 不获取 main 内部台账细节；A2A 直连可用（sessions.visibility=all）
+- 05-05: 日常自检；`CEO Weekly Briefing` timeout 180→300s、`healthcheck:update-status` 120→180s；OpenAI Codex OAuth 配法答疑（`openclaw models auth login --provider openai-codex` + auth.profiles/order，不手填 token）
+
 ## 2026-04
 
 - 04-01: 企业微信 DM 白名单加固（open→allowlist, 8人白名单），heartbeat 审批机制建立
@@ -42,4 +50,9 @@
 - 04-18: **木巴 schema 400 事故 + 自毁型故障**——zenmux schema 升级后 opus-4.7 的 thinking.type=enabled 被 400（官方 2026.4.15 supportsAdaptiveThinking 漏管 4.7）；两次在 main session 里直接 gateway restart/stop，**第二次 stop 把自己一同 kill**；最终 Bruce 叫停，补丁全回滚到原版 dist，靠内置 fallback 跑（每次 400 后 retry with thinking=off）。**铁律**：(1) 永远不在 main session 直接动 gateway 生命周期；(2) 必须重启→用 cron 延时一次性任务；(3) 不用补丁+reload 修 upstream bug，开 issue 等官方；(4) 容忍能用但不最优状态
 - 04-19: Daily self-check——Gateway/cron/logs/git 全正常，仅昨日 QR 登录超时需重登（非系统故障）
 - 04-20: 修复 mangba 微信 cron delivery——早上误判 Unsupported channel 为瞬时，真实根因是 4 个 mangba cron 绑定旧 weixin accountId `08a8c78d3ebe-im-bot`；切到当前账号 `5814497b5df4-im-bot` 后 force-run delivered=true，Bruce 微信确认收到。教训：lastError 含 weixin not configured/Unsupported channel 时必须核对 delivery.accountId 是否仍有效，单点错邻居正常也可能是账号失效
-- 04-21: Daily self-check——Gateway/logs/git 正常；芒巴晚报 lastStatus=error（weixin 通道未配置，内容已生成但投递失败），非紧急，需 Bruce 手动 `openclaw channels login --channel openclaw-weixin`
+- 04-21: 芒巴晚报投递失败（weixin 通道未配置），其余正常
+- 04-24: Codex `openai-codex/gpt-5.5` fallback 修复——provider 块统一为 `models.providers.openai-codex` 并声明 5.5；subagent 验证 CODEX55_OK
+- 04-25: mangba 4-24 投递失败复盘——根因 iLink outbound 冷会话/24h token TTL；patch ①api.ts 解析 ret≠0 抛错 ②channel.ts 发送前 getConfig warm-up + ret=-2 no-token 重试；教训：日志缺 outbound 行 ≠ 失败，必须对照成功案例
+- 04-27/28: 日常自检正常；mangba weixin cron + chief 双周周检偶发 error 为历史遗留
+- 04-29: chief rollback 边界事故——cron 全局共用，chief 误删 mangba `信号雷达周报`已恢复；patch openclaw-weixin ret=-2 重试不复用 stale context_token；mangba weixin 通道测试 delivered=true Bruce 确认；新建 `contact-delivery` plugin（send_contact）+ benben 联系人 runbook，但 plugin tool 未暴露到 benben
+- 04-30: 日常自检正常；继续 benben weixin 卡点（cron one-shot 实测 delivered，但 send_contact tool 仍未列入 benben）
