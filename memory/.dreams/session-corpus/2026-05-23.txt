@@ -1,1 +1,6 @@
 [main/sessions/main/2e151196-f5d1-4f1a-aff2-e1d1a19e8328.jsonl#L10] Assistant: All checks clean — no notification needed.
+[main/sessions/main/4d567973-fada-4ad9-9506-a36636ed3284.jsonl#L15] Assistant: # 日报 2026-05-23 ## 🏢 业务进展（chief） 今日 chief 工作区**无新增日志**，未记录新业务决策或经营动作。chief HANDOFF 仍停留在 2026-05-04： - ADR-012 rollback sync 已收尾，主干确定为 Route 1/2/3 + 5-agent - Dual-Engine/Radar Operating 已被 ADR-012 取代归档 - `NORTH_STAR.md`、`CEO_SYSTEM_NAVIGATION.md`、`kill-criteria.md
+[main/sessions/main/4d567973-fada-4ad9-9506-a36636ed3284.jsonl#L15] Assistant: 今日 main 日志极简，建设期日志规模健康。
+[main/sessions/main/6f5b15d7-d284-4c70-b6ce-276568f5fdbf.jsonl#L4] Assistant: # 日报 2026-05-23 ## 🏢 业务进展（chief） 今日 chief 工作区**无新增日志**，未记录新业务决策或经营动作。chief HANDOFF 仍停留在 2026-05-04： - ADR-012 rollback sync 已收尾，主干确定为 Route 1/2/3 + 5-agent - Dual-Engine/Radar Operating 已被 ADR-012 取代归档 - `NORTH_STAR.md`、`CEO_SYSTEM_NAVIGATION.md`、`kill-criteria.md`
+[main/sessions/main/6f5b15d7-d284-4c70-b6ce-276568f5fdbf.jsonl#L4] Assistant: 今日 main 日志极简，建设期日志规模健康。
+[main/sessions/main/cf29510e-7c26-4875-b2e5-301617fb0d60.jsonl#L18] Assistant: Bruce, 早。日检发现一处需要你看一眼： **Cron 失败 4 个，全部同一根因 — zenmux 订阅配额耗尽 (`quote_exceeded`)：** - 每日价值投资学习提醒（连续 4 次失败） - Validation Tracker Midweek Nudge（1） - NVDA Q1 FY27 盘前提醒 / F-Watch 复检（各 1） 不是代码或调度问题，是上游 LLM 配额 —— 自修不动。处理选项：等滚动窗口刷新 / 升级套餐 / 换 PAYG key。 其余正常：gateway running、

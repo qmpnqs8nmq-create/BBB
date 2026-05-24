@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-22T21:00:08.094Z",
+  "updatedAt": "2026-05-23T21:01:13.684Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -12317,12 +12317,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: gateway: ok (pid 1341263, active); logs: clean (no errors in last 50 lines); cron: 1 flag — `healthcheck:security-audit` lastStatus=error (5d ago, ✉️ Message failed delivery, not task failure). Next run Mon. Pre-existing, no action.; workspace + chief snap",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-16T21:00:52.502Z",
-      "lastRecalledAt": "2026-05-22T21:00:01.855Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
       "queryHashes": [
         "ccfae0e39afd"
       ],
@@ -12333,7 +12333,8 @@
         "2026-05-19",
         "2026-05-21",
         "2026-05-22",
-        "2026-05-23"
+        "2026-05-23",
+        "2026-05-24"
       ],
       "conceptTags": [
         "gateway",
@@ -12418,12 +12419,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running (pid 1341263, ok). Logs clean.; Crons: 22 total. 1 pre-existing error: `healthcheck:security-audit` (last 6d ago, \"Message failed\" delivery). Next run in 1d (Mon 10:00) — will self-resolve or surface again.; Auto-commit: workspace + worksp",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-17T21:00:01.737Z",
-      "lastRecalledAt": "2026-05-22T21:00:01.855Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
       "queryHashes": [
         "ca7d365d990f"
       ],
@@ -12434,7 +12435,8 @@
         "2026-05-19",
         "2026-05-21",
         "2026-05-22",
-        "2026-05-23"
+        "2026-05-23",
+        "2026-05-24"
       ],
       "conceptTags": [
         "gateway",
@@ -12547,12 +12549,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running, probe ok (pid 1341263); Logs: no errors in tail -50; Cron: 1 job lastStatus=error → `healthcheck:security-audit` (7d ago, diag: ✉️ Message failed) — delivery failure not task failure; next run in 2h, will self-recover; Auto-commit: worksp",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-18T21:00:01.656Z",
-      "lastRecalledAt": "2026-05-22T21:00:01.855Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -12562,7 +12564,8 @@
         "2026-05-20",
         "2026-05-21",
         "2026-05-22",
-        "2026-05-23"
+        "2026-05-23",
+        "2026-05-24"
       ],
       "conceptTags": [
         "gateway",
@@ -12583,12 +12586,12 @@
       "source": "memory",
       "snippet": "22:36 OpenClaw 版本节奏核查: Bruce 发现 OpenClaw stable 从 2026.5.12 后数日未更新，怀疑异常。; 核查 npm：latest=2026.5.12（2026-05-14T18:26Z），beta=2026.5.16-beta.7（2026-05-18T08:46Z），说明主线仍在发 beta，stable 暂未推进。; 本机安装 2026.5.7；openclaw update status 显示 stable(default)，registry update available=true，可升级到 202",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-18T21:00:01.656Z",
-      "lastRecalledAt": "2026-05-22T21:00:01.855Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
       "queryHashes": [
         "f2bd5daba4fc"
       ],
@@ -12598,7 +12601,8 @@
         "2026-05-20",
         "2026-05-21",
         "2026-05-22",
-        "2026-05-23"
+        "2026-05-23",
+        "2026-05-24"
       ],
       "conceptTags": [
         "2026.5.12",
@@ -13021,12 +13025,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running, probe ok (pid 1496710).; Logs: recent tail shows zenmux-key1/claude-opus-4.7 quota exceeded at cron start; OpenClaw failed over to openai-codex/gpt-5.5 and continued. Also saw transient event_loop_delay warning during startup.; Cron: 24 j",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T21:00:01.672Z",
-      "lastRecalledAt": "2026-05-22T21:00:01.855Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
@@ -13035,7 +13039,8 @@
         "2026-05-19",
         "2026-05-21",
         "2026-05-22",
-        "2026-05-23"
+        "2026-05-23",
+        "2026-05-24"
       ],
       "conceptTags": [
         "gateway",
@@ -13056,12 +13061,12 @@
       "source": "memory",
       "snippet": "11:16 OpenClaw 版本复查: npm latest 已从 2026.5.12 推进到 2026.5.18；beta 为 2026.5.19-beta.1；registry modified=2026-05-19T00:05Z。; 本机仍为 2026.5.7；openclaw update status 显示 stable(default)，可升级到 2026.5.18。",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T21:00:01.672Z",
-      "lastRecalledAt": "2026-05-22T21:00:01.855Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
@@ -13070,7 +13075,8 @@
         "2026-05-19",
         "2026-05-21",
         "2026-05-22",
-        "2026-05-23"
+        "2026-05-23",
+        "2026-05-24"
       ],
       "conceptTags": [
         "2026.5.12",
@@ -13091,12 +13097,12 @@
       "source": "memory",
       "snippet": "11:39 OpenClaw 升级到 2026.5.18: Bruce 要求升级到 5月18号 stable；直接在 Gateway 进程树内运行 update 被保护机制拒绝，随后通过外部升级路径完成。; 结果：本机与 Gateway 均为 OpenClaw 2026.5.18；`openclaw status` 显示 stable up to date、Gateway systemd user service running。; 10天发布统计（2026-05-09 11:36 至 2026-05-19 11:36 CST）：openclaw npm",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-19T21:00:01.672Z",
-      "lastRecalledAt": "2026-05-22T21:00:01.855Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
       "queryHashes": [
         "f2aa78e3961c"
       ],
@@ -13105,7 +13111,8 @@
         "2026-05-19",
         "2026-05-21",
         "2026-05-22",
-        "2026-05-23"
+        "2026-05-23",
+        "2026-05-24"
       ],
       "conceptTags": [
         "gateway",
@@ -13893,6 +13900,256 @@
         "checks",
         "clean",
         "notification",
+        "needed"
+      ]
+    },
+    "memory:memory/2026-05-23.md:3:6": {
+      "key": "memory:memory/2026-05-23.md:3:6",
+      "path": "memory/2026-05-23.md",
+      "startLine": 3,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: Gateway: ok (pid 1513199, probe ok); Logs: 无 error/fatal; Cron 失败 4 个，全部 `LLM error quote_exceeded`（zenmux 订阅配额耗尽）：; 每日价值投资学习提醒 (consec=4)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "gateway",
+        "daily-self-check",
+        "error/fatal",
+        "quote-exceeded",
+        "self",
+        "check",
+        "pid",
+        "probe"
+      ]
+    },
+    "memory:memory/2026-05-23.md:7:10": {
+      "key": "memory:memory/2026-05-23.md:7:10",
+      "path": "memory/2026-05-23.md",
+      "startLine": 7,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: Validation Tracker Midweek Nudge (consec=1); NVDA Q1 FY27 盘前提醒 / F-Watch 复检 (各 consec=1); 自修复不可行（外部配额问题），需 Bruce 处理：等待配额刷新 / 升级套餐 / 切 PAYG key; Git: workspace + chief 已快照推送",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "ae3ac765491f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "daily-self-check",
+        "f-watch",
+        "self",
+        "check",
+        "validation",
+        "tracker",
+        "midweek",
+        "nudge"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-05-23 ## 🏢 业务进展（chief） 今日 chief 工作区**无新增日志**，未记录新业务决策或经营动作。chief HANDOFF 仍停留在 2026-05-04： - ADR-012 rollback sync 已收尾，主干确定为 Route 1/2/3 + 5-agent - Dual-Engine/Radar Operating 已被 ADR-012 取代归档 - `NORTH_STAR.md`、`CEO_SYSTEM_NAVIGATION.md`、`kill-criteria.md` 已对",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine/radar",
+        "north-star.md",
+        "ceo-system-navigation.md",
+        "kill-criteria.md",
+        "日报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 今日 main 日志极简，建设期日志规模健康。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "今日",
+        "日志",
+        "建设",
+        "规模",
+        "健康"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-05-23 ## 🏢 业务进展（chief） 今日 chief 工作区**无新增日志**，未记录新业务决策或经营动作。chief HANDOFF 仍停留在 2026-05-04： - ADR-012 rollback sync 已收尾，主干确定为 Route 1/2/3 + 5-agent - Dual-Engine/Radar Operating 已被 ADR-012 取代归档 - `NORTH_STAR.md`、`CEO_SYSTEM_NAVIGATION.md`、`kill-criteria.md` 已对",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine/radar",
+        "north-star.md",
+        "ceo-system-navigation.md",
+        "kill-criteria.md",
+        "日报"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 今日 main 日志极简，建设期日志规模健康。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "今日",
+        "日志",
+        "建设",
+        "规模",
+        "健康"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-23.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-23.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-23.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: Bruce, 早。日检发现一处需要你看一眼： **Cron 失败 4 个，全部同一根因 — zenmux 订阅配额耗尽 (`quote_exceeded`)：** - 每日价值投资学习提醒（连续 4 次失败） - Validation Tracker Midweek Nudge（1） - NVDA Q1 FY27 盘前提醒 / F-Watch 复检（各 1） 不是代码或调度问题，是上游 LLM 配额 —— 自修不动。处理选项：等滚动窗口刷新 / 升级套餐 / 换 PAYG key。 其余正常：gateway running、日志干净",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "f61ede95966f"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "gateway",
+        "quote-exceeded",
+        "f-watch",
+        "bruce",
+        "发现",
+        "需要",
+        "一眼",
+        "cron"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-24.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-24.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-24.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: All checks passed. No anomalies, no auto-fixes needed. Staying quiet per notification rules.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-23T21:01:05.358Z",
+      "lastRecalledAt": "2026-05-23T21:01:05.358Z",
+      "queryHashes": [
+        "c27113cc41fb"
+      ],
+      "recallDays": [
+        "2026-05-24",
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "auto-fixes",
+        "all",
+        "checks",
+        "passed",
+        "anomalies",
+        "auto",
+        "fixes",
         "needed"
       ]
     }
