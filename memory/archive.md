@@ -31,6 +31,10 @@
 - 05-03/04 早: 日常自检；信号雷达周报偶发 weixin not configured
 - 05-04: OpenClaw 4.24→5.2 升级（systemd PATH 收窄至标准目录）；**跨 agent 治理重大决策**——平台/全局 cron/workspace-wide rollback DRI 归 main，chief 仅可 propose；CTX-CONTROL-RULES §8 新增并下发到所有 workspace；chief ADR-012 收口（NORTH_STAR/CEO_NAV pointer drift 修复 + kill-criteria.md v2.2 抽象为 Route 1/2/3 通用框架）；权限边界收紧：main 全局可见，chief 不获取 main 内部台账细节；A2A 直连可用（sessions.visibility=all）
 - 05-05: 日常自检；`CEO Weekly Briefing` timeout 180→300s、`healthcheck:update-status` 120→180s；OpenAI Codex OAuth 配法答疑（`openclaw models auth login --provider openai-codex` + auth.profiles/order，不手填 token）
+- 05-06: mangba-guest 个人微信扫码绑定脱后重生（`tmp/weixin-mangba-guest-bind.mjs`写精确 binding/allowFrom + restart）；**划重点**：peer `o9cq80wM7ygwc_CUhNLgfW_1SDsQ@im.wechat` / accountId `a89efed44537-im-bot` = 「刘董事长」
+- 05-07: 日常自检正常；`CEO Weekly Briefing` timeout 300→360s、`healthcheck:update-status` 180→240s；3 个历史 stale error 仍在列表
+- 05-08: OpenClaw 5.2→5.7 升级；wecom plugin 同步至 5.7；`doctor --fix` 应用 bundledDiscovery=compat / visibleReplies=message_tool / 禁用 10 个未用 skill；**铁律**：doctor --fix / restart 会 SIGTERM 当前 exec，必须先告知 Bruce “会被打断” 再跑并主动 poll 状态
+- 05-09/10: 日常自检正常；3 条历史 stale error（CEO Weekly / healthcheck:update-status / 芒巴晚报）consecutiveErrors=0 鴿造
 
 ## 2026-04
 
