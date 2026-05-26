@@ -34,7 +34,7 @@
 - 05-06: mangba-guest 个人微信扫码绑定脱后重生（`tmp/weixin-mangba-guest-bind.mjs`写精确 binding/allowFrom + restart）；**划重点**：peer `o9cq80wM7ygwc_CUhNLgfW_1SDsQ@im.wechat` / accountId `a89efed44537-im-bot` = 「刘董事长」
 - 05-07: 日常自检正常；`CEO Weekly Briefing` timeout 300→360s、`healthcheck:update-status` 180→240s；3 个历史 stale error 仍在列表
 - 05-08: OpenClaw 5.2→5.7 升级；wecom plugin 同步至 5.7；`doctor --fix` 应用 bundledDiscovery=compat / visibleReplies=message_tool / 禁用 10 个未用 skill；**铁律**：doctor --fix / restart 会 SIGTERM 当前 exec，必须先告知 Bruce “会被打断” 再跑并主动 poll 状态
-- 05-09/10: 日常自检正常；3 条历史 stale error（CEO Weekly / healthcheck:update-status / 芒巴晚报）consecutiveErrors=0 鴿造
+- 05-09/10/11: 日常自检正常；3 条历史 stale error（CEO Weekly / healthcheck:update-status / 芒巴晚报）consecutiveErrors=0 鴿造
 
 ## 2026-04
 
