@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-26T21:00:21.024Z",
+  "updatedAt": "2026-05-28T21:00:18.570Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -13925,12 +13925,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: ok (pid 1513199, probe ok); Logs: 无 error/fatal; Cron 失败 4 个，全部 `LLM error quote_exceeded`（zenmux 订阅配额耗尽）：; 每日价值投资学习提醒 (consec=4)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-23T21:01:05.358Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "ae3ac765491f"
       ],
@@ -13939,7 +13939,9 @@
         "2026-05-23",
         "2026-05-25",
         "2026-05-26",
-        "2026-05-27"
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "gateway",
@@ -13960,12 +13962,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Validation Tracker Midweek Nudge (consec=1); NVDA Q1 FY27 盘前提醒 / F-Watch 复检 (各 consec=1); 自修复不可行（外部配额问题），需 Bruce 处理：等待配额刷新 / 升级套餐 / 切 PAYG key; Git: workspace + chief 已快照推送",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-23T21:01:05.358Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "ae3ac765491f"
       ],
@@ -13974,7 +13976,9 @@
         "2026-05-23",
         "2026-05-25",
         "2026-05-26",
-        "2026-05-27"
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14181,12 +14185,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway ok（pid 1513199, active）；近 50 行日志无 error。; workspace + workspace-chief 已 commit & push（13 + 11 文件）。; Cron 异常 3 项（均外部原因，无需修）：; 周日系统巡检（3h ago）：provider 返回 HTML（CDN/网关拦截，瞬时）",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-24T21:00:02.150Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "e87913ef436c"
       ],
@@ -14194,7 +14198,9 @@
         "2026-05-25",
         "2026-05-24",
         "2026-05-26",
-        "2026-05-27"
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "gateway",
@@ -14215,12 +14221,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Validation Tracker（4d ago）：zenmux quota_exceeded; NVDA Q1 财报相关 2 项（3d ago）：历史 error，下次触发再观察",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-24T21:00:02.150Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "e87913ef436c"
       ],
@@ -14228,7 +14234,9 @@
         "2026-05-25",
         "2026-05-24",
         "2026-05-26",
-        "2026-05-27"
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14473,19 +14481,21 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway healthy (pid 1513199, probe ok), 无 ERROR; Workspace + chief 两个仓库已 auto-commit + push; Cron 中 lastStatus=error（历史遗留，非今日新增）：; 7f1dacbb Validation Tracker (chief, 5d ago)",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-25T21:00:02.108Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "d840cb851395"
       ],
       "recallDays": [
         "2026-05-26",
         "2026-05-25",
-        "2026-05-27"
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "gateway",
@@ -14506,19 +14516,21 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: 7a59f223 周日系统巡检 (chief, 1d ago); 890f4b0a / 5b1abbd9 NVDA Q1 FY27 双子任务 (mangba, 4d ago); 未做修复，这些都是周期性任务，下次触发再看。",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-25T21:00:02.108Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "d840cb851395"
       ],
       "recallDays": [
         "2026-05-26",
         "2026-05-25",
-        "2026-05-27"
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14695,18 +14707,20 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running, probe ok, version 2026.5.18; Logs: 0 errors in last 50 lines; Cron failures (existing): 23:00 daily-summary (5月25)→ wecom ack timeout，任务已生成 daily-summary/2026-05-25.md 仅推送 ack 超时；周日巡检/Validation Tracker/NVDA 提醒均为旧错误，无新增; Auto-commit: work",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-26T21:00:03.294Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "0e882fd58aee"
       ],
       "recallDays": [
         "2026-05-27",
-        "2026-05-26"
+        "2026-05-26",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "gateway",
@@ -14727,18 +14741,20 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Action: 不重启，观察今晚 23:00 是否复发",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-26T21:00:03.294Z",
-      "lastRecalledAt": "2026-05-26T21:00:03.294Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
       "queryHashes": [
         "0e882fd58aee"
       ],
       "recallDays": [
         "2026-05-27",
-        "2026-05-26"
+        "2026-05-26",
+        "2026-05-28",
+        "2026-05-29"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14813,6 +14829,339 @@
         "needed",
         "per",
         "rules"
+      ]
+    },
+    "memory:memory/2026-05-27.md:3:6": {
+      "key": "memory:memory/2026-05-27.md:3:6",
+      "path": "memory/2026-05-27.md",
+      "startLine": 3,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: Gateway: running ok (pid 1513199, probe ok); Workspace + chief git snapshot pushed; Cron failures (consecutiveErrors>0): 5 jobs, all `OutboundDeliveryError: WebSocket 1006` to wecom node — delivery-layer issue, not job logic. 监控中，未自动修复。; 58868110 每日使用总结23:",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "queryHashes": [
+        "c3d4719b3f48"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "daily-self-check",
+        "delivery-layer",
+        "self",
+        "check",
+        "running",
+        "pid",
+        "probe"
+      ]
+    },
+    "memory:memory/2026-05-27.md:7:9": {
+      "key": "memory:memory/2026-05-27.md:7:9",
+      "path": "memory/2026-05-27.md",
+      "startLine": 7,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: 7f1dacbb Validation Tracker; 7a59f223 周日系统巡检; 890f4b0a / 5b1abbd9 NVDA 财报提醒",
+      "recallCount": 0,
+      "dailyCount": 2,
+      "groundedCount": 0,
+      "totalScore": 1.24,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "queryHashes": [
+        "c3d4719b3f48"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "daily-self-check",
+        "self",
+        "check",
+        "7f1dacbb",
+        "validation",
+        "tracker",
+        "7a59f223",
+        "周日"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-27.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-27.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-27.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-05-27 ## 🏢 业务进展（chief） - chief 今日无新增日志，HANDOFF 仍停在 2026-05-04（ADR-012 回滚同步收尾）。 - 主线维持 Route 1/2/3 + 5-agent；Dual-Engine / Radar Operating 已归档。 - 边界不变：平台回滚/cron/workspace 恢复归 main，chief 只提请求收结论。 - 待跟进：chief 已 3 周以上无落本地日志，需确认是否仍在使用，或工作已全部下沉到 main。 ## 🔧 系统运维（m",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-27T21:00:14.199Z",
+      "queryHashes": [
+        "99886bb257c4"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine",
+        "平台回滚/cron/workspace",
+        "日报",
+        "业务",
+        "进展"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-27.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-27.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-27.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: `memory/daily-summary/2026-05-27.md`。🐎",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-27T21:00:14.199Z",
+      "queryHashes": [
+        "99886bb257c4"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "summary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-27.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-27.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-27.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-05-27 ## 🏢 业务进展（chief） - chief 今日无新增日志，HANDOFF 仍停在 2026-05-04（ADR-012 回滚同步收尾）。 - 主线维持 Route 1/2/3 + 5-agent；Dual-Engine / Radar Operating 已归档。 - 边界不变：平台回滚/cron/workspace 恢复归 main，chief 只提请求收结论。 - 待跟进：chief 已 3 周以上无落本地日志，需确认是否仍在使用，或工作已全部下沉到 main。 ## 🔧 系统运维（m",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-27T21:00:14.199Z",
+      "queryHashes": [
+        "99886bb257c4"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine",
+        "平台回滚/cron/workspace",
+        "日报",
+        "业务",
+        "进展"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-27.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-27.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-27.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: `memory/daily-summary/2026-05-27.md`。🐎",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-27T21:00:14.199Z",
+      "queryHashes": [
+        "99886bb257c4"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "summary"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-27.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-27.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-27.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 🐎 daily check 报告： - Gateway 正常（pid 1513199，探测 ok），workspace + chief 已 git push - **5 个 cron job consecutiveErrors>0**，全部失败原因相同：`OutboundDeliveryError: WebSocket 1006`，wecom 节点投递通道掉线，不是 job 本身问题 - 每日使用总结 23:00（连续 2 次失败） - Validation Tracker / 周日系统巡检 - NVDA Q1 FY27 财报盘前",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-27T21:00:14.199Z",
+      "queryHashes": [
+        "99886bb257c4"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "gateway",
+        "check",
+        "报告",
+        "正常",
+        "pid",
+        "探测",
+        "chief",
+        "git"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: All checks pass. No notification needed.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-27T21:00:14.199Z",
+      "lastRecalledAt": "2026-05-27T21:00:14.199Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-28",
+        "2026-05-27"
+      ],
+      "conceptTags": [
+        "all",
+        "checks",
+        "pass",
+        "notification",
+        "needed"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 📅 日报 2026-05-28 **🏢 业务（chief）** 今日无 chief 日志。最近活跃 05-24，HANDOFF 停在 05-04（ADR-012 rollback 收尾）。主线仍是 Route 1/2/3 + 5-agent，Dual-Engine/Radar Operating 已归档。无新增决策或项目进展。 **🔧 系统（main）** 今日无 main 日志。最近活跃 05-27。HANDOFF 仍指向 05-19 OpenClaw 升级至 2026.5.18 stable，doctor 告警（plugi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "05-24",
+        "05-04",
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine/radar",
+        "05-27",
+        "05-19"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-28.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-28.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-28.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 📅 日报 2026-05-28 **🏢 业务（chief）** 今日无 chief 日志。最近活跃 05-24，HANDOFF 停在 05-04（ADR-012 rollback 收尾）。主线仍是 Route 1/2/3 + 5-agent，Dual-Engine/Radar Operating 已归档。无新增决策或项目进展。 **🔧 系统（main）** 今日无 main 日志。最近活跃 05-27。HANDOFF 仍指向 05-19 OpenClaw 升级至 2026.5.18 stable，doctor 告警（plugi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "queryHashes": [
+        "f9fcbbc6bd1e"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "05-24",
+        "05-04",
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine/radar",
+        "05-27",
+        "05-19"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: All checks passed — silent.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-29",
+        "2026-05-28"
+      ],
+      "conceptTags": [
+        "all",
+        "checks",
+        "passed",
+        "silent"
       ]
     }
   }
