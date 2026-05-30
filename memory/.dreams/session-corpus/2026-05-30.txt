@@ -1,0 +1,2 @@
+[main/sessions/main/d09d213e-869b-41f8-8673-7d9aa4bae2a3.jsonl#L10] Assistant: Part C3 的 docker 模板字段名在这个版本不支持，换个写法重跑：
+[main/sessions/main/d09d213e-869b-41f8-8673-7d9aa4bae2a3.jsonl#L12] Assistant: 全部检查通过，无异常，无需通知 Bruce。 - **Part A** 断裂 symlink：5 个 workspace 全部干净，无需修复。 - **Part B** CTX 规则同步：benben / kefu / mangba / mangba-guest 全部与 main 权威副本一致。 - **Part C1** 流浪 remote：无 ALERT。 - **Part C2** egress 配置：benben=none、kefu=none，符合预期。 - **Part C3** 镜像匹配：运行中的 `opencl

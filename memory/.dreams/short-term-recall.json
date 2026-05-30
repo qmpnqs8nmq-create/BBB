@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-28T21:00:18.570Z",
+  "updatedAt": "2026-05-29T21:00:13.248Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -13925,12 +13925,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: ok (pid 1513199, probe ok); Logs: 无 error/fatal; Cron 失败 4 个，全部 `LLM error quote_exceeded`（zenmux 订阅配额耗尽）：; 每日价值投资学习提醒 (consec=4)",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-23T21:01:05.358Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "ae3ac765491f"
       ],
@@ -13941,7 +13941,8 @@
         "2026-05-26",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "gateway",
@@ -13962,12 +13963,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Validation Tracker Midweek Nudge (consec=1); NVDA Q1 FY27 盘前提醒 / F-Watch 复检 (各 consec=1); 自修复不可行（外部配额问题），需 Bruce 处理：等待配额刷新 / 升级套餐 / 切 PAYG key; Git: workspace + chief 已快照推送",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-23T21:01:05.358Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "ae3ac765491f"
       ],
@@ -13978,7 +13979,8 @@
         "2026-05-26",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14185,12 +14187,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway ok（pid 1513199, active）；近 50 行日志无 error。; workspace + workspace-chief 已 commit & push（13 + 11 文件）。; Cron 异常 3 项（均外部原因，无需修）：; 周日系统巡检（3h ago）：provider 返回 HTML（CDN/网关拦截，瞬时）",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-24T21:00:02.150Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "e87913ef436c"
       ],
@@ -14200,7 +14202,8 @@
         "2026-05-26",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "gateway",
@@ -14221,12 +14224,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Validation Tracker（4d ago）：zenmux quota_exceeded; NVDA Q1 财报相关 2 项（3d ago）：历史 error，下次触发再观察",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-24T21:00:02.150Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "e87913ef436c"
       ],
@@ -14236,7 +14239,8 @@
         "2026-05-26",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14481,12 +14485,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway healthy (pid 1513199, probe ok), 无 ERROR; Workspace + chief 两个仓库已 auto-commit + push; Cron 中 lastStatus=error（历史遗留，非今日新增）：; 7f1dacbb Validation Tracker (chief, 5d ago)",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-25T21:00:02.108Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "d840cb851395"
       ],
@@ -14495,7 +14499,8 @@
         "2026-05-25",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "gateway",
@@ -14516,12 +14521,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: 7a59f223 周日系统巡检 (chief, 1d ago); 890f4b0a / 5b1abbd9 NVDA Q1 FY27 双子任务 (mangba, 4d ago); 未做修复，这些都是周期性任务，下次触发再看。",
       "recallCount": 0,
-      "dailyCount": 4,
+      "dailyCount": 5,
       "groundedCount": 0,
-      "totalScore": 2.48,
+      "totalScore": 3.1,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-25T21:00:02.108Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "d840cb851395"
       ],
@@ -14530,7 +14535,8 @@
         "2026-05-25",
         "2026-05-27",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14707,12 +14713,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running, probe ok, version 2026.5.18; Logs: 0 errors in last 50 lines; Cron failures (existing): 23:00 daily-summary (5月25)→ wecom ack timeout，任务已生成 daily-summary/2026-05-25.md 仅推送 ack 超时；周日巡检/Validation Tracker/NVDA 提醒均为旧错误，无新增; Auto-commit: work",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-26T21:00:03.294Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "0e882fd58aee"
       ],
@@ -14720,7 +14726,8 @@
         "2026-05-27",
         "2026-05-26",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "gateway",
@@ -14741,12 +14748,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Action: 不重启，观察今晚 23:00 是否复发",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-26T21:00:03.294Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "0e882fd58aee"
       ],
@@ -14754,7 +14761,8 @@
         "2026-05-27",
         "2026-05-26",
         "2026-05-28",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14839,19 +14847,20 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running ok (pid 1513199, probe ok); Workspace + chief git snapshot pushed; Cron failures (consecutiveErrors>0): 5 jobs, all `OutboundDeliveryError: WebSocket 1006` to wecom node — delivery-layer issue, not job logic. 监控中，未自动修复。; 58868110 每日使用总结23:",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-27T21:00:14.199Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "c3d4719b3f48"
       ],
       "recallDays": [
         "2026-05-28",
         "2026-05-27",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "gateway",
@@ -14872,19 +14881,20 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: 7f1dacbb Validation Tracker; 7a59f223 周日系统巡检; 890f4b0a / 5b1abbd9 NVDA 财报提醒",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-27T21:00:14.199Z",
-      "lastRecalledAt": "2026-05-28T21:00:04.029Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
       "queryHashes": [
         "c3d4719b3f48"
       ],
       "recallDays": [
         "2026-05-28",
         "2026-05-27",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -15162,6 +15172,2636 @@
         "checks",
         "passed",
         "silent"
+      ]
+    },
+    "memory:memory/2026-05-29.md:3:6": {
+      "key": "memory:memory/2026-05-29.md:3:6",
+      "path": "memory/2026-05-29.md",
+      "startLine": 3,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: Gateway running (pid 1689797, probe ok), 无最近 error 日志; workspace + chief 自动 snapshot 已 push; ⚠️ 3 个 cron 处于 error 状态（均为历史失败，非今日新增）：; 7a59f223 周日系统巡检（5d ago）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "c7834f911a8f"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "daily-self-check",
+        "self",
+        "check",
+        "running",
+        "pid",
+        "probe",
+        "最近"
+      ]
+    },
+    "memory:memory/2026-05-29.md:7:8": {
+      "key": "memory:memory/2026-05-29.md:7:8",
+      "path": "memory/2026-05-29.md",
+      "startLine": 7,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "08:00 daily-self-check: 890f4b0a / 5b1abbd9 NVDA Q1 FY27（8d ago，HTML 错误页 / CDN 拦截）; 当前无需自修复，下次运行时观察是否恢复",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "c7834f911a8f"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "daily-self-check",
+        "self",
+        "check",
+        "890f4b0a",
+        "5b1abbd9",
+        "nvda",
+        "fy27",
+        "ago"
+      ]
+    },
+    "memory:memory/2026-05-29.md:11:14": {
+      "key": "memory:memory/2026-05-29.md:11:14",
+      "path": "memory/2026-05-29.md",
+      "startLine": 11,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "10:30 ZenMux opus 升级 4.8 + 删 key3（Bruce 主导）: 验证 ZenMux 确有 opus-4.8（key1/key2 实跑 HTTP 200，真回包），sonnet 无 4.8 → sonnet 保持 4.6 不动; 目标态：key1/key2 都有 opus-4.8 + sonnet-4.6；删除 key3（provider+模型+auth+fallback 全清）; ⚠️ 关键教训：模型配置有 **3 层来源会被合并**，改一处不够，key3 反复\"复活\"：; /root/.openclaw/openclaw.js",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "c7834f911a8f"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "4.8",
+        "opus-4.8",
+        "key1/key2",
+        "4.6",
+        "sonnet-4.6",
+        "openclaw/openclaw.js",
+        "zenmux",
+        "opus"
+      ]
+    },
+    "memory:memory/2026-05-29.md:15:18": {
+      "key": "memory:memory/2026-05-29.md:15:18",
+      "path": "memory/2026-05-29.md",
+      "startLine": 15,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "10:30 ZenMux opus 升级 4.8 + 删 key3（Bruce 主导）: 顶层 /root/.openclaw/models.json + auth-profiles.json; **每个 agent 各自的** agents/*/agent/models.json + auth-profiles.json（24 文件）; 处理：脚本 /root/.openclaw/tmp/zenmux-key3-cleanup.py 批量删 key3 + opus4.7→4.8，全量备份在 backups/zenmux-key3-cleanup-202",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "c7834f911a8f"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "备份",
+        "4.8",
+        "openclaw/models.json",
+        "auth-profiles.json",
+        "agent/models.json",
+        "opus4.7"
+      ]
+    },
+    "memory:memory/2026-05-29.md:19:20": {
+      "key": "memory:memory/2026-05-29.md:19:20",
+      "path": "memory/2026-05-29.md",
+      "startLine": 19,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "10:30 ZenMux opus 升级 4.8 + 删 key3（Bruce 主导）: 副作用提醒：restart 会断当前 webchat 连接（SIGTERM），属正常，等几秒重连即可; market agent 之前是 4.7，本次一并统一到 4.8（其 primary 仍是 sonnet，未变）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "c7834f911a8f"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "4.8",
+        "4.7",
+        "zenmux",
+        "opus",
+        "升级",
+        "key3",
+        "bruce",
+        "主导"
+      ]
+    },
+    "memory:memory/2026-05-29.md:23:26": {
+      "key": "memory:memory/2026-05-29.md:23:26",
+      "path": "memory/2026-05-29.md",
+      "startLine": 23,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "15:45 OpenClaw 升级 2026.5.18 → 2026.5.27: 触发：Bruce 问最新版/是否值得升。最新稳定 5.27（5/28 发布），隔 6 个稳定版~11天; 升级理由：安全加固（群prompt不进system、记忆按不可信处理、SSRF/路径穿越修复、无auth Tailscale拒绝）+ Gateway启动/回复性能 + Memory/QMD召回正确性 + cron并发默认提到8; 执行：备份27个配置文件→/root/.openclaw/backups/pre-upgrade-20260529-110818；npm -g",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "c7834f911a8f"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "backup",
+        "backups",
+        "gateway",
+        "qmd",
+        "备份",
+        "2026.5.18",
+        "2026.5.27",
+        "问最新版/是否值得升"
+      ]
+    },
+    "memory:memory/2026-05-29.md:27:28": {
+      "key": "memory:memory/2026-05-29.md:27:28",
+      "path": "memory/2026-05-29.md",
+      "startLine": 27,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "15:45 OpenClaw 升级 2026.5.18 → 2026.5.27: 唯一差异：6个无tag的 codex/* 本地harness目录消失（codex CLI不在PATH，残留探测目录，无害）; 无breaking change影响本部署",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "c7834f911a8f"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.5.18",
+        "2026.5.27",
+        "openclaw",
+        "升级",
+        "唯一",
+        "差异",
+        "tag",
+        "codex"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: No chief activity today (chief log for 2026-05-29 doesn't exist; chief HANDOFF last active 05-04). Today is entirely main/系统运维. I'll generate the report honestly reflecting that.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "05-04",
+        "main/系统运维",
+        "chief",
+        "activity",
+        "log",
+        "doesn't",
+        "exist",
+        "handoff"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: 📋 **日报 2026-05-29** 今天活动全部集中在系统运维层，chief 业务侧无新记录（chief 日志未生成，状态仍停在 05-04）。 **🔧 系统运维（main）** - **08:00 自检**：Gateway 正常、无 error 日志、snapshot 已 push。发现 3 个历史失败 cron（周日巡检 + NVDA 抓取 ×2），属旧失败，决定下次运行时观察自愈。 - **10:30 ZenMux 升级**：opus 全线 4.7→4.8，彻底删除 key3。关键发现：模型配置有 **3 层合并来源*",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "05-04",
+        "4.7",
+        "4.8",
+        "日报",
+        "今天",
+        "活动",
+        "全部"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: 3 个 cron 处于历史 error 状态（非新增），其余正常。已记入今日日记，无需打扰。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "cron",
+        "处于",
+        "历史",
+        "error",
+        "状态",
+        "新增",
+        "其余",
+        "正常"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: 📋 **日报 2026-05-29** 今天活动全部集中在系统运维层，chief 业务侧无新记录（chief 日志未生成，状态仍停在 05-04）。 **🔧 系统运维（main）** - **08:00 自检**：Gateway 正常、无 error 日志、snapshot 已 push。发现 3 个历史失败 cron（周日巡检 + NVDA 抓取 ×2），属旧失败，决定下次运行时观察自愈。 - **10:30 ZenMux 升级**：opus 全线 4.7→4.8，彻底删除 key3。关键发现：模型配置有 **3 层合并来源*",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "05-04",
+        "4.7",
+        "4.8",
+        "日报",
+        "今天",
+        "活动",
+        "全部"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "User: 请帮我查一下系统现在最新的版本是什么？是否值得升级？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "一下",
+        "系统",
+        "现在",
+        "最新",
+        "版本",
+        "什么",
+        "是否",
+        "值得"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: 当前情况已经查清，我去看一下这中间几个版本改了什么，判断升级价值。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "当前",
+        "情况",
+        "已经",
+        "查清",
+        "我去",
+        "看一下",
+        "中间",
+        "几个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 我装的是 5.18 的 changelog。我去拉一下 5.19→5.27 这几个版本的更新内容来判断升级价值。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "5.18",
+        "5.19",
+        "5.27",
+        "的是",
+        "changelog",
+        "我去",
+        "一下",
+        "几个"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "Assistant: The full diff dump is noisy. Let me extract just the version sections between my installed version and latest.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "full",
+        "diff",
+        "dump",
+        "noisy",
+        "let",
+        "extract",
+        "version",
+        "sections"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: I have what I need. Here's the assessment. ## 版本现状 - **你当前装的**：`2026.5.18`（5月18日发布，commit 50a2481） - **最新稳定版**：`2026.5.27`（5月28日发布） - 中间隔了 6 个稳定版（5.19/5.20/5.22/5.24/5.25/5.26/5.27），约 11 天的更新 ## 值得升级吗？—— 值得，建议升 这 9 天积累的更新里，有几类对**我们这套部署**直接相关： **1. 安全加固（最该升的理由）** - 群聊 p",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.5.18",
+        "2026.5.27",
+        "what",
+        "need",
+        "here's",
+        "assessment",
+        "版本",
+        "现状"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: memory_search 信噪比 - **沙箱**：bind-mount 感知、host-path 提示修复（benben/mangba 沙箱相关） **没有 breaking change** 影响我们（5.19–5.27 没有破坏性配置变更，唯一的 `.moltbot` 迁移是 2026.2 的旧事）。 ## 我的建议 值得升，而且风险低。不过有个**重要前提**——按 MEMORY.md 记录，我们的模型/auth 配置分散在 3 层共约 24 个文件，升级 npm 包本身不动这些配置，但升级后必须 `restart` 并验",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory-search",
+        "bind-mount",
+        "host-path",
+        "benben/mangba",
+        "5.19",
+        "5.27",
+        "2026.2",
+        "memory.md"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "User: 好的，按照你的计划动手。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "好的",
+        "按照",
+        "你的",
+        "计划",
+        "动手"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 好，开始执行。先做计划追踪。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "开始",
+        "执行",
+        "计划",
+        "追踪"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 备份完成：3 个顶层 + 24 个 agent 级，共 27 个文件。先记录升级前的 `models list` 快照便于对比，再升级。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "备份",
+        "完成",
+        "文件",
+        "记录",
+        "升级",
+        "models",
+        "list",
+        "快照"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: Snapshot saved. Now run the upgrade.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "snapshot",
+        "saved",
+        "now",
+        "run",
+        "upgrade"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 已升到 2026.5.27。先跑 doctor 检查配置兼容性，再 restart。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "2026.5.27",
+        "升到",
+        "先跑",
+        "doctor",
+        "检查",
+        "配置",
+        "兼容",
+        "restart"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: Config valid. Now restart the Gateway.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "config",
+        "valid",
+        "now",
+        "restart"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "User: ZenMux, 请验证一下我的大模型平台ZenMux, 是否提供Opus 4.8？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "4.8",
+        "zenmux",
+        "验证",
+        "一下",
+        "我的",
+        "模型",
+        "平台",
+        "是否"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 验证完毕 ✅ **ZenMux 已上架 Claude Opus 4.8** - 模型页：https://zenmux.ai/anthropic/claude-opus-4.8（HTTP 200，正常存在） - 与 Opus 4.6 / 4.7 同列在 Anthropic 模型矩阵里，作为最新一代 Opus 提供 - Anthropic 官方 ID：`claude-opus-4-8`，2026-05-28 全球放量 🐎 备注：按我们之前的约定（MEMORY.md），Anthropic 跳过 4.7、4.6 之后直接 4.8 的节奏对",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "4.8",
+        "4.6",
+        "4.7",
+        "claude-opus-4-8",
+        "memory.md",
+        "验证",
+        "完毕",
+        "zenmux"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "User: ZenMux Opus 4.8，要验证是否真的可以用这个模型。然后，ZenMux 我有三个key， key1key2key3，请删除掉key3，然后key1和key2的大模型opus都变成从4.7变成4.8。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "4.8",
+        "然后key1和key2的大模型opus都变成从4.7变成4.8",
+        "zenmux",
+        "opus",
+        "验证",
+        "是否",
+        "真的",
+        "可以"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: 先实测 Opus 4.8 能不能用，再改配置。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "4.8",
+        "opus",
+        "能不能",
+        "配置"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: JSON 合法，key3 全部清除，key1/key2 已升 4.8。重启 Gateway 让配置生效：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "key1/key2",
+        "4.8",
+        "合法",
+        "key3",
+        "全部",
+        "清除",
+        "key1"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "User: 请注意，好像没有sonnet4.8, 原来的sonnet4.6不能直接变成sonnet4.8. 请看看再决定",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "好像没有sonnet4.8",
+        "原来的sonnet4.6不能直接变成sonnet4.8",
+        "注意",
+        "好像",
+        "没有",
+        "sonnet4.8",
+        "原来",
+        "sonnet4.6"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: 理解 — 你提醒得对。我确认一下：**我没有动 sonnet**,只把 opus 从 4.7 升到 4.8,sonnet 仍保持 4.6。先把 Gateway 拉起来再核对。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "4.7",
+        "4.8",
+        "4.6",
+        "理解",
+        "提醒",
+        "确认",
+        "一下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: Gateway 已正常运行。核对一下 sonnet 是否被误改：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "正常",
+        "运行",
+        "核对",
+        "一下",
+        "sonnet",
+        "是否"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "Assistant: 确认无误,放心 👍 我从头到尾**只动了 opus,完全没碰 sonnet**。 实际改动总结: **1. Opus 4.8 实测可用 ✅** - key1 + key2 都用 `anthropic/claude-opus-4.8` 实跑成功,HTTP 200,模型真实回包(不是页面挂个名而已) **2. 删 key3 ✅** - provider `zenmux-key3`、其下两个模型、auth 账号、defaults/market 的 fallback 引用,全部清除 **3. opus 4.7 → 4.8 ✅** - ke",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "4.8",
+        "anthropic/claude-opus-4.8",
+        "zenmux-key3",
+        "defaults/market",
+        "4.7",
+        "确认",
+        "无误",
+        "放心"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "User: 你是不是把我的key1删了？是要key1和key2都有opus4.8的。key1和key2都有sonnet-4.6的",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "是要key1和key2都有opus4.8的",
+        "key1和key2都有sonnet-4.6的",
+        "是不是",
+        "我的",
+        "key1",
+        "key2",
+        "都有",
+        "opus4.8"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 别担心,key1 没被删。我核对给你看:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "担心",
+        "key1",
+        "没被",
+        "核对"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: key1 和 key2 都在,只删了 key3。逐项看一下每个 key 下挂的模型:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "key1",
+        "key2",
+        "都在",
+        "key3",
+        "看一下",
+        "key",
+        "模型"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: No daily logs older than 14 days, MEMORY.md within limits, no wecom DM blocks in the last 24h. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "heartbeat-ok",
+        "logs",
+        "older",
+        "days",
+        "within",
+        "limits",
+        "wecom"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: The date is actually May 29 — let me recheck with the correct cutoff.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "date",
+        "actually",
+        "may",
+        "let",
+        "recheck",
+        "correct",
+        "cutoff"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: All clear: oldest daily log is May 16 (within 14 days), MEMORY.md at 53 lines, no wecom DM blocks, archive months all recent. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "heartbeat-ok",
+        "all",
+        "clear",
+        "oldest",
+        "log",
+        "may",
+        "within"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this run. Nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "run",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything — all clean. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "all",
+        "clean"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: Nothing needs attention — checked just now. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "nothing",
+        "needs",
+        "attention",
+        "checked",
+        "now"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: Already checked this cycle — nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "already",
+        "checked",
+        "cycle",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: Nothing needs attention — checks done this cycle already. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "nothing",
+        "needs",
+        "attention",
+        "checks",
+        "done",
+        "cycle",
+        "already"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything in the prior turn — no logs older than 14 days, MEMORY.md within limits, no wecom DM blocks. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "prior",
+        "turn",
+        "logs",
+        "older"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this cycle — all clear. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "cycle",
+        "all",
+        "clear"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this run — nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "run",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this cycle. Nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "cycle",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: Part C3 的 docker 模板字段名在这个版本不支持，换个写法重跑：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "docker",
+        "模板",
+        "这个",
+        "版本",
+        "支持",
+        "换个",
+        "写法"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: 全部检查通过，无异常，无需通知 Bruce。 - **Part A** 断裂 symlink：5 个 workspace 全部干净，无需修复。 - **Part B** CTX 规则同步：benben / kefu / mangba / mangba-guest 全部与 main 权威副本一致。 - **Part C1** 流浪 remote：无 ALERT。 - **Part C2** egress 配置：benben=none、kefu=none，符合预期。 - **Part C3** 镜像匹配：运行中的 `openclaw-s",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "openclaw-s",
+        "全部",
+        "检查",
+        "通过",
+        "异常",
+        "通知",
+        "bruce"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: restart 把当前进程也带走了（SIGTERM）。稍等几秒确认 Gateway 是否已恢复。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "restart",
+        "当前",
+        "进程",
+        "带走",
+        "sigterm",
+        "稍等",
+        "几秒"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: Gateway 正在 systemd 重启过程中（deactivating），仍显示旧版本。等它起来。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "正在",
+        "systemd",
+        "过程",
+        "deactivating",
+        "显示",
+        "旧版",
+        "起来"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "User: 升级之后重启过了，你看需要怎么审计，或者是核查是否升级成功。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "升级",
+        "之后",
+        "需要",
+        "怎么",
+        "审计",
+        "或者是",
+        "核查",
+        "是否"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: 好，我来做升级后的完整核查。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "我来",
+        "升级",
+        "完整",
+        "核查"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Assistant: CLI 和 Gateway 都到 2026.5.27 了，版本一致、运行中。现在核查模型配置有没有旧 key 复活，以及 cron 是否正常。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026.5.27",
+        "cli",
+        "版本",
+        "一致",
+        "运行",
+        "现在",
+        "核查"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:47:47": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:47:47",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "Assistant: 关键发现已清晰。我先解读，再查 cron 和日志。 **模型对比结果**（忽略 plugin 加载的 stderr 噪音）： - ✅ 所有 **configured / fallback 链**模型完全不变：key1/key2 opus-4.8、sonnet-4.6、openai/gpt-5.5、openai-codex/gpt-5.5 都在 - ✅ **没有旧 key3 复活、没有幽灵 sonnet-4.8**——这正是 MEMORY.md 最担心的三层不同步问题，干净 - ⚠️ 唯一差异：`codex/*` 那 6 个本地 Co",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "key1/key2",
+        "opus-4.8",
+        "sonnet-4.6",
+        "openai/gpt-5.5",
+        "openai-codex/gpt-5.5",
+        "sonnet-4.8"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:48:48": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:48:48",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 48,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "Assistant: 那些 `error` 命中的都是 `isError=false`（正常结束），不是真错误。codex CLI 本来就不在 PATH 里——所以那 6 个 `codex/*` 是之前某次本地探测残留的目录，无 tag、未配置、不在 fallback 链，掉了完全无害。 最后查 cron 调度器和定时任务：",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "那些",
+        "error",
+        "命中",
+        "都是",
+        "iserror",
+        "false",
+        "正常",
+        "结束"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:49:49": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:49:49",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 49,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "Assistant: 升级和审计全部完成。记一笔到当日日记。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "升级",
+        "审计",
+        "全部",
+        "完成",
+        "当日",
+        "日记"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:50:50": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:50:50",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 50,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "Assistant: ✅ **升级 + 审计完成，全部正常。** ## 结果汇总 | 项目 | 结果 | |---|---| | 版本 | `2026.5.18` → `2026.5.27` | | CLI / Gateway 一致性 | ✅ 都是 2026.5.27，无版本错配 | | Gateway 运行状态 | ✅ running，连通性 probe ok，admin-capable | | config validate | ✅ 通过 | | 模型配置三层同步 | ✅ **干净**——无旧 key3 复活、无幽灵 sonnet-4.8 | | f",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "2026.5.18",
+        "2026.5.27",
+        "admin-capable",
+        "sonnet-4.8",
+        "升级",
+        "审计",
+        "完成"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:51:51": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:51:51",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 51,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "Assistant: 个文件），万一需要回滚随时可用。已记入当日日记。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "文件",
+        "万一",
+        "需要",
+        "随时",
+        "可用",
+        "当日",
+        "日记"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:52:52": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:52:52",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 52,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "User: 我们不是还有那个open ai oauth的codex-5.5吗？你确定我们不能有这个删除的。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "oauth的codex-5.5吗",
+        "我们",
+        "不是",
+        "还有",
+        "那个",
+        "open",
+        "oauth",
+        "codex"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:53:53": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:53:53",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 53,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "Assistant: 好问题,我来分清楚两组,别混了。 **先看现状**:升级后的 models list 里—— - ✅ `openai-codex/gpt-5.5` —— **还在**,没被删。这个就是走 OpenAI OAuth 的 Codex app-server 路径。 - ❌ 消失的是另一组,带 `codex/` 前缀的:`codex/gpt-5.2`、`codex/gpt-5.3-codex`、`codex/gpt-5.4`、`codex/gpt-5.5` 等 6 个。 这两组前缀不同、来源不同: - `openai-codex/*` =",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gpt",
+        "openai",
+        "openai-codex/gpt-5.5",
+        "app-server",
+        "codex/gpt-5.2",
+        "codex/gpt-5.3-codex",
+        "codex/gpt-5.4",
+        "codex/gpt-5.5"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:54:54": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:54:54",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 54,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "Assistant: 全对上了 ✅ 没删 key1,你要的状态现在完全满足: | Key | Opus | Sonnet | |-----|------|--------| | **key1** | ✅ opus-4.8-key1 | ✅ sonnet-4.6-key1 | | **key2** | ✅ opus-4.8-key2 | ✅ sonnet-4.6-key2 | | ~~key3~~ | 已删除 | 已删除 | - **key1 和 key2 都有 opus 4.8** ✅ - **key1 和 key2 都有 sonnet 4.6** ✅",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "opus-4.8-key1",
+        "sonnet-4.6-key1",
+        "opus-4.8-key2",
+        "sonnet-4.6-key2",
+        "4.8",
+        "4.6",
+        "上了",
+        "key1"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:55:55": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:55:55",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 55,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "User: 我不知道是什么问题，但是你在dashboard里面展示模型的框里面只有key2，没有key1。只有opus没有sonnet。？？？",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "不知道",
+        "什么",
+        "问题",
+        "但是",
+        "你在",
+        "dashboard",
+        "里面",
+        "展示"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:56:56": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:56:56",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 56,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "Assistant: 奇怪,让我查一下 dashboard 模型列表是怎么取的。先看 defaults.models 那块——刚才我注意到那里只显式列了 key2:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "defaults.models",
+        "奇怪",
+        "一下",
+        "dashboard",
+        "模型",
+        "列表",
+        "怎么",
+        "先看"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:57:57": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:57:57",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 57,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "Assistant: 可能是配置缓存或某处模型注册没刷新。我直接问 Gateway 它实际加载到了哪些模型,而不是靠猜:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "可能是",
+        "配置",
+        "某处",
+        "模型",
+        "注册",
+        "刷新",
+        "直接"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:58:58": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:58:58",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 58,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "Assistant: Two things surface here. Let me read them carefully. **Problem A:** `models list` still shows `zenmux-key3/opus-4.7` — meaning the running Gateway is still on the **old config**, my restart didn't fully take. **Problem B (your dashboard symptom):** the dropdown likely",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "zenmux-key3/opus-4.7",
+        "two",
+        "things",
+        "surface",
+        "here",
+        "let",
+        "read"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:59:59": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:59:59",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 59,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "Assistant: File is clean (no key3, JSON valid). But the live Gateway still reports key3 → it's serving a stale config because my earlier restart got interrupted. Forcing a clean restart now:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "clean",
+        "key3",
+        "valid",
+        "but",
+        "live",
+        "still",
+        "reports"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:60:60": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:60:60",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 60,
+      "endLine": 60,
+      "source": "memory",
+      "snippet": "Assistant: restart 会杀掉我自己这条会话的连接,所以命令显示被 SIGTERM 中断是正常的。等几秒再查状态:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "restart",
+        "杀掉",
+        "自己",
+        "会话",
+        "连接",
+        "所以",
+        "命令",
+        "显示"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:61:61": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:61:61",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 61,
+      "endLine": 61,
+      "source": "memory",
+      "snippet": "User: 改好了。 请同步所有系统的文档和memory。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "好了",
+        "同步",
+        "所有",
+        "系统"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:62:62": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:62:62",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 62,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "Assistant: 先确认现在 Gateway 实际加载的模型列表对了,再更新文档和记忆:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "确认",
+        "现在",
+        "实际",
+        "模型",
+        "列表",
+        "更新",
+        "记忆"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:63:63": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:63:63",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 63,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "Assistant: 新配置已生效(key1/key2 现在带 `configured` 标记,说明我加的 override 已加载)。**但 key3 还在列表里**,而文件里已经没有 key3 了——说明有别的来源。排查一下:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "key1/key2",
+        "配置",
+        "生效",
+        "key1",
+        "key2",
+        "现在",
+        "configured",
+        "标记"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:64:64": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:64:64",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 64,
+      "endLine": 64,
+      "source": "memory",
+      "snippet": "Assistant: key3 在配置文件里确实没了,但 `models list` 还显示它。可能来自别的 agent 的配置文件或缓存。再查一下其它配置来源:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "key3",
+        "配置",
+        "文件",
+        "确实",
+        "没了",
+        "models",
+        "list",
+        "显示"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:65:65": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:65:65",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 65,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "Assistant: 找到根因了。除了 `openclaw.json`,还有两个**顶层独立文件**也定义着 key3: - `/root/.openclaw/models.json` - `/root/.openclaw/auth-profiles.json` Gateway 会合并这些。所以 key3 还冒出来。看一下:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "gateway",
+        "openclaw.json",
+        "openclaw/models.json",
+        "openclaw/auth-profiles.json",
+        "找到",
+        "根因",
+        "除了",
+        "还有"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:66:66": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:66:66",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 66,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this round: no logs older than 14 days, MEMORY.md within limits, no wecom DM blocks. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "round",
+        "logs",
+        "older",
+        "days"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:67:67": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:67:67",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 67,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "Assistant: Already checked this cycle — all clear. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "already",
+        "checked",
+        "cycle",
+        "all",
+        "clear"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:68:68": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:68:68",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 68,
+      "endLine": 68,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this round — nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "round",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:69:69": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:69:69",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 69,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this round. All clear. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "round",
+        "all",
+        "clear"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:70:70": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:70:70",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 70,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "Assistant: Already checked this cycle — nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "already",
+        "checked",
+        "cycle",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:71:71": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:71:71",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 71,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "Assistant: Nothing needs attention — verified just now: no logs older than 14 days, MEMORY.md at 53 lines, no wecom DM blocks. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "heartbeat-ok",
+        "nothing",
+        "needs",
+        "attention",
+        "verified",
+        "now",
+        "logs"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:72:72": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:72:72",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 72,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this run — nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "run",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:73:73": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:73:73",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 73,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything. All clear. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "all",
+        "clear"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:74:74": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:74:74",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 74,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "Assistant: Already verified this cycle: no logs older than 14 days, MEMORY.md at 53 lines, no wecom DM blocks. It's also 9:18 PM, quiet hours approaching. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "heartbeat-ok",
+        "already",
+        "verified",
+        "cycle",
+        "logs",
+        "older",
+        "days"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:75:75": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:75:75",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 75,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "Assistant: Just checked everything this cycle. Nothing needs attention. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "heartbeat-ok",
+        "checked",
+        "everything",
+        "cycle",
+        "nothing",
+        "needs",
+        "attention"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-29.txt:76:76": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-29.txt:76:76",
+      "path": "memory/.dreams/session-corpus/2026-05-29.txt",
+      "startLine": 76,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "Assistant: Just verified everything this round — no logs over 14 days old, MEMORY.md at 53 lines, no wecom DM blocks. It's also 10:48 PM (quiet hours). HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-29T21:00:02.079Z",
+      "lastRecalledAt": "2026-05-29T21:00:02.079Z",
+      "queryHashes": [
+        "0e934d1f0d1c"
+      ],
+      "recallDays": [
+        "2026-05-30",
+        "2026-05-29"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "heartbeat-ok",
+        "verified",
+        "everything",
+        "round",
+        "logs",
+        "days",
+        "old"
       ]
     }
   }
