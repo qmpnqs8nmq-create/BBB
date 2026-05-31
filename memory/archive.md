@@ -36,6 +36,7 @@
 - 05-08: OpenClaw 5.2→5.7 升级；wecom plugin 同步至 5.7；`doctor --fix` 应用 bundledDiscovery=compat / visibleReplies=message_tool / 禁用 10 个未用 skill；**铁律**：doctor --fix / restart 会 SIGTERM 当前 exec，必须先告知 Bruce “会被打断” 再跑并主动 poll 状态
 - 05-09/10/11: 日常自检正常；3 条历史 stale error（CEO Weekly / healthcheck:update-status / 芒巴晚报）consecutiveErrors=0 鴿造
 - 05-12/13: 日常自检；`healthcheck:security-audit` lastDeliveryStatus=not-delivered（wecom 投递失败，job 本身跑完）；weixin getUpdates errcode -14 session-expired 按小时复现但 bot 60min 自暂停（已知）；symlink-integrity-check 03:00 推送 admin WSClient 未连 best-effort
+- 05-16: 日常自检正常（gateway ok / logs clean / git pushed）；`healthcheck:security-audit` lastStatus=error 为投递失败非任务失败，pre-existing
 
 ## 2026-04
 

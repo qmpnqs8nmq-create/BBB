@@ -1,8 +1,8 @@
-- Last active: 2026-05-29 10:59 Asia/Shanghai
-- Current topic: ZenMux 模型调整完成 — opus 全线升 4.8、删除 key3
-- Key facts: 现存 key1/key2，各带 opus-4.8 + sonnet-4.6（sonnet 无 4.8，保持 4.6）；key3 已彻底删除
-- ⚠️ 模型配置有 3 层来源会合并：openclaw.json + 顶层 models.json/auth-profiles.json + 每个 agent 各自的同名文件（24 个）。改模型必须三层全改，否则 key3 会"复活"
-- 清理脚本：/root/.openclaw/tmp/zenmux-key3-cleanup.py；备份：backups/zenmux-key3-cleanup-20260529-105511/
-- 验证：openclaw models list 只剩 key1/key2×(opus-4.8+sonnet-4.6)；main 自身已跑 opus-4.8；Gateway running
-- 注意：gateway restart 会断当前 webchat 连接（SIGTERM），属正常
-- Today note: memory/2026-05-29.md（10:30 段）
+- Last active: 2026-05-30 18:33 Asia/Shanghai
+- Current topic: memory_search embedding provider 从 OpenAI 切到 Gemini（OpenAI 额度 429 耗尽）
+- Key facts: agents.defaults.memorySearch = provider `gemini`(非google) + model `gemini-embedding-001`(3072维)；auth 走 google:default(api_key) 自动映射
+- ⚠️ 易错点：provider 值必须写 `gemini`（google 插件注册的 adapter id=gemini, authProviderId=google）；写 `google` 会报 "Unknown memory embedding provider: google"
+- ⚠️ 改 memorySearch 后必须 restart Gateway（CLI 重读配置但 Gateway 进程缓存旧值），且换 provider 后必须 `openclaw memory index --force` 全量重建（维度 1536→3072 不兼容）
+- 验证：memory_search 实测返回正常(provider=gemini, vectorScore 0.77+)，429 消失；status Vector dims=3072, Embeddings ready
+- OpenAI OAuth(openai-codex) 不能做 embedding（无 /v1/embeddings 端点），只有 api_key 类型可用
+- 备份：backups/openclaw.json.bak.embedding-google-*

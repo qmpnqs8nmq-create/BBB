@@ -1,0 +1,2 @@
+[main/sessions/main/0a6fd432-bd56-4d9a-9f96-9fd5c5df9933.jsonl#L12] Assistant: C3 的 docker ps 模板报错（`.ImageID` 字段不支持），重跑一下：
+[main/sessions/main/0a6fd432-bd56-4d9a-9f96-9fd5c5df9933.jsonl#L14] Assistant: All checks passed — no notification needed. - **Part A** (symlinks): all 5 CEO workspaces OK, no broken links. - **Part B** (CTX rules sync): benben/kefu/mangba/mangba-guest all in sync, no copy needed. - **Part C1** (rogue remotes): none found. - **Part C2** (egre
