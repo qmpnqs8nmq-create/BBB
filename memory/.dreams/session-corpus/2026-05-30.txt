@@ -43,3 +43,27 @@
 [main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L65] Assistant: 配置路径全部摸清了。开始执行——先建计划，然后备份+改配置+重建索引。
 [main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L68] Assistant: No per-agent overrides — only `agents.defaults`. Editing one place.
 [main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L74] Assistant: Now restart. ⚠️ This will drop my current webchat connection (SIGTERM), per the known note — that's expected.
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L76] Assistant: Expected — restart killed the connection. Let me wait for the Gateway to come back up.
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L81] User: [System] Your previous turn was interrupted by a gateway restart while OpenClaw was waiting on tool/model work. Continue from the existing transcript and finish the interrupted response.
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L82] Assistant: Gateway 重启中状态有点矛盾（"not running" 但又在监听 18789）。我先确认真实状态。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L84] Assistant: Gateway 实际是活的（PID 1721613 在监听 18789，而且正在处理我这条消息）。刚才那个 status 输出是 restart 过程中的瞬时态，已恢复。继续重建索引。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L88] Assistant: "Unknown memory embedding provider: google" — provider id 不对。查 google 插件注册的 embedding provider 到底叫什么 id。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L94] Assistant: 找到了——provider id 是 `gemini`（不是 `google`），但 auth profile 用的是 `google:default`（adapter 里 `authProviderId: "google"` 会自动映射）。改成 `gemini`。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L100] Assistant: Provider 现在是 `gemini`、Embeddings: ready ✅。但注意 `Vector dims: 1536` —— 这是**旧的 OpenAI 向量**（text-embedding-3-small=1536），而 gemini-embedding-001 默认产出不同维度，混用会搜不准。必须强制全量重建。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L108] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L110] Assistant: Gateway 重启中状态有点矛盾（"not running" 但又在监听 18789）。我先确认真实状态。 Gateway 实际是活的（PID 1721613 在监听 18789，而且正在处理我这条消息）。刚才那个 status 输出是 restart 过程中的瞬时态，已恢复。继续重建索引。 "Unknown memory embedding provider: google" — provider id 不对。查 google 插件注册的 embedding provider 到底叫什么 id。 找到了——provid
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L112] User: Continue the OpenClaw runtime event.
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L113] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L115] User: 有没有更高级的向量，例如3072还是什么？
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L116] Assistant: [[reply_to:ea35f2ad-6474-453b-83d6-a6f6fa66751b]] LLM error quote_exceeded: You have reached your subscription quota limit. Please wait for automatic quota refresh in the rolling time window, upgrade to a higher plan, or use a Pay-As-You-Go API Key for unlimited a
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L117] User: 有没有更高级的向量，例如3072还是什么？
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L120] User: 有没有更高级的向量，例如3072还是什么？
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L121] Assistant: 有，确实有更高维度的。先回答你的问题，顺便看一眼重建进度。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L123] Assistant: 重建跑完了（最后一行只显示了 kefu agent，我得确认 main 的状态和实际维度）。先回答你的维度问题，再核对结果。 ## Gemini 的高维 embedding 选项 OpenClaw 的 google 插件支持 3 个 embedding 模型，维度如下（来自 dist 源码确认）： | 模型 | 维度 | 说明 | |---|---|---| | `text-embedding-004` | 2048 | 旧款 | | **`gemini-embedding-001`**（当前在用） | 2048 | 默认
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L123] Assistant: 免费版解决了。维度不是瓶颈，`gemini-embedding-001`（2048 维，稳定免费）是这个场景的最优解。等哪天你觉得检索质量真不够了，我们再上 3072 也不迟。 --- 现在核对重建结果（关键看 Vector dims 是否从旧的 1536 变成 Gemini 的输出维度，以及 main 是否覆盖完整）：
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L127] Assistant: 有意思的转折——**你现在已经在用 3072 维了！** 我之前看的那张表（2048）是 `MAX_INPUT_TOKENS`（输入 token 上限），不是输出维度。实际重建后 status 明确显示： - **Vector dims: 3072** ✅（旧 OpenAI 是 1536，现在翻倍） - Provider: gemini · Model: gemini-embedding-001 · Embeddings: ready - main 索引：**250/868 文件 · 1221 chunks**（memor
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L129] Assistant: Gateway 进程内存里还是旧值 `google`（我第一次改错的那版，restart 时被加载进去了；后来改成 `gemini` 只有 CLI 重读了配置文件，Gateway 没重载）。需要再 restart 一次让 Gateway 吃到 `gemini`。 ⚠️ 这次 restart 会再断一下 webchat（正常），稍等几秒就回。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L135] User: [System] Your previous turn was interrupted by a gateway restart while OpenClaw was waiting on tool/model work. Continue from the existing transcript and finish the interrupted response.
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L136] Assistant: Gateway 回来了（18789 在监听）。现在 Gateway 内存里应该是正确的 `gemini` 了。实测搜索：
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L138] Assistant: 完美，全部跑通 ✅ `memory_search` 实测返回正常结果，`provider: "gemini"`、`model: "gemini-embedding-001"`、vectorScore 0.77–0.81，召回精准。429 彻底消失。 更新计划收尾，记录到记忆，然后给你总结。
+[main/sessions/main/eec54116-8fc5-4e75-8584-cd8be4078de2.jsonl#L142] Assistant: 全部搞定 ✅ 给你完整总结： ## memory_search 已切到 Gemini，恢复正常 **做了什么** 1. `agents.defaults.memorySearch` provider 从 `openai` → **`gemini`**，model → **`gemini-embedding-001`** 2. 走你已有的 `google:default`（api_key 类型，免费），自动映射 3. 全量重建索引（维度从 OpenAI 的 1536 → Gemini 的 **3072**） 4. resta
