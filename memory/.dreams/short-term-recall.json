@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-31T21:00:08.829Z",
+  "updatedAt": "2026-06-01T21:00:28.398Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -14491,12 +14491,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway healthy (pid 1513199, probe ok), 无 ERROR; Workspace + chief 两个仓库已 auto-commit + push; Cron 中 lastStatus=error（历史遗留，非今日新增）：; 7f1dacbb Validation Tracker (chief, 5d ago)",
       "recallCount": 0,
-      "dailyCount": 7,
+      "dailyCount": 8,
       "groundedCount": 0,
-      "totalScore": 4.34,
+      "totalScore": 4.96,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-25T21:00:02.108Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "d840cb851395"
       ],
@@ -14508,7 +14508,8 @@
         "2026-05-29",
         "2026-05-30",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "gateway",
@@ -14529,12 +14530,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: 7a59f223 周日系统巡检 (chief, 1d ago); 890f4b0a / 5b1abbd9 NVDA Q1 FY27 双子任务 (mangba, 4d ago); 未做修复，这些都是周期性任务，下次触发再看。",
       "recallCount": 0,
-      "dailyCount": 7,
+      "dailyCount": 8,
       "groundedCount": 0,
-      "totalScore": 4.34,
+      "totalScore": 4.96,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-25T21:00:02.108Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "d840cb851395"
       ],
@@ -14546,7 +14547,8 @@
         "2026-05-29",
         "2026-05-30",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14723,12 +14725,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running, probe ok, version 2026.5.18; Logs: 0 errors in last 50 lines; Cron failures (existing): 23:00 daily-summary (5月25)→ wecom ack timeout，任务已生成 daily-summary/2026-05-25.md 仅推送 ack 超时；周日巡检/Validation Tracker/NVDA 提醒均为旧错误，无新增; Auto-commit: work",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-26T21:00:03.294Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "0e882fd58aee"
       ],
@@ -14739,7 +14741,8 @@
         "2026-05-29",
         "2026-05-30",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "gateway",
@@ -14760,12 +14763,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Action: 不重启，观察今晚 23:00 是否复发",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-26T21:00:03.294Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "0e882fd58aee"
       ],
@@ -14776,7 +14779,8 @@
         "2026-05-29",
         "2026-05-30",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -14861,12 +14865,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running ok (pid 1513199, probe ok); Workspace + chief git snapshot pushed; Cron failures (consecutiveErrors>0): 5 jobs, all `OutboundDeliveryError: WebSocket 1006` to wecom node — delivery-layer issue, not job logic. 监控中，未自动修复。; 58868110 每日使用总结23:",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-27T21:00:14.199Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c3d4719b3f48"
       ],
@@ -14876,7 +14880,8 @@
         "2026-05-29",
         "2026-05-30",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "gateway",
@@ -14897,12 +14902,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: 7f1dacbb Validation Tracker; 7a59f223 周日系统巡检; 890f4b0a / 5b1abbd9 NVDA 财报提醒",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-27T21:00:14.199Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c3d4719b3f48"
       ],
@@ -14912,7 +14917,8 @@
         "2026-05-29",
         "2026-05-30",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -15200,12 +15206,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway running (pid 1689797, probe ok), 无最近 error 日志; workspace + chief 自动 snapshot 已 push; ⚠️ 3 个 cron 处于 error 状态（均为历史失败，非今日新增）：; 7a59f223 周日系统巡检（5d ago）",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-29T21:00:02.079Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c7834f911a8f"
       ],
@@ -15213,7 +15219,8 @@
         "2026-05-30",
         "2026-05-29",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "gateway",
@@ -15234,12 +15241,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: 890f4b0a / 5b1abbd9 NVDA Q1 FY27（8d ago，HTML 错误页 / CDN 拦截）; 当前无需自修复，下次运行时观察是否恢复",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-29T21:00:02.079Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c7834f911a8f"
       ],
@@ -15247,7 +15254,8 @@
         "2026-05-30",
         "2026-05-29",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "daily-self-check",
@@ -15268,12 +15276,12 @@
       "source": "memory",
       "snippet": "10:30 ZenMux opus 升级 4.8 + 删 key3（Bruce 主导）: 验证 ZenMux 确有 opus-4.8（key1/key2 实跑 HTTP 200，真回包），sonnet 无 4.8 → sonnet 保持 4.6 不动; 目标态：key1/key2 都有 opus-4.8 + sonnet-4.6；删除 key3（provider+模型+auth+fallback 全清）; ⚠️ 关键教训：模型配置有 **3 层来源会被合并**，改一处不够，key3 反复\"复活\"：; /root/.openclaw/openclaw.js",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-29T21:00:02.079Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c7834f911a8f"
       ],
@@ -15281,7 +15289,8 @@
         "2026-05-30",
         "2026-05-29",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "4.8",
@@ -15302,12 +15311,12 @@
       "source": "memory",
       "snippet": "10:30 ZenMux opus 升级 4.8 + 删 key3（Bruce 主导）: 顶层 /root/.openclaw/models.json + auth-profiles.json; **每个 agent 各自的** agents/*/agent/models.json + auth-profiles.json（24 文件）; 处理：脚本 /root/.openclaw/tmp/zenmux-key3-cleanup.py 批量删 key3 + opus4.7→4.8，全量备份在 backups/zenmux-key3-cleanup-202",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-29T21:00:02.079Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c7834f911a8f"
       ],
@@ -15315,7 +15324,8 @@
         "2026-05-30",
         "2026-05-29",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "backup",
@@ -15336,12 +15346,12 @@
       "source": "memory",
       "snippet": "10:30 ZenMux opus 升级 4.8 + 删 key3（Bruce 主导）: 副作用提醒：restart 会断当前 webchat 连接（SIGTERM），属正常，等几秒重连即可; market agent 之前是 4.7，本次一并统一到 4.8（其 primary 仍是 sonnet，未变）",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-29T21:00:02.079Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c7834f911a8f"
       ],
@@ -15349,7 +15359,8 @@
         "2026-05-30",
         "2026-05-29",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "4.8",
@@ -15370,12 +15381,12 @@
       "source": "memory",
       "snippet": "15:45 OpenClaw 升级 2026.5.18 → 2026.5.27: 触发：Bruce 问最新版/是否值得升。最新稳定 5.27（5/28 发布），隔 6 个稳定版~11天; 升级理由：安全加固（群prompt不进system、记忆按不可信处理、SSRF/路径穿越修复、无auth Tailscale拒绝）+ Gateway启动/回复性能 + Memory/QMD召回正确性 + cron并发默认提到8; 执行：备份27个配置文件→/root/.openclaw/backups/pre-upgrade-20260529-110818；npm -g",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-29T21:00:02.079Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c7834f911a8f"
       ],
@@ -15383,7 +15394,8 @@
         "2026-05-30",
         "2026-05-29",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "backup",
@@ -15404,12 +15416,12 @@
       "source": "memory",
       "snippet": "15:45 OpenClaw 升级 2026.5.18 → 2026.5.27: 唯一差异：6个无tag的 codex/* 本地harness目录消失（codex CLI不在PATH，残留探测目录，无害）; 无breaking change影响本部署",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-05-29T21:00:02.079Z",
-      "lastRecalledAt": "2026-05-31T21:00:01.246Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
       "queryHashes": [
         "c7834f911a8f"
       ],
@@ -15417,7 +15429,8 @@
         "2026-05-30",
         "2026-05-29",
         "2026-05-31",
-        "2026-06-01"
+        "2026-06-01",
+        "2026-06-02"
       ],
       "conceptTags": [
         "2026.5.18",
@@ -21265,6 +21278,1382 @@
         "api-key",
         "全部",
         "搞定"
+      ]
+    },
+    "memory:memory/2026-06-01.md:3:6": {
+      "key": "memory:memory/2026-06-01.md:3:6",
+      "path": "memory/2026-06-01.md",
+      "startLine": 3,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "08:00 每日自检: Gateway 正常运行 (pid 1722065, active, probe ok)。; Cron：仅 1 个任务 (daily-self-check)，consecutiveErrors=0, lastStatus=ok。; Git：workspace + chief 均已提交快照 (14 / 13 files)。; ⚠️ 注意：日志中 openclaw-weixin 通道反复报错 `getUpdates: session expired (errcode -14), pausing bot for 60 min`，自 05",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "52228d277b79"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "daily-self-check",
+        "openclaw-weixin",
+        "每日",
+        "正常",
+        "运行",
+        "pid",
+        "active"
+      ]
+    },
+    "memory:memory/2026-06-01.md:9:12": {
+      "key": "memory:memory/2026-06-01.md:9:12",
+      "path": "memory/2026-06-01.md",
+      "startLine": 9,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "10:00 周度安全巡检 (cron security-audit): status: gateway 健康，sessions+cron 正常运行（本 job 在列）。--deep 探针超时=误报（插件加载~21-27s 超过 10s 探针窗）; security audit: 0 critical / 6 warn / 1 info。warn 均为既有配置姿态：exec security=full(多 agent)、find/sed 无 strictInlineEval、codex/feishu 未 pin 版本、openclaw-weixin 两处",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "52228d277b79"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "security-audit",
+        "21-27s",
+        "find/sed",
+        "codex/feishu",
+        "openclaw-weixin",
+        "安全",
+        "cron"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:70:70": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:70:70",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 70,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "User: [System] Your previous turn was interrupted by a gateway restart while OpenClaw was waiting on tool/model work. Continue from the existing transcript and finish the interrupted response.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "tool/model",
+        "previous",
+        "turn",
+        "was",
+        "interrupted",
+        "restart",
+        "while"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:71:71": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:71:71",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 71,
+      "endLine": 71,
+      "source": "memory",
+      "snippet": "Assistant: 没有需要补的——上一轮的工作已经全部完成了。 确认一下最终状态（重启后再核一次，确保 Gateway 内存里是对的）： - ✅ memory_search 切到 **Gemini**（`provider: gemini` + `gemini-embedding-001`，3072 维） - ✅ 索引全量重建完成（1536 → 3072） - ✅ 实测搜索正常返回，429 消失 - ✅ HANDOFF.md 已更新 唯一还挂着的一个小问题问你：要不要把这条\"embedding 改用 Gemini\"的决策沉淀进 **MEMORY.md*",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "embedding",
+        "gateway",
+        "memory-search",
+        "gemini-embedding-001",
+        "handoff.md",
+        "memory.md",
+        "没有",
+        "需要"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:72:72": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:72:72",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 72,
+      "endLine": 72,
+      "source": "memory",
+      "snippet": "User: 更高级的 3072？你认为的3072的太高级了，用不上吗？请再思考，是不是要降级，或者是保持现在的。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "高级",
+        "认为",
+        "不上",
+        "思考",
+        "是不是",
+        "降级",
+        "或者是",
+        "保持"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:73:73": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:73:73",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 73,
+      "endLine": 73,
+      "source": "memory",
+      "snippet": "Assistant: 好，我认真想过了——给你一个明确结论：**保持 3072，别降级。** 但理由不是\"3072 高级所以留着\"，恰恰相反： ## 先承认你的直觉对了一半 **3072 对你这个场景确实是\"用不上\"的过剩**。你的记忆库才 ~1200 个 chunk，1536 维（甚至 768）在这个规模下检索质量和 3072 几乎完全一样——MTEB 跑分上 gemini-embedding-001 在 768 维就已经很能打，1536→3072 的差距是小数点后的边际，人根本感知不到。 所以单看\"需不需要\"，答案是：**不需要这么高。** ## 但",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "embedding",
+        "gemini-embedding-001",
+        "认真",
+        "一个",
+        "明确",
+        "结论",
+        "保持",
+        "降级"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:74:74": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:74:74",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 74,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "Assistant: chunk，那时存储和本地比对成本才开始真正累积，再降到 1536 才有意义。现在差着两个数量级，不用管。 要我把这个判断也记进 MEMORY 吗？（\"embedding 用 Gemini 3072，规模够小不降级\"）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "embedding",
+        "chunk",
+        "那时",
+        "存储",
+        "本地",
+        "比对",
+        "成本",
+        "开始"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:75:75": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:75:75",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 75,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "Assistant: 记进去。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "进去"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-30.txt:76:76": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-30.txt:76:76",
+      "path": "memory/.dreams/session-corpus/2026-05-30.txt",
+      "startLine": 76,
+      "endLine": 76,
+      "source": "memory",
+      "snippet": "Assistant: 记好了 ✅ 收工状态： - **memory_search 走 Gemini**（3072 维，免费，已重建索引，实测正常） - **保持 3072 不降级**——过剩但无害，降级不划算 - 决策已写进 MEMORY.md 架构区 + HANDOFF.md 剩下那个还没动的小尾巴：key3 的运行时缓存残留（`.usage-cost-cache.json` / market `auth-state.json` 的死 cooldown），不影响路由、会自然过期。要清就说一声，不然就这样。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "3558e5ebbbb7"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "memory-search",
+        "memory.md",
+        "handoff.md",
+        "usage-cost-cache.json",
+        "auth-state.json",
+        "好了",
+        "收工",
+        "状态"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:3:3": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:3:3",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 3,
+      "endLine": 3,
+      "source": "memory",
+      "snippet": "Assistant: The deep status probe timed out. Let me capture the full security audit output (severity summary) and retry status.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "deep",
+        "status",
+        "probe",
+        "timed",
+        "out",
+        "let",
+        "capture",
+        "full"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:4:4": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:4:4",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 4,
+      "endLine": 4,
+      "source": "memory",
+      "snippet": "Assistant: `openclaw status` (non-deep) works fine — gateway is up and serving sessions. The `--deep` probe timed out (10s) because plugin loading takes ~21s, a probe-window timeout rather than a real outage. Let me grab the status header to confirm gateway health.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "non-deep",
+        "probe-window",
+        "openclaw",
+        "status",
+        "non",
+        "deep",
+        "works"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:5:5": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:5:5",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 5,
+      "endLine": 5,
+      "source": "memory",
+      "snippet": "Assistant: Gateway is healthy (status non-deep works, sessions + cron live — this job itself is running). The `--deep` probe \"timeout\" is a false positive: plugin loading takes ~21–27s, exceeding the 10s probe window. No real outage. Let me log to memory.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "non-deep",
+        "healthy",
+        "status",
+        "non",
+        "deep",
+        "works",
+        "cron"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:6:6": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:6:6",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "Assistant: 本周巡检正常 ✅ 高压缩结论： - **状态**：Gateway 健康，sessions + cron 均正常运行（本巡检任务在列）。`--deep` 探针报 timeout 为**误报**——插件加载耗时 ~21–27s 超过 10s 探针窗，非真实宕机；非 deep `status` 与 `audit` 均正常返回。 - **安全审计**：0 critical · 6 warn · 1 info。6 个 warn 全是既有配置姿态项（exec security=full、find/sed 缺 strictInlineEval、c",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "find/sed",
+        "本周",
+        "正常",
+        "压缩",
+        "结论",
+        "状态",
+        "健康"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:7:7": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:7:7",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 7,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "Assistant: Gateway healthy, cron clean, commits done. But there's a recurring channel error worth flagging. Let me note it and report.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "healthy",
+        "cron",
+        "clean",
+        "commits",
+        "done",
+        "but",
+        "there's"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:8:8": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:8:8",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "Assistant: 早安 Bruce ☕ 日常自检完成,大体健康,但有一处需要你处理: **✅ 正常** - Gateway 运行中 (pid 1722065, probe ok, v2026.5.27) - Cron 任务无失败 (consecutiveErrors=0, lastStatus=ok) - 工作区快照已提交 (workspace 14 文件 / chief 13 文件) **⚠️ 需要你介入** 微信通道 (`openclaw-weixin`) 凭证过期,日志反复报: `getUpdates: session expired (err",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "v2026.5.27",
+        "openclaw-weixin",
+        "早安",
+        "bruce",
+        "日常",
+        "完成",
+        "大体"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:9:9": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:9:9",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "User: 请你从系统的角度看看，为什么web search会经常出现错误？我刚才给你举的例子是在芒芭那个agent运作的时候的问题。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "系统",
+        "角度",
+        "看看",
+        "为什么",
+        "web",
+        "经常",
+        "出现",
+        "错误"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:10:10": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:10:10",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 10,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "Assistant: 先从系统层面查实际配置和日志，而不是猜。让我并行拉几路证据。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "先从",
+        "系统",
+        "层面",
+        "实际",
+        "配置",
+        "日志",
+        "而不是",
+        "并行"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 核心配置已清楚：web search 走 **Perplexity sonar-pro**。日志那条没抓到，换个方式找真实报错，并直接打一次 Perplexity API 看活体状态。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "sonar-pro",
+        "核心",
+        "配置",
+        "清楚",
+        "web",
+        "perplexity",
+        "sonar",
+        "pro"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: Key 是好的（HTTP 200，2.9s 返回正常结果）。所以不是 key 失效。问题是**间歇性**的。去抓 mangba 那次运行的真实报错文本——错误信息本身才是关键。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "2.9s",
+        "key",
+        "好的",
+        "http",
+        "200,2.9s",
+        "返回",
+        "正常",
+        "结果"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: 找到真实报错。截图是今天 16:20 的运行，去 mangba 的 trajectory 里抓那几条 query 对应的实际错误文本。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "找到",
+        "真实",
+        "今天",
+        "运行",
+        "mangba",
+        "trajectory",
+        "那几",
+        "query"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 证据齐了。根因清楚了——不是 key 坏，是**超时**。我把账算给你看。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "证据",
+        "根因",
+        "清楚",
+        "不是",
+        "key",
+        "我把"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:15:15": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:15:15",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "Assistant: 数据把故事讲完了。看这组时序： | 时间 | 结果 | 耗时 | |---|---|---| | 08:20:15 | ❌ timed out | — | | 08:20:15 | ❌ timed out | — | | 08:20:47 | ✅ OK | **25991 ms** | | 08:21:27 | ❌ timed out | — | | 08:22:02 | ❌ timed out | — | | 08:22:38 | ❌ timed out | — | | 08:23:02 | ✅ OK | **19375 ms**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "数据",
+        "故事",
+        "完了",
+        "时序",
+        "时间",
+        "结果",
+        "timed",
+        "out"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:16:16": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:16:16",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "Assistant: 证据闭环了，从系统角度给你结论。 ## 根因：不是\"出错\"，是**超时** 那些红色 `× ERROR` 全是同一个错误： ```json { \"status\": \"error\", \"tool\": \"web_search\", \"error\": \"request timed out\" } ``` 不是 key 失效、不是被封、不是网络断。我刚直连 Perplexity API 实测：HTTP 200，2.9s 正常返回，**key 和链路都是健康的**。 问题出在**延迟踩线**。看 mangba 今早那次的真实时序：成功的两次分别花",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "网络",
+        "web-search",
+        "2.9s",
+        "证据",
+        "系统",
+        "角度",
+        "结论",
+        "根因"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:17:17": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:17:17",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 17,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "Assistant: 所以这是**结构性问题，不是偶发故障**：高延迟 provider × 并发 × 长 query = 经常踩超时线。 ## 三条修复路径（按性价比排） **A. 换检索型 provider 做主力**（最治本） `tools.web.search.provider` 换成 Brave 或 Tavily——纯检索，1–3s 返回，不跑生成模型，超时基本绝迹。需要配一把对应 key。Perplexity 留着做\"需要深度综述\"时的备选。 **B. 不换 provider，调高超时 + 限并发**（最低成本） 把 web_search 超",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "tools.web.search.provider",
+        "web-search",
+        "所以",
+        "结构",
+        "问题",
+        "不是",
+        "故障",
+        "延迟"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:18:18": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:18:18",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 18,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "User: A. 换检索型 provider 做主力（最治本） tools.web.search.provider 换成 Brave 或 Tavily——纯检索，1–3s 返回，不跑生成模型，超时基本绝迹。需要配一把对应 key。Perplexity 留着做\"需要深度综述\"时的备选。 ？？？ 我这个搜索是什么用途的？是对外搜索吗？Perplexity ？？不符合功能需求吗？或者是大材小用吗？还是什么？ 我们要系统思考。我以前好像没有碰到超时的情况，如果 Key没有问题。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "tools.web.search.provider",
+        "检索",
+        "provider",
+        "主力",
+        "治本",
+        "brave",
+        "tavily",
+        "返回"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:19:19": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:19:19",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "Assistant: 你这几个问题问到点子上了，尤其是最后一句——**\"我以前没碰到超时\"**。如果这是真的，那我上一轮的\"结构性慢\"结论就不完整,因为结构性的东西不会\"以前不发生\"。让我别空谈,去翻历史数据看延迟到底是不是一直这么高。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "几个",
+        "问题",
+        "问到",
+        "点子",
+        "上了",
+        "尤其是",
+        "最后",
+        "一句"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:20:20": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:20:20",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "Assistant: 完整数据出来了。你的直觉是对的——我上一轮结论下得太快。让我把真相讲清楚。 ## 先回答你的三个问题 **\"我这个搜索是什么用途？是对外搜索吗？\"** 是。`web_search` 就是对外公网搜索,agent 用它查实时信息(新闻、框架、行情)。Perplexity 是其中一种 provider。 **\"Perplexity 不符合功能需求吗？大材小用吗？\"** 不是不符合,也不是大材小用——恰恰相反,Perplexity 对 mangba 这种**做投资分析、要综述观点**的 agent 是很合适的(它返回的是消化过的结论而非一",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "web-search",
+        "完整",
+        "数据",
+        "出来",
+        "你的",
+        "直觉",
+        "一轮",
+        "结论"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:21:21": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:21:21",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-06-01 ## 🏢 业务进展（chief） 今日 chief 工作区**无新增日志**，无业务/经营/决策动作。状态快照仍停留在 05-04：ADR-012 回滚同步已关闭，主线为 Route 1/2/3 + 5-agent 架构，chief 侧无待办。 ## 🔧 系统运维（main） - **自检（08:00）**：Gateway 正常，Cron 无错误，Git 快照已提交。 - **安全巡检（10:00）**：0 critical / 6 warn / 1 info（均为既有可接受姿态），有更新 npm",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "无业务/经营/决策动作",
+        "05-04",
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "日报",
+        "业务"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:22:22": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:22:22",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "Assistant: # 日报 2026-06-01 ## 🏢 业务进展（chief） 今日 chief 工作区**无新增日志**，无业务/经营/决策动作。状态快照仍停留在 05-04：ADR-012 回滚同步已关闭，主线为 Route 1/2/3 + 5-agent 架构，chief 侧无待办。 ## 🔧 系统运维（main） - **自检（08:00）**：Gateway 正常，Cron 无错误，Git 快照已提交。 - **安全巡检（10:00）**：0 critical / 6 warn / 1 info（均为既有可接受姿态），有更新 npm",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "无业务/经营/决策动作",
+        "05-04",
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "日报",
+        "业务"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:23:23": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:23:23",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "Assistant: 有更新待处理。 - **OpenClaw 更新**：有新版本可用 → npm `2026.5.28`（当前 stable 频道）。升级命令：`openclaw update` - **Node 版本**：v22.22.0 如需我执行升级，告诉我一声即可。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "2026.5.28",
+        "v22.22.0",
+        "更新",
+        "处理",
+        "openclaw",
+        "版本",
+        "可用",
+        "npm"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-02.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-02.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-02.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: C3 had a docker format field error. Let me fix the image check with a compatible approach.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "e10dbdebc851"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "had",
+        "docker",
+        "format",
+        "field",
+        "error",
+        "let",
+        "fix",
+        "image"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-02.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-02.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-06-02.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: All checks passed — no notification needed per rules. Summary (no action required): - **Part A** — Symlink integrity OK across all 5 CEO workspaces (chief-user, strategy, market, execution, coach). No broken links. - **Part B** — CTX rules in sync across benben/kefu/ma",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "e10dbdebc851"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "chief-user",
+        "benben/kefu/ma",
+        "all",
+        "checks",
+        "passed",
+        "notification",
+        "needed",
+        "per"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:24:24": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:24:24",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "Assistant: 你看到的\"经常超时\"。 ## 所以系统层面真正的问题是:Perplexity 侧延迟在 5 月中旬之后劣化了 key 没问题(我实测 200/2.9s),代码没改,我们这边配置没动。**变的是 Perplexity 服务端的响应速度**,可能原因: - `sonar-pro` 模型在 5 月做过升级/扩容变动,延迟整体上升(行业里 Perplexity 这半年确实在换底层模型) - 我们的 API 套餐档位被降速/限流(高峰期排队) - 长 query + 高并发触发它的限速(5月15那天 340 次调用,明显是某个 agent 批",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "200/2.9s",
+        "sonar-pro",
+        "月做过升级/扩容变动",
+        "套餐档位被降速/限流",
+        "看到",
+        "经常",
+        "所以",
+        "系统"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:25:25": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:25:25",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "Assistant: Gateway,我会一起处理。同时我可以查一下我们 Perplexity 账户的套餐/限速情况,确认是不是服务端降速。你拍板。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "账户的套餐/限速情况",
+        "一起",
+        "处理",
+        "同时",
+        "可以",
+        "一下",
+        "我们"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:26:26": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:26:26",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "User: 先把超时阈值从 ~30s 提到 60s(最小改动,治当下)",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "先把",
+        "30s",
+        "提到",
+        "60s",
+        "最小",
+        "当下"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:27:27": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:27:27",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 27,
+      "endLine": 27,
+      "source": "memory",
+      "snippet": "Assistant: 先确认当前超时到底配在哪、默认值是多少,别盲改。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "确认",
+        "当前",
+        "到底",
+        "默认",
+        "多少"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:28:28": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:28:28",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "Assistant: 没有显式 timeout 字段,用的是默认值。查 schema 确认正确的字段名和默认值,免得写错 key。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "没有",
+        "timeout",
+        "的是",
+        "默认",
+        "schema",
+        "确认",
+        "正确",
+        "名和"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:29:29": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:29:29",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 29,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "Assistant: exec preflight 在拦 node 调用。改用 gateway 工具查 schema。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "exec",
+        "preflight",
+        "node",
+        "改用",
+        "工具",
+        "schema"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:30:30": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:30:30",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Assistant: 头部有 banner 行污染了 JSON。清掉再解析。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "头部",
+        "banner",
+        "污染",
+        "解析"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:31:31": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:31:31",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 31,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "Assistant: 找到字段了:`tools.web.search.timeoutSeconds`。看默认值。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "tools.web.search.timeoutseconds",
+        "找到",
+        "默认"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:32:32": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:32:32",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 32,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "Assistant: 字段确认:`tools.web.search.timeoutSeconds`(整数,秒)。当前未设,默认行为撞在 ~30s。我加 `60` 并重启。先备份。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "备份",
+        "tools.web.search.timeoutseconds",
+        "确认",
+        "整数",
+        "当前",
+        "默认",
+        "行为",
+        "撞在"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:33:33": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:33:33",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 33,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "Assistant: 验证 JSON 合法性,然后重启 Gateway。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "验证",
+        "合法性",
+        "然后"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:34:34": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:34:34",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 34,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "Assistant: [assistant turn failed before producing content]",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "turn",
+        "failed",
+        "producing",
+        "content"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-01.txt:35:35": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-01.txt:35:35",
+      "path": "memory/.dreams/session-corpus/2026-06-01.txt",
+      "startLine": 35,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "Assistant: 配置已改好并验证通过(`timeoutSeconds: 60`,JSON 合法,已备份)。现在重启 Gateway 生效。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-01T21:00:06.925Z",
+      "lastRecalledAt": "2026-06-01T21:00:06.925Z",
+      "queryHashes": [
+        "2939732c7523"
+      ],
+      "recallDays": [
+        "2026-06-02",
+        "2026-06-01"
+      ],
+      "conceptTags": [
+        "gateway",
+        "备份",
+        "配置",
+        "验证",
+        "通过",
+        "timeoutseconds",
+        "合法",
+        "现在"
       ]
     }
   }
