@@ -1,0 +1,2 @@
+[main/sessions/main/a7f3692a-86e5-4f40-9264-43f036b12d00.jsonl#L10] Assistant: C3 docker format field failed. Let me retry with a compatible approach.
+[main/sessions/main/a7f3692a-86e5-4f40-9264-43f036b12d00.jsonl#L12] Assistant: All checks passed. No anomalies, no fixes needed — staying silent per notification rules. - **Part A:** No broken symlinks across all 5 CEO workspaces. - **Part B:** All 4 governed workspaces (benben/kefu/mangba/mangba-guest) already in sync with authoritative CTX 
