@@ -1,8 +1,8 @@
-- Last active: 2026-05-30 18:33 Asia/Shanghai
-- Current topic: memory_search embedding provider 从 OpenAI 切到 Gemini（OpenAI 额度 429 耗尽）
-- Key facts: agents.defaults.memorySearch = provider `gemini`(非google) + model `gemini-embedding-001`(3072维)；auth 走 google:default(api_key) 自动映射
-- ⚠️ 易错点：provider 值必须写 `gemini`（google 插件注册的 adapter id=gemini, authProviderId=google）；写 `google` 会报 "Unknown memory embedding provider: google"
-- ⚠️ 改 memorySearch 后必须 restart Gateway（CLI 重读配置但 Gateway 进程缓存旧值），且换 provider 后必须 `openclaw memory index --force` 全量重建（维度 1536→3072 不兼容）
-- 验证：memory_search 实测返回正常(provider=gemini, vectorScore 0.77+)，429 消失；status Vector dims=3072, Embeddings ready
-- OpenAI OAuth(openai-codex) 不能做 embedding（无 /v1/embeddings 端点），只有 api_key 类型可用
-- 备份：backups/openclaw.json.bak.embedding-google-*
+- Last active: 2026-06-07 01:27 Asia/Shanghai
+- Current topic: Bruce 要求核验“我们这个系统”的真实版本/状态
+- 本机 OpenClaw: `2026.5.27` (`27ae826`)，全局 npm 包 `openclaw@2026.5.27`
+- npm registry: stable `latest=2026.6.1`；beta `2026.6.5-beta.1`；alpha `2026.5.19-alpha.1`
+- GitHub Releases: `v2026.6.5-beta.1` 是 prerelease；`v2026.6.1` 是最新稳定 release
+- Gateway: systemd user service enabled/running, pid `1786727`, port `18789`, health `live`
+- 结论口径：生产建议升 stable `2026.6.1`，不建议直接上 beta；升级/restart 前按规则 8 需 Bruce 确认
+- 今日笔记：memory/2026-06-07.md
