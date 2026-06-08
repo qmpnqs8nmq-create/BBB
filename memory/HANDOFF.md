@@ -1,8 +1,8 @@
 - Last active: 2026-06-07 01:27 Asia/Shanghai
 - Current topic: Bruce 要求核验“我们这个系统”的真实版本/状态
 - 本机 OpenClaw: `2026.5.27` (`27ae826`)，全局 npm 包 `openclaw@2026.5.27`
-- npm registry: stable `latest=2026.6.1`；beta `2026.6.5-beta.1`；alpha `2026.5.19-alpha.1`
-- GitHub Releases: `v2026.6.5-beta.1` 是 prerelease；`v2026.6.1` 是最新稳定 release
+- npm registry: stable `latest=2026.6.1`；beta `2026.6.5-beta.2`；alpha `2026.5.19-alpha.1`
+- GitHub Releases: `v2026.6.5-beta.2` 是 prerelease；`v2026.6.1` 是最新稳定 release
 - Gateway: systemd user service enabled/running, pid `1786727`, port `18789`, health `live`
 - 结论口径：生产建议升 stable `2026.6.1`，不建议直接上 beta；升级/restart 前按规则 8 需 Bruce 确认
 - 今日笔记：memory/2026-06-07.md
