@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T21:00:11.308Z",
+  "updatedAt": "2026-06-09T21:00:19.493Z",
   "entries": {
     "memory:memory/2026-04-16.md:1:12": {
       "key": "memory:memory/2026-04-16.md:1:12",
@@ -22712,12 +22712,12 @@
       "source": "memory",
       "snippet": "08:00 daily-self-check: Gateway: running healthy (pid 1757007, v2026.5.27, probe ok); Cron: 1 job (daily-self-check), 0 errors; Git: workspace + chief 已提交并推送 (snapshot 2026-06-02); ⚠️ 发现问题: weixin/wecom 通道 session expired (errcode -14)，自 05:53 起每小时重复 \"pausing bot for 60 min\"（今日已",
       "recallCount": 0,
-      "dailyCount": 7,
+      "dailyCount": 8,
       "groundedCount": 0,
-      "totalScore": 4.34,
+      "totalScore": 4.96,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-02T21:00:06.824Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "3a661a3fedb5"
       ],
@@ -22729,7 +22729,8 @@
         "2026-06-06",
         "2026-06-07",
         "2026-06-08",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "gateway",
@@ -23304,12 +23305,12 @@
       "source": "memory",
       "snippet": "08:00 每日自检 (daily-self-check-8am): Gateway: 正常运行 (pid 1757007, active, probe ok), v2026.5.27。; Cron: 仅 1 个 job (本自检任务)，consecutiveErrors=0, lastStatus=ok。健康。; Git: workspace + workspace-chief 均已自动提交快照 (含 dreaming/memory 文件)。; ⚠️ 日志发现 **openclaw-weixin 渠道 session 过期 (errcode -14)*",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-03T21:00:02.176Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "e34de1772deb"
       ],
@@ -23320,7 +23321,8 @@
         "2026-06-06",
         "2026-06-07",
         "2026-06-08",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "gateway",
@@ -23341,12 +23343,12 @@
       "source": "memory",
       "snippet": "08:00 每日自检 (daily-self-check-8am): 注：当前 wecom 渠道工作正常；受影响的是 openclaw-weixin (4d5b593c4a1b-im-bot)。",
       "recallCount": 0,
-      "dailyCount": 6,
+      "dailyCount": 7,
       "groundedCount": 0,
-      "totalScore": 3.72,
+      "totalScore": 4.34,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-03T21:00:02.176Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "e34de1772deb"
       ],
@@ -23357,7 +23359,8 @@
         "2026-06-06",
         "2026-06-07",
         "2026-06-08",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "daily-self-check-8am",
@@ -23602,12 +23605,12 @@
       "source": "memory",
       "snippet": "08:00 每日自检: gateway 健康（pid active, probe ok, v2026.5.27）；cron 唯一任务 lastStatus=ok, 0 错误。; workspace + workspace-chief 均已 auto-commit。; ⚠️ 日志发现 weixin（个人微信）bot session 过期（errcode -14），自 05:53 起每小时重试暂停 60min。需重新登录扫码，无法自修复。已通知 Bruce。",
       "recallCount": 0,
-      "dailyCount": 5,
+      "dailyCount": 6,
       "groundedCount": 0,
-      "totalScore": 3.1,
+      "totalScore": 3.72,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-04T21:00:02.626Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "8dceb9d4ef94"
       ],
@@ -23617,7 +23620,8 @@
         "2026-06-06",
         "2026-06-07",
         "2026-06-08",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "gateway",
@@ -25666,12 +25670,12 @@
       "source": "memory",
       "snippet": "01:24 OpenClaw 版本真实情况核验: 本机 CLI/Gateway: OpenClaw `2026.5.27` (`27ae826`)，全局 npm 包 `openclaw@2026.5.27`，路径 `/usr/bin/openclaw` → `/usr/lib/node_modules/openclaw`。; npm `openclaw` dist-tags: `latest=2026.6.1`，`beta=2026.6.5-beta.1`，`alpha=2026.5.19-alpha.1`；`@openclaw/openclaw` 包不",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-06T21:00:04.757Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "848f5c932f67"
       ],
@@ -25679,7 +25683,8 @@
         "2026-06-07",
         "2026-06-06",
         "2026-06-08",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "gateway",
@@ -25700,12 +25705,12 @@
       "source": "memory",
       "snippet": "01:24 OpenClaw 版本真实情况核验: 30 分钟 Gateway journal 无日志项；`openclaw status` fast 状态显示渠道 openclaw-weixin/WeCom OK，Feishu SETUP。",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-06T21:00:04.757Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "848f5c932f67"
       ],
@@ -25713,7 +25718,8 @@
         "2026-06-07",
         "2026-06-06",
         "2026-06-08",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "gateway",
@@ -25734,12 +25740,12 @@
       "source": "memory",
       "snippet": "08:00 每日自检: Gateway: running, healthy (pid 1786727, probe ok); 日志: 无 error; Cron: daily-self-check 昨日(06-05)run 失败 — zenmux quota_exceeded（订阅额度耗尽），今日 run 已恢复正常。consecutiveErrors=1 为昨日遗留。; Git: workspace + workspace-chief 均已 commit（push best-effort）",
       "recallCount": 0,
-      "dailyCount": 3,
+      "dailyCount": 4,
       "groundedCount": 0,
-      "totalScore": 1.8599999999999999,
+      "totalScore": 2.48,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-06T21:00:04.757Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "f70befc3aa2b"
       ],
@@ -25747,7 +25753,8 @@
         "2026-06-07",
         "2026-06-06",
         "2026-06-08",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "gateway",
@@ -26080,19 +26087,20 @@
       "source": "memory",
       "snippet": "11:12 OpenClaw 最新版本复核: Bruce 质疑“这么长时间都没有新版本吗”，复查 npm + GitHub。; npm `openclaw` dist-tags: stable `latest=2026.6.1`，beta `2026.6.5-beta.2`，alpha `2026.5.19-alpha.1`，modified `2026-06-07T00:17:47.824Z`。; GitHub Releases: `v2026.6.5-beta.2` published `2026-06-07T00:26:39Z`，为 prerele",
       "recallCount": 0,
-      "dailyCount": 2,
+      "dailyCount": 3,
       "groundedCount": 0,
-      "totalScore": 1.24,
+      "totalScore": 1.8599999999999999,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-07T21:00:02.175Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "848f5c932f67"
       ],
       "recallDays": [
         "2026-06-08",
         "2026-06-07",
-        "2026-06-09"
+        "2026-06-09",
+        "2026-06-10"
       ],
       "conceptTags": [
         "dist-tags",
@@ -26396,18 +26404,19 @@
       "source": "memory",
       "snippet": "13:50 刘董事长接入 mangba-guest（已闭环）: Bruce 要为刘董事长生成个人微信链接绑 mangba-guest。刘是老用户，5/6 已建过绑定。; 链接连发 3 个都\"过期\"——根因：bind 脚本只认\"新账号文件出现\"，老用户走 binded_redirect 复用旧绑定不产生新文件 → 误判过期。; 实查网关 dispatch 日志确认链路正常：账号 a89efed44537-im-bot / peer o9cq80wM7ygwc...@im.wechat，binding 指向 mangba-guest；13:40、13:43",
       "recallCount": 0,
-      "dailyCount": 1,
+      "dailyCount": 2,
       "groundedCount": 0,
-      "totalScore": 0.62,
+      "totalScore": 1.24,
       "maxScore": 0.62,
       "firstRecalledAt": "2026-06-08T21:00:01.372Z",
-      "lastRecalledAt": "2026-06-08T21:00:01.372Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
       "queryHashes": [
         "c7780e41285a"
       ],
       "recallDays": [
         "2026-06-09",
-        "2026-06-08"
+        "2026-06-08",
+        "2026-06-10"
       ],
       "conceptTags": [
         "网关",
@@ -27777,6 +27786,964 @@
         "脚本",
         "某次",
         "restart"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:36:36": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:36:36",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 36,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "Assistant: 日志轮转/重启导致细粒度入站行没留存,但结论已经能确认。我再从 mangba-guest 这个 agent 的 session 侧确认有没有他刚进来的会话活动:",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "日志轮转/重启导致细粒度入站行没留存",
+        "mangba-guest",
+        "日志",
+        "导致",
+        "粒度",
+        "留存",
+        "结论",
+        "已经"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:37:37": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:37:37",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 37,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "Assistant: mangba-guest 这 60 分钟内没有活跃 session——也就是说他**已连上通道**（账号 a89 是活的、sync 在刷新），但还没有真正发出一条会路由进 mangba-guest 的消息，或者那条消息没落到 session 层。 我先把残留的监听进程清掉（避免它们再生成无用链接），再给你一个干净结论。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "mangba",
+        "guest",
+        "分钟",
+        "没有",
+        "活跃",
+        "也就是说",
+        "连上"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:38:38": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:38:38",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 38,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "Assistant: 清干净了。给你结论： **好消息：刘董事长其实已经正确绑定到 mangba-guest 了。** - 他的微信账号 `a89efed44537-im-bot`（peer `o9cq80wM7ygwc...@im.wechat`）在 **5 月 6 日就建过绑定**，binding 明确指向 **mangba-guest**，没串到任何别的 agent ✅ - 这次他点链接走的是\"老用户复用\"路径，不会新建账号文件——所以**不需要重新绑**，配置已经是对的。 **我的监控为什么\"没反应\"：** 我盯的是\"出现新账号文件 → 写 bi",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "a89efed44537-im-bot",
+        "im.wechat",
+        "干净",
+        "结论",
+        "好消息",
+        "董事",
+        "其实"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:39:39": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:39:39",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 39,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "User: 请刘董事长在微信里随便发一句话(比如\"在吗\")给这个 bot。他一发,我立刻就能在 mangba-guest 这边看到入站,确认整条链路(微信 → mangba-guest)真正打通。发了告诉我。 有的呀，你要看看",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "董事",
+        "信里",
+        "随便",
+        "一句",
+        "比如",
+        "这个",
+        "bot"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:40:40": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:40:40",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 40,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "Assistant: 他说发了——我去 mangba-guest 那边查入站会话。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "我去",
+        "mangba",
+        "guest",
+        "那边",
+        "会话"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:41:41": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:41:41",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 41,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Assistant: sync.json 在 **13:48:47** 刚更新——说明他的消息确实到了通道层。但 mangba-guest 还是没 session，而且网关 PID 又变了（1834219 → 1834261），有反复重启迹象。最可能是**消息到了但被 allowFrom 白名单拦了**(他的 peer 不在该账号白名单里就会被 deny)。我查白名单和拦截日志。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "网关",
+        "sync.json",
+        "mangba-guest",
+        "更新",
+        "说明",
+        "他的",
+        "消息",
+        "确实"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:42:42": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:42:42",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 42,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "Assistant: 白名单没问题（他的 peer 在里面 ✅）。真正的问题暴露了：**网关进程不稳定**——pid 一直在变（1834219→1834261→1834271），刚才 3 秒后 pgrep 直接返回空。网关在反复重启/崩溃,消息当然进不来。我查状态和崩溃原因。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "网关",
+        "网关在反复重启/崩溃",
+        "名单",
+        "问题",
+        "他的",
+        "peer",
+        "里面",
+        "真正"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:43:43": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:43:43",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 43,
+      "endLine": 43,
+      "source": "memory",
+      "snippet": "Assistant: 重要纠正——我刚才把 pid 看错了。`pgrep -f openclaw-gateway` 之前匹配到的是**我自己那些临时 exec shell 子进程**（命令行里含 \"openclaw-gateway\" 字样），不是真网关。真正的网关是稳定的： - **systemd 服务 running，pid 1786727，state active，last exit 0,连通探测 ok** ✅ 所以网关一直好好的,没崩。是我诊断时 pgrep 用错了匹配,自己吓自己。 那现在矛盾点收窄成一个:**通道层收到了他的消息(sync 13",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "gateway",
+        "网关",
+        "openclaw-gateway",
+        "重要",
+        "纠正",
+        "刚才",
+        "pid",
+        "看错"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:44:44": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:44:44",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 44,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "Assistant: 全查清楚了，**链路完全正常，刘董事长已经在和 mangba-guest 正常对话**。日志铁证： - **13:40:26 → 13:40:51**：他发的第一条消息，路由到 `agentId=mangba-guest`，`outcome=completed`，mangba-guest 已回复 ✅ - **13:43:39 → 13:44:05**：第二条消息，同样路由到 mangba-guest，`outcome=completed`，已回复 ✅ - session 文件已生成：`agents/mangba-guest/sess",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "agents/mangba-guest/sess",
+        "清楚",
+        "完全",
+        "正常",
+        "董事",
+        "已经",
+        "mangba"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:45:45": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:45:45",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 45,
+      "endLine": 45,
+      "source": "memory",
+      "snippet": "Assistant: 的回复——如果收到了，就彻底闭环了。 我把这次的接入结果和经验教训落盘记一下。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "回复",
+        "如果",
+        "收到",
+        "彻底",
+        "我把",
+        "这次",
+        "结果",
+        "经验"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:46:46": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:46:46",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "Assistant: 搞定。最终给你一句话结论： **刘董事长早就接好了，整条链路正常。** 他的微信（账号 `a89efed44537-im-bot`）绑定明确指向 **mangba-guest**，没串到任何别的 agent。13:40 和 13:43 他发的两条消息，网关日志都显示路由到 mangba-guest 且 `outcome=completed`、已回复。 之所以折腾这么久，是我两个监控盲点（已记进记忆）： 1. 我的脚本只认\"新用户建新账号\"，刘是**老用户复用旧绑定**，不产生新文件，被误判成链接过期； 2. 我先看 `session",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "网关",
+        "a89efed44537-im-bot",
+        "mangba-guest",
+        "搞定",
+        "最终",
+        "一句",
+        "结论",
+        "董事"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:47:47": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:47:47",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 47,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "User: 刘董事长早就接好了，整条链路正常。 他的微信（账号 a89efed44537-im-bot）绑定明确指向 mangba-guest， 他还希望用企业微信连接进来， 你要记住，他企业微信连接进来的时候是和他的个人微信账号 a89efed44537-im-bot，是同一个内部的文件和交流交易记录。 可以做到吗？我当然知道session是不一定相同的，但是他可能建立的一些文档是相同的。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "a89efed44537-im-bot",
+        "mangba-guest",
+        "董事",
+        "早就",
+        "好了",
+        "正常",
+        "他的",
+        "a89efed44537"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:11:11": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:11:11",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 11,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "Assistant: 📋 **日报 2026-06-09** 今日 chief 与 main 两个 workspace 均**无当日日志文件**（`memory/2026-06-09.md` 不存在），HANDOFF 快照也未更新到今天，因此没有可总结的真实活动。以下为基于最新快照的状态备忘： 🏢 **业务（chief）** — 无当日记录。最近快照（05-04）：ADR-012 rollback sync 已收尾，主线 Route 1/2/3 + 5-agent，旧的 Dual-Engine/Radar 已归档，chief 侧无待办。 🔧 **系",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "memory/2026-06-09.md",
+        "05-04",
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine/radar",
+        "日报",
+        "今日"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:12:12": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:12:12",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "Assistant: All checks passed: gateway healthy (pid 1786727, probe ok), no errors in recent logs, only cron job is clean (lastStatus=ok, 0 consecutive errors), and both workspaces committed successfully. Everything normal — no action needed. HEARTBEAT_OK",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "gateway",
+        "heartbeat-ok",
+        "all",
+        "checks",
+        "passed",
+        "healthy",
+        "pid",
+        "probe"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:13:13": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:13:13",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 13,
+      "endLine": 13,
+      "source": "memory",
+      "snippet": "Assistant: No log files exist for 2026-06-09 in either workspace. I'll generate an honest report reflecting no recorded activity today.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "log",
+        "exist",
+        "either",
+        "i'll",
+        "generate",
+        "honest",
+        "report",
+        "reflecting"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-09.txt:14:14": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-09.txt:14:14",
+      "path": "memory/.dreams/session-corpus/2026-06-09.txt",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "Assistant: 📋 **日报 2026-06-09** 今日 chief 与 main 两个 workspace 均**无当日日志文件**（`memory/2026-06-09.md` 不存在），HANDOFF 快照也未更新到今天，因此没有可总结的真实活动。以下为基于最新快照的状态备忘： 🏢 **业务（chief）** — 无当日记录。最近快照（05-04）：ADR-012 rollback sync 已收尾，主线 Route 1/2/3 + 5-agent，旧的 Dual-Engine/Radar 已归档，chief 侧无待办。 🔧 **系",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "25f210cf024c"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "memory/2026-06-09.md",
+        "05-04",
+        "adr-012",
+        "1/2/3",
+        "5-agent",
+        "dual-engine/radar",
+        "日报",
+        "今日"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: C3 had a docker format error (`.ImageID` not supported in this docker version). Let me retry with a working approach.",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "had",
+        "docker",
+        "format",
+        "error",
+        "imageid",
+        "not",
+        "supported",
+        "version"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-10.txt:2:2": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-10.txt:2:2",
+      "path": "memory/.dreams/session-corpus/2026-06-10.txt",
+      "startLine": 2,
+      "endLine": 2,
+      "source": "memory",
+      "snippet": "Assistant: All checks passed — no notification to Bruce per rules. - **Part A** (symlinks): all 5 CEO workspaces OK, no broken links. - **Part B** (CTX rules sync): all 4 sandbox workspaces match authoritative copy, no diffs. - **Part C1** (rogue remotes): none found. - **Part C2",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "660dc72d44f8"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "all",
+        "checks",
+        "passed",
+        "notification",
+        "bruce",
+        "per",
+        "rules",
+        "symlinks"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:48:48": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:48:48",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 48,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "Assistant: 能做到——而且这正是 OpenClaw 的天然机制。我先把原理讲清楚，再去核实 mangba-guest 的实际配置确认无误。 **核心结论:能。** 关键在于\"**同一个 agent = 同一个 workspace**\"。 - session(对话记录/transcript)是按 `渠道:账号:peer` 分开的——所以个人微信和企业微信会是**两条独立对话线**(这点你已经接受)。 - 但**文件、文档、memory、台账**这些是存在 **agent 的 workspace 目录**里的,**所有 session 共享同一个",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "对话记录/transcript",
+        "做到",
+        "而且",
+        "正是",
+        "openclaw",
+        "天然",
+        "机制"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:49:49": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:49:49",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 49,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "Assistant: workspace 路径需要从 agent 定义里看(可能配置了自定义 cwd)。我查 mangba-guest 的完整定义和 wecom 现有路由。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "路径",
+        "需要",
+        "定义",
+        "可能",
+        "配置",
+        "cwd",
+        "mangba"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:50:50": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:50:50",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 50,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "Assistant: 完全清楚了。给你确定的答案: ## 能做到,而且很干净 **原理:** mangba-guest 的 workspace 是固定目录 `/root/.openclaw/workspace-mangba-guest`。**任何 binding 到 mangba-guest 的入口(个人微信 / 企业微信 / 任何渠道)都共享这同一个 workspace 目录。** 所以: - ✅ **文档、文件、memory、台账** → 存在 workspace,**完全共享**。他个人微信里建的文档,企业微信侧读得到、能续写。 - ⚠️ **对话",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "openclaw/workspace-mangba-guest",
+        "完全",
+        "清楚",
+        "确定",
+        "答案",
+        "做到",
+        "而且"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:51:51": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:51:51",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 51,
+      "endLine": 51,
+      "source": "memory",
+      "snippet": "Assistant: userid 加进 wecom `allowFrom` 白名单,然后 restart 生效。 ## 我需要你提供一个信息 **刘董事长的企业微信 userid**(就是他在你们企业微信通讯录里的成员账号,类似 `frankye`、`amyliu` 这种)。 你告诉我他的企业微信 userid,我就: 1. 加精确 binding → mangba-guest(确保不串到 chief-user) 2. 加进 wecom allowFrom 白名单 3. restart Gateway 4. 让他企业微信发一句,我查 dispatch",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "gateway",
+        "mangba-guest",
+        "chief-user",
+        "userid",
+        "wecom",
+        "allowfrom",
+        "名单",
+        "然后"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:52:52": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:52:52",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 52,
+      "endLine": 52,
+      "source": "memory",
+      "snippet": "User: 所以只要让他的企业微信身份也 binding 到 mangba-guest,他在个人微信里建的文档、记录,在企业微信侧能读到/能续写——同一套文件,同一个内部空间。 是的！！ 同时我可能不单指刘董事长他一个人接入到mangba-guest ， 可能会有几个人，你也要帮我分清楚，不同的人用不同的记录。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "在企业微信侧能读到/能续写",
+        "同时我可能不单指刘董事长他一个人接入到mangba-guest",
+        "所以",
+        "只要",
+        "他的",
+        "企业",
+        "身份"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:53:53": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:53:53",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 53,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "Assistant: 对，这个需求我帮你理清楚——因为它和\"同一个人跨渠道共享\"其实是**同一个维度的两面**,关键是想清楚\"共享/隔离的单位是谁\"。 ## 核心规则:共享的单位是 **agent**,不是渠道 - **同一个 agent = 同一个 workspace = 同一套文件/文档/memory** - session(对话线)永远按 `渠道:账号:peer` 分开 所以要同时满足你的两个要求,正确架构是: **👉 一个人 = 一个独立 agent(各自独立 workspace),这个人的所有渠道(个人微信 + 企业微信)都 binding",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "共享/隔离的单位是谁",
+        "同一套文件/文档/memory",
+        "这个",
+        "需求",
+        "清楚",
+        "因为",
+        "同一",
+        "个人"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:54:54": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:54:54",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 54,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "Assistant: `mangba-guest-wang`),独立 workspace - 把他的个人微信 peer + 企业微信 userid 都绑到他自己那个 agent - 彼此记录天然隔离 ## 现在需要你给我两个信息 1. **刘董事长的企业微信 userid**(通讯录成员账号,类似 `frankye`/`amyliu` 这种)。不确定的话我可以用通讯录查询技能按姓名帮你找。 2. **命名确认**:第一个用现有 `mangba-guest` 专属给刘董事长,可以吗?(这样零迁移、最干净) 给我刘董事长的企业微信 userid,我就先把他这",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest-wang",
+        "mangba-guest",
+        "mangba",
+        "guest",
+        "wang",
+        "独立",
+        "他的",
+        "个人"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:55:55": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:55:55",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 55,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "User: 刘董事长的企业微信 userid(通讯录成员账号,类似 frankye/amyliu 这种)。不确定的话我可以用通讯录查询技能按姓名帮你找。？？？他还没有连接进来，你可以给出一个企业微信的链接，让他来去链接这个东西的吗？ 命名确认:第一个用现有 mangba-guest 专属给刘董事长,可以吗?(这样零迁移、最干净)。 可以",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "frankye/amyliu",
+        "mangba-guest",
+        "董事",
+        "企业",
+        "userid",
+        "通讯",
+        "成员",
+        "类似"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:56:56": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:56:56",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 56,
+      "endLine": 56,
+      "source": "memory",
+      "snippet": "Assistant: 可以——命名定了:刘董事长 = 现有 `mangba-guest`。下面说企业微信的\"链接\"问题,这里和个人微信**不一样**,我先把机制核实清楚再给你方案,不瞎给链接。 企业微信(wecom)不是像个人微信那样\"生成一个链接扫一下就连进来\"。企业微信的 bot 是**挂在你们企业内部的一个应用**,谁能用取决于:他是不是你们企业通讯录成员 + 在不在白名单。我去核实你们这套 wecom 到底是怎么接入的,才能告诉你正确的拉人方式。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "mangba-guest",
+        "可以",
+        "命名",
+        "董事",
+        "现有",
+        "mangba",
+        "guest",
+        "下面"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:57:57": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:57:57",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 57,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "Assistant: 企业微信和个人微信的接入模型完全不同,我把机制讲清楚,这样你就知道该怎么拉他进来。 ## 你们的企业微信是「智能机器人」模式(botId 已配置) 关键区别: - **个人微信**:陌生人靠\"扫码/链接\"临时配对 → 所以要现场生成链接。 - **企业微信**:bot 是挂在**你们企业内部**的一个智能机器人。能不能用,取决于两件事—— 1. **他得是能接触到这个机器人的人**(在企业内、或机器人被分享给他); 2. **他的企业微信 userid 在 `allowFrom` 白名单里**(目前白名单:QiuHongYue /",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "扫码/链接",
+        "企业",
+        "信和",
+        "个人",
+        "模型",
+        "完全",
+        "不同",
+        "我把"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:58:58": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:58:58",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 58,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "Assistant: 你把机器人分享给他即可;同时告诉我他的企业微信 userid(不确定我用通讯录查询技能按\"刘\"帮你找),我加白名单 + binding。 - **不是(外部人)** → 那企业微信这条路要看你们后台权限,我帮你查机器人当前的分享/外部可用能力,再决定怎么发链接。 你先回答:**他是企业内部成员,还是外部人?** 顺便如果知道他姓名全称,我可以直接去通讯录查 userid。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "我帮你查机器人当前的分享/外部可用能力",
+        "机器",
+        "分享",
+        "即可",
+        "同时",
+        "告诉",
+        "他的",
+        "企业"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-06-08.txt:59:59": {
+      "key": "memory:memory/.dreams/session-corpus/2026-06-08.txt:59:59",
+      "path": "memory/.dreams/session-corpus/2026-06-08.txt",
+      "startLine": 59,
+      "endLine": 59,
+      "source": "memory",
+      "snippet": "User: 刘董事长是你们企业微信的内部成员吗? 现在我整个openclaw都还没有连接过任何的企业微信，你说是外人还是内人？他有企业微信，你看怎么样用最简单最方便的方式让他连接进来的。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-06-09T21:00:02.624Z",
+      "lastRecalledAt": "2026-06-09T21:00:02.624Z",
+      "queryHashes": [
+        "b2d79ea44bad"
+      ],
+      "recallDays": [
+        "2026-06-10",
+        "2026-06-09"
+      ],
+      "conceptTags": [
+        "董事",
+        "你们",
+        "企业",
+        "内部",
+        "成员",
+        "现在",
+        "整个",
+        "openclaw"
       ]
     }
   }
