@@ -1,2 +1,19 @@
 [main/sessions/main/d7063300-c484-42f6-baab-2516c598bcee.jsonl#L10] Assistant: C3 had a docker format error (`.ImageID` not supported in this docker version). Let me retry with a working approach.
 [main/sessions/main/d7063300-c484-42f6-baab-2516c598bcee.jsonl#L12] Assistant: All checks passed — no notification to Bruce per rules. - **Part A** (symlinks): all 5 CEO workspaces OK, no broken links. - **Part B** (CTX rules sync): all 4 sandbox workspaces match authoritative copy, no diffs. - **Part C1** (rogue remotes): none found. - **Par
+[main/sessions/main/5982d8b1-6729-43d9-a0ce-e025fbb12615.jsonl#L12] Assistant: Let me check all cron jobs (not just main agent's) for failures, since the log referenced a cron `e463b042` not in the filtered list.
+[main/sessions/main/5982d8b1-6729-43d9-a0ce-e025fbb12615.jsonl#L16] Assistant: All checks done. Let me record a brief note to memory. Findings: gateway healthy, my own cron job OK (0 errors), git committed for both workspaces. Log errors are all known/recurring (weixin errcode -14 session-expired hourly pauses; one model-fallback timeout that
+[main/sessions/main/5982d8b1-6729-43d9-a0ce-e025fbb12615.jsonl#L20] Assistant: Self-check complete — all green, no action needed. - **Gateway**: running (pid 1786727, probe ok, v2026.5.27) - **Self-check cron**: consecutiveErrors=0, lastStatus=ok - **Git**: workspace + workspace-chief both auto-committed today's snapshot (push best-effort) - 
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4162] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4165] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4168] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4171] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4174] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4177] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4180] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4183] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4186] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4189] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4192] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4195] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4198] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4201] Assistant: [assistant turn failed before producing content]
