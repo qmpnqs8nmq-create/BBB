@@ -1,0 +1,2 @@
+[main/sessions/main/e9e09bb8-0977-4eab-bac0-cb29c2df17e1.jsonl#L10] Assistant: C3 check had a format string error (`.ImageID` not valid in this docker version). Let me re-run with the correct field.
+[main/sessions/main/e9e09bb8-0977-4eab-bac0-cb29c2df17e1.jsonl#L12] Assistant: All checks passed cleanly — no notification needed per rules. - **Part A** (symlinks, 5 CEO workspaces): no broken links - **Part B** (CTX rules sync): all 4 sandbox workspaces already in sync - **Part C1** (rogue git remotes): none found - **Part C2** (egress conf

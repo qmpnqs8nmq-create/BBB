@@ -75,3 +75,12 @@
 - 15:45 OpenClaw 升级 2026.5.18 → 2026.5.27: 唯一差异：6个无tag的 codex/* 本地harness目录消失（codex CLI不在PATH，残留探测目录，无害）; 无breaking change影响本部署 [score=0.879 recalls=0 avg=0.620 source=memory/2026-05-29.md:27-28]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-07.md:9:12 -->
 - 11:12 OpenClaw 最新版本复核: Bruce 质疑“这么长时间都没有新版本吗”，复查 npm + GitHub。; npm `openclaw` dist-tags: stable `latest=2026.6.1`，beta `2026.6.5-beta.2`，alpha `2026.5.19-alpha.1`，modified `2026-06-07T00:17:47.824Z`。; GitHub Releases: `v2026.6.5-beta.2` published `2026-06-07T00:26:39Z`，为 prerelease；最新稳定仍是 `v2026.6.1`。; 本机仍是 `OpenClaw 2026.5.27 (27ae826)`。 [score=0.868 recalls=0 avg=0.620 source=memory/2026-06-07.md:9-12]
+
+## Promoted From Short-Term Memory (2026-06-13)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-08.md:3:6 -->
+- 13:50 刘董事长接入 mangba-guest（已闭环）: Bruce 要为刘董事长生成个人微信链接绑 mangba-guest。刘是老用户，5/6 已建过绑定。; 链接连发 3 个都"过期"——根因：bind 脚本只认"新账号文件出现"，老用户走 binded_redirect 复用旧绑定不产生新文件 → 误判过期。; 实查网关 dispatch 日志确认链路正常：账号 a89efed44537-im-bot / peer o9cq80wM7ygwc...@im.wechat，binding 指向 mangba-guest；13:40、13:43 两条入站均 outcome=completed 并回复。; 教训：① 老用户接入别等新账号文件，直接看 dispatch 日志确认路由；② 别只信 sessions_list 活跃数，要以网关 message processed 日志为准；③ pgrep -f openclaw-gateway 会误匹配自己的 exec shell，确认网关 pid 用 openclaw gateway status。 [score=0.900 recalls=0 avg=0.620 source=memory/2026-06-08.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10.md:2:5 -->
+- 08:00 每日自检: Gateway: running (pid 1786727, probe ok, v2026.5.27)。; 自检 cron 本身 consecutiveErrors=0, lastStatus=ok。; git: workspace + workspace-chief 均已自动提交今日快照（push best-effort）。; 日志已知项（非新增故障，无需处理）： [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-10.md:2-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-10.md:6:9 -->
+- 08:00 每日自检: weixin getUpdates errcode -14，每小时 session-expired 自动 pause 60min（持续性，待 Bruce 关注 weixin 凭证）。; 一次 model fallback：opus-4.8 timeout → codex/gpt-5.5 成功兜底。; cron e463b042 bestEffort 投递失败：wecom admin 账号 WSClient 未连接/未配置 Agent 模式。; 结论：核心服务正常，无需自修复。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-10.md:6-9]
