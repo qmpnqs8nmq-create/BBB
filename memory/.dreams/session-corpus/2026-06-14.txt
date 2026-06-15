@@ -1,2 +1,32 @@
 [main/sessions/main/63cd801e-72cc-431e-816a-501cac6af98e.jsonl#L9] Assistant: C3 had a docker template error (`.ImageID` unsupported in this docker version). Retrying with a compatible approach:
 [main/sessions/main/63cd801e-72cc-431e-816a-501cac6af98e.jsonl#L11] Assistant: All checks passed cleanly — no notification needed per rules. - **Part A** (symlinks): all 5 CEO workspaces OK, no broken links. - **Part B** (CTX sync): benben/kefu/mangba/mangba-guest all in sync, no copies needed. - **Part C1** (git remotes): no rogue remotes. -
+[main/sessions/main/329b0a94-8439-4901-a545-d5feafcca71a.jsonl#L12] Assistant: Found issues. Let me inspect the failing chief cron job.
+[main/sessions/main/329b0a94-8439-4901-a545-d5feafcca71a.jsonl#L15] Assistant: I can't inspect other jobs via the restricted cron tool. Let me read the jobs store directly.
+[main/sessions/main/329b0a94-8439-4901-a545-d5feafcca71a.jsonl#L23] Assistant: Gateway healthy, git snapshots committed. Found one real issue I can't self-repair from this restricted context. Let me log it.
+[main/sessions/main/329b0a94-8439-4901-a545-d5feafcca71a.jsonl#L25] Assistant: 每日自检完成，一个需要你关注的问题： **✅ 正常** - Gateway 运行健康（pid 1889215，probe ok，v2026.6.5） - workspace + workspace-chief 已自动提交快照 **⚠️ 需处理** - chief 的 cron「周日系统巡检（合并版）」（`7a59f223`）已 **连续 4 次失败**，都是在 model-call-started 阶段 180s 超时，已退避到下周。这是 chief agent 的任务，我（main）的受限 cron 工具无法 inspec
+[main/sessions/main/6f5b15d7-d284-4c70-b6ce-276568f5fdbf.jsonl#L21] Assistant: 📋 **日报 2026-06-14** **🏢 业务（chief）** 今日无 chief 日志，无新业务决策或经营动作。状态快照停留在 ADR-012 回滚同步收尾阶段，chief 侧无待办。周日属低活跃日。 **🔧 系统运维（main）** - 每日自检：Gateway 正常（pid 1889215，v2026.6.5，probe ok） - git：workspace / workspace-chief 均已自动提交 - ⚠️ chief cron「周日系统巡检」连续超时 4 次（model-call 阶段 18
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4592] Assistant: All clear: no daily logs 14+ days old, MEMORY.md trimmed to 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4597] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4602] Assistant: No daily logs older than 14 days, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4607] Assistant: All clear — no logs 14+ days old, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4612] Assistant: No daily logs older than 14 days, no wecom DM blocks. All clear. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4617] Assistant: All clear: no daily logs older than 14 days, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4622] Assistant: All clear — no daily logs 14+ days old, MEMORY.md trimmed yesterday (59 lines), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4627] Assistant: All clear — no daily logs older than 14 days, no wecom DM blocks in the last 24h, MEMORY.md trimmed to 59 lines yesterday. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4632] Assistant: All clear: no daily logs older than 14 days, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4637] Assistant: No daily logs older than 14 days, no wecom DM blocks. All clear. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4642] Assistant: All clear: no daily logs 14+ days old (oldest is 06-01), MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4647] Assistant: All clear — no daily logs older than 14 days, MEMORY.md trimmed to 59 lines yesterday, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/e4b93f9f-df1a-4166-a61f-22d5f0ed2285.jsonl#L13] Assistant: 📋 **日报 2026-06-14** **🏢 业务（chief）** 今日无 chief 日志，无新业务决策或经营动作。状态快照停留在 ADR-012 回滚同步收尾阶段，chief 侧无待办。周日属低活跃日。 **🔧 系统运维（main）** - 每日自检：Gateway 正常（pid 1889215，v2026.6.5，probe ok） - git：workspace / workspace-chief 均已自动提交 - ⚠️ chief cron「周日系统巡检」连续超时 4 次（model-call 阶段 18
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4652] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4657] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4662] Assistant: All clear — no daily logs 14+ days old, no wecom DM blocks in the last 24h, MEMORY.md at 59 lines. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4667] Assistant: All clear — no daily logs older than 14 days, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4672] Assistant: All clear: no daily logs older than 14 days, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4677] Assistant: All clear — no daily logs 14+ days old, MEMORY.md at 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4682] Assistant: All clear — no daily logs 14+ days old, MEMORY.md trimmed to 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4687] Assistant: All clear — no daily logs 14+ days old, MEMORY.md trimmed to 59 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4701] Assistant: All clear: MEMORY.md 59 lines, no logs 14+ days old, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4706] Assistant: All clear: no daily logs ≥14 days, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4711] Assistant: All clear — no logs 14+ days old, no wecom DM blocks. Sunday evening, quiet. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4716] Assistant: All clear — no logs older than 14 days, no wecom DM blocks. HEARTBEAT_OK

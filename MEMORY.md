@@ -57,3 +57,10 @@
 - 刘董事长接入 mangba-guest 已闭环（2026-06-08）：老用户走 binded_redirect 复用旧绑定不产新账号文件→链接误判"过期"；接入老用户直接看网关 dispatch 日志确认路由，别等新文件、别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep -f openclaw-gateway 会误匹配 exec shell）
 - 持续性已知项（非故障）：weixin getUpdates errcode -14 每小时 session-expired 自动 pause 60min（待 Bruce 关注 weixin 凭证）；wecom admin WSClient bestEffort 投递偶发失败；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
 - 本机版本 OpenClaw 2026.5.27；最新稳定 2026.6.1（2026-06-07 复核）
+
+## Promoted From Short-Term Memory (2026-06-15)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:13:14 -->
+- 14:00 fallback/子agent failover 深度排查(Bruce 主导): 临时绕过:等 key1 配额窗口刷新或充值,key1 本身能用后子 agent 撞它就不死。 根治:上游修 Bug1/2(/3)。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-12.md:13-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:5:7 -->
+- 14:00 fallback/子agent failover 深度排查(Bruce 主导): RAW_402_MARKER_RE 入口正则不容忍引号包裹的码值 → ZenMux 返回 "code":"402"(字符串)被挡 → 下游本可正确判 rate_limit 的逻辑到不了。; failover 决策点拿到的是被收敛的 "LLM request failed."(丢了 status+原文)→ 分类 null → 整条 fallback 链不触发(无论怎么配)。; agents.defaults.subagents.model 实测无效:config get 写入 key2,spawn 报告 key2,但执行日志仍 provider=key1 秒死。报告值≠执行值。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-12.md:5-7]
