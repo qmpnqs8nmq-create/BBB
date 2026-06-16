@@ -2,6 +2,10 @@
 
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
+## 2026-06
+
+- 06-01: 日常自检正常（Gateway ok、cron lastStatus=ok、git 已提交）；周度安全巡检 0 critical / 6 warn / 1 info（均为既有可接受姿态）；weixin errcode -14 每小时 session-expired 持续项
+
 ## 2026-03（至今）
 
 - 03-13: 身份设定(Kaopuge/🐎)、Docker安装、模型切换至openai-codex/gpt-5.4 OAuth、飞书通道启用
