@@ -79,3 +79,8 @@
 - 14:00 fallback/子agent failover 深度排查(Bruce 主导): 现象链:主 session 靠早先粘住的 key2 auto-override 活着;子 agent 全新 session 无 override → 从配置 primary(key1)起步 → 撞欠费 402 → 单发即死 0 token → 主 session 收 failed 回执 → 自己接手跑(Bruce 反复遇到的体验)。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-12.md:8-8]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:3:6 -->
 - 08:00 daily-self-check: Gateway: running healthy (pid 1889215, probe ok, v2026.6.5).; Logs: no errors in last 50 lines.; Git: workspace + chief committed daily snapshot. ✅; Note: self-check cron showed consecutiveErrors=2 / lastStatus=error from prior 2 runs ("LLM request failed") — transient LLM failures on previous days; today's run succeeded, so counter will reset. No action needed. [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-13.md:3-6]
+
+## Promoted From Short-Term Memory (2026-06-17)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:3:6 -->
+- 08:04 每日自检: Gateway: running (pid 1889215, probe ok, v2026.6.5)。; git: workspace + workspace-chief 均已 auto-commit（dreaming/daily-summary 等）。; ⚠️ chief cron `7a59f223` "周日系统巡检（合并版）" consecutiveErrors=4，model-call-started 阶段超时（180s）。属 chief agent，main 的受限 cron 工具无法 inspect/修复。已退避至下周。建议 Bruce 处理：缩短该任务/拆分/提高 timeout 或换更快模型。; weixin getUpdates errcode -14 周期性 session 过期自动 pause 60min，常态噪音，暂不处理。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-14.md:3-6]
