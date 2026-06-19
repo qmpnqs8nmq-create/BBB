@@ -58,29 +58,14 @@
 - 持续性已知项（非故障）：weixin getUpdates errcode -14 每小时 session-expired 自动 pause 60min（待 Bruce 关注 weixin 凭证）；wecom admin WSClient bestEffort 投递偶发失败；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
 - 本机版本 OpenClaw 2026.5.27；最新稳定 2026.6.1（2026-06-07 复核）
 
-## Promoted From Short-Term Memory (2026-06-15)
+## ⚠️ 402/failover 本地补丁（2026-06-12，升级后必重打）
+- 根因：OpenClaw 2026.6.5 的 `dist/errors-DcOiGp7S.js` 中 RAW_402_MARKER_RE 入口正则不认带引号码值（ZenMux 返 `"code":"402"` 字符串）→ 撞 402 后 errCount 恒 0、零 failover、子 agent 0token 秒死。
+- 补丁：正则 `[:=]\s*402\b` → `[:=]\s*["']?402\b`（加1处 `["']?`）。只改 1 处。原文件备份 `/root/.openclaw/backups/errors-DcOiGp7S.js.orig-*`。
+- ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 python 重打同一补丁**（补丁点 RAW_402_MARKER_RE）。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
+- 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
+- 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:13:14 -->
-- 14:00 fallback/子agent failover 深度排查(Bruce 主导): 临时绕过:等 key1 配额窗口刷新或充值,key1 本身能用后子 agent 撞它就不死。 根治:上游修 Bug1/2(/3)。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-12.md:13-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:5:7 -->
-- 14:00 fallback/子agent failover 深度排查(Bruce 主导): RAW_402_MARKER_RE 入口正则不容忍引号包裹的码值 → ZenMux 返回 "code":"402"(字符串)被挡 → 下游本可正确判 rate_limit 的逻辑到不了。; failover 决策点拿到的是被收敛的 "LLM request failed."(丢了 status+原文)→ 分类 null → 整条 fallback 链不触发(无论怎么配)。; agents.defaults.subagents.model 实测无效:config get 写入 key2,spawn 报告 key2,但执行日志仍 provider=key1 秒死。报告值≠执行值。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-12.md:5-7]
+## Promoted From Short-Term Memory (2026-06-18)
 
-## Promoted From Short-Term Memory (2026-06-16)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:10:12 -->
-- 14:00 fallback/子agent failover 深度排查(Bruce 主导): 修了真实死配置:billingBackoffHoursByProvider 的 key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h。保留。; 子 agent model 覆盖实测无效 → 已回滚。; 起草上游 issue:memory/tasks/openclaw-402-subagent-failover-issue.md [score=0.888 recalls=0 avg=0.620 source=memory/2026-06-12.md:10-12]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:17:20 -->
-- 15:17 外科手术修补:402 failover 跑通(Bruce 要求"不管什么办法,跑通"): 根因确诊:dist/errors-DcOiGp7S.js 的 RAW_402_MARKER_RE 入口正则不认带引号的码值 "402"(ZenMux 返回字符串)。证据:撞402后 errCount恒为0、零failover动作、子agent 0token秒死。; 补丁:正则 `[:=]\s*402\b` → `[:=]\s*["']?402\b`(插入 ["']? 容忍引号)。仅1处替换。; 原文件备份:/root/.openclaw/backups/errors-DcOiGp7S.js.orig-*; 验证(端到端,日志铁证):子agent从key1起步→402→"auth profile failure state updated reason=rate_limit window=cooldown"→"failover decision decision=fallback_model reason=rate_limit"→自动切→run done PATCH_WORKS 19.7k tokens。对比修复前同测试:0token秒死零failover。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-12.md:17-20]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:21:24 -->
-- 15:17 外科手术修补:402 failover 跑通(Bruce 要求"不管什么办法,跑通"): Bruce 设定保留未动:primary=key1,fallbacks=[codex/gpt-5.5, key2]。; ⚠️ 代价:改的是 node_modules 编译文件,OpenClaw 升级会被覆盖→升级后需重打补丁 or 等上游issue合并。; 升级重打方法:同上 python 替换;补丁点 RAW_402_MARKER_RE。; 长久解:上游 issue 草稿 memory/tasks/openclaw-402-subagent-failover-issue.md(Bug1=正则,已本地修;Bug2=收敛丢status;Bug3=subagents.model执行不一致)。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-12.md:21-24]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:3:4 -->
-- 14:00 fallback/子agent failover 深度排查(Bruce 主导): 触发:Bruce 问 fallback 是否真能用 + 为何 402 满额不自动跳 + 子 agent 秒死自己不换。 根因(代码+实测坐实,OpenClaw 2026.6.5): [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-12.md:3-4]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-12.md:8:8 -->
-- 14:00 fallback/子agent failover 深度排查(Bruce 主导): 现象链:主 session 靠早先粘住的 key2 auto-override 活着;子 agent 全新 session 无 override → 从配置 primary(key1)起步 → 撞欠费 402 → 单发即死 0 token → 主 session 收 failed 回执 → 自己接手跑(Bruce 反复遇到的体验)。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-12.md:8-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-13.md:3:6 -->
-- 08:00 daily-self-check: Gateway: running healthy (pid 1889215, probe ok, v2026.6.5).; Logs: no errors in last 50 lines.; Git: workspace + chief committed daily snapshot. ✅; Note: self-check cron showed consecutiveErrors=2 / lastStatus=error from prior 2 runs ("LLM request failed") — transient LLM failures on previous days; today's run succeeded, so counter will reset. No action needed. [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-13.md:3-6]
-
-## Promoted From Short-Term Memory (2026-06-17)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-14.md:3:6 -->
-- 08:04 每日自检: Gateway: running (pid 1889215, probe ok, v2026.6.5)。; git: workspace + workspace-chief 均已 auto-commit（dreaming/daily-summary 等）。; ⚠️ chief cron `7a59f223` "周日系统巡检（合并版）" consecutiveErrors=4，model-call-started 阶段超时（180s）。属 chief agent，main 的受限 cron 工具无法 inspect/修复。已退避至下周。建议 Bruce 处理：缩短该任务/拆分/提高 timeout 或换更快模型。; weixin getUpdates errcode -14 周期性 session 过期自动 pause 60min，常态噪音，暂不处理。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-14.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:3:6 -->
+- 08:00 每日自检: Gateway: running (pid 1889215, active), probe ok, v2026.6.5。健康。; 近期日志：无 error。; Cron `daily-self-check-8am`：上一次运行(06-14)lastStatus=error，lastDurationMs≈300276ms — 即撞上 600s? 实为达到上轮超时被判 error，consecutiveErrors=1。本轮正常执行，将清零。系统本身无异常，无需修复。; git: workspace + workspace-chief 均已 auto-commit（含 dreaming/daily-summary 文件）。push 静默尝试。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-15.md:3-6]

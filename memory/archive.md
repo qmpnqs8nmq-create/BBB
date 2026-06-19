@@ -4,6 +4,10 @@
 
 ## 2026-06
 
+- 06-04: 日常自检正常（Gateway v2026.5.27 healthy / cron ok / git pushed）；weixin -14 session 过期每小时 pause 60min（已知噪音，已报 Bruce）
+
+- 06-02/03: 日常自检正常（Gateway v2026.5.27 healthy / git pushed）；openclaw-weixin (4d5b593c) session expired errcode -14 每小时 pause 60min，认证失效非可自修复，已报 Bruce（wecom 渠道正常）
+
 - 06-01: 日常自检正常（Gateway ok、cron lastStatus=ok、git 已提交）；周度安全巡检 0 critical / 6 warn / 1 info（均为既有可接受姿态）；weixin errcode -14 每小时 session-expired 持续项
 
 ## 2026-03（至今）

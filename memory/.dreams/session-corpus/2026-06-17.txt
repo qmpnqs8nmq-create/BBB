@@ -1,2 +1,17 @@
 [main/sessions/main/88389b45-8a57-4405-ab8a-4ddd0d737d71.jsonl#L10] Assistant: C3 needs a fix — `.ImageID` isn't valid in this docker version. Let me re-run with a working approach.
 [main/sessions/main/88389b45-8a57-4405-ab8a-4ddd0d737d71.jsonl#L12] Assistant: All checks passed — no notification needed per rules. - **Part A** (symlink integrity): no broken symlinks in any of the 5 CEO workspaces. - **Part B** (CTX rules sync): all 4 sandbox workspaces (benben/kefu/mangba/mangba-guest) already in sync. - **Part C1** (rogu
+[main/sessions/main/3c8a2576-3365-4ee1-a26c-e2c8320d4441.jsonl#L13] Assistant: All checks passed — gateway healthy, no log errors, cron job clean (lastStatus=ok), workspace commits done. Nothing notable to report. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4944] Assistant: Two old logs to archive and MEMORY.md is back at 86 (auto-promotion again). Let me handle both.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4948] Assistant: Both are routine self-checks with the already-known weixin -14 issue. Archiving as one-line summaries and deleting.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4952] Assistant: Now the MEMORY.md trim — same auto-promotion noise.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4954] Assistant: This batch has a genuinely durable item (the 402 failover patch — needs re-applying after upgrades) mixed with self-check noise. I'll preserve the patch knowledge in curated form and drop the noise.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4956] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4961] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 66 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L4966] Assistant: Maintenance done this cycle: - Archived & deleted `2026-06-02.md` + `2026-06-03.md` (routine self-checks → one combined line under `## 2026-06`). - Trimmed MEMORY.md 86→66 lines: collapsed three auto-promotion sections; preserved the durable **402/failover local 
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5029] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5035] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5041] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5044] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5050] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5053] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5059] Assistant: [assistant turn failed before producing content]
