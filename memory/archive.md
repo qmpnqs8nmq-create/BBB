@@ -4,6 +4,10 @@
 
 ## 2026-06
 
+- 06-06: 日常自检正常；06-05 self-check 因 zenmux quota_exceeded 失败，今日恢复
+- 06-07: OpenClaw 版本核验——本机 2026.5.27，最新稳定 2026.6.1，beta 2026.6.5-beta.2(prerelease)；Gateway health ok
+- 06-08: 刘董事长接入 mangba-guest 已闭环；老用户走 binded_redirect 复用旧绑定不产新文件→链接误判过期；接入老用户直接看 dispatch 日志确认路由，确认网关 pid 用 `openclaw gateway status`
+
 - 06-04: 日常自检正常（Gateway v2026.5.27 healthy / cron ok / git pushed）；weixin -14 session 过期每小时 pause 60min（已知噪音，已报 Bruce）
 
 - 06-02/03: 日常自检正常（Gateway v2026.5.27 healthy / git pushed）；openclaw-weixin (4d5b593c) session expired errcode -14 每小时 pause 60min，认证失效非可自修复，已报 Bruce（wecom 渠道正常）

@@ -1,0 +1,6 @@
+[main/sessions/main/3bed30ac-655e-4e58-9dce-f06d5d323027.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3bed30ac-655e-4e58-9dce-f06d5d323027.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/3bed30ac-655e-4e58-9dce-f06d5d323027.jsonl#L12] Assistant: Bruce，晚上好 🐎 这会儿快十点半了，有什么要我处理的？
+[main/sessions/main/5f262c44-3960-4bb2-bb14-3b952941ec56.jsonl#L13] Assistant: 没有今天（2026-06-22）的日志文件。chief 最新日志是 06-07，main 最新是 06-19，都不是今天。严格基于实际记录，今天没有活动记录。 我写一份如实标注"无记录"的日报。
+[main/sessions/main/5f262c44-3960-4bb2-bb14-3b952941ec56.jsonl#L15] Assistant: 📋 **日报 2026-06-22** ⚠️ 今天（6/22）chief 和 main 都没有当日日志文件，最新记录分别停在 6/7 和 6/19。以下基于状态快照，非今日新增活动。 **🏢 业务（chief）** - 今日无新增业务记录。 - 快照：ADR-012 回滚同步已收口，主线锁定 Route 1/2/3 + 5-agent；旧的 Dual-Engine/Radar 框架已归档。chief 侧无待办。 **🔧 系统（main）** - 今日无新增运维记录。 - 快照：OpenClaw 402 failover
+[main/sessions/main/6f5b15d7-d284-4c70-b6ce-276568f5fdbf.jsonl#L25] Assistant: 📋 **日报 2026-06-22** ⚠️ 今天（6/22）chief 和 main 都没有当日日志文件，最新记录分别停在 6/7 和 6/19。以下基于状态快照，非今日新增活动。 **🏢 业务（chief）** - 今日无新增业务记录。 - 快照：ADR-012 回滚同步已收口，主线锁定 Route 1/2/3 + 5-agent；旧的 Dual-Engine/Radar 框架已归档。chief 侧无待办。 **🔧 系统（main）** - 今日无新增运维记录。 - 快照：OpenClaw 402 failover

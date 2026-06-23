@@ -69,3 +69,8 @@
 
 <!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:3:6 -->
 - 08:00 每日自检: Gateway: running (pid 1889215, active), probe ok, v2026.6.5。健康。; 近期日志：无 error。; Cron `daily-self-check-8am`：上一次运行(06-14)lastStatus=error，lastDurationMs≈300276ms — 即撞上 600s? 实为达到上轮超时被判 error，consecutiveErrors=1。本轮正常执行，将清零。系统本身无异常，无需修复。; git: workspace + workspace-chief 均已 auto-commit（含 dreaming/daily-summary 文件）。push 静默尝试。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-15.md:3-6]
+
+## Promoted From Short-Term Memory (2026-06-22)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:3:5 -->
+- 08:00 daily-self-check: gateway healthy (pid 1889215, probe ok, v2026.6.5)；近50行日志无 error; git: workspace + workspace-chief 均已 auto-commit（dreaming/memory 文件）; ⚠️ 本 cron 任务自身 consecutiveErrors=4，全部 timeout（~601s 撞 600s 上限）。今日已快速执行收尾。需关注：self-check 拖太久。已报告 Bruce。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-19.md:3-5]

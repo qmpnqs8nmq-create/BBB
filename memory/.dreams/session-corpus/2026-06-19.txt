@@ -1,2 +1,34 @@
 [main/sessions/main/6901ef5c-5e91-428c-949a-0a68f571203f.jsonl#L10] Assistant: C3 had a format error (`.ImageID` not valid in this docker version). Let me retry.
 [main/sessions/main/6901ef5c-5e91-428c-949a-0a68f571203f.jsonl#L12] Assistant: All checks passed — no notification needed per rules. - **Part A (symlinks):** All 5 CEO workspaces clean, no broken links. - **Part B (CTX sync):** All 4 sandbox workspaces already in sync. - **Part C1 (git remotes):** No rogue remotes. - **Part C2 (egress):** ben
+[main/sessions/main/b90c30ea-070d-4da3-abe8-715c78ead410.jsonl#L12] Assistant: The cron job itself is the issue — `daily-self-check-8am` has `consecutiveErrors: 4`, all timeouts at ~601s (hitting its own 600s limit). The check task has been running too slowly and self-killing. Everything else is healthy. Let me log this and report.
+[main/sessions/main/b90c30ea-070d-4da3-abe8-715c78ead410.jsonl#L14] Assistant: ⚠️ 自检发现一个问题需要你知晓： **daily-self-check 这个 cron 任务自身一直超时** - `consecutiveErrors: 4`，最近 4 次全部 timeout（每次跑满 ~601s，撞到 600s 上限被杀） - 今天这次我加了限时、快速收尾，正常完成了。 **其余一切正常：** - Gateway 健康（pid 1889215，probe ok，v2026.6.5） - 近 50 行日志无 error - workspace 和 workspace-chief 都已 auto-commi
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5219] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5224] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5229] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5234] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5239] Assistant: All clear: no logs 14+ days old, MEMORY.md at 71 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5244] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5249] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5254] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5259] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5264] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5269] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5274] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5279] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5284] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5289] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5292] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5295] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5298] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5301] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5304] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5307] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5310] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5313] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5316] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5319] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5322] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5325] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5328] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5331] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5334] Assistant: [assistant turn failed before producing content]

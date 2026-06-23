@@ -24,3 +24,12 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5162] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5167] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5172] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5177] Assistant: My heredoc got truncated. Retry.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5179] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5184] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5189] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks in last 24h. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5194] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5199] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5204] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. Late evening, nothing to disturb Bruce with. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5209] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 71 lines (under cap), no wecom DM blocks. Late evening — keeping quiet. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5214] Assistant: Late hour, all clear: no logs 14+ days old, MEMORY.md at 71 lines, no wecom DM blocks. HEARTBEAT_OK
