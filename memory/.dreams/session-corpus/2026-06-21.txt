@@ -25,3 +25,6 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5499] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5502] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5505] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5508] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5511] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5514] Assistant: [assistant turn failed before producing content]
