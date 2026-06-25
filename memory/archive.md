@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-10: 日常自检正常（Gateway v2026.5.27 / git pushed）；已知项：weixin -14 每小时 pause、opus-4.8 timeout 由 gpt-5.5 兜底一次、cron e463b042 wecom admin WSClient 投递失败；无需自修复
+
 - 06-06: 日常自检正常；06-05 self-check 因 zenmux quota_exceeded 失败，今日恢复
 - 06-07: OpenClaw 版本核验——本机 2026.5.27，最新稳定 2026.6.1，beta 2026.6.5-beta.2(prerelease)；Gateway health ok
 - 06-08: 刘董事长接入 mangba-guest 已闭环；老用户走 binded_redirect 复用旧绑定不产新文件→链接误判过期；接入老用户直接看 dispatch 日志确认路由，确认网关 pid 用 `openclaw gateway status`

@@ -56,7 +56,8 @@
 ## Recent State（近期状态，可滚动覆盖）
 - 刘董事长接入 mangba-guest 已闭环（2026-06-08）：老用户走 binded_redirect 复用旧绑定不产新账号文件→链接误判"过期"；接入老用户直接看网关 dispatch 日志确认路由，别等新文件、别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep -f openclaw-gateway 会误匹配 exec shell）
 - 持续性已知项（非故障）：weixin getUpdates errcode -14 每小时 session-expired 自动 pause 60min（待 Bruce 关注 weixin 凭证）；wecom admin WSClient bestEffort 投递偶发失败；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
-- 本机版本 OpenClaw 2026.5.27；最新稳定 2026.6.1（2026-06-07 复核）
+- 本机版本 OpenClaw 2026.5.27→已到 2026.6.5（自检日志显示 v2026.6.5）
+- ⚠️ `daily-self-check-8am` cron 反复 timeout（~600s 撞上限，6/14、6/19 均 consecutiveErrors↑），每轮快速收尾会清零但根因是自检任务拖太久，已报 Bruce，建议拆分/提速
 
 ## ⚠️ 402/failover 本地补丁（2026-06-12，升级后必重打）
 - 根因：OpenClaw 2026.6.5 的 `dist/errors-DcOiGp7S.js` 中 RAW_402_MARKER_RE 入口正则不认带引号码值（ZenMux 返 `"code":"402"` 字符串）→ 撞 402 后 errCount 恒 0、零 failover、子 agent 0token 秒死。
@@ -65,12 +66,3 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-## Promoted From Short-Term Memory (2026-06-18)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-15.md:3:6 -->
-- 08:00 每日自检: Gateway: running (pid 1889215, active), probe ok, v2026.6.5。健康。; 近期日志：无 error。; Cron `daily-self-check-8am`：上一次运行(06-14)lastStatus=error，lastDurationMs≈300276ms — 即撞上 600s? 实为达到上轮超时被判 error，consecutiveErrors=1。本轮正常执行，将清零。系统本身无异常，无需修复。; git: workspace + workspace-chief 均已 auto-commit（含 dreaming/daily-summary 文件）。push 静默尝试。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-15.md:3-6]
-
-## Promoted From Short-Term Memory (2026-06-22)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-19.md:3:5 -->
-- 08:00 daily-self-check: gateway healthy (pid 1889215, probe ok, v2026.6.5)；近50行日志无 error; git: workspace + workspace-chief 均已 auto-commit（dreaming/memory 文件）; ⚠️ 本 cron 任务自身 consecutiveErrors=4，全部 timeout（~601s 撞 600s 上限）。今日已快速执行收尾。需关注：self-check 拖太久。已报告 Bruce。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-19.md:3-5]
