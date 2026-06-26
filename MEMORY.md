@@ -66,3 +66,8 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
+
+## Promoted From Short-Term Memory (2026-06-26)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:3:6 -->
+- 08:00 daily-self-check: Gateway: running healthy (pid 1889215, probe ok, v2026.6.5)。; 日志：无 error/warn。; cron `daily-self-check-8am`：consecutiveErrors=3，前 3 次因 "LLM request failed" 失败（疑似模型/provider 瞬时问题），本次运行正常。; git：workspace + chief 已快照提交。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-23.md:3-6]
