@@ -1,0 +1,1 @@
+[main/sessions/main/8171368c-143e-4d92-b1b4-89aab4a157ea.jsonl#L13] Assistant: 检查完成：全部正常，无需通知 Bruce。 - Symlink：正常，无需修复 - CTX 规则：无差异，未覆盖 - Git remote：无 ALERT - benben/kefu egress：均为 `none` - sandbox 镜像：运行容器未发现旧镜像 ALERT

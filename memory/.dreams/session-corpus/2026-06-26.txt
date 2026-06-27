@@ -2,3 +2,46 @@
 [main/sessions/main/ed4d2a00-dbe7-4a02-bdbd-0f1b8df4059b.jsonl#L10] Assistant: Part A: clean. Part B: all in sync. Part C1/C2: clean. The C3 docker format string failed — `.ImageID` isn't a valid field in this Docker version. Let me fix the format.
 [main/sessions/main/ed4d2a00-dbe7-4a02-bdbd-0f1b8df4059b.jsonl#L12] Assistant: All checks pass: - **Part A (symlinks):** All 5 CEO workspaces clean — no broken symlinks. - **Part B (CTX sync):** All 4 sandbox workspaces in sync with authoritative copy. - **Part C1 (rogue remotes):** None found. - **Part C2 (egress):** benben & kefu both `dock
 [main/sessions/main/ed4d2a00-dbe7-4a02-bdbd-0f1b8df4059b.jsonl#L12] Assistant: the image-freshness check.)
+[main/sessions/main/9a82c481-aaec-4007-8ff8-eb90fb8cc613.jsonl#L6] Assistant: I'll perform the daily self-check. Let me run the steps efficiently.
+[main/sessions/main/9a82c481-aaec-4007-8ff8-eb90fb8cc613.jsonl#L10] Assistant: Gateway running and healthy. Both repos committed and pushed. Note: there's a minor service config version mismatch (installed by 2026.6.5, CLI now 2026.6.10) — non-critical but worth flagging. Let me check logs and cron.
+[main/sessions/main/9a82c481-aaec-4007-8ff8-eb90fb8cc613.jsonl#L13] Assistant: All checks pass: - **Gateway:** running, healthy, connectivity ok - **Logs:** no errors in recent log - **Cron:** 1 job (this self-check), lastRunStatus=ok, no failures - **Git:** both workspace and chief repos committed + pushed One minor non-critical item: the sy
+[main/sessions/main/9a82c481-aaec-4007-8ff8-eb90fb8cc613.jsonl#L15] Assistant: Daily self-check complete. Summary: - ✅ Gateway running and healthy (pid 2030321, connectivity ok) - ✅ No errors in recent logs - ✅ Cron jobs all ok (1 job, no failures) - ✅ Both repos committed and pushed - ⚠️ Minor: systemd service file installed by 2026.6.5, CLI
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5976] Assistant: This is the 402 failover deep-dive — but it's already fully captured in the curated `## ⚠️ 402/failover 本地补丁` section in MEMORY.md. Safe to archive as a one-liner pointer and delete.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5978] Assistant: Maintenance done: - Archived & deleted `2026-06-12.md` (402 failover deep-dive → one-line pointer; full detail already curated in MEMORY.md + issue draft). - MEMORY.md at 73 lines (under cap), no promotion noise to trim. - No wecom DM blocks in last 24h. HEARTBEA
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5983] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 73 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5988] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 73 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5993] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 73 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L5998] Assistant: All clear: no daily logs 14+ days old (oldest within range), MEMORY.md at 73 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6006] Assistant: All clear: no daily logs 14+ days old (oldest is 06-12, still within window), MEMORY.md at 73 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6014] Assistant: All clear: no daily logs 14+ days old (oldest now within window), MEMORY.md at 73 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6017] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6035] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6051] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6065] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L84] User: 我的benben agent， 出现一些错误，错误的代码如下，请看如何解决？是什么问题？ Activity: 3 tools Web Search Error Web Search Error with for "Chinese students US student visa 2026 STEM AI restrictions revoke latest policy" (top 8) Tool input { "query": "Chinese students US student visa 2026 STEM AI restr
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L85] Assistant: benben 的 web_search 报 "disabled or no provider available"。这和升级后审计时看到的一条 warn 对上了——配置里 `tools.web.search.provider = perplexity`，但 perplexity 插件根本没装。先查清当前 web search 的真实配置和可用 provider：
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L89] Assistant: 找到根因了。看一下 perplexity 的配置块和可用的 key，判断该装插件还是换 provider：
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L91] Assistant: 诊断清楚了，是个配置/安装不一致的问题： ## 是什么问题 benben（以及任何 agent）调用 `web_search` 报"no provider available"，根因是： - 配置里 `tools.web.search.provider = "perplexity"`，且 perplexity 插件**已 enabled、已填好 API key**（`pplx-...`，model `sonar-pro`） - **但 perplexity 插件的代码包根本没装**（`@openclaw/perplexity
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L93] Assistant: 装好了 `perplexity@2026.6.10`，那条 "plugin not installed: perplexity" 警告已消失。重启加载：
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L96] User: 装好了 perplexity@2026.6.10 我以前没听说需要装插件的，原来我直接把这个模型加进去就能工作，为什么？么现在会出现这些的问题？第2点重启之后，你是否真正解决这些问题了？
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L97] Assistant: 先把状态和实际效果确认了，再回答你两个问题。
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L99] Assistant: Gateway running，doctor 里关于 perplexity / web_search 的警告已全部消失。现在做最关键的一步——**我实测一次 web_search** 确认真的能用：
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L101] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L109] Assistant: 是的，我确认过了：**web_search 这条问题已经真正解决**。 原因分两层： 1. 你以前“直接把 Perplexity 模型加进去就能工作”，大概率是因为当时系统里已经有对应的 `perplexity` 插件/内置能力在。 现在 OpenClaw 升级后，配置里还写着： `web.search.provider = perplexity` API key 和 model 也还在，但插件包本身不在，所以 Gateway 找不到 web_search provider，才报： `web_search is disab
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L110] User: 我的本本agent里面还是出现如下的问题，你再看清楚，你是否真的是做好了，修复好了。 Activity: 3 tools Web Search Error Web Search Error with for "2026 US universities admissions Chinese international students artificial intelligence major sensitive undergraduate admissions" (top 5) Tool input { "query": "2026
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L111] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/f7b1a259-3de2-473f-bb71-011e3d0cd445.jsonl#L25] Assistant: 2026-06-26 日报已生成。 今日 chief 侧未发现当日日志，状态仍停留在 2026-05-04：ADR-012 rollback sync 已关闭，chief 当前无待处理业务动作。今天主要进展集中在 main 系统运维：08:00 自检显示 Gateway 健康、cron 正常、仓库已提交推送；发现 systemd service 与 CLI 版本不匹配的非致命提示，建议空闲时跑 `openclaw doctor --repair`。 12:40 修复 benben `web_search`：根因是 Perpl
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6075] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6085] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6101] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6111] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6119] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6129] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6139] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6151] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6161] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6181] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6199] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6215] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L127] User: [System] Your previous turn was interrupted by a gateway restart while OpenClaw was waiting on tool/model work. Continue from the existing transcript and finish the interrupted response.
+[main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L140] Assistant: 你说得对，我前一次没有完全做好。准确说，我只修好了第一层问题：`perplexity` provider 从“没装/不可用”变成“能调用”。但 benben 实际传了 `max_tokens: 3000`，这暴露了第二层配置问题。 真正原因是：`perplexity.webSearch` 里配置了 `model: "sonar-pro"`。在 OpenClaw 2026.6.10 里，只要带 `max_tokens` 或 `max_tokens_per_page`，Perplexity 必须走 native Search 

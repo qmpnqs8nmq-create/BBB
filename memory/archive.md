@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-12: 402/子agent failover 深度排查+外科手术修补（Bruce 主导）。根因 RAW_402_MARKER_RE 不认带引号码值→撞402零failover子agent秒死；补丁改 dist/errors-DcOiGp7S.js 正则容忍引号，端到端验证跑通。详见 MEMORY.md「402/failover 本地补丁」section（升级后必重打）+ issue 草稿 memory/tasks/openclaw-402-subagent-failover-issue.md
+
 - 06-10: 日常自检正常（Gateway v2026.5.27 / git pushed）；已知项：weixin -14 每小时 pause、opus-4.8 timeout 由 gpt-5.5 兜底一次、cron e463b042 wecom admin WSClient 投递失败；无需自修复
 
 - 06-06: 日常自检正常；06-05 self-check 因 zenmux quota_exceeded 失败，今日恢复
