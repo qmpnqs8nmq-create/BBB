@@ -78,3 +78,10 @@
 - 08:00 每日自检: Gateway: running (pid 1889215), probe ok, v2026.6.5 ✓; Cron: daily-self-check lastStatus=ok, consecutiveErrors=0 ✓; 日志发现两个**复发**错误（非本次新增，无法安全自动修复）：; `openclaw-weixin` 渠道 `getUpdates: session expired (errcode -14)`，每小时复发 → 凭据/会话过期，需重新登录(扫码)恢复 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-24.md:3-6]
 <!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:7:9 -->
 - 08:00 每日自检: `cron:e463b042` delivery 失败：account admin WSClient 未连接 / Agent 未配置（与上面 weixin 掉线同源）; git: workspace + workspace-chief 均已 commit（push 在 timeout 包裹下执行）; 处置：已记录，weixin 重新登录需 Bruce 介入，不自动操作 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-24.md:7-9]
+
+## Promoted From Short-Term Memory (2026-06-28)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:12:15 -->
+- 21:43 升级 OpenClaw 2026.6.5 → 2026.6.10: npm latest 实时确认 2026.6.10（今天 06-24 03:01 UTC 发布），本机原 6.5（6/9）落后 5 版; `npm install -g openclaw@latest` → 2026.6.10 (aa69b12); 402 补丁重打：新文件 dist/errors-BmvajW3H.js（注意文件名随版本变，靠 grep RAW_402_MARKER_RE 定位）。新版正则已改进但仍不认带引号码值 "code":"402"，补丁点 [:=]\s* → [:=]\s*["']? 加1处。备份 backups/errors-BmvajW3H.js.orig-20260624-214119; restart 后 running pid 2022313，18789 监听正常 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-24.md:12-15]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25.md:3:6 -->
+- 08:00 daily-self-check: Gateway running healthy (pid 2022313, probe ok). 服务文件版本漂移 2026.6.5 vs CLI 2026.6.10（仅 cosmetic，可 openclaw doctor --repair）。; Cron: 1 job, lastRunStatus=ok, 无失败。; Git: workspace + chief 均已 commit 快照。; ⚠️ weixin 通道 session expired (errcode -14)，自 05:43 起每 60min 重试暂停 → 入站微信消息收不到。疑似需重新登录/换 token，未擅自动凭据，已上报 Bruce。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-25.md:3-6]

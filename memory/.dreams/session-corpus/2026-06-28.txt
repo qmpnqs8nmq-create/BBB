@@ -1,0 +1,1 @@
+[main/sessions/main/9c920c17-0c44-4f4c-9faa-7a4d10c2879e.jsonl#L15] Assistant: 全部正常，无需通知 Bruce。 - Symlink：OK，无断裂 - CTX rules：无差异，未覆盖 - Git remote：无 ALERT - Sandbox egress：benben/kefu 均为 `none` - Sandbox image：运行中的 `openclaw-sbx-agent-benben-4c00550b` 使用最新镜像 `8ef0febba319` 注：原 C3 模板字段 `.ImageID` 在当前 Docker 输出中不可用，已用 `docker inspect` 校验实际镜像 ID。

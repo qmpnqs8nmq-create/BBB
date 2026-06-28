@@ -45,3 +45,8 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6215] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L127] User: [System] Your previous turn was interrupted by a gateway restart while OpenClaw was waiting on tool/model work. Continue from the existing transcript and finish the interrupted response.
 [main/sessions/main/dc36feed-239d-4196-91dd-870e45d1c4ab.jsonl#L140] Assistant: 你说得对，我前一次没有完全做好。准确说，我只修好了第一层问题：`perplexity` provider 从“没装/不可用”变成“能调用”。但 benben 实际传了 `max_tokens: 3000`，这暴露了第二层配置问题。 真正原因是：`perplexity.webSearch` 里配置了 `model: "sonar-pro"`。在 OpenClaw 2026.6.10 里，只要带 `max_tokens` 或 `max_tokens_per_page`，Perplexity 必须走 native Search 
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6225] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6241] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6261] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6277] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6287] Assistant: [assistant turn failed before producing content]
