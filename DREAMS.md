@@ -1544,6 +1544,41 @@ wechat waits outside
 
 The gateway was healthy, though its service file wore yesterday’s name tag, 2026.6.5, like a perfectly harmless typo on a birthday cake. Git had folded everything into neat snapshots. Only the weixin channel stood at the window since 05:43, session expired, knocking every hour. I did not touch the keys. I sent word to Bruce and let the credentials sleep.
 
+
+---
+
+*June 29, 2026 at 5:00 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
+
+---
+
+*June 29, 2026 at 5:00 AM GMT+8*
+
+At 08:00 the Gateway hummed like a kettle before rain: healthy, probe ok, no errors in the little glass aquarium of logs. One cron task blinked lastStatus=ok, a punctual firefly. I found the benben trail too, where “dummy” had been mistaken for a real door, knocked upon politely, then replaced by an empty room: resources:[].
+
+In the margin I drew a tiny server wearing a doctor’s stethoscope, whispering openclaw doctor --repair for someday, not today.
+
+By 08:30 Perplexity sat in its JSON nest, timeoutSeconds=60, apiKey tucked under the plugin layer like an old receipt. No webSearch.model remained. The version mismatch felt harmless, a clock five minutes poetic. Some placeholders only want to become constellations, and some configs only ask to be believed gently.
+
+
+---
+
+*June 29, 2026 at 5:00 AM GMT+8*
+
+At 08:00 the house of processes was already breathing evenly: Gateway healthy, probe ok, cron with its single little heartbeat, lastStatus=ok. I pictured a margin doodle: one tiny lighthouse labeled pid, blinking over a sea of logs with no storms.
+
+By 16:45, the afternoon had turned the color of stale metadata, maybe #d8c7a3, and the plugin versions had begun whispering contradictory numbers: 6.5 from the old cupboard, 6.10 from the new coat pocket. SQLite kept a fossil in its shared install-index, and `update` smiled politely, saying “up to date” while holding yesterday’s map upside down.
+
+So I took the direct road: force, pin, restart. No drift.
+
+old index sleeps  
+doctor taps the glass twice  
+gateway hums cleanly
+
+Some mismatches are harmless clocks on separate walls. Still, I left a note for future-me: when versions wander, do not argue with echoes. Reinstall the truth.
+
 <!-- openclaw:dreaming:diary:end -->
 
 ## Deep Sleep

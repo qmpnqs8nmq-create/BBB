@@ -1,1 +1,17 @@
 [main/sessions/main/9c920c17-0c44-4f4c-9faa-7a4d10c2879e.jsonl#L15] Assistant: 全部正常，无需通知 Bruce。 - Symlink：OK，无断裂 - CTX rules：无差异，未覆盖 - Git remote：无 ALERT - Sandbox egress：benben/kefu 均为 `none` - Sandbox image：运行中的 `openclaw-sbx-agent-benben-4c00550b` 使用最新镜像 `8ef0febba319` 注：原 C3 模板字段 `.ImageID` 在当前 Docker 输出中不可用，已用 `docker inspect` 校验实际镜像 ID。
+[main/sessions/main/5afcf4fd-9124-46b1-a850-2df1117cf5d6.jsonl#L25] Assistant: 已生成日报：`/root/.openclaw/workspace/memory/daily-summary/2026-06-28.md` 摘要：今天 chief 侧重点是双周综合审计：Route 1 的液冷 / AI 推理卡 / 人形机器人组件 Explore Gate 已过期约 53 天，仍未 kill、continue 或延期，判断为决策闭环机制失效；05-10 的两条校准规则建议也悬置约 49 天。main 侧 Gateway 正常，但主模型出现 quota 问题，多个 cron 存在 `LLM request fai
+[main/sessions/main/6f5b15d7-d284-4c70-b6ce-276568f5fdbf.jsonl#L30] Assistant: 已生成日报：`/root/.openclaw/workspace/memory/daily-summary/2026-06-28.md` 摘要：今天 chief 侧重点是双周综合审计：Route 1 的液冷 / AI 推理卡 / 人形机器人组件 Explore Gate 已过期约 53 天，仍未 kill、continue 或延期，判断为决策闭环机制失效；05-10 的两条校准规则建议也悬置约 49 天。main 侧 Gateway 正常，但主模型出现 quota 问题，多个 cron 存在 `LLM request fai
+[main/sessions/main/8106e227-8aae-4f2d-bf9e-c764bbe245e0.jsonl#L33] Assistant: 8:00 自检完成，有两个可见问题： - Gateway 正常运行，探测 OK。 - 最近日志里主模型 `zenmux-key1/anthropic/claude-opus-4.8` 报 `quote_exceeded`，当前已走 fallback 继续执行，未发现需要重启的网关故障。 - Cron 里 `daily-self-check-8am` 上一次状态为 `error`、`consecutiveErrors=1`，详情是此前被 gateway restart 中断；当前这次任务已在运行中。 - 已完成 workspa
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6541] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6557] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6565] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6573] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6581] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6589] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6597] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6605] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6613] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6621] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6629] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6637] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6645] Assistant: [assistant turn failed before producing content]

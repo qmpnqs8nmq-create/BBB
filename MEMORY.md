@@ -56,32 +56,19 @@
 ## Recent State（近期状态，可滚动覆盖）
 - 刘董事长接入 mangba-guest 已闭环（2026-06-08）：老用户走 binded_redirect 复用旧绑定不产新账号文件→链接误判"过期"；接入老用户直接看网关 dispatch 日志确认路由，别等新文件、别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep -f openclaw-gateway 会误匹配 exec shell）
 - 持续性已知项（非故障）：weixin getUpdates errcode -14 每小时 session-expired 自动 pause 60min（待 Bruce 关注 weixin 凭证）；wecom admin WSClient bestEffort 投递偶发失败；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
-- 本机版本 OpenClaw 2026.5.27→已到 2026.6.5（自检日志显示 v2026.6.5）
+- 本机版本 OpenClaw 2026.6.10（2026-06-24 从 2026.6.5 升级，CLI/Gateway 已一致）
 - ⚠️ `daily-self-check-8am` cron 反复 timeout（~600s 撞上限，6/14、6/19 均 consecutiveErrors↑），每轮快速收尾会清零但根因是自检任务拖太久，已报 Bruce，建议拆分/提速
 
 ## ⚠️ 402/failover 本地补丁（2026-06-12，升级后必重打）
-- 根因：OpenClaw 2026.6.5 的 `dist/errors-DcOiGp7S.js` 中 RAW_402_MARKER_RE 入口正则不认带引号码值（ZenMux 返 `"code":"402"` 字符串）→ 撞 402 后 errCount 恒 0、零 failover、子 agent 0token 秒死。
-- 补丁：正则 `[:=]\s*402\b` → `[:=]\s*["']?402\b`（加1处 `["']?`）。只改 1 处。原文件备份 `/root/.openclaw/backups/errors-DcOiGp7S.js.orig-*`。
-- ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 python 重打同一补丁**（补丁点 RAW_402_MARKER_RE）。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
+- 根因：OpenClaw 的 RAW_402_MARKER_RE 入口正则不认带引号码值（ZenMux 返 `"code":"402"` 字符串）→ 撞 402 后 errCount 恒 0、零 failover、子 agent 0token 秒死。
+- 补丁：定位 dist 中 `RAW_402_MARKER_RE`，把 `[:=]\s*402\b` / `[:=]\s*` 这类入口补成可容忍引号的 `[:=]\s*["']?402\b` / `[:=]\s*["']?`。只改 1 处。2026-06-12 备份 `/root/.openclaw/backups/errors-DcOiGp7S.js.orig-*`；2026-06-24 升级 6.10 后重打到 `dist/errors-BmvajW3H.js`，备份 `backups/errors-BmvajW3H.js.orig-20260624-214119`。
+- ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 grep `RAW_402_MARKER_RE` 重打同一补丁**。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
+## Promoted From Short-Term Memory (2026-06-29)
 
-## Promoted From Short-Term Memory (2026-06-26)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-23.md:3:6 -->
-- 08:00 daily-self-check: Gateway: running healthy (pid 1889215, probe ok, v2026.6.5)。; 日志：无 error/warn。; cron `daily-self-check-8am`：consecutiveErrors=3，前 3 次因 "LLM request failed" 失败（疑似模型/provider 瞬时问题），本次运行正常。; git：workspace + chief 已快照提交。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-23.md:3-6]
-
-## Promoted From Short-Term Memory (2026-06-27)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:3:6 -->
-- 08:00 每日自检: Gateway: running (pid 1889215), probe ok, v2026.6.5 ✓; Cron: daily-self-check lastStatus=ok, consecutiveErrors=0 ✓; 日志发现两个**复发**错误（非本次新增，无法安全自动修复）：; `openclaw-weixin` 渠道 `getUpdates: session expired (errcode -14)`，每小时复发 → 凭据/会话过期，需重新登录(扫码)恢复 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-24.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:7:9 -->
-- 08:00 每日自检: `cron:e463b042` delivery 失败：account admin WSClient 未连接 / Agent 未配置（与上面 weixin 掉线同源）; git: workspace + workspace-chief 均已 commit（push 在 timeout 包裹下执行）; 处置：已记录，weixin 重新登录需 Bruce 介入，不自动操作 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-24.md:7-9]
-
-## Promoted From Short-Term Memory (2026-06-28)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-24.md:12:15 -->
-- 21:43 升级 OpenClaw 2026.6.5 → 2026.6.10: npm latest 实时确认 2026.6.10（今天 06-24 03:01 UTC 发布），本机原 6.5（6/9）落后 5 版; `npm install -g openclaw@latest` → 2026.6.10 (aa69b12); 402 补丁重打：新文件 dist/errors-BmvajW3H.js（注意文件名随版本变，靠 grep RAW_402_MARKER_RE 定位）。新版正则已改进但仍不认带引号码值 "code":"402"，补丁点 [:=]\s* → [:=]\s*["']? 加1处。备份 backups/errors-BmvajW3H.js.orig-20260624-214119; restart 后 running pid 2022313，18789 监听正常 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-24.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-25.md:3:6 -->
-- 08:00 daily-self-check: Gateway running healthy (pid 2022313, probe ok). 服务文件版本漂移 2026.6.5 vs CLI 2026.6.10（仅 cosmetic，可 openclaw doctor --repair）。; Cron: 1 job, lastRunStatus=ok, 无失败。; Git: workspace + chief 均已 commit 快照。; ⚠️ weixin 通道 session expired (errcode -14)，自 05:43 起每 60min 重试暂停 → 入站微信消息收不到。疑似需重新登录/换 token，未擅自动凭据，已上报 Bruce。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-25.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-25.md:9:12 -->
+- 16:45 修复插件版本漂移（codex/feishu 6.5→6.10）: 升级 6.10 后 doctor 报 codex/feishu 仍 6.5。`openclaw plugins update` 误报 "up to date"——根因是 shared SQLite install-index 元数据冲突（doctor 反复警告 codex,feishu），让更新器读到 stale 状态; 解法：绕过 update，直接 `openclaw plugins install @openclaw/codex@2026.6.10 --force --pin`（feishu 同），磁盘版本确认 6.10 → restart; 复查：doctor NO DRIFT，Gateway running pid 2030321。402 补丁不受影响; 遗留(可选/非问题)：systemd 服务单元仍 6.5 生成，`openclaw gateway install --force` 可对齐，不影响运行。下次升级遇插件漂移直接用 force install 套路，别指望 plugins update [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-25.md:9-12]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-26.md:3:6 -->
+- 08:00 每日自检: Gateway running/healthy，probe ok，无日志错误; cron 1 个任务（自检），lastStatus=ok; workspace + chief 仓库已提交并推送; 注意：systemd service 文件由 2026.6.5 安装，当前 CLI 2026.6.10（版本不匹配，非致命）→ 建议有空跑 `openclaw doctor --repair`，未自动改动 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-26.md:3-6]
