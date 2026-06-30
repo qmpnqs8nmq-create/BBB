@@ -1,0 +1,4 @@
+[main/sessions/main/8a1aafc9-15fa-4e6c-a138-16ec2ff702bb.jsonl#L6] Assistant: I'll run the daily integrity check across all parts.
+[main/sessions/main/8a1aafc9-15fa-4e6c-a138-16ec2ff702bb.jsonl#L10] Assistant: C3 hit a docker template format issue (`.ImageID` not valid in this docker version). Let me fix and re-run just C3.
+[main/sessions/main/8a1aafc9-15fa-4e6c-a138-16ec2ff702bb.jsonl#L12] Assistant: All checks complete. Results: - **Part A (symlink integrity):** All 5 CEO workspaces OK — no broken symlinks. - **Part B (CTX rules sync):** All 4 sandbox workspaces already in sync — no changes needed. - **Part C1 (rogue git remotes):** Clean — no remotes outside 
+[main/sessions/main/8a1aafc9-15fa-4e6c-a138-16ec2ff702bb.jsonl#L12] Assistant: ps`, which this docker version rejects — worth switching the spec to the `docker inspect` approach to avoid the recurring error. HEARTBEAT_OK

@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-15: 日常自检正常（Gateway v2026.6.5 healthy / 日志无 error / git snapshot）；前一轮 self-check 超时导致 consecutiveErrors=1，本轮正常会清零，无需处理
+
 - 06-14: 日常自检正常；chief 周日系统巡检 cron `7a59f223` 连续超时（model-call-started 180s，属 chief 侧，建议拆分/提速/换模型）；weixin -14 仍为已知噪音
 
 - 06-13: 日常自检正常（Gateway v2026.6.5 healthy / 日志无 error / git snapshot）；此前两次 self-check 因 LLM request failed 失败，当日恢复，无需处理
