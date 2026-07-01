@@ -58,6 +58,8 @@
 - 持续性已知项（非故障）：weixin getUpdates errcode -14 每小时 session-expired 自动 pause 60min（待 Bruce 关注 weixin 凭证）；wecom admin WSClient bestEffort 投递偶发失败；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
 - 本机版本 OpenClaw 2026.6.10（2026-06-24 从 2026.6.5 升级，CLI/Gateway 已一致）
 - ⚠️ `daily-self-check-8am` cron 反复 timeout（~600s 撞上限，6/14、6/19 均 consecutiveErrors↑），每轮快速收尾会清零但根因是自检任务拖太久，已报 Bruce，建议拆分/提速
+- 6.10 升级后插件漂移经验：codex/feishu 若 doctor 报旧版本且 `plugins update` 误报 up-to-date，直接 `openclaw plugins install @openclaw/{codex,feishu}@版本 --force --pin` 后 restart；systemd service 文件旧版本号非致命。
+- benben/web_search 用 Perplexity：不要配置 `plugins.entries.perplexity.config.webSearch.model=sonar-pro`，否则带 `max_tokens` 会走 legacy path 报 `unsupported_content_budget`；保留 API key + `timeoutSeconds=60` 即可。
 
 ## ⚠️ 402/failover 本地补丁（2026-06-12，升级后必重打）
 - 根因：OpenClaw 的 RAW_402_MARKER_RE 入口正则不认带引号码值（ZenMux 返 `"code":"402"` 字符串）→ 撞 402 后 errCount 恒 0、零 failover、子 agent 0token 秒死。
@@ -66,16 +68,15 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-## Promoted From Short-Term Memory (2026-06-29)
+## Promoted From Short-Term Memory (2026-07-01)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-25.md:9:12 -->
-- 16:45 修复插件版本漂移（codex/feishu 6.5→6.10）: 升级 6.10 后 doctor 报 codex/feishu 仍 6.5。`openclaw plugins update` 误报 "up to date"——根因是 shared SQLite install-index 元数据冲突（doctor 反复警告 codex,feishu），让更新器读到 stale 状态; 解法：绕过 update，直接 `openclaw plugins install @openclaw/codex@2026.6.10 --force --pin`（feishu 同），磁盘版本确认 6.10 → restart; 复查：doctor NO DRIFT，Gateway running pid 2030321。402 补丁不受影响; 遗留(可选/非问题)：systemd 服务单元仍 6.5 生成，`openclaw gateway install --force` 可对齐，不影响运行。下次升级遇插件漂移直接用 force install 套路，别指望 plugins update [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-25.md:9-12]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-26.md:3:6 -->
-- 08:00 每日自检: Gateway running/healthy，probe ok，无日志错误; cron 1 个任务（自检），lastStatus=ok; workspace + chief 仓库已提交并推送; 注意：systemd service 文件由 2026.6.5 安装，当前 CLI 2026.6.10（版本不匹配，非致命）→ 建议有空跑 `openclaw doctor --repair`，未自动改动 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-26.md:3-6]
-
-## Promoted From Short-Term Memory (2026-06-30)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-06-26.md:9:12 -->
-- 12:40 benben web_search 修复: benben `web_search` 仍失败：`unsupported_content_budget`，因 Perplexity 配置含 `webSearch.model=sonar-pro`，带 `max_tokens` 时不能走 native Search API path。; 已备份 `/root/.openclaw/openclaw.json` 到 `/root/.openclaw/backups/openclaw.json.perplexity-native-20260626-124042`。; 已删除 `plugins.entries.perplexity.config.webSearch.model`，保留 API key，重启 Gateway。; 用 benben 同款参数 `count=5,max_tokens=3000` 实测成功返回结果；此前只验证 provider 可用是不充分的。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-26.md:9-12]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:2:5 -->
-- 08:30 Perplexity 配置复核: 当前 `/root/.openclaw/openclaw.json`: `tools.web.search.provider=perplexity`, `timeoutSeconds=60`; `plugins.entries.perplexity.enabled=true`, `config.webSearch.apiKey=pplx-...`; 已无 `webSearch.model`。; 非标准/历史项: API key 仍放在插件层 `plugins.entries.perplexity.config.webSearch.apiKey`，官方新文档推荐 `tools.web.search.perplexity.apiKey`；但插件仍声明该 credentialPath，当前可兼容。; 6/26 已修掉危险项: `webSearch.model=sonar-pro` 会触发 legacy chat_completions path，导致带 `max_tokens` 的 web_search 报 `unsupported_content_budget`。; 另一个非默认项: `tools.web.search.timeoutSeconds=60` 是 6/1 为 Perplexity 长尾延迟加的，不是官方最小配置，但对稳定性有帮助。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-27.md:2-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:6:6 -->
+- 08:30 Perplexity 配置复核: 结论: 现在不需要回滚；如要追求最标准，可择机把 key 迁移到 `tools.web.search.perplexity.apiKey`，保留 provider/perplexity，继续不设置 model/baseUrl。 [score=0.869 recalls=0 avg=0.620 source=memory/2026-06-27.md:6-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:15:18 -->
+- 21:55 benben "failed before producing a reply" 定位: 用户反馈本本发信息返回 `The agent run failed before producing a reply`。; 当前 dashboard 会话 `agent:benben:dashboard:...7115dc` / session `e357f19e-051f-450e-af73-d32353fe6a30` 日志显示 21:49 多次失败。; 根因日志: `Session history or replay state is invalid. Use /new to start a fresh session and try again.` rawError=`messages.5.content.0: Invalid signature in thinking block`。; 这不是上下文超限（precheck fits ~75k/380k），也不是 dummy MCP；是该会话历史里的 Anthropic thinking 签名无法重放/已损坏。旧会话继续发会反复失败。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-27.md:15-18]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:19:19 -->
+- 21:55 benben "failed before producing a reply" 定位: 临时恢复: 在本本该窗口开 `/new`/新会话；若要彻底清理，可归档/重置该 session 文件，但属于会话状态变更，需 Bruce 确认。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-27.md:19-19]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:9:12 -->
+- 08:50 benben dummy MCP 报错定位: 报错: `Dummy.list Mcp Resources` / `resources/list failed: unknown MCP server 'dummy'`。; 定位到 benben Codex 会话 `rollout-2026-06-27T15-15-27...`: assistant 调用了 `list_mcp_resources({"server":"dummy"})`，随后又调用 `list_mcp_resources({})` 成功返回 `resources:[]`。; 静态配置未发现 `dummy` MCP server；benben `config.toml` 仅有 workspace trust，Codex app server 名为 `codex-connectors-mcp`。; 结论: 这是模型/工具路由误把占位名 `dummy` 当 MCP server 调用，不是 benben MCP 配置缺失；若频繁复发再清理相关 Codex session/cache 或加提示约束。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-27.md:9-12]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-28.md:2:5 -->
+- 08:00 daily self-check: Gateway healthy: `openclaw gateway status` running, connectivity probe ok.; Recent logs include primary model quota `quote_exceeded` on `zenmux-key1/anthropic/claude-opus-4.8`; fallback continued the cron run.; Cron list flagged `daily-self-check-8am` with previous `lastStatus=error`, `consecutiveErrors=1`; detail says prior run was interrupted by gateway restart, current run active.; Auto snapshots committed for workspace (`3906558`) and workspace-chief (`740f7b6`); push attempted best-effort within timeout. [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-28.md:2-5]

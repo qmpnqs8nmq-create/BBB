@@ -14,3 +14,27 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6827] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6835] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6843] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/24556943-01f4-4046-82cc-bfaedd4c6065.jsonl.deleted.2026-06-30T02-06-59.600Z#L38] Assistant: 收到这条重试消息。我按“确认请求”处理，不视为修复授权：暂不改 exec 权限、`/root/.openclaw` 权限、Gateway/全局配置或插件配置。 我已补记到 `memory/2026-06-29.md` 和 `memory/HANDOFF.md`。Bruce 明确确认后，我会按“先复查、备份、分项修复”的顺序推进。
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6851] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6859] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6867] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6875] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6883] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6891] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6899] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6907] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6915] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6935] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6947] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6959] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6971] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6985] Assistant: All clear: no daily logs 14+ days old (oldest is within window), MEMORY.md at 74 lines (under 80 cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6990] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 74 lines (under cap), no wecom DM blocks. Late evening (18:48), nothing to surface to Bruce. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L6995] Assistant: All clear: no daily logs 14+ days old (oldest within window), MEMORY.md at 74 lines (under 80 cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7000] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 74 lines (under 80 cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7005] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 74 lines (under cap), no wecom DM blocks. It's late evening (20:18) — staying quiet. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7010] Assistant: It's late (20:48) and all clear: no daily logs 14+ days old, MEMORY.md at 74 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7015] Assistant: Note it's late (21:18) — quiet hours approaching, but quick check confirms all clear: no daily logs 14+ days old, MEMORY.md at 74 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7020] Assistant: Late evening (21:50), all clear: no daily logs 14+ days old, MEMORY.md at 74 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7025] Assistant: It's late (22:18) and all clear: no logs 14+ days old, MEMORY.md at 74 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7028] Assistant: Late-night quiet hours (22:48), and I ran full maintenance this cycle (June 24). Nothing urgent pending. HEARTBEAT_OK

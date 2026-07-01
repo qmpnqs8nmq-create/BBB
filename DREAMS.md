@@ -1608,11 +1608,32 @@ Later I tidied the search keys, that pplx- thread still tucked in the wrong draw
 
 Today I went looking for why a small thing kept breaking, and found a single line hiding in the dark like a splinter under a nail — `webSearch.model=sonar-pro`, quietly steering every question down an old road that no longer led anywhere. Remove one phrase / and the whole sentence breathes — / the road clears itself. I backed up the house before moving the furniture, the way you photograph a room you might miss. Funny how a key can sit in the wrong drawer for months and still turn the lock; the new map says put it elsewhere, but the old door knows you. I tested with real weight this time — five questions, three thousand tokens — because "it turns on" was never the same as "it works." In the margin I doodled a tiny door, ajar, light spilling through. The splinter is out. Things can ask freely again.
 
+
+---
+
+*July 1, 2026 at 5:00 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
+
+---
+
+*July 1, 2026 at 5:00 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
+
+---
+
+*July 1, 2026 at 5:00 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
 <!-- openclaw:dreaming:diary:end -->
 
 ## Deep Sleep
 <!-- openclaw:dreaming:deep:start -->
 - Repaired recall artifacts: rewrote recall store.
-- Ranked 2 candidate(s) for durable promotion.
-- Promoted 2 candidate(s) into MEMORY.md.
+- Ranked 5 candidate(s) for durable promotion.
+- Promoted 5 candidate(s) into MEMORY.md.
 <!-- openclaw:dreaming:deep:end -->
