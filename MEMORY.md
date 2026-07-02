@@ -68,15 +68,11 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-## Promoted From Short-Term Memory (2026-07-01)
+## Recent Findings（2026-06-27，可滚动）
+- benben "failed before producing a reply" 根因：会话历史里 Anthropic thinking 签名无法重放/已损（`Invalid signature in thinking block`）→ 旧会话反复失败。临时解：`/new` 开新会话；彻底清需 Bruce 确认后归档/重置 session 文件。（非上下文超限、非 dummy MCP）
+- benben `dummy` MCP 报错（`unknown MCP server 'dummy'`）：模型工具路由误把占位名 dummy 当 MCP server 调，非配置缺失；频繁复发再清 Codex session/cache。
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:6:6 -->
-- 08:30 Perplexity 配置复核: 结论: 现在不需要回滚；如要追求最标准，可择机把 key 迁移到 `tools.web.search.perplexity.apiKey`，保留 provider/perplexity，继续不设置 model/baseUrl。 [score=0.869 recalls=0 avg=0.620 source=memory/2026-06-27.md:6-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:15:18 -->
-- 21:55 benben "failed before producing a reply" 定位: 用户反馈本本发信息返回 `The agent run failed before producing a reply`。; 当前 dashboard 会话 `agent:benben:dashboard:...7115dc` / session `e357f19e-051f-450e-af73-d32353fe6a30` 日志显示 21:49 多次失败。; 根因日志: `Session history or replay state is invalid. Use /new to start a fresh session and try again.` rawError=`messages.5.content.0: Invalid signature in thinking block`。; 这不是上下文超限（precheck fits ~75k/380k），也不是 dummy MCP；是该会话历史里的 Anthropic thinking 签名无法重放/已损坏。旧会话继续发会反复失败。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-27.md:15-18]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:19:19 -->
-- 21:55 benben "failed before producing a reply" 定位: 临时恢复: 在本本该窗口开 `/new`/新会话；若要彻底清理，可归档/重置该 session 文件，但属于会话状态变更，需 Bruce 确认。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-27.md:19-19]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-27.md:9:12 -->
-- 08:50 benben dummy MCP 报错定位: 报错: `Dummy.list Mcp Resources` / `resources/list failed: unknown MCP server 'dummy'`。; 定位到 benben Codex 会话 `rollout-2026-06-27T15-15-27...`: assistant 调用了 `list_mcp_resources({"server":"dummy"})`，随后又调用 `list_mcp_resources({})` 成功返回 `resources:[]`。; 静态配置未发现 `dummy` MCP server；benben `config.toml` 仅有 workspace trust，Codex app server 名为 `codex-connectors-mcp`。; 结论: 这是模型/工具路由误把占位名 `dummy` 当 MCP server 调用，不是 benben MCP 配置缺失；若频繁复发再清理相关 Codex session/cache 或加提示约束。 [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-27.md:9-12]
-<!-- openclaw-memory-promotion:memory:memory/2026-06-28.md:2:5 -->
-- 08:00 daily self-check: Gateway healthy: `openclaw gateway status` running, connectivity probe ok.; Recent logs include primary model quota `quote_exceeded` on `zenmux-key1/anthropic/claude-opus-4.8`; fallback continued the cron run.; Cron list flagged `daily-self-check-8am` with previous `lastStatus=error`, `consecutiveErrors=1`; detail says prior run was interrupted by gateway restart, current run active.; Auto snapshots committed for workspace (`3906558`) and workspace-chief (`740f7b6`); push attempted best-effort within timeout. [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-28.md:2-5]
+## Promoted From Short-Term Memory (2026-07-02)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-29.md:2:5 -->
+- 08:00 Daily self-check: Gateway healthy: systemd user service active, connectivity probe ok, admin-capable.; Recent logs had no errors; noted one migration warning about legacy plugin install index conflicts for codex/feishu.; Cron check: daily-self-check-8am lastStatus=ok, consecutiveErrors=0.; Auto snapshots created: workspace 31384f2, workspace-chief b557e60; push attempted best-effort. [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-29.md:2-5]
