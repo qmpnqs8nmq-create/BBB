@@ -76,3 +76,12 @@
 
 <!-- openclaw-memory-promotion:memory:memory/2026-06-29.md:2:5 -->
 - 08:00 Daily self-check: Gateway healthy: systemd user service active, connectivity probe ok, admin-capable.; Recent logs had no errors; noted one migration warning about legacy plugin install index conflicts for codex/feishu.; Cron check: daily-self-check-8am lastStatus=ok, consecutiveErrors=0.; Auto snapshots created: workspace 31384f2, workspace-chief b557e60; push attempted best-effort. [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-29.md:2-5]
+
+## Promoted From Short-Term Memory (2026-07-03)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-06-29.md:12:13 -->
+- 09:?? OpenClaw weekly healthcheck alert: Delivery note: direct `message(action=send)` failed with WeCom `invalid chatid`; retried via `openclaw.sessions_send` to source cron session, accepted with `pending/announce`.; 10:04 retry routed after previous model timeout; treated as reminder/confirmation request, not authorization. Still no security/global config changes until Bruce explicitly confirms. [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-29.md:12-13]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-29.md:8:11 -->
+- 09:?? OpenClaw weekly healthcheck alert: Cron routed weekly inspection result: Gateway running and update current; security audit `0 critical / 6 warn / 1 info`.; Reported risks: exec `security=full` across multiple agents; `/root/.openclaw` permission shown as `755`; `openclaw-weixin` has suspicious read-file + network-send pattern to review; deep gateway probe timeout; plugin index/config conflicts and missing entries.; Suggested actions require confirmation where they change security/global config: tighten exec to allowlist, `chmod 700 /root/.openclaw`, review weixin marked code, run `openclaw status --all`, clean... [score=0.837 recalls=0 avg=0.620 source=memory/2026-06-29.md:8-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-06-30.md:4:7 -->
+- 08:00 每日自检: Gateway 健康（pid 2063958, probe ok, v2026.6.10）。cron 仅自检任务，lastRunStatus=ok。两 workspace 已 commit。; 日志两类复现错误（外部通道，未自动改配置）：; `weixin getUpdates: session expired (errcode -14)` — openclaw-weixin bot session 过期，每小时自动暂停 60min。需重新登录/刷新 weixin 会话。; `cron:e463b042 delivery failed: WSClient not connected for account admin` — 该 cron 投递失败，wecom account `admin` 无 WSClient 且未配 Agent 模式。需配置 Bot 或 Agent 凭证。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-06-30.md:4-7]

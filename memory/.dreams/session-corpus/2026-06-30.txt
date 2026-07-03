@@ -36,3 +36,10 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7156] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 69 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7161] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 69 lines (under cap), no wecom DM blocks. Late evening, nothing urgent. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7166] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 69 lines (under cap), no wecom DM blocks. It's late evening (20:18) and the gap since last cycle was ~6 days of quiet polls. Nothing actionable. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7171] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 69 lines (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7176] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 69 lines (under cap), no wecom DM blocks. It's 21:18 — quiet hours approaching. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7181] Assistant: It's late (21:48) and all clear: no daily logs 14+ days old, MEMORY.md at 69 lines, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7184] Assistant: Late evening (22:18), quick maintenance check only.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7186] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 69 lines, no wecom DM blocks. Quiet hours. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7189] Assistant: Late night (22:48), and the prior maintenance pass this cycle was thorough. Quick check for anything urgent only.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7191] Assistant: All clear: no logs 14+ days old, MEMORY.md at 69 lines, no wecom DM blocks. Late night, nothing urgent. HEARTBEAT_OK
