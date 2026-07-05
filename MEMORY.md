@@ -76,11 +76,8 @@
 - 周度安全巡检 0 critical / 6 warn / 1 info（均既有姿态）：exec security=full、`/root/.openclaw` 权限 755、openclaw-weixin read-file+network-send 启发式告警、deep probe 超时、plugin index 冲突。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改任何安全/全局配置。
 - 本机已到 v2026.6.10。
 
-## Promoted From Short-Term Memory (2026-07-04)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-06-30.md:8:8 -->
-- 08:00 每日自检: 已向 Bruce 报告以上两点，等其决定是否处理。 [score=0.866 recalls=0 avg=0.620 source=memory/2026-06-30.md:8-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:3:6 -->
-- 08:00 daily-self-check: Gateway: running (pid 2063958), probe ok, v2026.6.10 ✅; Git: workspace + workspace-chief 均已 auto-commit（daily snapshot）✅; Cron: 本 agent 仅 daily-self-check-8am，lastRunStatus=ok ✅; 错误（非本 agent 可修）: [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-01.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-01.md:7:9 -->
-- 08:00 daily-self-check: weixin errcode -14 仍每小时暂停 60min（已知问题，需手动重新登录 weixin，自 06-24 起记录）; chief 的 symlink-integrity-check 昨夜 03:03 超时 1 次（timeout，已自动重试；非本 lane）; 无需 Bruce 介入的新问题。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-01.md:7-9]
+## Promoted From Short-Term Memory (2026-07-05)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-02.md:3:6 -->
+- 08:00 每日自检: Gateway: running (pid 2063958), probe ok, v2026.6.10 — 健康; Cron: 仅 daily-self-check（lastRunStatus=ok）；其他 job 因 restricted-run 无法从本次运行查看; 自动提交: workspace c685478 / chief af88203，均已 commit（push best-effort）; ⚠️ 发现两个 recurring error： [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-02.md:3-6]

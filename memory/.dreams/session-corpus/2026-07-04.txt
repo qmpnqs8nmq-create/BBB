@@ -1,3 +1,29 @@
 [main/sessions/main/4401524f-24aa-46df-80fd-c96a1e796132.jsonl#L6] Assistant: I'll run the daily integrity check. Let me start with all the independent checks in parallel.
 [main/sessions/main/4401524f-24aa-46df-80fd-c96a1e796132.jsonl#L12] Assistant: Part C3 hit a docker format field error (`.ImageID` not valid in this docker version). Let me redo C3 with a compatible approach.
 [main/sessions/main/4401524f-24aa-46df-80fd-c96a1e796132.jsonl#L14] Assistant: All checks complete. Everything is clean: - **Part A (Symlinks):** All 5 CEO workspaces — no broken symlinks. - **Part B (CTX rules sync):** benben / kefu / mangba / mangba-guest all in sync (no diff). - **Part C1 (rogue remotes):** No rogue git remotes found. - **
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L48] Assistant: 已生成 `/root/.openclaw/workspace/memory/daily-summary/2026-07-04.md`。 今日未找到 chief 和 main 的 2026-07-04 当日日志，因此没有可确认的今日新增业务进展或系统变更。chief 仅能引用旧快照：5 月已完成 ADR-012 rollback sync 相关收尾，且 chief 侧无待办。main 旧快照显示 6 月 29 日周巡检仍待 Bruce 授权处理，风险点包括 agent exec 权限、`.openclaw` 权限、opencl
+[main/sessions/main/b0084d60-27c1-4d69-8a65-d0eac87fe66a.jsonl#L6] Assistant: I'll perform the daily self-check now, keeping each step time-boxed.
+[main/sessions/main/b0084d60-27c1-4d69-8a65-d0eac87fe66a.jsonl#L9] Assistant: Gateway healthy, cron job clean. Now checking logs and committing.
+[main/sessions/main/b0084d60-27c1-4d69-8a65-d0eac87fe66a.jsonl#L12] Assistant: All checks passed: - **Gateway:** running (pid 2063958), connectivity probe ok, admin-capable - **Logs:** no errors in recent lines - **Cron:** 1 job, lastRunStatus=ok, no failures - **Commits:** both workspaces committed cleanly (workspace + workspace-chief) Every
+[main/sessions/main/c624b95d-c4d5-43e2-923a-62124c0bc866.jsonl#L27] Assistant: 已生成 `/root/.openclaw/workspace/memory/daily-summary/2026-07-04.md`。 今日未找到 chief 和 main 的 2026-07-04 当日日志，因此没有可确认的今日新增业务进展或系统变更。chief 仅能引用旧快照：5 月已完成 ADR-012 rollback sync 相关收尾，且 chief 侧无待办。main 旧快照显示 6 月 29 日周巡检仍待 Bruce 授权处理，风险点包括 agent exec 权限、`.openclaw` 权限、opencl
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7510] Assistant: No old logs to archive. MEMORY.md at 86 (over cap) — but this is likely fresh promotion since yesterday's trim. Let me check.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7514] Assistant: All pure self-check noise this time — already-known items (weixin -14, symlink-check timeout). Nothing durable. Drop the whole section.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7518] Assistant: Trimmed MEMORY.md 86→78 (dropped pure self-check promotion noise). No old logs to archive, no wecom DM blocks. Side note for a future non-heartbeat moment: the auto-promotion is consistently re-inflating MEMORY.md with routine self-check lines every few days, for
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7527] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7539] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7551] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7563] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7575] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7587] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7599] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7611] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7623] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7635] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7647] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7659] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7671] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7683] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7695] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7707] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7719] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7731] Assistant: [assistant turn failed before producing content]
