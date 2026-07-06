@@ -1,0 +1,27 @@
+[main/sessions/main/3183d85e-be78-4f28-8019-eaed4ecb635a.jsonl#L57] Assistant: 日检完成，发现并处理了几项问题： - Gateway 正常：服务运行中，probe ok，admin-capable。 - 最近 50 行日志无网关故障，但有配置 warning：`openclaw-weixin` 重复插件、`whatsapp/wecom` 配置项提示未安装。 - Cron 异常：`daily-self-check-8am` 上次 timeout、`coach:双周综合审计` 路径误读、`周日系统巡检` 连续 timeout、两个 NVDA 旧提醒因 quota_exceeded 失败。 - 已安全修复：运
+[main/sessions/main/330ffd6f-b8b7-47a8-b97b-d398e9a57548.jsonl#L25] Assistant: 已生成日报：`/root/.openclaw/workspace/memory/daily-summary/2026-07-05.md` 今日未找到 chief 当日业务日志，chief HANDOFF 也停留在 2026-05-04，因此没有可展开的业务/经营新增内容。main 侧完成了 08:00 系统自检：Gateway 健康、无 outage；修复了部分 cron 配置问题，包括规范化 cron store、给 Sunday patrol 和 coach audit 加 `lightContext` 与 timeou
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L49] Assistant: 已生成日报：`/root/.openclaw/workspace/memory/daily-summary/2026-07-05.md` 今日未找到 chief 当日业务日志，chief HANDOFF 也停留在 2026-05-04，因此没有可展开的业务/经营新增内容。main 侧完成了 08:00 系统自检：Gateway 健康、无 outage；修复了部分 cron 配置问题，包括规范化 cron store、给 Sunday patrol 和 coach audit 加 `lightContext` 与 timeou
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7755] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7775] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7787] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7799] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7811] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7823] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7835] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7847] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7859] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7871] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7883] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e8f66da0-f3d1-4655-93d6-a3601825a926.jsonl#L51] Assistant: 8:00 self-check completed. Gateway healthy: running, probe ok, admin-capable. Recent logs showed warnings but no outage. Issues found and safe repairs done: - Fixed `coach:双周综合审计` prompt path: `SYSTEM_ITERATION_LOG.md` is in workspace-chief root, not `memory/`. - R
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7895] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7907] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7919] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7931] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7943] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7955] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7967] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7979] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L7991] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8003] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8015] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8027] Assistant: [assistant turn failed before producing content]

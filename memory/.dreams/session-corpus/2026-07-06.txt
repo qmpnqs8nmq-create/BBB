@@ -1,0 +1,1 @@
+[main/sessions/main/23a81c59-ff68-47fc-ae18-325e49818428.jsonl#L14] Assistant: Integrity check completed. - Broken symlinks: none - CTX rules drift: none - Rogue git remotes: none - Sandbox egress: `benben none`, `kefu none` - Sandbox image audit: no stale running `openclaw-sbx-*` containers found No direct notification sent.
