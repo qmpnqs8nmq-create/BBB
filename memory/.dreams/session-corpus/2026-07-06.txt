@@ -1,1 +1,27 @@
 [main/sessions/main/23a81c59-ff68-47fc-ae18-325e49818428.jsonl#L14] Assistant: Integrity check completed. - Broken symlinks: none - CTX rules drift: none - Rogue git remotes: none - Sandbox egress: `benben none`, `kefu none` - Sandbox image audit: no stale running `openclaw-sbx-*` containers found No direct notification sent.
+[main/sessions/main/42b49793-747f-4599-b502-e4cb2750ac86.jsonl#L6] Assistant: I'll generate today's daily summary. Let me read the source files first.
+[main/sessions/main/42b49793-747f-4599-b502-e4cb2750ac86.jsonl#L11] Assistant: Chief has no entry for today. Let me check for a recent chief daily note to see if there's business context.
+[main/sessions/main/42b49793-747f-4599-b502-e4cb2750ac86.jsonl#L13] Assistant: No chief activity today (last was July 1 quarterly audit, then June 28). Only main-session system/ops activity happened today. I'll generate an honest report reflecting that.
+[main/sessions/main/42b49793-747f-4599-b502-e4cb2750ac86.jsonl#L15] Assistant: 📊 **日报 2026-07-06** **🏢 业务（chief）**：今日无活动记录，纯运维日。最近业务记录停在 07-01 季度审计。 **🔧 系统运维（main）**： - 08:00 每日自检：Gateway 健康，端口连通正常，快照已提交。 - 修复：装 bubblewrap 0.9.0（解 Codex sandbox 缺失）；跑 `doctor --fix`；周巡检 cron 调整为 timeout 900s + thinking minimal（此前连续 7 次超时）；禁用两个过期的 5 月 NVDA 提
+[main/sessions/main/52967afc-3c52-4f7d-9822-281d11f7d1e3.jsonl#L43] Assistant: Daily self-check found one local issue and repaired it. Gateway is healthy, cron has `consecutiveErrors=0` / `lastStatus=ok`, and workspace snapshots were committed. Recent logs showed Codex could not find `bubblewrap`, so I installed `bubblewrap 0.9.0` via apt and
+[main/sessions/main/67801803-2cb5-4267-b451-4c648eeb9f50.jsonl#L15] Assistant: 【需关注】本周巡检发现非紧急问题。 当前状态：Gateway 正常运行，服务可达；0 critical，4 warn，1 info；OpenClaw 有更新可用 `2026.6.11`。 关键风险： - 多个 agent 启用了 `exec security=full`，权限面偏大。 - `find`/`sed` allowlist 缺少 `strictInlineEval` 加固。 - `openclaw-weixin` 插件扫描到 2 处潜在“读文件 + 网络发送”模式，需确认是否为预期上传逻辑。 - Feishu do
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L50] Assistant: 📊 **日报 2026-07-06** **🏢 业务（chief）**：今日无活动记录，纯运维日。最近业务记录停在 07-01 季度审计。 **🔧 系统运维（main）**： - 08:00 每日自检：Gateway 健康，端口连通正常，快照已提交。 - 修复：装 bubblewrap 0.9.0（解 Codex sandbox 缺失）；跑 `doctor --fix`；周巡检 cron 调整为 timeout 900s + thinking minimal（此前连续 7 次超时）；禁用两个过期的 5 月 NVDA 提
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8123] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8141] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8153] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8165] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8177] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/e148ba19-3b82-4e5d-b678-8e0192ad5b98.jsonl#L13] Assistant: 有新版本可更新：OpenClaw `npm 2026.6.11`，可运行 `openclaw update`。 当前 Node 版本：`v22.22.0`。
+[main/sessions/main/fec7d8d9-4377-4652-b404-c3a2bc2a8038.jsonl#L39] Assistant: 8:00 daily self-check completed. Gateway is healthy: service running, connectivity probe ok on port `18789`. Issues found: - `daily-self-check-8am` currently flagged `lastStatus=error` from a tool timeout on `ls memory/2026-07-06.md`; the file exists and I appended
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8189] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8201] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8213] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8225] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8237] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8249] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8261] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8273] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8285] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8297] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8309] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8321] Assistant: [assistant turn failed before producing content]

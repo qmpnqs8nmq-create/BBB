@@ -75,8 +75,3 @@
 ## Recent Findings（2026-06-29→30，可滚动）
 - 周度安全巡检 0 critical / 6 warn / 1 info（均既有姿态）：exec security=full、`/root/.openclaw` 权限 755、openclaw-weixin read-file+network-send 启发式告警、deep probe 超时、plugin index 冲突。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改任何安全/全局配置。
 - 本机已到 v2026.6.10。
-
-## Promoted From Short-Term Memory (2026-07-06)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-02.md:7:9 -->
-- 08:00 每日自检: weixin `getUpdates: session expired (errcode -14)` — 整夜每小时一次（00:03~07:03 共 8 次），每次暂停 bot 60 分钟。疑似微信 channel session/token 过期，需 Bruce 关注或刷新凭证。; cron `e463b042` delivery failed — WSClient not connected for account admin，Agent 模式未配置。该 job 投递不到 wecom。本次为 restricted-run，无法直接修 job。; 已就以上两点向 Bruce 报告 [score=0.888 recalls=0 avg=0.620 source=memory/2026-07-02.md:7-9]
