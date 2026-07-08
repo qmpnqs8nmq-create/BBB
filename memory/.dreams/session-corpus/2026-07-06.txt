@@ -25,3 +25,18 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8297] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8309] Assistant: [assistant turn failed before producing content]
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8321] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8333] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8345] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8357] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8369] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8383] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 77 (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8388] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 77 (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8393] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 77 (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8398] Assistant: All clear: MEMORY.md at 77 (under cap), no daily logs 14+ days old, no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8403] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 77 (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8408] Assistant: All clear: no daily logs 14+ days old, MEMORY.md at 77 (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8413] Assistant: Late evening (21:48), all clear: no old logs, MEMORY.md at 77 (under cap), no wecom DM blocks. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8416] Assistant: Late evening (22:18) — quiet hours approaching. Quick check only.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8418] Assistant: All clear: MEMORY.md at 77 (under cap), no old logs to archive. Skipping wecom log check at this hour — nothing pressing. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8421] Assistant: Late (22:48) — quiet hours. Quick check only.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8423] Assistant: MEMORY.md at 77, no old logs. All clear. HEARTBEAT_OK

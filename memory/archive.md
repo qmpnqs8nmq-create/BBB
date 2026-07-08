@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-23: 日常自检正常（gateway v2026.6.5，日志无 error）；self-check cron consecutiveErrors=3（前3次 "LLM request failed" 瞬时），本次已恢复
+
 - 06-19: 日常自检正常（gateway v2026.6.5）；self-check cron 自身 consecutiveErrors=4 全 timeout(~601s 撞 600s)，已报 Bruce
 
 - 06-15: 日常自检正常（Gateway v2026.6.5 healthy / 日志无 error / git snapshot）；前一轮 self-check 超时导致 consecutiveErrors=1，本轮正常会清零，无需处理
