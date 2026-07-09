@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-24: 日常自检正常；复发项 weixin -14 / cron e463b042 admin WSClient（同源，待重登）；**OpenClaw 6.5→6.10 升级**，402 补丁重打到 dist/errors-BmvajW3H.js（靠 grep RAW_402_MARKER_RE 定位，正则仍不认带引号码值），备份 errors-BmvajW3H.js.orig-20260624-214119
+
 - 06-23: 日常自检正常（gateway v2026.6.5，日志无 error）；self-check cron consecutiveErrors=3（前3次 "LLM request failed" 瞬时），本次已恢复
 
 - 06-19: 日常自检正常（gateway v2026.6.5）；self-check cron 自身 consecutiveErrors=4 全 timeout(~601s 撞 600s)，已报 Bruce

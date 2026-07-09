@@ -76,9 +76,10 @@
 - 周度安全巡检 0 critical / 6 warn / 1 info（均既有姿态）：exec security=full、`/root/.openclaw` 权限 755、openclaw-weixin read-file+network-send 启发式告警、deep probe 超时、plugin index 冲突。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改任何安全/全局配置。
 - 本机已到 v2026.6.10。
 
-## Promoted From Short-Term Memory (2026-07-08)
+## Recent Fixes（2026-07-05，可滚动）
+- 自检中修多个 cron timeout：`openclaw doctor --fix`（cron store 归一）+ Sunday 系统巡检设 `lightContext=true`/timeout 600s + coach audit path 补为 `lightContext=true`/timeout 360s。
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-05.md:2:5 -->
-- 08:00 Daily self-check: Gateway healthy: runtime active, probe ok, admin-capable.; Recent logs had state-migration/plugin config warnings but no gateway outage.; Cron failures flagged: daily self-check prior timeout, coach audit path bug, Sunday system patrol timeout, and two future NVDA reminder quota errors.; Safe repair done: ran `openclaw doctor --fix` (cron store normalized), set Sunday patrol `lightContext=true` + timeout 600s, and reinforced coach audit path with `lightContext=true` + timeout 360s. [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-05.md:2-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-05.md:6:6 -->
-- 08:00 Daily self-check: Auto snapshot step ran for workspace and workspace-chief; no new tracked changes were pending at that moment, push attempted best-effort. [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-05.md:6-6]
+## Promoted From Short-Term Memory (2026-07-09)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:2:5 -->
+- 08:00 daily self-check: Gateway healthy: systemd user service active, connectivity probe ok on port 18789.; Cron list ok: daily-self-check-8am lastRunStatus=ok; no failed cron jobs visible.; Recent gateway log showed Codex fallback due upstream quota and missing bubblewrap; installed bubblewrap 0.9.0 via apt as safe repair. Quota/fallback was provider-side and not locally repairable.; Auto snapshots committed: workspace c6e33f1, workspace-chief 844e5c5. [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-06.md:2-5]
