@@ -79,7 +79,13 @@
 ## Recent Fixes（2026-07-05，可滚动）
 - 自检中修多个 cron timeout：`openclaw doctor --fix`（cron store 归一）+ Sunday 系统巡检设 `lightContext=true`/timeout 600s + coach audit path 补为 `lightContext=true`/timeout 360s。
 
-## Promoted From Short-Term Memory (2026-07-09)
+- 07-06: 自检中装 bubblewrap 0.9.0（apt，修 Codex sandbox missing bubblewrap 告警）。
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:2:5 -->
-- 08:00 daily self-check: Gateway healthy: systemd user service active, connectivity probe ok on port 18789.; Cron list ok: daily-self-check-8am lastRunStatus=ok; no failed cron jobs visible.; Recent gateway log showed Codex fallback due upstream quota and missing bubblewrap; installed bubblewrap 0.9.0 via apt as safe repair. Quota/fallback was provider-side and not locally repairable.; Auto snapshots committed: workspace c6e33f1, workspace-chief 844e5c5. [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-06.md:2-5]
+## Promoted From Short-Term Memory (2026-07-10)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:8:10 -->
+- 08:05 daily self-check follow-up: Gateway remains healthy; current `/tmp/openclaw/openclaw-2026-07-06.log` tail has no hard errors, only config warnings for duplicate `openclaw-weixin`, missing `whatsapp`, and missing `wecom` plugin allow entry.; Cron failures found: `daily-self-check-8am` lastStatus=error from a `timeout 60 ls memory/2026-07-06.md` tool failure; `周日系统巡检（合并版）` has 7 consecutive timeouts.; Safe repair attempted: ran `openclaw doctor --fix`; updated weekly巡检 cron to `timeoutSeconds=900` and `thinking=minimal`; disabled two stale May-2026 NVDA reminder crons that would otherwise repeat in 2027 with obsolete payloads. [score=0.837 recalls=0 avg=0.620 source=memory/2026-07-06.md:8-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:3:6 -->
+- 08:00 每日自检: gateway: running (pid 2063958), probe ok, v2026.6.10 ✅; cron (本任务视角): daily-self-check lastStatus=ok ✅; 自动提交: workspace + workspace-chief 均已 commit（含 dreaming/daily-summary 快照）; ⚠️ 日志两类重复报错（非本任务可修）： [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-07.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:7:9 -->
+- 08:00 每日自检: weixin getUpdates session expired (errcode -14)，每小时暂停 60min → 微信 IM bot 需重新登录/换 token; cron e463b042 delivery failed：wecom account admin 未配 Bot/Agent，投递目标失联（疑似孤儿 cron，本 run 无权限查看）; 已向 Bruce 简报上述两项 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-07.md:7-9]

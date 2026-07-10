@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-25: 日常自检正常（weixin -14 复发已上报）；**插件版本漂移修复**：升级后 codex/feishu 仍旧版，`plugins update` 误报 up-to-date（根因 shared SQLite install-index 元数据冲突）→ 解法绕过 update 直接 `plugins install @openclaw/codex@ver --force --pin`（feishu 同）+ restart；下次升级遇插件漂移直接用 force install，别指望 plugins update
+
 - 06-24: 日常自检正常；复发项 weixin -14 / cron e463b042 admin WSClient（同源，待重登）；**OpenClaw 6.5→6.10 升级**，402 补丁重打到 dist/errors-BmvajW3H.js（靠 grep RAW_402_MARKER_RE 定位，正则仍不认带引号码值），备份 errors-BmvajW3H.js.orig-20260624-214119
 
 - 06-23: 日常自检正常（gateway v2026.6.5，日志无 error）；self-check cron consecutiveErrors=3（前3次 "LLM request failed" 瞬时），本次已恢复

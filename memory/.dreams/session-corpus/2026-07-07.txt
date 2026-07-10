@@ -45,3 +45,4 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8570] Assistant: Late evening (22:18) — quiet hours approaching. Quick check only.
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8572] Assistant: All clear: MEMORY.md at 77 (under cap), no logs 14+ days old, no wecom DM blocks. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8575] Assistant: It's late (22:48) — quiet hours. Quick low-noise check only.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8577] Assistant: All quiet: MEMORY.md at 77 (under cap), no old logs to archive. Skipping wecom log scan at this hour (quiet time, nothing pressing). HEARTBEAT_OK
