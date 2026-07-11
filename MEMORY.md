@@ -54,12 +54,13 @@
 - **成熟切换时机**：系统连续 2 周无架构级变更、日均话题 ≤3 个时，执行容量回收
 
 ## Recent State（近期状态，可滚动覆盖）
-- 刘董事长接入 mangba-guest 已闭环（2026-06-08）：老用户走 binded_redirect 复用旧绑定不产新账号文件→链接误判"过期"；接入老用户直接看网关 dispatch 日志确认路由，别等新文件、别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep -f openclaw-gateway 会误匹配 exec shell）
-- 持续性已知项（非故障）：weixin getUpdates errcode -14 每小时 session-expired 自动 pause 60min（待 Bruce 关注 weixin 凭证）；wecom admin WSClient bestEffort 投递偶发失败；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
-- 本机版本 OpenClaw 2026.6.10（2026-06-24 从 2026.6.5 升级，CLI/Gateway 已一致）
-- ⚠️ `daily-self-check-8am` cron 反复 timeout（~600s 撞上限，6/14、6/19 均 consecutiveErrors↑），每轮快速收尾会清零但根因是自检任务拖太久，已报 Bruce，建议拆分/提速
-- 6.10 升级后插件漂移经验：codex/feishu 若 doctor 报旧版本且 `plugins update` 误报 up-to-date，直接 `openclaw plugins install @openclaw/{codex,feishu}@版本 --force --pin` 后 restart；systemd service 文件旧版本号非致命。
-- benben/web_search 用 Perplexity：不要配置 `plugins.entries.perplexity.config.webSearch.model=sonar-pro`，否则带 `max_tokens` 会走 legacy path 报 `unsupported_content_budget`；保留 API key + `timeoutSeconds=60` 即可。
+- 本机版本 OpenClaw 2026.6.10（2026-06-24 从 6.5 升级，CLI/Gateway 一致）
+- 持续性已知项（非故障，待 Bruce）：weixin getUpdates errcode -14 每小时 session-expired pause 60min（需重登/换 token）；wecom admin WSClient bestEffort 投递偶发失败（cron e463b042 疑似孤儿）；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
+- cron timeout 治理：`daily-self-check-8am` 与 chief 周日系统巡检反复 timeout；已用 `openclaw doctor --fix` + 周日巡检 `lightContext=true`/timeout 900s/thinking=minimal + coach audit `lightContext=true`/timeout 360s；禁用两个 2026-05 陈旧 NVDA reminder cron。装 bubblewrap 0.9.0 修 Codex sandbox 告警
+- 周度安全巡检 0 critical / 6 warn（均既有姿态：exec security=full、`/root/.openclaw` 755、weixin read-file+network 启发式告警、deep probe 超时、plugin index 冲突）。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改安全/全局配置
+- benben 排障：① web_search 用 Perplexity 别配 `webSearch.model=sonar-pro`（带 max_tokens 走 legacy 报 unsupported_content_budget），保留 key + `timeoutSeconds=60`；② "failed before producing a reply"=会话历史 Anthropic thinking 签名损坏（`Invalid signature in thinking block`），`/new` 开新会话解；③ `dummy` MCP 报错=工具路由误调占位名，非配置缺失
+- 接入老用户经验（刘董事长 mangba-guest 2026-06-08）：老用户走 binded_redirect 不产新账号文件→链接误判"过期"；直接看网关 dispatch 日志确认路由，别等新文件/别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep 会误匹配 exec shell）
+- 插件漂移经验：升级后 codex/feishu 若 doctor 报旧版且 `plugins update` 误报 up-to-date → 直接 `openclaw plugins install @openclaw/{codex,feishu}@版本 --force --pin` + restart；systemd 单元旧版本号非致命
 
 ## ⚠️ 402/failover 本地补丁（2026-06-12，升级后必重打）
 - 根因：OpenClaw 的 RAW_402_MARKER_RE 入口正则不认带引号码值（ZenMux 返 `"code":"402"` 字符串）→ 撞 402 后 errCount 恒 0、零 failover、子 agent 0token 秒死。
@@ -68,24 +69,9 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-## Recent Findings（2026-06-27，可滚动）
-- benben "failed before producing a reply" 根因：会话历史里 Anthropic thinking 签名无法重放/已损（`Invalid signature in thinking block`）→ 旧会话反复失败。临时解：`/new` 开新会话；彻底清需 Bruce 确认后归档/重置 session 文件。（非上下文超限、非 dummy MCP）
-- benben `dummy` MCP 报错（`unknown MCP server 'dummy'`）：模型工具路由误把占位名 dummy 当 MCP server 调，非配置缺失；频繁复发再清 Codex session/cache。
 
-## Recent Findings（2026-06-29→30，可滚动）
-- 周度安全巡检 0 critical / 6 warn / 1 info（均既有姿态）：exec security=full、`/root/.openclaw` 权限 755、openclaw-weixin read-file+network-send 启发式告警、deep probe 超时、plugin index 冲突。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改任何安全/全局配置。
-- 本机已到 v2026.6.10。
 
-## Recent Fixes（2026-07-05，可滚动）
-- 自检中修多个 cron timeout：`openclaw doctor --fix`（cron store 归一）+ Sunday 系统巡检设 `lightContext=true`/timeout 600s + coach audit path 补为 `lightContext=true`/timeout 360s。
+## Promoted From Short-Term Memory (2026-07-11)
 
-- 07-06: 自检中装 bubblewrap 0.9.0（apt，修 Codex sandbox missing bubblewrap 告警）。
-
-## Promoted From Short-Term Memory (2026-07-10)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-06.md:8:10 -->
-- 08:05 daily self-check follow-up: Gateway remains healthy; current `/tmp/openclaw/openclaw-2026-07-06.log` tail has no hard errors, only config warnings for duplicate `openclaw-weixin`, missing `whatsapp`, and missing `wecom` plugin allow entry.; Cron failures found: `daily-self-check-8am` lastStatus=error from a `timeout 60 ls memory/2026-07-06.md` tool failure; `周日系统巡检（合并版）` has 7 consecutive timeouts.; Safe repair attempted: ran `openclaw doctor --fix`; updated weekly巡检 cron to `timeoutSeconds=900` and `thinking=minimal`; disabled two stale May-2026 NVDA reminder crons that would otherwise repeat in 2027 with obsolete payloads. [score=0.837 recalls=0 avg=0.620 source=memory/2026-07-06.md:8-10]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:3:6 -->
-- 08:00 每日自检: gateway: running (pid 2063958), probe ok, v2026.6.10 ✅; cron (本任务视角): daily-self-check lastStatus=ok ✅; 自动提交: workspace + workspace-chief 均已 commit（含 dreaming/daily-summary 快照）; ⚠️ 日志两类重复报错（非本任务可修）： [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-07.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-07.md:7:9 -->
-- 08:00 每日自检: weixin getUpdates session expired (errcode -14)，每小时暂停 60min → 微信 IM bot 需重新登录/换 token; cron e463b042 delivery failed：wecom account admin 未配 Bot/Agent，投递目标失联（疑似孤儿 cron，本 run 无权限查看）; 已向 Bruce 简报上述两项 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-07.md:7-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:3:6 -->
+- 08:00 每日自检: Gateway 正常 (pid 2063958, probe ok, v2026.6.10)。; Cron: daily-self-check-8am lastStatus=ok，无失败任务。; 自动提交完成：workspace + workspace-chief 均已 commit（含 dream/日记文件）。; ⚠️ 发现问题：weixin(个人微信) channel 反复 `session expired (errcode -14)`，每小时(05:05/06:05/07:05)暂停 bot 60 分钟。凭证/登录态可能失效，需重新登录扫码或刷新 token。当前 wecom 通道正常，暂不影响主对话。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-08.md:3-6]

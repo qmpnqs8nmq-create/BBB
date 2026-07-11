@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-26: 日常自检正常（systemd 单元 6.5 vs CLI 6.10 版本漂移，非致命）；benben web_search 修复：删 `plugins.entries.perplexity.config.webSearch.model=sonar-pro`（带 max_tokens 时不能走 native Search API→unsupported_content_budget），保留 key + restart，实测 count=5/max_tokens=3000 成功
+
 - 06-25: 日常自检正常（weixin -14 复发已上报）；**插件版本漂移修复**：升级后 codex/feishu 仍旧版，`plugins update` 误报 up-to-date（根因 shared SQLite install-index 元数据冲突）→ 解法绕过 update 直接 `plugins install @openclaw/codex@ver --force --pin`（feishu 同）+ restart；下次升级遇插件漂移直接用 force install，别指望 plugins update
 
 - 06-24: 日常自检正常；复发项 weixin -14 / cron e463b042 admin WSClient（同源，待重登）；**OpenClaw 6.5→6.10 升级**，402 补丁重打到 dist/errors-BmvajW3H.js（靠 grep RAW_402_MARKER_RE 定位，正则仍不认带引号码值），备份 errors-BmvajW3H.js.orig-20260624-214119
