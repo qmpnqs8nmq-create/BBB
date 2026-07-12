@@ -1,0 +1,1 @@
+[main/sessions/main/7777d9da-64a3-4317-9001-bb3d79e86e3e.jsonl#L11] Assistant: OK: symlinks intact, CTX rules in sync, sandbox remotes/network/images clean. Egress check: `benben none` `kefu none`

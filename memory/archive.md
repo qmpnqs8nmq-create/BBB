@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-27: benben 三项排障（均入 MEMORY Recent State）：Perplexity 配置复核（key 仍在插件层可兼容，可择机迁 tools.web.search.perplexity.apiKey）；`dummy` MCP 报错=工具路由误调占位名非配置缺失；"failed before producing a reply"=会话历史 Anthropic thinking 签名损坏（Invalid signature in thinking block），/new 开新会话解
+
 - 06-26: 日常自检正常（systemd 单元 6.5 vs CLI 6.10 版本漂移，非致命）；benben web_search 修复：删 `plugins.entries.perplexity.config.webSearch.model=sonar-pro`（带 max_tokens 时不能走 native Search API→unsupported_content_budget），保留 key + restart，实测 count=5/max_tokens=3000 成功
 
 - 06-25: 日常自检正常（weixin -14 复发已上报）；**插件版本漂移修复**：升级后 codex/feishu 仍旧版，`plugins update` 误报 up-to-date（根因 shared SQLite install-index 元数据冲突）→ 解法绕过 update 直接 `plugins install @openclaw/codex@ver --force --pin`（feishu 同）+ restart；下次升级遇插件漂移直接用 force install，别指望 plugins update

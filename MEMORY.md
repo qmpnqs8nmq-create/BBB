@@ -69,9 +69,9 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
+## Promoted From Short-Term Memory (2026-07-12)
 
-
-## Promoted From Short-Term Memory (2026-07-11)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-08.md:3:6 -->
-- 08:00 每日自检: Gateway 正常 (pid 2063958, probe ok, v2026.6.10)。; Cron: daily-self-check-8am lastStatus=ok，无失败任务。; 自动提交完成：workspace + workspace-chief 均已 commit（含 dream/日记文件）。; ⚠️ 发现问题：weixin(个人微信) channel 反复 `session expired (errcode -14)`，每小时(05:05/06:05/07:05)暂停 bot 60 分钟。凭证/登录态可能失效，需重新登录扫码或刷新 token。当前 wecom 通道正常，暂不影响主对话。 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-08.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-09.md:3:6 -->
+- 08:00 每日自检: gateway 健康 (pid 2063958, probe ok, v2026.6.10)；cron 仅 1 个任务(自检本身) lastStatus=ok; git 双 workspace 提交成功; 日志两处需关注（均为凭证/配置问题，非崩溃，无法安全自修复）：; openclaw-weixin bot 每小时 `session expired errcode -14`，自动暂停 60 分钟 → 微信 bot 登录态失效，需重新授权 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-09.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-09.md:7:8 -->
+- 08:00 每日自检: cron `e463b042` 投递失败 `WSClient not connected / Agent mode not configured`（该 job 不在当前 cron 列表，疑似孤立/过期投递）; 备注：`[agent] run ... stopReason=stop` 以 ERROR 记录但实为 dream cycle 正常完成(isError=false)，噪音 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-09.md:7-8]

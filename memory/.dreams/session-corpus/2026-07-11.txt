@@ -1,3 +1,35 @@
 [main/sessions/main/70a5f1d8-79e9-4e15-b40a-f3b89a247069.jsonl#L6] Assistant: I'll run the daily integrity check. Let me start with all the audit parts.
 [main/sessions/main/70a5f1d8-79e9-4e15-b40a-f3b89a247069.jsonl#L10] Assistant: C3 had a docker format issue. Let me re-run it with the correct format field.
 [main/sessions/main/70a5f1d8-79e9-4e15-b40a-f3b89a247069.jsonl#L12] Assistant: All checks complete. Summary: - **Part A (symlinks):** All 5 CEO agent workspaces OK, no broken links. - **Part B (CTX sync):** All 4 sandbox workspaces already in sync, no changes needed. - **Part C1 (rogue remotes):** None found. - **Part C2 (egress):** benben an
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L55] Assistant: 日报已生成：`/root/.openclaw/workspace/memory/daily-summary/2026-07-11.md` 今日 chief 当日日志缺失，业务侧只能依据旧 HANDOFF：ADR-012 rollback sync 已关闭，chief 无待处理动作，平台/全局恢复类事项归 main 负责。main 侧 08:00 自检正常：Gateway 健康、cron 无失败、两个 workspace 均完成本地自动提交。发现的 session 文件锁抢占与 weixin 凭证过期均属非致命/可自愈问题，当
+[main/sessions/main/82ece4bd-095a-49a7-8d9d-8a3cb71b9ccb.jsonl#L6] Assistant: I'll run the daily self-check. Let me batch the independent checks first.
+[main/sessions/main/82ece4bd-095a-49a7-8d9d-8a3cb71b9ccb.jsonl#L9] Assistant: Cron looks healthy (only 1 job, lastRunStatus=ok). Let me check the gateway status result.
+[main/sessions/main/82ece4bd-095a-49a7-8d9d-8a3cb71b9ccb.jsonl#L11] Assistant: Gateway is healthy. Now let me check recent logs for errors and do the auto-commit.
+[main/sessions/main/82ece4bd-095a-49a7-8d9d-8a3cb71b9ccb.jsonl#L14] Assistant: Both commits succeeded. Two findings worth noting: 1. **`EmbeddedAttemptSessionTakeoverError`** — several chief-agent dreaming-narrative lanes at ~05:28 collided (session file changed while lock released). These are transient concurrency errors in the dreaming pipe
+[main/sessions/main/82ece4bd-095a-49a7-8d9d-8a3cb71b9ccb.jsonl#L16] Assistant: The weixin bot resumed after the 60-min pause and is polling again as of 08:00 (POST getupdates going out). So the `errcode -14` is a periodic session-expiry that self-recovers via the 60-min pause/retry — annoying but self-healing, not a hard outage. This is a kno
+[main/sessions/main/82ece4bd-095a-49a7-8d9d-8a3cb71b9ccb.jsonl#L20] Assistant: Self-check complete. Everything is fundamentally healthy — the two log issues are recurring but self-healing, so no repair needed and no urgent action from Bruce. Since findings are non-critical and self-recovering, I'll keep the report brief per the "no chatter if
+[main/sessions/main/be37881f-9b56-47bc-86d0-0807512182ea.jsonl#L23] Assistant: 日报已生成：`/root/.openclaw/workspace/memory/daily-summary/2026-07-11.md` 今日 chief 当日日志缺失，业务侧只能依据旧 HANDOFF：ADR-012 rollback sync 已关闭，chief 无待处理动作，平台/全局恢复类事项归 main 负责。main 侧 08:00 自检正常：Gateway 健康、cron 无失败、两个 workspace 均完成本地自动提交。发现的 session 文件锁抢占与 weixin 凭证过期均属非致命/可自愈问题，当
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8894] Assistant: All three findings (perplexity config, dummy MCP, benben thinking-signature) are already captured in the consolidated Recent State block. Archive one-liner + delete.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8898] Assistant: Pure self-check noise (weixin -14, already in Recent State). Drop it and clean the extra blank lines.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8902] Assistant: Maintenance done: - Archived & deleted `2026-06-27.md` (benben triage findings already in Recent State → one line under `## 2026-06`). - Trimmed MEMORY.md 77→70: dropped the 2026-07-11 promotion block (pure weixin -14 self-check noise, already covered). - No weco
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8908] Assistant: Already ran the full maintenance sweep this cycle (~1h ago): archived/deleted `2026-06-27.md`, trimmed MEMORY.md to 70 lines, no wecom DM blocks. Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8926] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8959] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8967] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8975] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8983] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8991] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L8999] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9007] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9015] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9023] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9031] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9039] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9047] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9055] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9063] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9071] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9079] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9087] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9095] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9103] Assistant: [assistant turn failed before producing content]
