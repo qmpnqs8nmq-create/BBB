@@ -1,13 +1,13 @@
 # HANDOFF
 
-最后活跃: 2026-06-29 10:04
-当前话题: OpenClaw 周巡检告警待确认
+最后活跃: 2026-07-12 23:08
+当前话题: Bruce 要求把 OpenAI/Codex OAuth 从 5.5 升到 gpt-5.6-sol
 
 关键结论:
-- 周巡检结果: Gateway 运行中，更新最新；安全审计 `0 critical / 6 warn / 1 info`。
-- 风险点: 多 agent exec `security=full`、`/root/.openclaw` 权限被报 `755`、openclaw-weixin 标记代码需复核、deep gateway probe timeout、插件索引/配置冲突。
-- 未执行任何权限/config/Gateway/plugin 变更；这些属于安全边界或全局配置，需 Bruce 明确确认。
-- 10:04 收到重试路由，仍按确认请求处理；已补记 `memory/2026-06-29.md`，继续等待 Bruce 明确授权。
-- 下一步如 Bruce 确认: 先非破坏性复查 `stat /root/.openclaw`、`openclaw status --all`、相关插件/配置；再按规则 3 备份后分项修复。
+- 已查 OpenAI 文档：GPT-5.6 Sol 在 Codex 需要 Codex CLI >= 0.144.0；Bruce 账号 OAuth 是 Pro，有资格。
+- 路线①外科式尝试失败：装 `@openai/codex@0.144.1` 到 `/root/.openclaw/codex-0144`，但 OpenClaw 2026.6.11 仍拒绝 `codex/gpt-5.6-sol` (`not allowed`)。
+- 尝试补插件/主程序 catalog 与白名单仍不生效，判断 6.11 有更深 provider merge/cache/allow 逻辑；不宜继续 monkey patch。
+- 已回滚本次所有补丁和 openclaw.json codex appServer 配置，Gateway active，当前仍是原 `codex/gpt-5.5` fallback；未设置 5.6。
+- 下一步可选：升级到 `2026.7.1-beta.5`（官方组合含 `@openai/codex@0.144.1`）或等下个 stable。
 
-今日笔记: memory/2026-06-29.md
+今日笔记: memory/2026-07-12.md
