@@ -4,6 +4,8 @@
 
 ## 2026-06
 
+- 06-29: 日常自检正常；周度安全巡检 0 critical / 6 warn / 1 info（exec security=full、/root/.openclaw 755、weixin read-file+network-send 启发式、deep probe timeout、plugin index/config 冲突等），均未自动改全局安全/权限配置，待 Bruce 明确确认
+
 - 06-28: 日常自检正常；zenmux-key1/opus-4.8 quota_exceeded 触发 fallback，self-check 前次 error 源于 Gateway restart 中断，本轮恢复；workspace/chief 已快照
 
 - 06-27: benben 三项排障（均入 MEMORY Recent State）：Perplexity 配置复核（key 仍在插件层可兼容，可择机迁 tools.web.search.perplexity.apiKey）；`dummy` MCP 报错=工具路由误调占位名非配置缺失；"failed before producing a reply"=会话历史 Anthropic thinking 签名损坏（Invalid signature in thinking block），/new 开新会话解

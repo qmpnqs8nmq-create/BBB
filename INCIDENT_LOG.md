@@ -131,3 +131,13 @@
 - mangba cron 的 accountId 从 5814 → f602 同步修好了（今晚 23:15 那次）
 
 **同类前例：** 2026-05-01 升级后遗症（mangba binding/cron 的 accountId 指向已失效 im-bot），本次是同一根源的再发。
+
+---
+
+### [2026-07-13] GPT-5.6 Sol 支持要求整套 beta 升级（变更）
+
+- **现象：** stable `2026.6.11` 不识别 canonical `openai/gpt-5.6-sol`；单独替换 Codex 0.144.1 和改缓存/catalog 均不能形成可靠支持。
+- **根因：** GPT-5.6 需要 Codex >=0.144.0，同时 OpenClaw 的模型路由、allowlist 与 Codex harness 也必须原生认识该 canonical ref；只升级一层会版本错位。
+- **永久修复：** 整套升级到 OpenClaw/官方插件 `2026.7.1-beta.6`（Codex 0.144.1），fallback 改为 `openai/gpt-5.6-sol` 并加入 allowlist；不再维护 5.6 monkey patch。
+- **验证：** 强制请求实际 provider=openai/model=gpt-5.6-sol/harness=codex；另一次真实 key1 402 后由 5.6 Sol 接管成功。
+- **升级纪律：** OpenClaw/Codex 新模型支持必须核对主程序、插件、内核三层版本；不能把 `modelApplied` 或回显文本当成功证据，必须检查实际 winner model 与 fallback trace。

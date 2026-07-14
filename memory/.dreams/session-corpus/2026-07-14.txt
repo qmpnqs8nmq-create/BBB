@@ -1,0 +1,4 @@
+[main/sessions/main/cc28dfca-4392-4af2-97e2-3b190f6f2d7a.jsonl#L6] Assistant: I'll run through all three parts of the integrity check.
+[main/sessions/main/cc28dfca-4392-4af2-97e2-3b190f6f2d7a.jsonl#L12] Assistant: C3 had a Docker template error (`.ImageID` isn't valid in that format context). Let me fix the command with the correct field.
+[main/sessions/main/cc28dfca-4392-4af2-97e2-3b190f6f2d7a.jsonl#L14] Assistant: All checks complete. Let me verify the C3 result — the running container resolved to the latest image (no ALERT printed, and the sandbox container uses `openclaw-sandbox:bookworm-slim` matching latest `8ef0febba319`). Summary of the full run: - **Part A (symlinks):
+[main/sessions/main/cc28dfca-4392-4af2-97e2-3b190f6f2d7a.jsonl#L14] Assistant: nothing auto-repaired, no anomalies. Per notification rules (all normal → no notify), I'll stay silent to Bruce. HEARTBEAT_OK

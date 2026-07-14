@@ -29,7 +29,7 @@
 - benben 沙箱安全基线（2026-04-20）：docker.network=none（无 egress，web_fetch 走 Gateway）+ 每日 03:00 cron 审计（git remote 白名单 qmpnqs8nmq-create/ + network 配置漂移检测 + 容器镜像陈旧检测）
 - Jamie 频率上限硬规则：24h ≤ 1 主动、 7d ≤ 3 主动，无日志则默认不发（fail-safe）；见 workspace-benben/jamie-weekly-companion-cron.md Step 2.5
 - market agent 模型规则：用 sonnet（不用 opus，轻量场景），主/备跨 zenmux key 异构，GPT 兜底；Anthropic 版本跳过 4.7，4.6 之后直接 4.8（5 月）
-- **ZenMux key 现状（2026-05-29）**：只剩 key1 + key2（key3 已删）。每把 key 带 opus-4.8 + sonnet-4.6。opus 已全线升 4.8；sonnet 无 4.8 版本，保持 4.6。default 主模型 = key1/opus-4.8，fallback = gpt-5.5 + key2/opus-4.8
+- **ZenMux/OpenAI fallback 现状（2026-07-13）**：只剩 ZenMux key1 + key2（key3 已删）。default 主模型 = key1/opus-4.8；fallback = `openai/gpt-5.6-sol`（ChatGPT Pro OAuth，经 Codex harness，local contextWindow/contextTokens=250k）→ key2/`anthropic/claude-fable-5`。5.6 Sol 已用实际 winner model 与真实 402 接管验证；Fable 5 已用 ZenMux key2 实际请求验证。
 - **memory_search embedding = Gemini（2026-05-30 切换）**：OpenAI embedding 额度 429 耗尽后切到 Gemini。`agents.defaults.memorySearch` = provider `gemini`（**必须写 gemini，不是 google**——google 插件注册的 adapter id=gemini/authProviderId=google；写 google 报 "Unknown memory embedding provider"）+ model `gemini-embedding-001`（3072 维），auth 走 google:default(api_key) 自动映射，免费。维度 3072 对当前 ~1200 chunk 规模属过剩但无害（存储/检索成本忽略），不降级；涨到几万 chunk 再考虑降 1536。⚠️ OpenAI OAuth(openai-codex) 不能做 embedding（无 /v1/embeddings 端点）。改 memorySearch 后必须 restart Gateway（CLI 重读但 Gateway 缓存旧值）+ 换 provider 后 `openclaw memory index --force` 全量重建（维度变了不兼容）
 - **⚠️ 改模型配置必须三层同步**：模型/auth 配置有 3 处来源会被 Gateway 合并——(1) openclaw.json (2) 顶层 models.json + auth-profiles.json (3) 每个 agent 各自的 agents/*/agent/{models,auth-profiles}.json（约 24 文件）。只改一处会导致旧 key/旧版本"复活"。统一改用脚本批量处理（参考 tmp/zenmux-key3-cleanup.py 思路），全量备份后 restart 验证 `openclaw models list`
 
@@ -54,11 +54,12 @@
 - **成熟切换时机**：系统连续 2 周无架构级变更、日均话题 ≤3 个时，执行容量回收
 
 ## Recent State（近期状态，可滚动覆盖）
-- 本机版本 OpenClaw 2026.6.10（2026-06-24 从 6.5 升级，CLI/Gateway 一致）
+- 本机版本 OpenClaw `2026.7.1-beta.6`（2026-07-13 为 GPT-5.6 Sol OAuth 支持从 stable 6.11 升级；CLI/Gateway/官方 codex、feishu、perplexity 插件一致；Codex 0.144.1）
 - 持续性已知项（非故障，待 Bruce）：weixin getUpdates errcode -14 每小时 session-expired pause 60min（需重登/换 token）；wecom admin WSClient bestEffort 投递偶发失败（cron e463b042 疑似孤儿）；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
 - cron timeout 治理：`daily-self-check-8am` 与 chief 周日系统巡检反复 timeout；已用 `openclaw doctor --fix` + 周日巡检 `lightContext=true`/timeout 900s/thinking=minimal + coach audit `lightContext=true`/timeout 360s；禁用两个 2026-05 陈旧 NVDA reminder cron。装 bubblewrap 0.9.0 修 Codex sandbox 告警
 - 周度安全巡检 0 critical / 6 warn（均既有姿态：exec security=full、`/root/.openclaw` 755、weixin read-file+network 启发式告警、deep probe 超时、plugin index 冲突）。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改安全/全局配置
 - benben 排障：① web_search 用 Perplexity 别配 `webSearch.model=sonar-pro`（带 max_tokens 走 legacy 报 unsupported_content_budget），保留 key + `timeoutSeconds=60`；② "failed before producing a reply"=会话历史 Anthropic thinking 签名损坏（`Invalid signature in thinking block`），`/new` 开新会话解；③ `dummy` MCP 报错=工具路由误调占位名，非配置缺失
+- 日志噪音（已知非故障）：`[agent] run ... stopReason=stop` 以 ERROR 记录但实为 dream cycle 正常完成（isError=false），可忽略
 - 接入老用户经验（刘董事长 mangba-guest 2026-06-08）：老用户走 binded_redirect 不产新账号文件→链接误判"过期"；直接看网关 dispatch 日志确认路由，别等新文件/别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep 会误匹配 exec shell）
 - 插件漂移经验：升级后 codex/feishu 若 doctor 报旧版且 `plugins update` 误报 up-to-date → 直接 `openclaw plugins install @openclaw/{codex,feishu}@版本 --force --pin` + restart；systemd 单元旧版本号非致命
 
@@ -68,10 +69,3 @@
 - ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 grep `RAW_402_MARKER_RE` 重打同一补丁**。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
-
-## Promoted From Short-Term Memory (2026-07-12)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-09.md:3:6 -->
-- 08:00 每日自检: gateway 健康 (pid 2063958, probe ok, v2026.6.10)；cron 仅 1 个任务(自检本身) lastStatus=ok; git 双 workspace 提交成功; 日志两处需关注（均为凭证/配置问题，非崩溃，无法安全自修复）：; openclaw-weixin bot 每小时 `session expired errcode -14`，自动暂停 60 分钟 → 微信 bot 登录态失效，需重新授权 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-09.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-09.md:7:8 -->
-- 08:00 每日自检: cron `e463b042` 投递失败 `WSClient not connected / Agent mode not configured`（该 job 不在当前 cron 列表，疑似孤立/过期投递）; 备注：`[agent] run ... stopReason=stop` 以 ERROR 记录但实为 dream cycle 正常完成(isError=false)，噪音 [score=0.815 recalls=0 avg=0.620 source=memory/2026-07-09.md:7-8]
