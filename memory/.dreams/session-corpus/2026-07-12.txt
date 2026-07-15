@@ -84,3 +84,27 @@
 [main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L248] Assistant: 等等——`openai-codex` 这个 provider 根本不在插件里，它就是**我 main models.json 里那个自定义 provider**（gpt-5.5 就是从这儿注册的、能用）。那我加的 gpt-5.6-sol 为什么被丢掉？重新核实一下当前状态和是否有 allowlist 在拦。
 [main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L250] Assistant: 文件里 5.5 和 5.6-sol 都在，但 OpenClaw 只放行 5.5、把 5.6-sol **剔除了**——而且没有显式 allowlist。强烈怀疑：OpenClaw 2026.6.11 的插件目录里维护了一份"OAuth/chatgpt-responses 可用模型白名单"，5.5 在、5.6 不在（5.6 比这个版本的目录知识更新）。确认一下这个剔除机制。
 [main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L252] Assistant: 我得如实、完整地跟你交代——这件事我**没能干净地确认，所以按你的指令没有改**。下面是穷尽后的结论。先把我加进去但被 OpenClaw 忽略的那条 stray 配置撤掉，保持干净，并确认你的 OAuth 登录没被我搞坏。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L254] Assistant: 撤销完成，配置已复原（openai-codex 只剩 gpt-5.5），**你的 OAuth 登录完好**（`openai:bobstazenski...` oauth，有效到 2026-07-22）。 先把结论记进 memory，然后如实汇报。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L262] Assistant: 记录完毕。下面是完整、如实的汇报。 **我没有改配置**——因为你的指令是"确认可用才改"，而我没能干净地确认它真的可用。不糊弄你。 **穷尽后的事实：** 1. **`gpt-5.6-sol` 是真实模型**，比你现在的 5.5 新（OpenAI 6-30 左右发布，5.6 家族含 luna/sol/terra）。 2. **但 OpenClaw 2026.6.11 根本不认识它**——这个版本的模型目录只到 5.5（build 早于 5.6 发布）。我把 5.6-sol 写进 models.json，OpenClaw 
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L262] Assistant: `2026.7.1-beta.5`**（7-01 发布，晚于 5.6，目录很可能原生就带 5.6）。最干净，但是 beta。 - **C**｜等下一个包含 5.6 的 stable 版本再上。 我个人倾向 **B 先探一下**（beta 目录若原生含 5.6，一步到位且升级不丢），不行再退 A。你说走哪条？
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L264] User: 因为5.6的版本是OpenAI比较新的版本，你要根据最新版本的Openclaw的一些规定和OpenAI的它的文档，来去看一看如何实现。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L265] Assistant: 明白，我去查两边的权威文档：OpenClaw 最新的自定义模型/OAuth 注册规则，以及 OpenAI 关于 gpt-5.6-sol 的接入文档（尤其是它能不能走 ChatGPT/Codex OAuth 后端）。先并行拉一批资料。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L268] Assistant: 文档给了**决定性线索**： - GPT‑5.6（Sol/Terra/Luna）已于 ~2026‑07‑09 GA，覆盖 ChatGPT / Codex / API。 - **关键**：要在 **Codex** 里用 GPT‑5.6，**Codex CLI 必须 ≥ 0.144.0**；调用方式 `codex -m gpt-5.6-sol`。 - 你是 **Pro**，在 Codex 里有资格选 Sol。 所以症结很可能是：OpenClaw 里捆绑的那个 codex 二进制版本太旧。我查一下版本 + OpenClaw 的 
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L271] Assistant: 现在**根因彻底清楚了**，而且是文档级铁证。我把研究结果给你： **OpenAI 侧（官方文档）：** - GPT‑5.6 Sol/Terra/Luna 已 GA，Codex 可用，你 Pro 有资格选 Sol。 - **硬性要求：要在 Codex 里用 GPT‑5.6，Codex CLI 必须 ≥ `0.144.0`**，调用名就是 `gpt-5.6-sol`。 **你机器现状：** - OpenClaw 里捆绑的 Codex app-server 二进制是 **`0.139.0`** ← 低于 0.144.0，**这
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L271] Assistant: 实测一句话确认 → 再替换你的 5.5。 让我先验证第 1 步的可行性（能不能干净拿到 0.144.1、插件怎么指向它）。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L275] Assistant: 验证完成，可行性和路径都清晰了。给你结论： **好消息：官方支持的路子存在，不用瞎搞 node_modules。** - `@openai/codex@0.144.1`（stable, linux-x64）✅ 可装，正好满足 OpenAI 对 5.6 的 ≥0.144.0 要求。 - 而且 **OpenClaw 的 beta 插件 `@openclaw/codex@2026.7.1-beta.5` 就是捆绑 `@openai/codex@0.144.1`** 的——等于官方已经把这条链配好了。 **但要跟你讲清楚：这已经不
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L275] Assistant: 我倾向**路线①**（外科式、可逆、不动稳定主程序）。这一步会改动 codex 运行时，属于你说的"确认才动"范畴——**你点头我就按①执行**：装 0.144.1 → 配 appServer.command → 重启 → 用 `/codex models` 和实测确认 5.6-sol 真出来 → 再替换 5.5。走①吗？
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L277] User: ① 外科式（推荐）
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L278] Assistant: 路线①，开工。先装 `@openai/codex@0.144.1` 到独立目录（不碰现有插件）。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L286] Assistant: 0.144.1 装好、app-server 子命令在。现在配置 codex 插件指向它。先备份 openclaw.json 并看现有 codex 配置。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L288] Assistant: 现有 codex 配置很干净。加上 `appServer.command` 指向新二进制（保留其他字段不动）。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L290] Assistant: 配置已更新并校验通过。重启 Gateway 让新二进制生效。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L297] User: 到底行不行？有没有设设置5.6？
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L298] Assistant: 抱歉又被重启打断了。我现在一次性把关键状态查清楚给你答复。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L300] Assistant: Gateway 起来了，没有残留旧的 0.139 app-server。但 `openai/gpt-5.6-sol` **还没出现在目录里**——升级二进制没让 OpenClaw 自动发现它（6.11 的 openai 静态目录只到 5.5，runtime discovery 用的是 api_key 那条死路）。所以还差一步：把 `openai/gpt-5.6-sol` 注册进目录。让我照插件里 5.5 的定义补上。 诚实说一句：**5.6 目前还没设置成功、还不能用**，我正在补最后这步。先看 5.5 的标准定义照抄。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L302] Assistant: 照 5.5 的规格补 5.6-sol。但先确认最干净的路子——codex 插件有"模型发现"机制（`/codex models` 就是读账号实时目录）。如果能让它自动发现 5.6-sol，就不用手工注册。查 codex-harness-reference 的 discovery 配置。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L306] Assistant: 这解答了关键机制：codex 插件在启动时向 app-server 发 `model/list` 探测，发现的模型进 **`codex/`** 前缀（不是 `openai/`）。换了 0.144.1 二进制后，`codex/gpt-5.6-sol` 应该会被发现。我之前只 grep 了 openai/，漏了 codex/。查一下。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L308] Assistant: 只发现了 5.5。要么新二进制没真正生效，要么 discovery 用了缓存/fallback。我核实一下：配置是否生效、实际起的 app-server 是不是 0.144.1、discovery 探测结果。查日志。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L310] Assistant: 配置已生效（appServer.command 指向 0.144.1）。但 app-server 是**懒启动**，重启时的 discovery 探测很可能因为新二进制首次冷启超过默认 2500ms 超时→退回 fallback 目录（所以只看到 5.5）。我把 discovery 超时调大并重启，让它有时间探到 app-server 的真实目录。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L312] Assistant: 重启（后台），让 discovery 有 15s 探测新 app-server。
+[main/sessions/main/61e9308f-c092-4b28-ad09-bb0ab1fdc7da.jsonl#L317] User: 请继续完成，快一点

@@ -2,7 +2,13 @@
 
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
+## 2026-07
+
+- 07-01: 日常自检正常；weixin errcode -14 为持续已知项；chief symlink-integrity-check 单次超时后已自动重试，无需介入
+
 ## 2026-06
+
+- 06-30: 日常自检正常；两复现外部通道错误（均已入 MEMORY Recent State，未自动改配置）：weixin -14 session 过期每小时暂停 60min；cron e463b042 投递失败（wecom admin 无 WSClient/未配 Agent）。已报 Bruce
 
 - 06-29: 日常自检正常；周度安全巡检 0 critical / 6 warn / 1 info（exec security=full、/root/.openclaw 755、weixin read-file+network-send 启发式、deep probe timeout、plugin index/config 冲突等），均未自动改全局安全/权限配置，待 Bruce 明确确认
 

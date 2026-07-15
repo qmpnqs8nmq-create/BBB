@@ -49,3 +49,10 @@
 - 变更前完整备份主配置、顶层模型目录及 12 个 agent 模型目录，共 14 文件并生成 SHA256：`/root/.openclaw/backups/gpt56-sol-250k-20260713-201406`。
 - 校验：配置 schema 合法；`models list` 显示 250000/250000、text+image、available；Gateway 已热加载，无重启、无中断，probe OK。
 - 回滚：从上述备份恢复 `openclaw.json`；其余13份为一致性快照，本次未修改。
+
+## 2026-07-14 · Gateway 重启与 memory_search 验证
+
+- 经 Bruce 明确要求重启；实际执行为 OpenClaw Gateway restart，未重启宿主机 OS。
+- Gateway 新进程于 23:02:38 CST 启动，PID 86541；systemd active/running，connectivity probe OK，CLI/Gateway 版本均为 `2026.7.1-beta.6`。
+- 重启后实际调用 `memory_search` 成功：backend=builtin，provider=`gemini`，model=`gemini-embedding-001`，返回 5 条语义检索结果。
+- 未修改配置；无需回滚。

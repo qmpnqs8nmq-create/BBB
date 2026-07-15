@@ -69,3 +69,10 @@
 - ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 grep `RAW_402_MARKER_RE` 重打同一补丁**。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
+
+## Promoted From Short-Term Memory (2026-07-15)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-11.md:5:8 -->
+- 08:00 每日自检 (cron daily-self-check-8am): Gateway: running & healthy (pid 2063958, probe ok, v2026.6.10)。; Cron: 仅 1 个 job，lastStatus=ok，无失败。; 自动提交：workspace + workspace-chief 均成功 commit（本地）。; 日志发现两类 ERROR（均非致命/自愈）： [score=0.833 recalls=0 avg=0.620 source=memory/2026-07-11.md:5-8]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-11.md:9:11 -->
+- 08:00 每日自检 (cron daily-self-check-8am): `EmbeddedAttemptSessionTakeoverError` — chief dreaming-narrative 多 lane 在 05:28 并发抢占 session 文件锁；run 最终 stopReason=stop。反复出现，属 dreaming 管线并发竞争，暂无害。; weixin `errcode -14` session expired — 06:05/07:05 各暂停 bot 60min，08:00 已自动恢复 getupdates 轮询。属 WeChat 凭证周期性过期+自愈，无需手动干预（除非要重新 auth）。; 当前会话走 wecom 通道，不受 weixin -14 影响。 [score=0.833 recalls=0 avg=0.620 source=memory/2026-07-11.md:9-11]
