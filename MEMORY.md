@@ -59,7 +59,7 @@
 - cron timeout 治理：`daily-self-check-8am` 与 chief 周日系统巡检反复 timeout；已用 `openclaw doctor --fix` + 周日巡检 `lightContext=true`/timeout 900s/thinking=minimal + coach audit `lightContext=true`/timeout 360s；禁用两个 2026-05 陈旧 NVDA reminder cron。装 bubblewrap 0.9.0 修 Codex sandbox 告警
 - 周度安全巡检 0 critical / 6 warn（均既有姿态：exec security=full、`/root/.openclaw` 755、weixin read-file+network 启发式告警、deep probe 超时、plugin index 冲突）。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改安全/全局配置
 - benben 排障：① web_search 用 Perplexity 别配 `webSearch.model=sonar-pro`（带 max_tokens 走 legacy 报 unsupported_content_budget），保留 key + `timeoutSeconds=60`；② "failed before producing a reply"=会话历史 Anthropic thinking 签名损坏（`Invalid signature in thinking block`），`/new` 开新会话解；③ `dummy` MCP 报错=工具路由误调占位名，非配置缺失
-- 日志噪音（已知非故障）：`[agent] run ... stopReason=stop` 以 ERROR 记录但实为 dream cycle 正常完成（isError=false），可忽略
+- 日志噪音（已知非故障）：`[agent] run ... stopReason=stop` 以 ERROR 记录但实为 dream cycle 正常完成（isError=false）；`EmbeddedAttemptSessionTakeoverError` = chief dreaming-narrative 多 lane 并发抢 session 文件锁，反复出现但暂无害，均可忽略
 - 接入老用户经验（刘董事长 mangba-guest 2026-06-08）：老用户走 binded_redirect 不产新账号文件→链接误判"过期"；直接看网关 dispatch 日志确认路由，别等新文件/别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep 会误匹配 exec shell）
 - 插件漂移经验：升级后 codex/feishu 若 doctor 报旧版且 `plugins update` 误报 up-to-date → 直接 `openclaw plugins install @openclaw/{codex,feishu}@版本 --force --pin` + restart；systemd 单元旧版本号非致命
 
@@ -70,9 +70,3 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-## Promoted From Short-Term Memory (2026-07-15)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-11.md:5:8 -->
-- 08:00 每日自检 (cron daily-self-check-8am): Gateway: running & healthy (pid 2063958, probe ok, v2026.6.10)。; Cron: 仅 1 个 job，lastStatus=ok，无失败。; 自动提交：workspace + workspace-chief 均成功 commit（本地）。; 日志发现两类 ERROR（均非致命/自愈）： [score=0.833 recalls=0 avg=0.620 source=memory/2026-07-11.md:5-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-11.md:9:11 -->
-- 08:00 每日自检 (cron daily-self-check-8am): `EmbeddedAttemptSessionTakeoverError` — chief dreaming-narrative 多 lane 在 05:28 并发抢占 session 文件锁；run 最终 stopReason=stop。反复出现，属 dreaming 管线并发竞争，暂无害。; weixin `errcode -14` session expired — 06:05/07:05 各暂停 bot 60min，08:00 已自动恢复 getupdates 轮询。属 WeChat 凭证周期性过期+自愈，无需手动干预（除非要重新 auth）。; 当前会话走 wecom 通道，不受 weixin -14 影响。 [score=0.833 recalls=0 avg=0.620 source=memory/2026-07-11.md:9-11]
