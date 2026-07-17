@@ -55,3 +55,5 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9722] Assistant: All quiet: MEMORY.md 71 lines, no logs ≥14 days old, no wecom DM blocks. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9727] Assistant: No changes since this morning's run: MEMORY.md 71 (under cap), no daily logs ≥14 days old, no wecom DM blocks in last 24h. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9730] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9744] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L9753] Assistant: [assistant turn failed before producing content]
