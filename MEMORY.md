@@ -57,7 +57,7 @@
 - 本机版本 OpenClaw `2026.7.1-beta.6`（2026-07-13 为 GPT-5.6 Sol OAuth 支持从 stable 6.11 升级；CLI/Gateway/官方 codex、feishu、perplexity 插件一致；Codex 0.144.1）
 - 持续性已知项（非故障，待 Bruce）：weixin getUpdates errcode -14 每小时 session-expired pause 60min（需重登/换 token）；wecom admin WSClient bestEffort 投递偶发失败（cron e463b042 疑似孤儿）；opus-4.8 偶发 timeout 由 gpt-5.5 兜底
 - cron timeout 治理：`daily-self-check-8am` 与 chief 周日系统巡检反复 timeout；已用 `openclaw doctor --fix` + 周日巡检 `lightContext=true`/timeout 900s/thinking=minimal + coach audit `lightContext=true`/timeout 360s；禁用两个 2026-05 陈旧 NVDA reminder cron。装 bubblewrap 0.9.0 修 Codex sandbox 告警
-- 周度安全巡检 0 critical / 6 warn（均既有姿态：exec security=full、`/root/.openclaw` 755、weixin read-file+network 启发式告警、deep probe 超时、plugin index 冲突）。可选加固（需 Bruce 确认）：exec 改 allowlist、`chmod 700 /root/.openclaw`。未自动改安全/全局配置
+- 周度安全巡检最新为 0 critical / 4 warn / 1 info（2026-07-13；均既有姿态：多 agent `exec security=full`、main allowlist 的 find/sed 缺 strictInlineEval、weixin 读文件+网络发送启发式、飞书建文档可授请求者权限）。可选加固需 Bruce 确认，未自动改安全/全局配置
 - benben 排障：① web_search 用 Perplexity 别配 `webSearch.model=sonar-pro`（带 max_tokens 走 legacy 报 unsupported_content_budget），保留 key + `timeoutSeconds=60`；② "failed before producing a reply"=会话历史 Anthropic thinking 签名损坏（`Invalid signature in thinking block`），`/new` 开新会话解；③ `dummy` MCP 报错=工具路由误调占位名，非配置缺失
 - 日志噪音（已知非故障）：`[agent] run ... stopReason=stop` 以 ERROR 记录但实为 dream cycle 正常完成（isError=false）；`EmbeddedAttemptSessionTakeoverError` = chief dreaming-narrative 多 lane 并发抢 session 文件锁，反复出现但暂无害，均可忽略
 - 接入老用户经验（刘董事长 mangba-guest 2026-06-08）：老用户走 binded_redirect 不产新账号文件→链接误判"过期"；直接看网关 dispatch 日志确认路由，别等新文件/别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep 会误匹配 exec shell）
@@ -70,17 +70,9 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-## Promoted From Short-Term Memory (2026-07-18)
+## Promoted From Short-Term Memory (2026-07-19)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-13.md:3:6 -->
-- 08:10 weekly OpenClaw security scan report: Cron routed weekly security scan result: Gateway reachable/running, updates current, security audit 0 critical / 4 warn / 1 info.; Warns to review: multiple agent configs use `exec security=full`; main allowlist `find`/`sed` lack `strictInlineEval`; openclaw-weixin has 2 heuristic "file read + network send" code paths; Feishu doc create can grant requester document permission.; Additional metadata/config warnings: duplicate weixin plugin; whatsapp/wecom config entries without matching installed plugins; SQLite/legacy health conflict.; No automatic hardening performed because these change... [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-13.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-13.md:7:7 -->
-- 08:10 weekly OpenClaw security scan report: Suggested next confirmed action: pick whether to tighten exec/strictInlineEval first, then separately review openclaw-weixin and Feishu doc exposure. [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-13.md:7-7]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-13.md:11:14 -->
-- 12:05 GPT-5.6-sol 最新方案复核: Bruce 追问昨晚是否真正解决。结论：没有；昨晚外科式 0.144.1 方案失败并已回滚，当前仍是 6.11 + `codex/gpt-5.5` fallback。; 最新资料：OpenAI Help 确认 Codex 访问 GPT-5.6 需 Codex CLI >=0.144.0，Pro 可用 Sol；当前 `@openai/codex` latest=0.144.1。; npm 最新：OpenClaw stable 仍 `2026.6.11`；beta 已到 `2026.7.1-beta.6`（2026-07-13 01:18Z）。`@openclaw/codex@beta.6` 依赖 `@openai/codex@0.144.1` 且 peer 要求 `openclaw >=2026.7.1-beta.6`。; beta.6 包内文档/代码原生支持 `openai/gpt-5.6-sol`：fresh ChatGPT/Codex OAuth setup 用 `openai/gpt-5.6-sol`；legacy `codex/gpt-*` 应迁移；代码默认 `OPENAI_CODEX_DEFAULT_MODEL = "openai/gpt-5.6-sol"`。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-13.md:11-14]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-13.md:15:15 -->
-- 12:05 GPT-5.6-sol 最新方案复核: 本机阻塞点：`openclaw.json` 的 `agents.defaults.models` 是 allowlist，当前只有 `codex/gpt-5.5`/`openai/gpt-5.5` 等；完美方案需升级整套 beta.6 后把 allowlist/fallback 中 `codex/gpt-5.5` 替换为 canonical `openai/gpt-5.6-sol`，再 restart + `models list`/session 实测。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-13.md:15-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-13.md:19:22 -->
-- 15:25 GPT-5.6 Sol OAuth 完成: Bruce 确认全套处理：OpenClaw + 官方 codex/feishu/perplexity 插件升至 `2026.7.1-beta.6`；Codex 内核为 `0.144.1`。; 主模型未改；fallback 从 `codex/gpt-5.5` 换为 `openai/gpt-5.6-sol`，第二 fallback key2 Opus 4.8 未改；5.6 加入 allowlist。; 严格强制测试成功：OpenAI OAuth + Codex harness，实际 winner=`openai/gpt-5.6-sol`，无 fallback。; 端到端 fallback 测试成功：key1 先报 ZenMux 402/rate_limit，随后实际由 `openai/gpt-5.6-sol` 返回结果。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-13.md:19-22]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-13.md:23:24 -->
-- 15:25 GPT-5.6 Sol OAuth 完成: 当前会话测试 pin 已清除；状态恢复默认主模型，fallback 顺序正确。Gateway/probe 与三通道均 OK。; 402 本地补丁由 systemd ExecStartPre 自动重打到 beta.6 dist；备份路径见 SYSTEM_CHANGE_LEDGER。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-13.md:23-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-14.md:3:6 -->
+- 23:04 Gateway 重启与 memory_search 验证: Bruce 明确要求重启系统并验证 memory search；本次实际重启对象为 OpenClaw Gateway，不是宿主机 OS。; Gateway 于 23:02:38 CST 启动新进程 PID 86541；systemd active/running，connectivity probe OK，CLI/Gateway 均为 2026.7.1-beta.6。; 宿主机仍自 2026-07-12 21:27:41 起运行，未执行 OS reboot。; `memory_search` 实际语义检索成功，返回 5 条结果；backend=builtin，provider=`gemini`，model=`gemini-embedding-001`，命中 `MEMORY.md#L32-L33`。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-14.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-14.md:7:7 -->
+- 23:04 Gateway 重启与 memory_search 验证: 结论：Gateway 重启成功，memory search 当前可用；单次检索总耗时约 11.7s。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-14.md:7-7]
