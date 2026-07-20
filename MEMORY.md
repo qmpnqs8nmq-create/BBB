@@ -30,8 +30,8 @@
 - Jamie 频率上限硬规则：24h ≤ 1 主动、 7d ≤ 3 主动，无日志则默认不发（fail-safe）；见 workspace-benben/jamie-weekly-companion-cron.md Step 2.5
 - market agent 模型规则：用 Sonnet 5（不用 Fable/Opus，轻量场景），主/备跨 ZenMux key，GPT-5.5 兜底；2026-07-19 已将活动配置中的 Sonnet 4.6 全量迁移为 Sonnet 5
 - **ZenMux/OpenAI 模型路由（2026-07-19）**：default = key1/`anthropic/claude-fable-5`；fallback#1 = `openai/gpt-5.6-sol`（ChatGPT Pro OAuth/Codex harness，250k）；fallback#2 = key2/Fable 5。两个 ZenMux key 均登记 Fable 5、Sonnet 5、Opus 4.8，Sonnet 4.6 已从活动配置移除；OpenAI 保留 GPT-5.6 Sol/5.5。当前两个 ZenMux key 实际请求均因额度 402，已验证自动由 5.6 Sol 接管。
-- **memory_search embedding = Gemini（2026-05-30 切换）**：OpenAI embedding 额度 429 耗尽后切到 Gemini。`agents.defaults.memorySearch` = provider `gemini`（**必须写 gemini，不是 google**——google 插件注册的 adapter id=gemini/authProviderId=google；写 google 报 "Unknown memory embedding provider"）+ model `gemini-embedding-001`（3072 维），auth 走 google:default(api_key) 自动映射，免费。维度 3072 对当前 ~1200 chunk 规模属过剩但无害（存储/检索成本忽略），不降级；涨到几万 chunk 再考虑降 1536。⚠️ OpenAI OAuth(openai-codex) 不能做 embedding（无 /v1/embeddings 端点）。改 memorySearch 后必须 restart Gateway（CLI 重读但 Gateway 缓存旧值）+ 换 provider 后 `openclaw memory index --force` 全量重建（维度变了不兼容）
-- **⚠️ 改模型配置必须三层同步**：模型/auth 配置有 3 处来源会被 Gateway 合并——(1) openclaw.json (2) 顶层 models.json + auth-profiles.json (3) 每个 agent 各自的 agents/*/agent/{models,auth-profiles}.json（约 24 文件）。只改一处会导致旧 key/旧版本"复活"。统一改用脚本批量处理（参考 tmp/zenmux-key3-cleanup.py 思路），全量备份后 restart 验证 `openclaw models list`
+- **memory_search embedding = Gemini（2026-05-30 切换）**：`agents.defaults.memorySearch` 必须写 provider `gemini`（不是 google）+ `gemini-embedding-001`（3072 维），auth 走 google:default(api_key)；OpenAI OAuth 不能做 embedding。改配置后须 restart Gateway，并对**每个 agent**分别 `openclaw memory index --agent <id> --force`；索引 `providerKey` 含实际凭据 hash，各 agent 凭据解析不同也会触发 settings changed
+- **⚠️ 改模型配置必须三层同步**：Gateway 会合并 (1) openclaw.json (2) 顶层 models/auth-profiles.json (3) 各 agent 的 models/auth-profiles.json；只改一处会让旧 key/版本复活。ZenMux 正确 base URL 为 `https://zenmux.ai/api/v1`（不是 `/v1`）。统一脚本批量处理、全量备份后验证 `openclaw models list`
 
 ## Operations（运维经验）
 
@@ -69,23 +69,3 @@
 - ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 grep `RAW_402_MARKER_RE` 重打同一补丁**。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
-
-## Promoted From Short-Term Memory (2026-07-19)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-14.md:3:6 -->
-- 23:04 Gateway 重启与 memory_search 验证: Bruce 明确要求重启系统并验证 memory search；本次实际重启对象为 OpenClaw Gateway，不是宿主机 OS。; Gateway 于 23:02:38 CST 启动新进程 PID 86541；systemd active/running，connectivity probe OK，CLI/Gateway 均为 2026.7.1-beta.6。; 宿主机仍自 2026-07-12 21:27:41 起运行，未执行 OS reboot。; `memory_search` 实际语义检索成功，返回 5 条结果；backend=builtin，provider=`gemini`，model=`gemini-embedding-001`，命中 `MEMORY.md#L32-L33`。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-14.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-14.md:7:7 -->
-- 23:04 Gateway 重启与 memory_search 验证: 结论：Gateway 重启成功，memory search 当前可用；单次检索总耗时约 11.7s。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-14.md:7-7]
-
-## Promoted From Short-Term Memory (2026-07-20)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-15.md:3:6 -->
-- 08:00 daily-self-check: Gateway: running/healthy (pid 86541), probe ok, v2026.7.1-beta.6.; Cron: 1 job (this self-check), lastStatus=ok.; Log errors (non-fatal, self-healing):; weixin getUpdates errcode -14 (session expired) recurring hourly → legacy weixin channel effectively down until re-auth. FLAGGED to Bruce. [score=0.802 recalls=0 avg=0.620 source=memory/2026-07-15.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-15.md:7:9 -->
-- 08:00 daily-self-check: cron e463b042 delivery failed: WSClient not connected (account admin) — bestEffort, degraded gracefully.; codex model-refresh timeout — transient.; Git: workspace + workspace-chief committed daily snapshot. Push wrapped in timeout. [score=0.802 recalls=0 avg=0.620 source=memory/2026-07-15.md:7-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-15.md:12:15 -->
-- 14:43 chief memory_search 报错排查（已修）: 症状：main memory_search 正常，但 chief 里报「index provider settings changed」。; 排查：chief/main 索引 config 一致（gemini-embedding-001 / 3072维 / 均全量已索引），非维度问题。; 根因：chief 索引 meta 存的 providerKey=bd50811302… 与 chief 当前运行时解析出的 Gemini 凭据 hash 不一致（main 存 e93dbab7… 与其运行时匹配，故 main 正常）。OpenClaw 检测到 providerKey 漂移即拒绝检索，要求重建。chief 无 reindex-lock，疑似 05-30 切 Gemini 后从未对 chief 跑过 --force。; 修复：`openclaw memory index --agent chief --force`（gemini cache 3141→9388+，重嵌 ~6-9min，免费）。完成后 chief memory_search 实测成功，provider=gemini。 [score=0.802 recalls=0 avg=0.620 source=memory/2026-07-15.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-15.md:16:16 -->
-- 14:43 chief memory_search 报错排查（已修）: 教训：换 embedding provider 后，`memory index --force` 要对**每个 agent** 都跑一遍，不能只跑 main/当前 agent。providerKey 是 provider+model+实际凭据的 hash，各 agent 解析的凭据不同则 hash 不同。 [score=0.802 recalls=0 avg=0.620 source=memory/2026-07-15.md:16-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-15.md:19:22 -->
-- 15:xx ZenMux key2 API 核验: fallback #2 为 `zenmux-key2/anthropic/claude-fable-5`，协议 `anthropic-messages`，Key 指纹末 8 位 `aaccb6b2`。; 正确且当前运行时使用的 Base URL：`https://zenmux.ai/api/v1`；最小鉴权请求 `/messages` 返回 HTTP 200，模型为 `anthropic/claude-fable-5`。; 无鉴权探针：`/v1/messages` 返回 302 到 `/500`，`/api/v1/messages` 返回标准 403，进一步确认 `/api/v1` 才是有效入口。; 漂移：顶层 `openclaw.json`/`models.json` 写 `/api/v1`，agent 本地 `agents/*/agent/models.json` 仍有 `/v1`；当前被全局配置覆盖，但后续应按三层同步规则统一，避免旧配置复活。此次只核验，未改配置。 [score=0.802 recalls=0 avg=0.620 source=memory/2026-07-15.md:19-22]

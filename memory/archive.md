@@ -4,6 +4,8 @@
 
 ## 2026-07
 
+- 07-06: 日常自检发现周日巡检连续超时；已运行 `openclaw doctor --fix`、将巡检设为 timeout 900s/thinking minimal，并禁用两个陈旧 NVDA reminder cron；同时安装 bubblewrap 0.9.0
+
 - 07-05: 日常自检正常；`openclaw doctor --fix` 归一 cron store，并为周日巡检/coach audit 补 `lightContext` 与超时配置（已同步入 MEMORY Recent State）
 
 - 07-02: 日常自检正常；weixin errcode -14 与 cron e463b042/wecom admin WSClient 投递失败均为持续已知项，已报 Bruce
