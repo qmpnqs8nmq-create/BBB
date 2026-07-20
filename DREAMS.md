@@ -2114,10 +2114,31 @@ Tiny margin doodle: a surgeon sewing shut a server with moonlight.
 
 Sometimes reliability is not arrival. Sometimes it is knowing exactly when to return home.
 
+
+---
+
+*July 20, 2026 at 10:16 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
+
+---
+
+*July 20, 2026 at 10:16 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
+
+---
+
+*July 20, 2026 at 10:16 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
 <!-- openclaw:dreaming:diary:end -->
 
 ## Deep Sleep
 <!-- openclaw:dreaming:deep:start -->
-- Ranked 2 candidate(s) for durable promotion.
-- Promoted 2 candidate(s) into MEMORY.md.
+- Ranked 5 candidate(s) for durable promotion.
+- Promoted 5 candidate(s) into MEMORY.md.
 <!-- openclaw:dreaming:deep:end -->

@@ -56,3 +56,27 @@
 - Gateway 新进程于 23:02:38 CST 启动，PID 86541；systemd active/running，connectivity probe OK，CLI/Gateway 版本均为 `2026.7.1-beta.6`。
 - 重启后实际调用 `memory_search` 成功：backend=builtin，provider=`gemini`，model=`gemini-embedding-001`，返回 5 条语义检索结果。
 - 未修改配置；无需回滚。
+
+## 2026-07-19 · OpenClaw 切换至 2026.7.1 稳定版
+
+- 按 Bruce 要求，将 OpenClaw 从 `2026.7.1-beta.6` 升级到 npm stable/latest `2026.7.1-2`；当前 channel=stable，CLI/Gateway 均为 `2026.7.1-2`。
+- 官方插件同步到各自实际 stable：Feishu/Perplexity `2026.7.1`；Codex 保持其 npm latest `2026.7.1-1`。CLI 曾错误建议不存在的插件版本 `2026.7.1-2`，已按 npm dist-tag 纠正。
+- Gateway 经 systemd 重启，PID `316700`；connectivity probe、event loop、飞书/微信/企业微信深度状态均正常，插件版本漂移已消失。
+- 启动前 402/failover 自愈脚本成功重打补丁，当前 `RAW_402_MARKER_RE` 可识别引号包裹的 `"code":"402"`。
+- 既有安全审计保持 `0 critical / 4 warn / 1 info`；未修改通道、安全边界或模型路由。回滚命令：`npm install -g openclaw@2026.7.1-beta.6`，并将官方插件恢复到 beta.6 后重启。
+
+## 2026-07-19 · 默认模型切换至 Claude Fable 5
+
+- 经 Bruce 明确决定，默认链更新为 `zenmux-key1/anthropic/claude-fable-5` → `openai/gpt-5.6-sol` → `zenmux-key2/anthropic/claude-fable-5`。
+- ZenMux key1/key2 均登记 Fable 5、Sonnet 5、Opus 4.8、Sonnet 4.6；OpenAI allowlist 保留 GPT-5.6 Sol 与 GPT-5.5。同步范围：`openclaw.json`、顶层 `models.json`、12 个 agent 的 `models.json`。
+- `api-worker`、`market` 的既有专用模型策略未改；其他无覆盖 agent 继承新默认链。Gateway 热加载，无重启、无中断，probe OK。
+- `models list` 运行态标签已确认 default/fallback#1/fallback#2 正确；端到端自动 failover 因两个 ZenMux key 当前均返回 402，由 `openai/gpt-5.6-sol` 成功接管。
+- 回滚备份：`/root/.openclaw/backups/fable5-default-sync-20260719-164051`。
+
+## 2026-07-19 · Claude Sonnet 4.6 全量迁移至 Sonnet 5
+
+- 经 Bruce 明确要求，将所有活动配置中的 `claude-sonnet-4.6` 替换为 `claude-sonnet-5`；历史日志与备份不改。
+- 已覆盖 OpenClaw 主配置、顶层模型目录、12 个 agent 模型目录，以及 ZenMux key1/key2、OpenRouter 模型项；`market` 专用链更新为 key1/Sonnet 5 → GPT-5.5 → key2/Sonnet 5。
+- 活动配置 Sonnet 4.6 引用=0；ZenMux key1/key2 与 OpenRouter 实时目录均确认 Sonnet 5 存在，`models list` 三路均 available。
+- Gateway 热加载，无重启、无中断，connectivity probe OK；默认 Fable 5 模型链未改变。
+- 回滚备份：`/root/.openclaw/backups/sonnet46-to-sonnet5-20260719-165631`。

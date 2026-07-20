@@ -141,3 +141,10 @@
 - **永久修复：** 整套升级到 OpenClaw/官方插件 `2026.7.1-beta.6`（Codex 0.144.1），fallback 改为 `openai/gpt-5.6-sol` 并加入 allowlist；不再维护 5.6 monkey patch。
 - **验证：** 强制请求实际 provider=openai/model=gpt-5.6-sol/harness=codex；另一次真实 key1 402 后由 5.6 Sol 接管成功。
 - **升级纪律：** OpenClaw/Codex 新模型支持必须核对主程序、插件、内核三层版本；不能把 `modelApplied` 或回显文本当成功证据，必须检查实际 winner model 与 fallback trace。
+
+### [2026-07-19] 稳定版补丁号与官方插件版本号不一致（变更）
+
+- **现象：** 主程序 stable 为 `2026.7.1-2`，`gateway status --deep` 建议把 Feishu/Perplexity 更新到同号 `2026.7.1-2`，但 npm 上不存在这两个版本。
+- **根因层级：** 发布/治理层——主程序补丁号与插件 dist-tag 独立，CLI 漂移检查错误地要求完全同号。
+- **处理：** 主程序使用 `2026.7.1-2`；Feishu/Perplexity 按各自 npm `latest` 安装 `2026.7.1`；Codex 保持其 `latest=2026.7.1-1`。重启后实际兼容性正常且漂移提示消失。
+- **预防：** 升级官方插件前同时核对各包 `npm view <pkg> dist-tags versions --json`，不要盲跑 CLI 建议的不存在版本。

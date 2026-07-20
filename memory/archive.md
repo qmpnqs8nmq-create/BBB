@@ -4,6 +4,8 @@
 
 ## 2026-07
 
+- 07-05: 日常自检正常；`openclaw doctor --fix` 归一 cron store，并为周日巡检/coach audit 补 `lightContext` 与超时配置（已同步入 MEMORY Recent State）
+
 - 07-02: 日常自检正常；weixin errcode -14 与 cron e463b042/wecom admin WSClient 投递失败均为持续已知项，已报 Bruce
 
 - 07-01: 日常自检正常；weixin errcode -14 为持续已知项；chief symlink-integrity-check 单次超时后已自动重试，无需介入
