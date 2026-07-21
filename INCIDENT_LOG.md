@@ -148,3 +148,33 @@
 - **根因层级：** 发布/治理层——主程序补丁号与插件 dist-tag 独立，CLI 漂移检查错误地要求完全同号。
 - **处理：** 主程序使用 `2026.7.1-2`；Feishu/Perplexity 按各自 npm `latest` 安装 `2026.7.1`；Codex 保持其 `latest=2026.7.1-1`。重启后实际兼容性正常且漂移提示消失。
 - **预防：** 升级官方插件前同时核对各包 `npm view <pkg> dist-tags versions --json`，不要盲跑 CLI 建议的不存在版本。
+
+### [2026-07-20] benben memory_search 索引身份指纹失配
+- 现象：本本从 2026-07-18 23:09 起多轮 `memory_search` 全部报 `index provider settings changed`；2026-07-20 13:38 一轮连续失败 6 次。
+- 触发条件：7/13 OpenClaw 升级后当前 Gemini embedding 凭据/配置指纹与 benben 旧索引 providerKey 不一致；benben 未像 main/chief 一样完成逐 agent 强制重建。
+- 根因层级：状态层 + 治理层（embedding 索引按 agent 隔离，但升级/凭据变化后的重建未覆盖所有 agent，也无统一健康门禁）。
+- 临时止血：本本绕过 memory_search 直接读 workspace 文件完成任务；不能视为检索恢复。
+- 永久修复 / 待验证：已备份 benben SQLite 并执行 `openclaw memory index --agent benben --force`；identity=valid，301 files/5089 chunks，真实查询返回 5 条结果（最高分 0.781）。后续 embedding/provider/凭据指纹变化时必须批量审计全部 agent，而不是只测 main。
+
+### [2026-07-20] memory_search MMR 在 maxResults=20 时超过工具硬超时
+- 现象：benben 索引重建后，maxResults=20 仍报 `memory_search timed out after 15s`；实际调用约 37–47s 后才返回，且被包装成 embedding/provider error。
+- 触发条件：hybrid `candidateMultiplier=4` + MMR enabled + maxResults=20；向量和关键词候选并集进入完整 MMR 重排。
+- 根因层级：产品缺口 + 性能层。MMR 实现对全部候选迭代选取、逐项与所有已选结果计算相似度，近似三次方增长并同步阻塞事件循环；工具又硬编码 15s deadline 和 60s cooldown，导致迟报与连锁失败。
+- 临时止血：把调用 maxResults 控制在 5（6.6s）；10 已达 13.5s，余量不足。
+- 永久修复：Bruce 确认后，在 `agents.list[id=benben].memorySearch.query.hybrid.mmr.enabled=false` 做 agent 级覆盖；全局默认仍为 MMR enabled，其他 agent 不受影响。未修改 provider、超时或索引，未重启 Gateway。
+- 验证：3 次 CLI `maxResults=20` 分别 6.383s、6.370s、6.076s，均返回20条并受外层15s截止保护；Gateway 下 benben 真实工具调用 success=true，工具阶段约1.841s、返回20条，无 `disabled:true`、超时或冷却。备份：`/root/.openclaw/backups/benben-mmr-disable-20260720-1443/`。
+
+### [2026-07-20] Codex 原生子代理误获动态工具目录但无 app-server handler
+- 现象：benben 主线程单条 `memory_search` 成功，随后两个 Codex 原生子代理调用同一工具均收到 `OpenClaw did not register a handler for this app-server tool call.`；父线程四组结果又被显示为空。
+- 触发条件：父 Codex 线程通过 `spawn_agent` 创建原生子线程，子线程继承 `memory_search` 动态工具声明并实际调用；另有父线程编排代码把动态工具返回的 JSON 字符串当对象读取。
+- 根因层级：产品缺口 + 编排层。Codex `2026.7.1-1` 运行态 handler 只接受当前父线程精确 `threadId + turnId`，对子线程请求返回 `undefined`，最终落入 app-server 默认错误；父线程四次检索在 Gateway trajectory 中实际均 `success=true`，但 `r.results` 读取字符串得到 `undefined`，被错误压成 `[]`。
+- 临时止血：需要 memory/web 等 OpenClaw 动态工具的检索留在父线程执行；可把检索结果或本地文件路径交给原生子代理。编排单元对动态工具返回先 `JSON.parse`，并对非对象/`success=false` fail closed，禁止把错误字符串伪装为空结果。
+- 永久修复 / 待验证：上游 Codex bridge 应为原生子线程注册动态工具 handler，或从子线程工具目录剔除不可处理的 OpenClaw 动态工具。当前 benben 索引及单线程检索健康，无需重建索引、改 memory 配置或重启 Gateway。
+
+### [2026-07-20] benben 全面检索被误判为并发/handler 不稳定
+- 现象：单次 `memory_search` 成功，6 组 `Promise.all` 检索 40–50 秒没有整组输出；子代理同时报 handler/JSON 解析错误。
+- 触发条件：父线程未加载写在 `AGENTS.md` 的父检索规则，先 spawn 子代理，再批量调用 6 次 `corpus=all`；动态工具队列实际串行，外层只在全部完成后输出。
+- 根因层级：上下文注入缺口 + 编排层 + 产品性能缺口。父 rollout 没有 AGENTS 内容、子 rollout 才有；`corpus=all` 每次额外触发共享 Wiki 搜索。Wiki digest 2946 页、0 claims，长自然语言 query 无完整子串候选时回退读取全部约2960个 Markdown，单次额外约11.8秒。
+- 证据：父线程三次请求均实际成功（约13.4/13.7/12.8秒），其余三次在 exec 被终止前未发起；CLI wiki-only 同类查询实测18.11秒、CPU17.72秒。不是索引、embedding、MMR 或随机 handler 抖动。
+- 临时止血：批量事实检索使用 `corpus=memory` 且顺序执行/逐次落结果；`corpus=all` 仅单次按需。动态工具不得在 Codex 原生子代理内调用。
+- 永久修复 / 待验证：经 Bruce 确认后，把父线程规则移入其确定加载的 `TOOLS.md`，AGENTS 保留作子线程第二道防线；上游优化 Wiki digest 候选与缓存，并修复/过滤原生子线程动态工具。

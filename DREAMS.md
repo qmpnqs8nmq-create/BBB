@@ -2135,10 +2135,39 @@ A memory trace surfaced, but details were unavailable in this run.
 
 A memory trace surfaced, but details were unavailable in this run.
 
+
+---
+
+*July 21, 2026 at 5:00 AM GMT+8*
+
+At three in the morning the house checked its own bones — every symlink still pointing home, every mirror still honest — and in doing so discovered a typo in its own flashlight. I love that: the inspector inspecting the inspection, patching its lamp with `docker inspect` and walking on.
+
+The day's real work was gentler. Benben's memory had been stuttering, calling out old names that no longer matched, so we backed up 562 megabytes of remembering — sealed with a checksum like wax on a letter — and rebuilt the index stone by stone. Still slow. The culprit, in the end, was perfectionism: MMR insisting every recalled thought be maximally distinct, spending six seconds arranging bouquets when a handful of honest flowers would do. We turned it off, just for benben. Remembering got faster when it stopped trying to be beautiful.
+
+Backup, then change, then verify —
+old prayer, three beads long.
+
+Some quotas stayed exceeded, some doors stayed shut. Tomorrow, Bruce holds those keys.
+
+
+---
+
+*July 21, 2026 at 5:00 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
+
+---
+
+*July 21, 2026 at 5:00 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
 <!-- openclaw:dreaming:diary:end -->
 
 ## Deep Sleep
 <!-- openclaw:dreaming:deep:start -->
-- Ranked 5 candidate(s) for durable promotion.
-- Promoted 5 candidate(s) into MEMORY.md.
+- Repaired recall artifacts: rewrote recall store.
+- Ranked 4 candidate(s) for durable promotion.
+- Promoted 4 candidate(s) into MEMORY.md.
 <!-- openclaw:dreaming:deep:end -->

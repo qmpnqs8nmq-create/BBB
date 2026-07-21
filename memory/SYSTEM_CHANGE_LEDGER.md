@@ -80,3 +80,30 @@
 - 活动配置 Sonnet 4.6 引用=0；ZenMux key1/key2 与 OpenRouter 实时目录均确认 Sonnet 5 存在，`models list` 三路均 available。
 - Gateway 热加载，无重启、无中断，connectivity probe OK；默认 Fable 5 模型链未改变。
 - 回滚备份：`/root/.openclaw/backups/sonnet46-to-sonnet5-20260719-165631`。
+
+## 2026-07-20 · benben Memory Search 独立索引重建
+
+- 经 Bruce 确认，仅对 benben 执行 `openclaw memory index --agent benben --force`，修复 `index provider settings changed`；未改全局配置、未重启 Gateway。
+- 变更前完整备份 benben SQLite/WAL/SHM 至 `/root/.openclaw/backups/benben-memory-reindex-20260720-1405/`（562MB，已生成 SHA256）。
+- 验证：index identity=valid，301 files/5089 chunks，Gemini embedding probe 与 sqlite-vec 正常；Jamie 实际查询返回 5 条结果，最高分 0.781。
+- 回滚：停止对 benben 索引写入后，用上述备份恢复 `/root/.openclaw/agents/benben/agent/openclaw-agent.sqlite{,-wal,-shm}`；当前无需回滚。
+
+## 2026-07-20 · benben 单独关闭 Memory Search MMR
+
+- 经 Bruce 确认，仅为 benben 增加 agent 级覆盖：`memorySearch.query.hybrid.mmr.enabled=false`；全局默认仍启用 MMR，其他 agent、Gemini provider、candidateMultiplier 与15秒工具截止均未修改。
+- 原因：benben 在 `maxResults=20`、candidateMultiplier=4 时，完整 MMR 同步重排耗时约46.6秒，超过工具15秒硬截止；统一错误包装误报 embedding/provider。
+- 验证：三次 `maxResults=20` CLI 搜索为6.383/6.370/6.076秒，均返回20条；Gateway 下 benben 实际工具调用 success=true，工具阶段约1.841秒并返回20条。Gateway 未重启、probe OK。
+- 回滚备份：`/root/.openclaw/backups/benben-mmr-disable-20260720-1443/openclaw.json`；恢复该文件或删除 benben 的 `memorySearch` 覆盖即可。
+
+## 2026-07-20 · GPT-5.6 Sol 显示名恢复
+
+- 按 Bruce 要求，仅将 `models.providers.openai.models[gpt-5.6-sol].name` 从 `GPT-5.6 Sol (OAuth 250k cap)` 改为 `GPT-5.6 Sol`。
+- `contextWindow=250000`、`contextTokens=250000`、`maxTokens=128000` 及模型链、认证均未修改；配置校验通过。
+- Gateway 未重启，PID 变更前后均为 1719，connectivity probe OK；回滚备份：`/root/.openclaw/backups/gpt56-sol-display-name-20260720-1525/openclaw.json`。
+
+## 2026-07-20 · benben Memory Search 编排规则修正
+
+- 将父线程动态检索规则写入父线程确定加载的 `workspace-benben/TOOLS.md`；原 `AGENTS.md` 保留为 Codex 原生子线程防线。
+- 规则要求：父线程先完成检索/解析/证据包再 spawn；批量事实检索默认 `corpus=memory`；`corpus=all` 仅按需单次；禁止动态工具 `Promise.all`；逐次解析、保存并 fail closed；子线程不调用 OpenClaw 动态工具。
+- 隔离新 benben 会话验证 TOOLS/AGENTS 均完整注入，本本准确复述关键限制。未改 Gateway、索引、embedding 或模型配置，无需重启。
+- 回滚备份：`/root/.openclaw/backups/benben-memory-orchestration-20260720-1612/`。

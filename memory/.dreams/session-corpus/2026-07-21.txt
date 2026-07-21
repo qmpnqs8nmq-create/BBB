@@ -1,0 +1,1 @@
+[main/sessions/main/e3a915ef-f36d-44b0-8985-777631a270e1.jsonl#L16] Assistant: HEARTBEAT_OK All checks passed (symlinks ✓, CTX sync ✓, git remotes ✓, egress=none ✓, sandbox image current ✓). No notification needed. Noted a script bug in the job's C3 command (docker ps doesn't support {{.ImageID}}) — worked around via docker inspect, logged to
