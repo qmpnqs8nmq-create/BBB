@@ -70,13 +70,10 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
 
-## Promoted From Short-Term Memory (2026-07-21)
+## Recent Fixes（2026-07-20，可滚动）
+- memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:22:33 -->
-- 两个 workspace 已完成日快照并推送尝试；外部模型额度和插件配置未擅自更改。 ## 14:00 本本 memory_search 重复报错诊断 - 本本自 7/18 23:09 起反复报 `index provider settings changed`；7/20 13:38 同一轮连续 6 次失败，界面显示的 Tool error 与 trajectory 原始结果一致。 - 深度探针确认 Gemini `gemini-embedding-001` 可用、3072 维向量扩展/FTS 均正常；唯一失败项为 benben 索引 identity mismatched，非 Gateway、模型或 provider 故障。 - benben SQLite 中旧 providerKey `bd508113…` 仍有 5612 处；当前运行时凭据/配置指纹已变化。该类问题在 7/15 chief 已发生并通过逐 agent `--force` 重建修复。 - 触发链：7/13 OpenClaw beta.6 升级后 provider/凭据解析指纹变化；main/chief 已重建或修复，benben 未重建，直到 7/18 再调用才暴露。 - 当前只完成诊断；未改全局配置、未重启 Gateway、未执行 benben 全量重建。修复应仅针对 benben：先备份 SQLite，再 `openclaw memory index --agent benben... [score=0.859 recalls=6 avg=0.782 source=memory/2026-07-20.md:22-33]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:30:41 -->
-- 当前只完成诊断；未改全局配置、未重启 Gateway、未执行 benben 全量重建。修复应仅针对 benben：先备份 SQLite，再 `openclaw memory index --agent benben --force`，完成后做真实检索验证。 ## 14:08 本本 memory_search 索引重建完成 - Bruce 确认后，先备份 benben SQLite 至 `/root/.openclaw/backups/benben-memory-reindex-20260720-1405/`（562MB，SHA256 已生成），再执行 `openclaw memory index --agent benben --force`。 - 命令正常完成：`Memory index updated (benben)`；索引 identity 从 mismatched 变为 valid，文件 276→301，chunks 4621→5089，Gemini/向量深度探针正常。 - 真实检索 `Jamie Peddie GPA SAT 1550 基本情况` 返回 5 条结果，最高分 0.781，命中 MEMORY.md 与本本 session；原 `index provider settings changed` 已消失。 - `dirty=true` 仍存在，但 scan=301/301、issues=[] 且实时检索成功，判断为活动 session... [score=0.818 recalls=5 avg=0.797 source=memory/2026-07-20.md:30-41]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-16.md:2:4 -->
-- 08:01 每日自检: Gateway 运行正常，connectivity probe=ok；21 个 cron 无 consecutiveErrors/lastStatus=error。; 两个 workspace 已自动提交并推送：main `f5dd09a`，chief `fbe4178`。; 最近 50 行日志无 error，但持续出现配置告警：openclaw-weixin 重复插件 ID、whatsapp/wecom 配置指向未安装插件；未自动改配置，避免影响现有消息通道。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-16.md:2-4]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-16.md:7:8 -->
-- 08:03 自检重试: 08:00 首次运行因错误命令 `openclaw logs 50` 超时，任务状态短暂为 error/consecutiveErrors=1；本次改用日志文件 `tail -n 50` 后完成，Gateway 与其余 cron 正常。; main workspace 已生成快照 `efcb6fd`；配置告警未自动修复，避免误伤现有消息通道。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-16.md:7-8]
+## Promoted From Short-Term Memory (2026-07-22)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-17.md:2:5 -->
+- 08:00 每日自检: Gateway 正常运行，connectivity probe=ok；21 个 cron 未发现 consecutiveErrors>0 或 lastStatus=error。; 最近日志出现 ZenMux Opus 额度 402，已自动切换至 openai/gpt-5.6-sol，本次任务继续执行，无需重启。; 配置仍提示 openclaw-weixin 重复 ID，以及 whatsapp/wecom allow 项对应插件未安装；未擅自改配置。; workspace 与 workspace-chief 已分别提交每日快照（2873840、684d767），push 均按 30 秒上限执行。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-17.md:2-5]

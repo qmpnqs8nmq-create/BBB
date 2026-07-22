@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-07
+- 07-07: 日常自检正常；复发项 weixin -14 / 孤儿 cron e463b042 wecom admin 投递失败（均已报 Bruce）
 
 - 07-06: 日常自检发现周日巡检连续超时；已运行 `openclaw doctor --fix`、将巡检设为 timeout 900s/thinking minimal，并禁用两个陈旧 NVDA reminder cron；同时安装 bubblewrap 0.9.0
 
