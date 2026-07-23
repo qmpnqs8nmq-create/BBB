@@ -71,3 +71,10 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10902] Assistant: Cutoff is 07-06 but nothing flagged — earlier there were 07-01/07-02/07-05/07-06 files. Verify:
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10904] Assistant: The 07-01…07-06 files were already archived by another session (main/daily-self-check) during the gap. Everything is current: - No daily logs ≥14 days old (oldest is 07-07, 13 days). - MEMORY.md 71 lines, under cap, no promotion block. - No wecom DM blocks in la
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10907] Assistant: Large poll backlog — 5 days since last full run. Several daily logs are likely past 14 days now.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10909] Assistant: No aged files flagged — another session may have archived them. Verify:
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10911] Assistant: All clear — the 07-01…07-06 logs were already archived by another session (archive.md now has a `## 2026-07` section). State: - Oldest daily log is 07-07 (13 days) — nothing to archive yet. - MEMORY.md 71 lines, under cap, no promotion block. - Archive sections:
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10914] Assistant: Checked comprehensively 17 minutes ago; nothing new. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10917] Assistant: Full check ran 47 min ago, all clear; nothing new to do. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10920] Assistant: Checked fully an hour ago; nothing new expected this late. Quiet. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10923] Assistant: Checked fully 2h ago; nothing new expected this late. Quiet hours approaching — no action needed. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L10926] Assistant: Checked fully 2h ago; quiet hours, nothing new. HEARTBEAT_OK

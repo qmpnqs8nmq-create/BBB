@@ -68,12 +68,8 @@
 - 补丁：定位 dist 中 `RAW_402_MARKER_RE`，把 `[:=]\s*402\b` / `[:=]\s*` 这类入口补成可容忍引号的 `[:=]\s*["']?402\b` / `[:=]\s*["']?`。只改 1 处。2026-06-12 备份 `/root/.openclaw/backups/errors-DcOiGp7S.js.orig-*`；2026-06-24 升级 6.10 后重打到 `dist/errors-BmvajW3H.js`，备份 `backups/errors-BmvajW3H.js.orig-20260624-214119`。
 - ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 grep `RAW_402_MARKER_RE` 重打同一补丁**。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
-- 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。
+- 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。生产验证：2026-07-17 自检中撞 402 已自动切备用模型，补丁生效。
 
 ## Recent Fixes（2026-07-20，可滚动）
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 
-## Promoted From Short-Term Memory (2026-07-22)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-17.md:2:5 -->
-- 08:00 每日自检: Gateway 正常运行，connectivity probe=ok；21 个 cron 未发现 consecutiveErrors>0 或 lastStatus=error。; 最近日志出现 ZenMux Opus 额度 402，已自动切换至 openai/gpt-5.6-sol，本次任务继续执行，无需重启。; 配置仍提示 openclaw-weixin 重复 ID，以及 whatsapp/wecom allow 项对应插件未安装；未擅自改配置。; workspace 与 workspace-chief 已分别提交每日快照（2873840、684d767），push 均按 30 秒上限执行。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-17.md:2-5]
