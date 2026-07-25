@@ -1,1 +1,17 @@
 [main/sessions/main/4f7b74fd-80fd-4c6f-b21d-90e09946fe1b.jsonl#L10] Assistant: All checks passed — no notification needed: - Part A: no broken symlinks in any of the 5 CEO agent workspaces - Part B: CTX-CONTROL-RULES.md in sync across benben/kefu/mangba/mangba-guest - Part C1: no rogue git remotes - Part C2: benben & kefu sandbox network = no
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L68] Assistant: 2026-07-24 日报已生成。今日 chief 与 main 日志均缺失，因此没有可核实的当日业务决策或系统变更。现有快照显示：chief 的 ADR-012 回滚同步已收口，当前无行动项；main 最近完成了除 benben 外的 agent embedding 只读审计，kefu 索引问题暂不修复。遗留事项为 benben 通过 `/new` 完成端到端验收，并确认是否需要补齐今日活动日志。
+[main/sessions/main/8fd607c2-5f97-4a80-bf3c-2bf872a0d420.jsonl#L18] Assistant: 2026-07-24 日报已生成。今日 chief 与 main 日志均缺失，因此没有可核实的当日业务决策或系统变更。现有快照显示：chief 的 ADR-012 回滚同步已收口，当前无行动项；main 最近完成了除 benben 外的 agent embedding 只读审计，kefu 索引问题暂不修复。遗留事项为 benben 通过 `/new` 完成端到端验收，并确认是否需要补齐今日活动日志。
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11284] Assistant: All clear: MEMORY.md 75 lines, no aged daily logs (07-09/07-10 already handled), no wecom DM blocks in last 24h. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11320] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11336] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11352] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11360] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11368] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11376] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11384] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11392] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11400] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11408] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11416] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/ffa78f9f-b0f4-46d0-9afd-c064bce6f922.jsonl#L14] Assistant: Daily self-check complete: gateway running and healthy (probe ok), no errors in today's logs, cron job status ok (no failures), workspace and chief snapshots committed and pushed. Nothing notable — no user notification needed.
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11424] Assistant: [assistant turn failed before producing content]

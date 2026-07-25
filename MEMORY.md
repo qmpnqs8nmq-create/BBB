@@ -73,3 +73,26 @@
 ## Recent Fixes（2026-07-20，可滚动）
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 
+
+## Promoted From Short-Term Memory (2026-07-25)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:2:4 -->
+- 08:00 每日自检: Gateway 运行正常，连通性探测通过；21 个 cron job 均无连续错误或 error 状态。; 最近 50 行日志无 ERROR，但存在配置警告：openclaw-weixin 插件 ID 重复，whatsapp/wecom 配置引用未安装插件；未自动修改，避免影响现有消息通道。; workspace 与 workspace-chief 已分别创建并推送每日快照：361c812、d940c9a。 [score=0.813 recalls=0 avg=0.620 source=memory/2026-07-19.md:2-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:7:9 -->
+- OpenClaw 稳定版检查: 本机 `2026.7.1-beta.6`，当前识别为 beta 渠道；只读检查，未升级或重启。; npm `latest`/稳定版为 `2026.7.1-2`（2026-07-18 发布）；GitHub 最新正式 release 标签为 `v2026.7.1`。; npm beta 最新为 `2026.7.2-beta.3`；`openclaw update status` 在当前 beta 渠道提示该版本可用。 [score=0.813 recalls=0 avg=0.620 source=memory/2026-07-19.md:7-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:12:15 -->
+- 16:19 OpenClaw 升级至稳定版: 按 Bruce 要求从 `2026.7.1-beta.6` 升至 npm stable `2026.7.1-2`，channel 已变为 stable；Gateway PID `316700`，probe/event loop 正常。; Feishu、Perplexity 插件从 beta.6 同步至实际 npm stable `2026.7.1`；Codex 已是其 latest `2026.7.1-1`。CLI 建议的插件 `2026.7.1-2` 不存在，按 dist-tag 纠正。; systemd ExecStartPre 自动重打 402/failover 补丁；grep 确认正则仍识别带引号的 402。飞书、微信、企业微信均 OK，插件漂移消失。; 安全审计仍为既有 `0 critical / 4 warn / 1 info`，无新增 warning；未改模型、路由或安全配置。 [score=0.813 recalls=0 avg=0.620 source=memory/2026-07-19.md:12-15]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:18:21 -->
+- 16:40 模型继承与 ZenMux 目录核验: `agents.defaults.model` 为 key1/opus-4.8 → openai/gpt-5.6-sol → key2/fable-5；无 per-agent model 的 10 个 agent 继承该链。; `api-worker`、`market` 有独立 model/fallback 配置，会覆盖 defaults；已有 session `/model`、cron/job model 也可继续覆盖默认值，因此不是所有运行都统一。; 12 个 agent 的本地模型目录均已同步 Fable 5；ZenMux key1/key2 的实时 `/models` 均 HTTP 200，均返回 `anthropic/claude-fable-5`、`claude-sonnet-5`、`claude-opus-4.8`。; 当前只在 key2 本地挂载 Fable 5，key1 仍挂 Opus 4.8；本轮只读核验，未修改全局配置。 [score=0.813 recalls=0 avg=0.620 source=memory/2026-07-19.md:18-21]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:24:27 -->
+- 16:46 默认模型链切换至 Fable 5: 追溯确认旧链并非运行时漂移：5/29 默认曾统一为 Opus 4.8；7/13 Bruce 要求仅替换 key2 为 Fable 5，最小变更保留了 key1/Opus 4.8。; 按 Bruce 新决策改为 key1/Fable 5 → OpenAI GPT-5.6 Sol → key2/Fable 5；两个 ZenMux key 均保留 Fable 5、Sonnet 5、Opus 4.8、Sonnet 4.6，OpenAI 保留 5.6 Sol/5.5。; 已备份并同步 openclaw.json、顶层 models.json、12 个 agent models.json；配置校验及运行态标签通过，Gateway 热加载，无需重启。; 两个 ZenMux key 的 `/models` 均 HTTP 200，但实际 Fable 5 `/messages` 均返回 402；端到端验证确认自动切至 `openai/gpt-5.6-sol` 并成功完成。 [score=0.813 recalls=0 avg=0.620 source=memory/2026-07-19.md:24-27]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:28:28 -->
+- 16:46 默认模型链切换至 Fable 5: 备份：`/root/.openclaw/backups/fable5-default-sync-20260719-164051`。memory_search 同期因 embedding 配置指纹变化暂停，待单独重建索引。 [score=0.813 recalls=0 avg=0.620 source=memory/2026-07-19.md:28-28]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:3:5 -->
+- 10:18 每日自检: Gateway 运行正常、连通探测通过；最近 50 行日志出现 ZenMux `quote_exceeded`，且 3 模型 fallback 全部失败。; 4 个 cron 处于 error（连续错误 1–2 次）：每日使用总结、Memory Dreaming Promotion、刘董事长每日价值投资课程、每日价值投资学习提醒；外部额度问题无法安全本地修复。; 已完成 workspace / workspace-chief 日快照提交（`0d9873c` / `1774ff0`）并尝试推送。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-20.md:3-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:9:10 -->
+- 10:20 Heartbeat 维护: 已将 `2026-07-06.md` 蒸馏至 `archive.md` 并移入回收站；MEMORY.md 由 91 行压缩至 71 行，保留了每 agent 重建 memory index 与 ZenMux `/api/v1` 两条长期经验。; 实时复核仍有模型链故障：两个 ZenMux key 均 quota 402，OpenAI GPT-5.6 Sol 报 account not active，导致 CEO Weekly Briefing 连续失败 2 次；需 Bruce 处理 provider 额度/账户。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-20.md:9-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:14:16 -->
+- 10:23 每日自检复核: Gateway 健康；最近 50 行无 ERROR，仅插件配置警告（微信插件重复、WhatsApp/WeCom 配置引用未安装插件）。; 3 个 cron 标记失败：本自检上轮为偶发 `tail` 超时（现已验证文件正常）；CEO Weekly Briefing 因 ZenMux 额度与 OpenAI 账户不可用连续失败 2 次；价值投资提醒昨晚被 Gateway 重启中断。; 未自动改 provider/插件配置或补发外部消息，避免破坏现有通道及造成重复投递。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-20.md:14-16]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:20:22 -->
+- 10:26 每日自检: Gateway 运行及连通探测正常；最近 50 行无运行错误，仍有微信插件重复及 WhatsApp/WeCom 缺失警告。; 失败 cron 共 3 个：daily-self-check（历史超时，当前检查已成功）、CEO Weekly Briefing（连续 3 次，模型额度/账户故障）、每日价值投资学习提醒（Gateway 重启中断）。; 两个 workspace 已完成日快照并推送尝试；外部模型额度和插件配置未擅自更改。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-20.md:20-22]
