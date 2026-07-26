@@ -1,0 +1,28 @@
+[main/sessions/main/192d8f4b-4e0b-44a4-9822-8ef2046feecd.jsonl#L20] Assistant: 日检发现并处理： - Gateway 正常，连通性通过；最近 50 行无 ERROR/FATAL。 - `CEO Weekly Briefing` 连续失败 4 次，原因为模型配额/计费；替代模型配置已生效，待周一验证。 - 本日检此前连续超时 2 次；本次执行正常，完成后应自动清零。 - 两个 workspace 已提交并推送每日快照，工作区干净。 - 已记录到今日日志。
+[main/sessions/main/1dfc3435-9555-4e20-8124-8dc5fd5143bd.jsonl#L56] Assistant: 每日自检发现并修复 1 项异常： - Gateway 正常运行，连通性通过；最近 50 行日志无错误。 - `CEO Weekly Briefing` 连续失败 4 次，原因是 ZenMux 配额耗尽、OpenAI 账户不可用。已切换到实测成功的 Google 模型，保留一个跨 provider fallback。 - `daily-self-check-8am` 的错误状态来自上一轮超时，本轮执行正常。 - 两个 workspace 已提交并推送：`98e2a6f`、`e8536a7`。 - 自检记录已更新。
+[main/sessions/main/2256ac75-9d69-46b5-a4c4-9295999f45a2.jsonl#L62] Assistant: 自检发现并处理两项异常： - `CEO Weekly Briefing` 已连续失败 4 次，原因为模型额度/计费问题。已切换至可用的 `openai-codex/gpt-5.5`，下周一运行验证。 - 已修复 Codex 项目信任告警。 Gateway 健康；两个 workspace 均已提交并推送每日快照，仓库状态干净。
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L69] Assistant: 7 月 25 日日报已生成。 今日无 chief 新日志，暂无可确认的新增业务决策；现有快照仅显示 ADR-012 回滚同步已闭环，且无 chief 侧待办。main 侧确认 Gateway 正常，修复 Codex 项目信任告警；针对 CEO Weekly Briefing 连续失败，已定位为 ZenMux 配额、OpenAI 计费及 CDN 拦截问题，并将主模型切换为实测可用的 Gemini。下周一需验证任务实际运行效果。另建议及时更新 chief/main HANDOFF，避免状态快照过期。
+[main/sessions/main/c5e21d1e-6834-401e-94f2-acf389292fa5.jsonl#L18] Assistant: 7 月 25 日日报已生成。 今日无 chief 新日志，暂无可确认的新增业务决策；现有快照仅显示 ADR-012 回滚同步已闭环，且无 chief 侧待办。main 侧确认 Gateway 正常，修复 Codex 项目信任告警；针对 CEO Weekly Briefing 连续失败，已定位为 ZenMux 配额、OpenAI 计费及 CDN 拦截问题，并将主模型切换为实测可用的 Gemini。下周一需验证任务实际运行效果。另建议及时更新 chief/main HANDOFF，避免状态快照过期。
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11440] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11454] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11462] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11470] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11478] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11486] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11494] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11502] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11510] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11518] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11526] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11534] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11542] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11550] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11558] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11566] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11574] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11582] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11590] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11595] Assistant: All clear: MEMORY.md 74 lines, no aged daily logs, no wecom DM blocks (36h window to cover the gap since yesterday). HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11599] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11617] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11629] Assistant: [assistant turn failed before producing content]
