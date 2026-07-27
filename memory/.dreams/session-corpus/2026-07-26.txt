@@ -1,0 +1,21 @@
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L70] Assistant: 7月26日日报已生成。业务侧未发现 chief 今日日志，无法确认新增经营决策；现有快照仅显示 ADR-012 已收口、当时无待办。系统侧 Gateway 运行正常；修正价值投资雷达任务文案及稳定性规则，调整 CEO Weekly Briefing 模型组合，完成双工作区快照推送与记忆归档压缩。待办：明早 08:30 验证周报任务运行，并继续观察子代理状态不匹配告警。日报已写入 `memory/daily-summary/2026-07-26.md`。
+[main/sessions/main/ab577327-cb0a-4062-a562-581d1932b814.jsonl#L34] Assistant: 自检发现并已处理历史异常： - Gateway 运行正常，连通性检测通过。 - 最近 50 行日志无 ERROR；3 条 WARN 暂未影响运行。 - CEO Weekly Briefing 连续失败 4 次：已更新模型配置，待 7 月 27 日实跑验证。 - 价值投资雷达失败 1 次：已修正文案与稳定性规则，待下次运行清零。 - 本次自检此前的历史失败状态将在本轮成功后清零。 - 两个 workspace 均已完成快照提交与推送。
+[main/sessions/main/bef1a61d-550e-4407-b63e-27b8b6c3ed55.jsonl#L16] Assistant: 7月26日日报已生成。业务侧未发现 chief 今日日志，无法确认新增经营决策；现有快照仅显示 ADR-012 已收口、当时无待办。系统侧 Gateway 运行正常；修正价值投资雷达任务文案及稳定性规则，调整 CEO Weekly Briefing 模型组合，完成双工作区快照推送与记忆归档压缩。待办：明早 08:30 验证周报任务运行，并继续观察子代理状态不匹配告警。日报已写入 `memory/daily-summary/2026-07-26.md`。
+[main/sessions/main/c05b4b0d-8c3c-4192-bc88-e17c153033b4.jsonl#L38] Assistant: 日检发现并处理： - Gateway 正常，探针通过；最近 50 行无 ERROR，仅有 subagent parent mismatch 警告，暂不影响运行。 - 已修复「价值投资机会雷达」cron 文案中的异常换行，并补充失败容错规则。 - 「CEO Weekly Briefing」仍保留 4 次历史模型额度失败；已配置新主模型与 fallback，等待 7 月 27 日实跑验证。 - 两个 workspace 已完成快照提交和推送；检查记录已写入今日 memory。
+[main/sessions/main/c798e4ae-c877-4ed8-8f9e-d8df759acc3d.jsonl#L60] Assistant: 自检发现并处理两项异常： - Gateway 正常；最近 50 行日志无 ERROR，有 3 条子代理监控状态不匹配 WARN，暂未影响运行。 - CEO Weekly Briefing 连续失败 4 次：已将额度不足的 fallback 替换为 `openai/gpt-5.6-sol`。 - 投资雷达周报被误判为 Bash/heredoc 失败且未投递：已加入稳定性规则，避免 heredoc，并确保单工具失败后继续交付。 - 两个 workspace 均已提交并推送；自检记录已写入今日 memory。
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11701] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11719] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11727] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11735] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11743] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11751] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11759] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11767] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11775] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11783] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11791] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11805] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11813] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11821] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11829] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11837] Assistant: [assistant turn failed before producing content]

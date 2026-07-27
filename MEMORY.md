@@ -46,6 +46,7 @@
 
 - 跟踪 openclaw/openclaw#55897
 - chief 业务层改善：启动流程、探索熔断、Exploration Discipline 具体化
+- 修正 `symlink-integrity-check` cron `e463b042` 的 C3 镜像检查：`docker ps --format '{{.ImageID}}'` 不受支持，应逐容器改用 `docker inspect --format '{{.Image}}'`
 
 ## Misc
 - openclaw-weixin 新用户接入：`liteapp.weixin.qq.com/q/` 链接有效期只有几分钟，必须朋友人在旁边能立刻点时才生成。协作模式：Bruce 说"发链接" → 我起 `openclaw channels login --channel openclaw-weixin` + autobind 监听脚本 + 通知 cron，一条龙自动绑 agent（如 mangba-guest），不要提前生成囤着。
@@ -72,22 +73,9 @@
 
 ## Recent Fixes（2026-07-20，可滚动）
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
+- benben `memory_search timed out after 15s` 与索引 identity 无关：根因是 hybrid 候选并集进入同步 MMR 后随 `maxResults` 急剧放大并阻塞事件循环；仅对 benben 关闭 MMR（备份后热加载）即将 `maxResults=20` 从约 47s 降至约 6s，真实 Gateway 工具调用成功，其他 agent 默认配置不变。
 
-## Promoted From Short-Term Memory (2026-07-26)
+## Promoted From Short-Term Memory (2026-07-27)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:26:29 -->
-- 14:00 本本 memory_search 重复报错诊断: 本本自 7/18 23:09 起反复报 `index provider settings changed`；7/20 13:38 同一轮连续 6 次失败，界面显示的 Tool error 与 trajectory 原始结果一致。; 深度探针确认 Gemini `gemini-embedding-001` 可用、3072 维向量扩展/FTS 均正常；唯一失败项为 benben 索引 identity mismatched，非 Gateway、模型或 provider 故障。; benben SQLite 中旧 providerKey `bd508113…` 仍有 5612 处；当前运行时凭据/配置指纹已变化。该类问题在 7/15 chief 已发生并通过逐 agent `--force` 重建修复。; 触发链：7/13 OpenClaw beta.6 升级后 provider/凭据解析指纹变化；main/chief 已重建或修复，benben 未重建，直到 7/18 再调用才暴露。 [score=0.818 recalls=0 avg=0.620 source=memory/2026-07-20.md:26-29]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:30:30 -->
-- 14:00 本本 memory_search 重复报错诊断: 当前只完成诊断；未改全局配置、未重启 Gateway、未执行 benben 全量重建。修复应仅针对 benben：先备份 SQLite，再 `openclaw memory index --agent benben --force`，完成后做真实检索验证。 [score=0.818 recalls=0 avg=0.620 source=memory/2026-07-20.md:30-30]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:34:37 -->
-- 14:08 本本 memory_search 索引重建完成: Bruce 确认后，先备份 benben SQLite 至 `/root/.openclaw/backups/benben-memory-reindex-20260720-1405/`（562MB，SHA256 已生成），再执行 `openclaw memory index --agent benben --force`。; 命令正常完成：`Memory index updated (benben)`；索引 identity 从 mismatched 变为 valid，文件 276→301，chunks 4621→5089，Gemini/向量深度探针正常。; 真实检索 `Jamie Peddie GPA SAT 1550 基本情况` 返回 5 条结果，最高分 0.781，命中 MEMORY.md 与本本 session；原 `index provider settings changed` 已消失。; `dirty=true` 仍存在，但 scan=301/301、issues=[] 且实时检索成功，判断为活动 session 持续写入产生的瞬时脏标记，不是索引身份故障；未重启 Gateway，运行态健康。 [score=0.818 recalls=0 avg=0.620 source=memory/2026-07-20.md:34-37]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-21.md:3:6 -->
-- 03:00 每日完整性巡检（cron symlink-integrity-check）: Part A symlink / Part B CTX 同步 / C1 git remote / C2 egress(none) / C3 镜像：全部正常，无需通知; 发现 cron job 自身脚本 bug：C3 用 `docker ps --format '{{.Names}} {{.ImageID}}'`，docker ps 不支持 ImageID 字段，模板报错; 本次已用 `docker inspect --format '{{.Image}}'` 绕过，容器 openclaw-sbx-agent-benben 镜像 8ef0febba319 = 最新; 受限 cron run 无法 patch job（"Cron tool is restricted"）→ 待办：main session 更新 job e463b042 的 C3 命令为 docker inspect 版本 [score=0.818 recalls=0 avg=0.620 source=memory/2026-07-21.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-19.md:31:33 -->
-- 16:51 Claude Sonnet 5 目录确认: Bruce 指出未要求新增 Sonnet 5；main 承认该项属于超出原始精确范围的主动扩展。; ZenMux key1/key2 实时 `/models` 均确认 `anthropic/claude-sonnet-5`，标称 context 1,000,000、publish_time 2026-06-30；当前因两 key 均 402，未完成真实推理验证。; Bruce 确认实际存在即可保留；仅作为可选模型，不进入 default/fallback 链。 [score=0.813 recalls=0 avg=0.620 source=memory/2026-07-19.md:31-33]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-21.md:9:10 -->
-- 08:00 每日自检: gateway 正常（pid 90035，probe ok，v2026.7.1-2）；日志无 error；cron 全部 lastStatus=ok; 双工作区已自动快照提交（workspace c25d227 / chief dbb22ad），push 完成 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-21.md:9-10]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-22.md:3:4 -->
-- 03:00 每日完整性巡检（cron symlink-integrity-check）: Part A 断链 symlink：无；Part B CTX-CONTROL-RULES.md 四个沙箱副本一致；C1 无流浪 git remote；C2 benben/kefu docker.network=none；C3 唯一运行容器 openclaw-sbx-agent-benben 镜像 8ef0febba319 = 最新。全部正常，未通知。; ⚠️ 待办：cron job e463b042 的 C3 脚本用 `docker ps --format '{{.Names}} {{.ImageID}}'`，本机 Docker 不支持 .ImageID 会报错。应改为 `docker inspect --format '{{.Image}}'` 逐容器取镜像 ID。本次 run 权限受限无法改 job（cron tool restricted to current job），请主会话下次用 cron update 修补。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-22.md:3-4]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-20.md:41:44 -->
-- 14:35 本本 memory_search 重建后仍超时的完整根因: Bruce 反馈重建后本本仍报 `memory_search timed out after 15s`；trajectory 确认 14:17:11 发起、14:17:48 返回，属于新故障，不能与旧 providerKey mismatch 混同。; 分层单测：Gemini 同模型/同长查询直连 0.45–0.67s；OpenClaw SSRF HTTP 包装约 0.5s；sqlite-vec KNN(k=640)约 0.95s；凭据哈希 root/benben 均为 `47eefbaaae16b760`。排除 provider、网络、密钥与数据库损坏。; 阶梯基准：maxResults=5 → 6.6s，10 → 13.5s，20 → 46.6s。当前 memory tool 源码硬截止 15s、失败后同 agent 冷却 60s；错误包装会误报 embedding/provider。; 根因：hybrid `candidateMultiplier=4`，向量/关键词候选并集再进入同步 MMR；MMR 实现完整重排全部候选，三重循环式增长并阻塞 Node 事件循环。maxResults=20 时候选最多约160条，15s timer 也被同步计算延迟，故37–47s后才返回“15s超时”。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-20.md:41-44]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-22.md:7:9 -->
+- 08:00 每日自检（cron）: Gateway 正常（pid 90035，probe ok，v2026.7.1-2）；日志无 error；cron 无失败。; 两个 workspace 已自动提交快照（workspace 14 files / chief 6 files），push 已尝试。; 无异常，未打扰 Bruce。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-22.md:7-9]
