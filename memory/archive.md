@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-07
+- 07-13: 周度安全巡检 0 critical/4 warn/1 info（未自动改安全边界）；升级至 OpenClaw beta.6 + Codex 0.144.1 后打通 `openai/gpt-5.6-sol` OAuth 与 402 自动接管，key2 改 Fable 5，Sol 本地上下文设为保守 250k（后续 stable 状态已入 MEMORY）
 - 07-12: OpenClaw 6.11 尚不识别 GPT-5.6 Sol；独立 Codex 0.144.1 与模型目录补丁尝试均未打通并已完整回滚，结论是升级到官方支持版本（或等待 stable），不继续叠 monkey patch
 - 07-11: 日常自检正常；dreaming 多 lane 会话锁竞争与 weixin -14 均为已知、自愈型日志噪音
 - 07-09: 日常自检正常；复发项 weixin -14 / 孤儿 cron e463b042（均已知）

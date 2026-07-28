@@ -1,0 +1,23 @@
+[main/sessions/main/423cc160-4bbd-4238-b84b-a79e4fa25830.jsonl#L16] Assistant: ⚠️ 本周巡检发现风险 - 当前状态：Gateway、企业微信/微信通道正常；OpenClaw 已是最新稳定版；0 严重、5 警告。 - 关键风险：12 个 Agent 启用 full exec；微信插件命中 2 处潜在数据外传模式；缺少 strictInlineEval；Codex 插件版本未锁定；飞书文档创建可授予请求者权限。 - 建议动作：优先收紧 exec 为 allowlist 并启用 strictInlineEval；审查微信插件告警代码；锁定插件版本；清理重复/失效插件配置；按需关闭飞书文档创建能力。
+[main/sessions/main/4d4f05e0-c9a4-4396-a36c-5d601cd9bfff.jsonl#L40] Assistant: 发现两项历史 Cron 异常： - CEO Weekly Briefing：连续失败 4 次，旧模型配额/账单异常；已切换主模型，今日 08:30 自动验证。 - 价值投资机会雷达：失败 1 次（heredoc）；失败后已加入稳定性规则，等待下次运行验证。 Gateway 健康、近期无 ERROR；有 4 条非阻断 subagent 状态 WARN。两个 workspace 已提交并推送，工作区干净。自检记录已写入今日日志。
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L71] Assistant: 2026-07-27 日报已生成并保存。 今日 chief 无当日日志，因此没有可核实的业务决策或项目进展；其状态快照仍停留在 5 月 4 日，未作为今日成果统计。main 完成记忆维护：归档并删除 7 月 13 日日记，将 `MEMORY.md` 从 81 行精简至 76 行，夜间未发现企业微信 DM 拦截记录。遗留事项是 benben 仍待通过 `/new` 完成端到端验收；kefu 索引异常按既定决策暂不处理。
+[main/sessions/main/9d06ae3b-1d52-4c10-8728-9254a708284f.jsonl#L16] Assistant: 2026-07-27 日报已生成并保存。 今日 chief 无当日日志，因此没有可核实的业务决策或项目进展；其状态快照仍停留在 5 月 4 日，未作为今日成果统计。main 完成记忆维护：归档并删除 7 月 13 日日记，将 `MEMORY.md` 从 81 行精简至 76 行，夜间未发现企业微信 DM 拦截记录。遗留事项是 benben 仍待通过 `/new` 完成端到端验收；kefu 索引异常按既定决策暂不处理。
+[main/sessions/main/a20cf992-4be5-431c-a3b3-086f7d3c93a6.jsonl#L10] Assistant: 无待处理更新
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11893] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11909] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11917] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11925] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11933] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11941] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11949] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11957] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11965] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11973] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11981] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11989] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L11997] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12005] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12013] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12021] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12029] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12037] Assistant: [assistant turn failed before producing content]

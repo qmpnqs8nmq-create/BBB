@@ -74,8 +74,3 @@
 ## Recent Fixes（2026-07-20，可滚动）
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 - benben `memory_search timed out after 15s` 与索引 identity 无关：根因是 hybrid 候选并集进入同步 MMR 后随 `maxResults` 急剧放大并阻塞事件循环；仅对 benben 关闭 MMR（备份后热加载）即将 `maxResults=20` 从约 47s 降至约 6s，真实 Gateway 工具调用成功，其他 agent 默认配置不变。
-
-## Promoted From Short-Term Memory (2026-07-27)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-07-22.md:7:9 -->
-- 08:00 每日自检（cron）: Gateway 正常（pid 90035，probe ok，v2026.7.1-2）；日志无 error；cron 无失败。; 两个 workspace 已自动提交快照（workspace 14 files / chief 6 files），push 已尝试。; 无异常，未打扰 Bruce。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-22.md:7-9]
