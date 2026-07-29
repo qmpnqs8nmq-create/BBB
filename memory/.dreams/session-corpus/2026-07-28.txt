@@ -1,0 +1,15 @@
+[main/sessions/main/18bbc1f7-1815-46b4-ada0-81b8c3b1e0e2.jsonl#L36] Assistant: 08:00 自检发现异常： - Gateway 正常，连接探针通过；近 50 行无 ERROR，但有 4 次子代理 transcript parent 不匹配警告，暂未影响服务。 - 「价值投资机会雷达周报」7 月 25 日失败且未投递；失败后已加入稳定性规则，将于 8 月 1 日验证。 - 配置仍警告微信插件 ID 重复，以及 whatsapp/wecom 插件缺失；未自动修改高风险配置。 - main、chief 工作区均已提交并推送每日快照，自检记录亦已归档。
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L72] Assistant: 7月28日日报已生成。 今日未发现 chief 当日日志，因此无可核实的新增业务决策或项目进展；chief 存量状态显示 ADR-012 回滚同步已闭环，目前无待执行动作。main 完成记忆维护：归档并删除满14天的日志，检查 MEMORY.md 无需精简，未发现企业微信 DM 拦截记录。遗留事项为 benben 的 `/new` 端到端验收；kefu 索引 identity 不一致按既定决定暂不修复。 日报已保存至 `memory/daily-summary/2026-07-28.md`。
+[main/sessions/main/a0e55ae2-0c8e-4387-ace4-dfa8865c721b.jsonl#L14] Assistant: 7月28日日报已生成。 今日未发现 chief 当日日志，因此无可核实的新增业务决策或项目进展；chief 存量状态显示 ADR-012 回滚同步已闭环，目前无待执行动作。main 完成记忆维护：归档并删除满14天的日志，检查 MEMORY.md 无需精简，未发现企业微信 DM 拦截记录。遗留事项为 benben 的 `/new` 端到端验收；kefu 索引 identity 不一致按既定决定暂不修复。 日报已保存至 `memory/daily-summary/2026-07-28.md`。
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12141] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12153] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12161] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12169] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12177] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12185] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12193] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12201] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12209] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12217] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12225] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L12233] Assistant: [assistant turn failed before producing content]
