@@ -1,0 +1,2 @@
+[main/sessions/main/ea165a9e-9b3e-47d3-844f-ecab544230c9.jsonl#L8] Assistant: C3 的模板字段在本机 Docker 版本不支持，用 `docker inspect` 换个方式再查一次：
+[main/sessions/main/ea165a9e-9b3e-47d3-844f-ecab544230c9.jsonl#L10] Assistant: All checks passed — no notification needed per rules. - Part A: 5 个 CEO workspace 均无断裂 symlink - Part B: 4 个目标 workspace 的 CTX-CONTROL-RULES.md 与主副本一致，无需同步 - C1: 无流浪 git remote - C2: benben/kefu 沙箱 network 均为 none - C3: 运行中的 openclaw-sbx-agent-benben 使用最新镜像 8ef0feb

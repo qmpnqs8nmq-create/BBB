@@ -74,3 +74,8 @@
 ## Recent Fixes（2026-07-20，可滚动）
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 - benben `memory_search timed out after 15s` 与索引 identity 无关：根因是 hybrid 候选并集进入同步 MMR 后随 `maxResults` 急剧放大并阻塞事件循环；仅对 benben 关闭 MMR（备份后热加载）即将 `maxResults=20` 从约 47s 降至约 6s，真实 Gateway 工具调用成功，其他 agent 默认配置不变。
+
+## Promoted From Short-Term Memory (2026-07-30)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-25.md:4:7 -->
+- 08:00 每日自检: Gateway 运行正常，连通性探测通过。; 最近 50 行日志出现 Codex 项目信任告警；已在 main agent 的 `codex-home/config.toml` 中加入 `/root` trusted 配置。; Cron 异常：`CEO Weekly Briefing` 连续失败 4 次；原因为 ZenMux 配额耗尽且 OpenAI API 账户计费未激活。`openai-codex/gpt-5.5` 实测也被 CDN 拦截，现已将任务主模型切到实测成功的 `google/gemini-3.1-flash-image-preview`，仅保留一个 ZenMux 跨 provider fallback；下周一运行验证。; workspace 与 workspace-chief 已生成并推送每日快照提交。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-25.md:4-7]
