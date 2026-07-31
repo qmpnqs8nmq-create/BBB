@@ -1,0 +1,2 @@
+[main/sessions/main/4df36c62-85e4-40fb-9eed-12d5ac3ee1fd.jsonl#L8] Assistant: C3 的 `docker ps` 模板不支持 `.ImageID`，换用 `docker inspect` 补检：
+[main/sessions/main/4df36c62-85e4-40fb-9eed-12d5ac3ee1fd.jsonl#L10] Assistant: HEARTBEAT_OK 全部检查通过，无需通知： - Part A：5 个 CEO agent workspace 无断裂 symlink - Part B：4 个 workspace 的 CTX-CONTROL-RULES.md 与主副本一致 - Part C1：无流浪 git remote - Part C2：benben/kefu 沙箱 network 均为 none - Part C3：运行中的 openclaw-sbx-agent-benben 使用最新镜像 8ef0febba319（脚本里 `docker ps

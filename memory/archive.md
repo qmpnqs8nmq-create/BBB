@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-07
+- 07-16: 日常自检正常；教训：`openclaw logs 50` 非法命令会超时，自检读日志改用日志文件 tail
 - 07-15: chief `memory_search` 因索引 providerKey 与运行时 Gemini 凭据 hash 漂移而拒绝检索，逐 agent `memory index --force` 后恢复；同时确认 ZenMux key2 正确 Base URL 为 `/api/v1`，旧 agent 本地 `/v1` 属待统一漂移（经验已入 MEMORY）
 - 07-14: 按 Bruce 要求重启 OpenClaw Gateway（非宿主机），systemd/probe 正常；`memory_search` 用 Gemini `gemini-embedding-001` 实际检索成功，确认运行态可用
 - 07-13: 周度安全巡检 0 critical/4 warn/1 info（未自动改安全边界）；升级至 OpenClaw beta.6 + Codex 0.144.1 后打通 `openai/gpt-5.6-sol` OAuth 与 402 自动接管，key2 改 Fable 5，Sol 本地上下文设为保守 250k（后续 stable 状态已入 MEMORY）

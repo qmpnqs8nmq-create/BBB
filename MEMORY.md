@@ -75,7 +75,14 @@
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 - benben `memory_search timed out after 15s` 与索引 identity 无关：根因是 hybrid 候选并集进入同步 MMR 后随 `maxResults` 急剧放大并阻塞事件循环；仅对 benben 关闭 MMR（备份后热加载）即将 `maxResults=20` 从约 47s 降至约 6s，真实 Gateway 工具调用成功，其他 agent 默认配置不变。
 
-## Promoted From Short-Term Memory (2026-07-30)
+## Recent Fixes（2026-07，可滚动）
+- `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-25.md:4:7 -->
-- 08:00 每日自检: Gateway 运行正常，连通性探测通过。; 最近 50 行日志出现 Codex 项目信任告警；已在 main agent 的 `codex-home/config.toml` 中加入 `/root` trusted 配置。; Cron 异常：`CEO Weekly Briefing` 连续失败 4 次；原因为 ZenMux 配额耗尽且 OpenAI API 账户计费未激活。`openai-codex/gpt-5.5` 实测也被 CDN 拦截，现已将任务主模型切到实测成功的 `google/gemini-3.1-flash-image-preview`，仅保留一个 ZenMux 跨 provider fallback；下周一运行验证。; workspace 与 workspace-chief 已生成并推送每日快照提交。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-25.md:4-7]
+## Promoted From Short-Term Memory (2026-07-31)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-07-26.md:3:6 -->
+- 08:04 每日自检: Gateway 正常：systemd active，connectivity probe ok。; 最近 50 行日志无 ERROR；有 3 条 `Codex native subagent transcript parent did not match monitor state` WARN，暂未影响运行。; Cron 异常：CEO Weekly Briefing 连续 4 次模型/额度失败；已将 fallback 改为 `openai/gpt-5.6-sol`，下次 07-27 08:30 验证。; 价值投资机会雷达周报被误判为 heredoc/Bash 失败，但会话实际已产出完整周报；已补稳定性规则，避免 heredoc，并要求单工具失败时继续交付。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-26.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-26.md:7:9 -->
+- 08:04 每日自检: 08:08 复核发现雷达 cron 文案在上次编辑时有 4 处单词被异常换行，已修复并验证完整；历史错误状态待下次成功运行自动清零。; CEO Weekly Briefing 仍显示连续 4 次历史失败；主模型已改为 Gemini 3.1 Flash、fallback 为 GPT-5.6，等待 07-27 08:30 实跑验证，未手动重跑以免重复推送。; workspace / workspace-chief 已完成日快照提交并推送。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-26.md:7-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-26.md:13:14 -->
+- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-07-12.md` 提炼为 1 行写入 `memory/archive.md` 后删除；当月段现 14 行。; `MEMORY.md` 93→76 行：去除自动晋升重复块，保留 benben MMR 性能修复与完整性巡检 C3 脚本待办；无企业微信 DM 拦截记录。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-26.md:13-14]
