@@ -78,11 +78,7 @@
 ## Recent Fixes（2026-07，可滚动）
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 
-## Promoted From Short-Term Memory (2026-07-31)
+## Promoted From Short-Term Memory (2026-08-01)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-26.md:3:6 -->
-- 08:04 每日自检: Gateway 正常：systemd active，connectivity probe ok。; 最近 50 行日志无 ERROR；有 3 条 `Codex native subagent transcript parent did not match monitor state` WARN，暂未影响运行。; Cron 异常：CEO Weekly Briefing 连续 4 次模型/额度失败；已将 fallback 改为 `openai/gpt-5.6-sol`，下次 07-27 08:30 验证。; 价值投资机会雷达周报被误判为 heredoc/Bash 失败，但会话实际已产出完整周报；已补稳定性规则，避免 heredoc，并要求单工具失败时继续交付。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-26.md:3-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-26.md:7:9 -->
-- 08:04 每日自检: 08:08 复核发现雷达 cron 文案在上次编辑时有 4 处单词被异常换行，已修复并验证完整；历史错误状态待下次成功运行自动清零。; CEO Weekly Briefing 仍显示连续 4 次历史失败；主模型已改为 Gemini 3.1 Flash、fallback 为 GPT-5.6，等待 07-27 08:30 实跑验证，未手动重跑以免重复推送。; workspace / workspace-chief 已完成日快照提交并推送。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-26.md:7-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-07-26.md:13:14 -->
-- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-07-12.md` 提炼为 1 行写入 `memory/archive.md` 后删除；当月段现 14 行。; `MEMORY.md` 93→76 行：去除自动晋升重复块，保留 benben MMR 性能修复与完整性巡检 C3 脚本待办；无企业微信 DM 拦截记录。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-26.md:13-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-27.md:4:5 -->
+- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-07-13.md` 提炼为 1 行写入 `memory/archive.md` 后删除。; `MEMORY.md` 81→76 行：移除纯日常自检的自动晋升块；夜间未发现企业微信 DM 拦截记录。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-27.md:4-5]
