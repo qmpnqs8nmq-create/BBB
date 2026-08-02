@@ -78,7 +78,7 @@
 ## Recent Fixes（2026-07，可滚动）
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 
-## Promoted From Short-Term Memory (2026-08-01)
+## Promoted From Short-Term Memory (2026-08-02)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-27.md:4:5 -->
-- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-07-13.md` 提炼为 1 行写入 `memory/archive.md` 后删除。; `MEMORY.md` 81→76 行：移除纯日常自检的自动晋升块；夜间未发现企业微信 DM 拦截记录。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-27.md:4-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-28.md:4:5 -->
+- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-07-14.md` 提炼为 1 行写入 `memory/archive.md` 后删除；`MEMORY.md` 76 行，无需精简。; 归档无超过 6 个月的月份；夜间未发现企业微信 DM 拦截记录。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-28.md:4-5]

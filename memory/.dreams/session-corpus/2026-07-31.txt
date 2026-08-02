@@ -13,3 +13,23 @@
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25355] Assistant: Full maintenance already done this morning (08:18); nothing new expected mid-day. Quick wecom-block check only:
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25357] Assistant: No wecom DM blocks; morning maintenance already complete. HEARTBEAT_OK
 [main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25360] Assistant: Morning maintenance already completed today (archived 07-17, MEMORY.md at 79, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25366] Assistant: Nothing new since this morning's maintenance run. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25369] Assistant: Nothing new since this morning's full run. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25372] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25384] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25396] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25404] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25412] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25420] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25428] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25436] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25444] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25452] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25460] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25468] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25476] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25484] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25492] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25500] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25508] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L25516] Assistant: [assistant turn failed before producing content]
