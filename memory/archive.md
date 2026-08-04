@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-07
+- 07-20: benben `memory_search` 先修索引 identity mismatch（备份后逐 agent `memory index --force`），再定位 15s 超时为同步 MMR 候选重排阻塞，仅对 benben 关闭 MMR 后 maxResults=20 降至约 6s；另固化父线程检索/证据包分流规则，并完成除 benben 外全 agent Gemini embedding 审计（kefu 索引漂移按 Bruce 决定不修）
 - 07-19: OpenClaw 从 beta.6 升至 stable 2026.7.1-2，插件同步稳定版且 402 启动补丁有效；默认链改为 key1/Fable 5 → GPT-5.6 Sol → key2/Fable 5，并将活动 Sonnet 4.6 全量迁移至 Sonnet 5，双 ZenMux 实测 402 后自动由 GPT-5.6 Sol 接管
 - 07-17: 日常自检正常；ZenMux Opus 402 自动切换 openai/gpt-5.6-sol（402 补丁生产验证）
 - 07-16: 日常自检正常；教训：`openclaw logs 50` 非法命令会超时，自检读日志改用日志文件 tail

@@ -78,7 +78,9 @@
 ## Recent Fixes（2026-07，可滚动）
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 
-## Promoted From Short-Term Memory (2026-08-03)
+## Promoted From Short-Term Memory (2026-08-04)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-29.md:4:5 -->
-- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-07-15.md` 提炼为 1 行写入 `memory/archive.md` 后删除；`MEMORY.md` 76 行，无需精简。; 归档无超过 6 个月的月份；夜间未发现企业微信 DM 拦截记录。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-29.md:4-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-30.md:4:7 -->
+- 08:03 每日自检: Gateway 运行正常，connectivity probe=ok；最近 50 行无 ERROR，见 2 条 Codex 子代理 transcript parent mismatch WARN。; Cron 异常 2 个：机会雷达周报连续错误 1 次（旧 heredoc 失败，任务提示已含稳定性修复）；Validation Tracker 连续错误 4 次（ZenMux 额度耗尽 + OpenAI API 账单异常）。; 已将 Validation Tracker 定向切换为 `openai-codex/gpt-5.5`，待下次运行验证。; workspace 已提交 `875baa5`；workspace-chief 已提交 `e389d79`，均执行了限时 push。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-30.md:4-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-07-30.md:10:11 -->
+- 08:05 自检重跑（上次投递失败）: 8:03 那次自检的报告投递失败（tail 命令报错），cron 触发重试。; 复核：Gateway 正常、日志仅 Codex transcript WARN（良性）、git 无新增变更。结论与 8:03 一致，已补投递报告给 Bruce。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-30.md:10-11]
