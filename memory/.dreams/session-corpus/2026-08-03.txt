@@ -6,3 +6,19 @@
 [main/sessions/main/56a38a25-c601-487f-8780-ed8397ca49bc.jsonl#L40] Assistant: ⚠️ 自检发现 1 项问题： - Gateway 正常，连接探测通过；最近 50 行日志无 ERROR，仅有非阻断 WARN。 - `daily-self-check-8am` 此前因错误参数 `--tail 50` 连续失败 2 次；正确命令为 `openclaw logs --limit 50 --plain`。 - 当前检查已用正确命令完成，但 cron 禁止自修改，无法固化修复，需从主会话更新任务。 - 两个 workspace 均已提交并同步，工作区干净；异常已记入今日日志。
 [main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L78] Assistant: # 8月3日日报摘要 今日未发现 chief 业务日志，无可核实的新增业务决策或项目进展；现有 chief 快照停留在 5 月 4 日。 系统侧完成每日自检：Gateway 与连接正常，日志无 ERROR；修复 `symlink-integrity-check`；将 Validation Tracker 切换至可用的 Gemini 模型后恢复；修正并固化 `daily-self-check-8am` 的日志命令。 待办：下次定时运行验证自检任务是否彻底恢复；建议及时更新 chief 日志与 HANDOFF，避免业务日报缺失。
 [main/sessions/main/a8c66854-c68e-4b98-9325-8e16da1378a1.jsonl#L18] Assistant: # 8月3日日报摘要 今日未发现 chief 业务日志，无可核实的新增业务决策或项目进展；现有 chief 快照停留在 5 月 4 日。 系统侧完成每日自检：Gateway 与连接正常，日志无 ERROR；修复 `symlink-integrity-check`；将 Validation Tracker 切换至可用的 Gemini 模型后恢复；修正并固化 `daily-self-check-8am` 的日志命令。 待办：下次定时运行验证自检任务是否彻底恢复；建议及时更新 chief 日志与 HANDOFF，避免业务日报缺失。
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26020] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26036] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26044] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26052] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26060] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26068] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26076] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26084] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26092] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26100] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26108] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26116] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26124] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26132] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26140] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L26148] Assistant: [assistant turn failed before producing content]
