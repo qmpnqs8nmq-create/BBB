@@ -78,7 +78,11 @@
 ## Recent Fixes（2026-07，可滚动）
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 
-## Promoted From Short-Term Memory (2026-08-05)
+## Promoted From Short-Term Memory (2026-08-06)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-07-31.md:3:4 -->
-- 08:00 每日自检: Gateway 正常（pid 90035，probe ok），日志无错误，cron 全部 lastStatus=ok; 双仓库已自动提交快照（workspace 13 files / chief 6 files），无异常 [score=0.803 recalls=0 avg=0.620 source=memory/2026-07-31.md:3-4]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-01.md:2:5 -->
+- 08:00 每日自检: Gateway 正常：systemd active，connectivity probe ok，版本 2026.7.1-2。; Cron 异常 2 项：价值投资机会雷达周报 v3.0（1 次，旧 Bash/heredoc 失败）；Validation Tracker（4 次，模型额度/认证失败）。; 安全修复：清除 Validation Tracker 的 `openai-codex/gpt-5.5` 固定模型覆盖，恢复 chief 默认模型链；待下次运行验证。; 近 50 行日志无 error；存在插件配置告警及 subagent transcript parent mismatch 警告，未自动改动高风险配置。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-01.md:2-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-01.md:6:6 -->
+- 08:00 每日自检: workspace / workspace-chief 已分别提交并推送每日快照：f07003e / 9f8eb3e。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-01.md:6-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-01.md:9:10 -->
+- 版本核对: `openclaw --version`：2026.7.1-2（0790d9f）。; `openclaw update status --json`：stable/latest 均为 2026.7.1-2，当前无可用更新。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-01.md:9-10]

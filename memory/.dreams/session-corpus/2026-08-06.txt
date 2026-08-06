@@ -1,0 +1,2 @@
+[main/sessions/main/88de97c9-01d4-4f01-96bb-d84134b77c3b.jsonl#L8] Assistant: C3 的模板字段在这台 Docker 上不可用，换用 `docker inspect` 重新校验镜像匹配性。
+[main/sessions/main/88de97c9-01d4-4f01-96bb-d84134b77c3b.jsonl#L10] Assistant: ANNOUNCE_SKIP All checks passed — Part A: no broken symlinks across 5 CEO workspaces; Part B: CTX rules already in sync (4 workspaces); C1: no rogue git remotes; C2: benben/kefu network=none; C3: running sandbox container on latest image 8ef0febba319. Nothing to fi
