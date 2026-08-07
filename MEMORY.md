@@ -71,18 +71,13 @@
 - 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
 - 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。生产验证：2026-07-17 自检中撞 402 已自动切备用模型，补丁生效。
 
-## Recent Fixes（2026-07-20，可滚动）
+## Recent Fixes（可滚动）
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 - benben `memory_search timed out after 15s` 与索引 identity 无关：根因是 hybrid 候选并集进入同步 MMR 后随 `maxResults` 急剧放大并阻塞事件循环；仅对 benben 关闭 MMR（备份后热加载）即将 `maxResults=20` 从约 47s 降至约 6s，真实 Gateway 工具调用成功，其他 agent 默认配置不变。
-
-## Recent Fixes（2026-07，可滚动）
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
+- `Validation Tracker` cron 连败修复已验证：清除 `openai-codex/gpt-5.5` 固定模型覆盖后 08-05 运行 ok。教训：cron 少用固定模型覆盖，优先用 agent 默认模型链获得 failover。
 
-## Promoted From Short-Term Memory (2026-08-06)
+## Promoted From Short-Term Memory (2026-08-07)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-01.md:2:5 -->
-- 08:00 每日自检: Gateway 正常：systemd active，connectivity probe ok，版本 2026.7.1-2。; Cron 异常 2 项：价值投资机会雷达周报 v3.0（1 次，旧 Bash/heredoc 失败）；Validation Tracker（4 次，模型额度/认证失败）。; 安全修复：清除 Validation Tracker 的 `openai-codex/gpt-5.5` 固定模型覆盖，恢复 chief 默认模型链；待下次运行验证。; 近 50 行日志无 error；存在插件配置告警及 subagent transcript parent mismatch 警告，未自动改动高风险配置。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-01.md:2-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-01.md:6:6 -->
-- 08:00 每日自检: workspace / workspace-chief 已分别提交并推送每日快照：f07003e / 9f8eb3e。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-01.md:6-6]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-01.md:9:10 -->
-- 版本核对: `openclaw --version`：2026.7.1-2（0790d9f）。; `openclaw update status --json`：stable/latest 均为 2026.7.1-2，当前无可用更新。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-01.md:9-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-02.md:3:6 -->
+- 08:02 每日自检: Gateway 正常：systemd active，连通性探针通过。; 最近 50 行日志无 error；有插件配置与 Codex 子线程父级不匹配警告。; Cron 异常：`Validation Tracker (Midweek Nudge)` 连续失败 4 次，源于 2026-07-29 三个模型路由额度/账单不可用；属外部认证/额度问题，未做高风险配置改动，待 08-05 下次运行验证。; 已自动快照并推送：workspace `51ff0f7`，workspace-chief `f110d8f`。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-02.md:3-6]
