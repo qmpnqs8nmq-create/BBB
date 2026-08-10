@@ -77,7 +77,7 @@
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 - `Validation Tracker` cron 连败修复已验证：清除 `openai-codex/gpt-5.5` 固定模型覆盖后 08-05 运行 ok。教训：cron 少用固定模型覆盖，优先用 agent 默认模型链获得 failover。
 
-## Promoted From Short-Term Memory (2026-08-09)
+## Promoted From Short-Term Memory (2026-08-10)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-04.md:3:6 -->
-- 08:00 每日自检: Gateway 正常（runtime active，connectivity probe ok）；最近 50 行无服务级 error。; 发现 daily-self-check-8am 前次连续 4 次报错，原因是 cron 列表的 jq 命令失败并最终超时；本次改用已验证的 60 秒内筛选命令，成功完成检查，其余 cron 无错误。; 日志仍有非阻断配置警告：微信插件 ID 重复，whatsapp/wecom 配置项指向未安装插件；未擅自安装或修改通道配置。; 已自动提交并尝试推送 workspace（670617c）及 workspace-chief（44dce7b）快照。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-04.md:3-6]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-05.md:3:6 -->
+- 08:00 每日自检: Gateway 运行正常，连接探测通过；近 50 行日志无运行错误。; 定时任务此前连续失败 5 次，直接原因是当天日记尚未创建时执行 `tail` 返回非零；今日已先创建日志，避免同类误报。; 日志仍提示插件配置告警：微信插件 ID 重复、WhatsApp 与 WeCom 配置项指向未安装插件；暂未自动改动渠道配置。; workspace 与 workspace-chief 已完成每日快照提交并尝试推送。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-05.md:3-6]
