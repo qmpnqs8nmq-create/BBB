@@ -77,9 +77,9 @@
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 - `Validation Tracker` cron 连败修复已验证：清除 `openai-codex/gpt-5.5` 固定模型覆盖后 08-05 运行 ok。教训：cron 少用固定模型覆盖，优先用 agent 默认模型链获得 failover。
 
-## Promoted From Short-Term Memory (2026-08-11)
+## Promoted From Short-Term Memory (2026-08-12)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-06.md:3:5 -->
-- 08:00 daily self-check: Gateway healthy (pid 90035, probe ok, v2026.7.1-2). Logs normal; known config warnings only (duplicate openclaw-weixin plugin, whatsapp/wecom plugin not installed — pre-existing).; Cron: daily-self-check-8am 昨日(08-05) lastRunStatus=error，原因是旧提示词 tail 不存在的 memory 文件；今日提示词已改为直接创建，today run 正常。; Git 快照已提交：workspace a09e07b、workspace-chief 0b12bdc（push 尽力而为）。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-06.md:3-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-06.md:8:9 -->
-- 14:48 heartbeat maintenance: 无 14 天以上 daily log；archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 白名单拦截。; `MEMORY.md` 82→79 行：合并 3 个重复的 Recent Fixes 标题，内容未丢失。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-06.md:8-9]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-07.md:3:5 -->
+- 08:00 每日自检: Gateway 运行正常、连通性正常；日志曾报 RSS 3.34 GiB 触发临界内存告警，随后回落至约 2.81 GiB，系统可用内存 24 GiB，未重启。; Cron 任务状态正常（consecutiveErrors=0，lastStatus=ok）。; 已自动提交并推送 workspace（2ac20fd）与 workspace-chief（696e4f5）快照。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-07.md:3-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-07.md:9:10 -->
+- 08:18 heartbeat maintenance: 无 14 天以上 daily log；archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 白名单拦截。; `MEMORY.md` 83→78 行：删除已被 Recent Fixes 覆盖的 Validation Tracker 自动晋升重复块。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-07.md:9-10]
