@@ -3,7 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-07
-- 07-27~28: heartbeat 完成 07-13/14 日志归档并清理 MEMORY 自检晋升噪音；未发现 WeCom DM 拦截（纯维护记录）
+- 07-27~29: heartbeat 完成 07-13~15 日志归档并清理 MEMORY 自检晋升噪音；未发现 WeCom DM 拦截（纯维护记录）
 - 07-25~26: 修复 Codex `/root` 项目信任告警、价值投资机会雷达 cron 文案异常换行及 heredoc/单工具失败规则；CEO Weekly Briefing 切至 Gemini 主模型 + GPT-5.6 fallback，07-27 已验证 ok
 - 07-22: 完整性巡检与 Gateway/cron 均正常；`symlink-integrity-check` C3 的不兼容 `docker ps .ImageID` 写法仍待主会话改为逐容器 `docker inspect .Image`（已在 MEMORY Active Commitments 跟踪）
 - 07-21: 每日完整性巡检各项正常；发现 `symlink-integrity-check` 的 C3 使用 `docker ps --format '{{.ImageID}}'` 不受支持，已用 `docker inspect --format '{{.Image}}'` 验证镜像正常，永久修正仍在 MEMORY Active Commitments 跟踪

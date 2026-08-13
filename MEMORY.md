@@ -77,9 +77,7 @@
 - `CEO Weekly Briefing` cron 连败 4 次后主模型切 `google/gemini-3.1-flash-image-preview`，07-27 运行 ok 已验证闭环。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）。
 - `Validation Tracker` cron 连败修复已验证：清除 `openai-codex/gpt-5.5` 固定模型覆盖后 08-05 运行 ok。教训：cron 少用固定模型覆盖，优先用 agent 默认模型链获得 failover。
 
-## Promoted From Short-Term Memory (2026-08-12)
+## Promoted From Short-Term Memory (2026-08-13)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-07.md:3:5 -->
-- 08:00 每日自检: Gateway 运行正常、连通性正常；日志曾报 RSS 3.34 GiB 触发临界内存告警，随后回落至约 2.81 GiB，系统可用内存 24 GiB，未重启。; Cron 任务状态正常（consecutiveErrors=0，lastStatus=ok）。; 已自动提交并推送 workspace（2ac20fd）与 workspace-chief（696e4f5）快照。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-07.md:3-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-07.md:9:10 -->
-- 08:18 heartbeat maintenance: 无 14 天以上 daily log；archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 白名单拦截。; `MEMORY.md` 83→78 行：删除已被 Recent Fixes 覆盖的 Validation Tracker 自动晋升重复块。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-07.md:9-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-08.md:3:5 -->
+- 08:18 heartbeat maintenance: 将满 14 天的 `2026-07-25.md` 提炼为 1 行写入 `memory/archive.md` 后删除；07 月段现 19 条摘要。; `MEMORY.md` 87→78 行：删除已被后续闭环记录覆盖的 2026-08-08 自动晋升重复块。; archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 拒绝/拦截。日志中的 `wecom_mcp` allowlist 两行是工具插件未启用告警，不是用户私聊被拒。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-08.md:3-5]
