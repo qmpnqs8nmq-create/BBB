@@ -1,6 +1,6 @@
 # mangba cron 投递失败 — 完整复盘 + 修复路径
 
-**最后更新**：2026-04-25 01:38 CST
+**最后更新**：2026-08-14 07:00 CST
 
 ## TL;DR（最终版本）
 
@@ -92,6 +92,14 @@ await apiPostFetch({...});  // 只检查 HTTP status
 3. [ ] 实现失败告警（方案 B 兜底）
 4. [ ] 起草 openclaw/openclaw issue（路径 1）
 5. [ ] 明晚 20:00 自然触发验证端到端
+
+## 2026-08-14 复核结论
+
+- 官方插件已升至2.4.6；sendMessage ret 校验已上游实现，本地 warm-up/ret=-2 retry 不能突破服务端窗口。
+- 腾讯官方 issue #185 collaborator 明确：仅接受用户主动消息后24小时内回复；功能请求 #202 仍 OPEN。
+- 冷会话穷尽实验均失败：正确 from_user_id + stale token；无 token；getConfig；getConfig→sendTyping on/off→sendMessage，最终皆 `ret=-2 prepare failed`。
+- 结论：路径2“客户端保活”不可行，除非腾讯后端开放静默续期/主动通知权限。iLink bot 私聊当前无客户端修复。
+- 可落地替代：认证服务号订阅通知，或第三方 Server酱 Turbo 微信服务号通道；消息仍到个人微信，但不是原 iLink bot 私聊。需 Bruce 选择后实施。
 
 ## 经验教训（给未来的自己）
 

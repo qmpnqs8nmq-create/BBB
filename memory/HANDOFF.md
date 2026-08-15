@@ -1,9 +1,11 @@
 # HANDOFF
-最后活跃: 2026-08-01 Asia/Shanghai
-当前话题: OpenClaw stable 版本核对完成
-上下文:
-- 当前安装：OpenClaw 2026.7.1-2（0790d9f）。
-- npm registry latest/stable：2026.7.1-2。
-- availability.available=false，无需升级；本轮未修改系统配置。
-待办: 无。
-今日笔记指针: memory/2026-08-01.md（版本核对）
+- 最后活跃：2026-08-14 11:00（webchat, Bruce）
+- 当前话题：服务器过期安装/备份清理已完成
+- 本阶段：删除旧 Codex、未使用 npm 依赖、Chrome 131、已停用插件/临时迁移/旧备份、Snap 下载缓存
+- 本阶段精确回收：3,519,983,616 bytes；根盘 68%→61%，可用19G
+- 当日累计：三次清理按记录共回收约18.5GB；根盘由98%降至61%
+- 安全门禁：逐项核对当前注册路径、文件类型、打开句柄及新版本存在性
+- 验证：Gateway runtime/probe正常；5个插件从保留的新版路径加载；main/chief FTS ready
+- 保留：当前插件、Chrome 148、两套当前 VS Code Server、当前 Snap/Docker、121MiB备份及全部 agent 数据
+- 恢复性：删除项不可原地恢复，但均为过期安装副本或可重下载缓存
+- 记录：memory/2026-08-14.md、memory/SYSTEM_CHANGE_LEDGER.md、INCIDENT_LOG.md

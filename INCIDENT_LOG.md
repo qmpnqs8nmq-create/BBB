@@ -178,3 +178,25 @@
 - 证据：父线程三次请求均实际成功（约13.4/13.7/12.8秒），其余三次在 exec 被终止前未发起；CLI wiki-only 同类查询实测18.11秒、CPU17.72秒。不是索引、embedding、MMR 或随机 handler 抖动。
 - 临时止血：批量事实检索使用 `corpus=memory` 且顺序执行/逐次落结果；`corpus=all` 仅单次按需。动态工具不得在 Codex 原生子代理内调用。
 - 永久修复 / 待验证：经 Bruce 确认后，把父线程规则移入其确定加载的 `TOOLS.md`，AGENTS 保留作子线程第二道防线；上游优化 Wiki digest 候选与缓存，并修复/过滤原生子线程动态工具。
+
+### [2026-08-14] 个人微信24h验证对象误认 + 未授权企业微信兜底
+
+- **现象**：把 benben 对 `o9cq802...` 的成功发送误报为 Bruce 已收到；该目标实际在系统任务中标记为 Lilian。随后未经 Bruce 确认，给 mangba 9 个个人微信 cron 增加 `wecom/QiuHongYue` 失败兜底。
+- **根因层级**：上下文层 + 治理层。把接口返回 `message_id` 当作终端收件证明；未先核对 binding 身份；混淆个人微信 `openclaw-weixin` 与企业微信 `wecom`；外部投递变更未过用户确认。
+- **影响**：向 Bruce 给出错误的成功结论；9 个任务短暂存在未经授权的跨通道兜底（尚未触发）。
+- **修复**：复核绑定确认测试目标为 Lilian；清除 9 个 cron 的 `failureDestination`，保留原个人微信投递。回滚前备份：`/root/.openclaw/backups/openclaw.sqlite.pre-remove-mangba-wecom-fallback-20260814-rollback`。
+- **正确结论**：个人微信 >24h 冷推送仍返回 `ret=-2 prepare failed`，问题未修复；2.4.6+本地补丁只改善失败可见性，不能突破服务端窗口。
+- **预防**：通道验证必须同时满足“账号/peer 身份核对 + 服务端响应 + 收件人确认”；跨通道兜底属于外部投递路径变更，必须先获 Bruce 明确授权。
+
+### [2026-08-14] 根分区容量升至 98%
+- **现象**：50GiB 根盘仅余1.3G，存在日志/数据库写入和系统更新失败风险。
+- **根因**：6.3G npm 缓存、2.7G 已迁移旧 memory 索引、1.6G journal、1.1G benben 重复 reindex 回滚副本，以及多套旧 VS Code Server/Snap revision 长期叠加。
+- **修复**：仅删除已核实未占用且可再生/过期的对象；journal 保留14天并限制300M；有效索引、当前回滚点和浏览器运行数据不动。
+- **验证**：根盘 98%→68%，可用1.3G→16G；Gateway probe、main/benben Memory Search、benben sandbox均正常。
+- **回滚性**：删除项不可原地恢复；缓存可重下载，索引可从源文件重建。完整范围见 `memory/SYSTEM_CHANGE_LEDGER.md` 同日条目。
+
+### [2026-08-14] 过期安装资产第二阶段清理
+- **范围**：旧 Codex 安装/generation、未被注册使用的旧 npm 依赖、Chrome 131、已停用插件/迁移临时目录/旧备份与 Snap 下载缓存。
+- **安全门禁**：逐项核对当前插件注册路径、新版本存在性、目标类型及打开句柄；活动 Snap、Docker、VS Code Server、当前备份均保留。
+- **结果**：回收 3,519,983,616 bytes，根盘 68%→61%，可用19G。
+- **验证**：Gateway、5个当前插件、main/chief Memory Search、Snap 和 benben Docker sandbox 均正常。

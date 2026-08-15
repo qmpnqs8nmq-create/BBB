@@ -107,3 +107,44 @@
 - 规则要求：父线程先完成检索/解析/证据包再 spawn；批量事实检索默认 `corpus=memory`；`corpus=all` 仅按需单次；禁止动态工具 `Promise.all`；逐次解析、保存并 fail closed；子线程不调用 OpenClaw 动态工具。
 - 隔离新 benben 会话验证 TOOLS/AGENTS 均完整注入，本本准确复述关键限制。未改 Gateway、索引、embedding 或模型配置，无需重启。
 - 回滚备份：`/root/.openclaw/backups/benben-memory-orchestration-20260720-1612/`。
+
+## 2026-08-14 · benben → main A2A 长期放行 + PACT 首批提醒
+
+- 经 Bruce 明确授权，在 `tools.agentToAgent.allow` 中定向加入 `benben`；既有 `main`、`agentToAgent.enabled=true`、`sessions.visibility=all` 保持不变，未扩大到其他 agent。
+- 配置校验通过并由 Gateway 热加载，无重启、无服务中断；新 benben turn 实测 `sessions_send(agentId="main")` accepted（runId `d5f93b21`）。
+- 创建 5 个 benben 一次性 cron：`30386fe1`（08-29）、`bbb0630c`（09-11）、`8c5d2f76`（09-12）、`91c13d13`（09-25）、`f5deef74`（09-26），均 `deleteAfterRun=true`、UTC 02:00（前一晚 22:00 EDT）。
+- 长期流程：benben 收到逐月新日期后去重、按 America/New_York 自动处理 EDT/EST，再 A2A 交 main 建 cron；提醒 Lilian/Jamie 后写入 benben 当日日志。
+- 回滚：从 `/root/.openclaw/backups/openclaw.json.pre-benben-a2a-20260814-0520` 恢复配置；如需撤销提醒，按上述 5 个 job ID 删除。
+
+## 2026-08-14 · 个人微信24h补丁与错误兜底回滚
+
+- `@tencent-weixin/openclaw-weixin` 从 2.4.3 升至 pinned 2.4.6，并移植 warm-up/ret=-2 重试补丁；Gateway 已重启加载。补丁备份：`/root/.openclaw/backups/weixin-2.4.6-channel.js.orig-20260814-0535`。
+- 实测 mangba 个人微信冷推送两次均 `ret=-2 prepare failed`，故24h问题未修复；benben 返回 message_id 的测试目标实际为 Lilian，不是 Bruce。
+- 曾未经确认给 mangba 9 个 cron 增加 `wecom/QiuHongYue` failureDestination；Bruce 指正后已全部设为 null 清除，原个人微信 delivery 保持不变，无 Gateway 重启。
+- 回滚前状态库备份：`/root/.openclaw/backups/openclaw.sqlite.pre-remove-mangba-wecom-fallback-20260814-rollback`。
+
+## 2026-08-14 · 根分区 98% 容量清理
+
+- Bruce 明确要求清理无用缓存和过期备份；清理前根分区 49G 已用46G（98%），仅余1.3G。
+- 永久删除确认未被占用的旧资产：`~/.openclaw/memory/*.sqlite.migrated` 2.7G、benben 2026-07-20 reindex 备份562M、benben 孤儿 reindex SQLite/WAL/SHM约613M；均已有健康的 agent 级当前索引。
+- 清除 npm/npx/apt/Docker 可再生缓存；删除3套旧 VS Code Server（保留两套8月12日版本）及5个 disabled Snap revisions。
+- journal rotate 后执行 `--vacuum-time=14d` 和 `--vacuum-size=300M`，从1.6G降至105.7M；未重启 Gateway，未修改 OpenClaw 配置、安全边界或在线索引。
+- 结果：根分区已用32G、可用16G、占用68%，总回收约14.7GB；Gateway probe ok，main/benben Memory Search FTS ready，benben Docker sandbox正常。
+- 删除项不可原地恢复；npm/VS Code/Snap 等可按需重新下载，memory 索引可从工作区源文件强制重建。今日微信回滚库与当前补丁/升级回滚点均保留。
+
+## 2026-08-14 · 删除 2026-03-29 云迁移压缩包
+
+- 定位 `/root/openclaw-config.tar.gz`：旧 macOS `/Users/bruce/.openclaw` 的云迁移快照，21,038 members；压缩253,645,043 bytes，文件内容613.56MiB，原tar约661MB。
+- 迁移已于2026-03-30闭环；当前系统从 `/root/.openclaw` 运行。删除前确认无进程打开、无配置或cron运行引用、gzip完整性正常。
+- 经 Bruce 明确确认，按 SHA256 `1f03b3508b258a1b87882ee586416947faf469589d649ea67f5c0f720bff7d53` 精确匹配后永久删除；无单独 `/root/openclaw-config.tar`。
+- 释放253,645,043 bytes；根盘约68%、可用16G。删除后 Gateway runtime/probe正常，chief当前索引路径不变且FTS ready。
+- 该历史迁移快照不可恢复；当前业务源文件、agent数据和活动索引均未修改。
+
+## 2026-08-14 · 旧系统/安装文件第二阶段清理
+
+- 经 Bruce 明确授权，删除已失败回滚的 `codex-0144`、旧 Codex beta.6 generation、未被当前注册表使用的旧 npm `node_modules`。
+- 删除 Puppeteer Chrome/Headless Shell 131（保留148）、已停用 Weixin 2.3.1、Claude 4.7 迁移临时目录及 2026-05-01 Weixin 旧备份；目标均先验证为非符号链接目录且无进程占用。
+- 清空 Snap 下载缓存，当前已安装 Snap 修订与实体保留；apt 无可 autoremove 包，Docker 活动 sandbox 保留。
+- 精确回收 3,519,983,616 bytes；根盘 68%→61%，当前可用19G。连同当日前两次清理，按删除记录累计回收约18.5GB。
+- 验证：Gateway probe ok；当前5个插件均从保留的新 generation 加载；main/chief FTS ready；Snap、Docker、inode 健康。
+- 删除项不可原地恢复，但均是过期安装副本或可重新下载的缓存；当前版本、当前备份及 agent 数据未动。
