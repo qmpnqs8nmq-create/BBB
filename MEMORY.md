@@ -79,7 +79,9 @@
 ## Pending（待 Bruce，2026-08-09 起）
 - 周日系统巡检 cron 连续因模型额度/账单失败（ZenMux 额度耗尽 + OpenAI 账户未激活；`openai-codex/gpt-5.5` 被白名单拒），属外部计费问题非配置可修，单任务模型覆盖已撤销。需 Bruce 充值/激活账单后自愈。
 
-## Promoted From Short-Term Memory (2026-08-15)
+## Promoted From Short-Term Memory (2026-08-16)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-10.md:5:7 -->
-- 08:18 heartbeat maintenance: 将满 14 天的 `2026-07-27.md` 提炼进 `memory/archive.md`；合并 07-25/26 重复摘要，使 07 月段维持 20 条。; `MEMORY.md` 83→78 行：删除纯日常自检的 2026-08-10 自动晋升块。; archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 拒绝/拦截。日志中的 `wecom_mcp` allowlist 两行是工具插件未启用告警，不是用户私聊被拒。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-10.md:5-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:2:5 -->
+- 08:00 每日自检: Gateway 正常，连通性探测通过；日志一度报告 RSS 1.31 GiB，复查已降至约 765 MiB，未重启。; 发现 3 个 cron 失败：周日系统巡检 7 次、双周综合审计 4 次（模型配额/认证），CEO Weekly Briefing 1 次（错误的图片模型工具调用）。; 安全修复：验证 `google/gemini-3.5-flash` 可用，将其加入允许模型并设为上述 3 个任务的专用模型，清除任务级 fallback。; 当前 daily-self-check 的历史错误来自上次 Gateway draining；本次 Gateway 正常，待本轮成功后状态自动清零。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:2-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:9:11 -->
+- 08:18 heartbeat maintenance: 将满 14 天的 `2026-07-28.md` 合并提炼进 `memory/archive.md` 的 07-27~28 条目，使 07 月段维持 20 条。; `MEMORY.md` 85→78 行：删除 2026-08-11 自动晋升的日常自检/heartbeat 重复块。; archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 拒绝/拦截。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:9-11]
