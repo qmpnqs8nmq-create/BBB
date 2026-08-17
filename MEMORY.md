@@ -74,14 +74,10 @@
 - memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
 - benben `memory_search timed out after 15s` 与索引 identity 无关：根因是 hybrid 候选并集进入同步 MMR 后随 `maxResults` 急剧放大并阻塞事件循环；仅对 benben 关闭 MMR（备份后热加载）即将 `maxResults=20` 从约 47s 降至约 6s，真实 Gateway 工具调用成功，其他 agent 默认配置不变。
 - cron 连败修复已闭环（教训：cron 少用固定模型覆盖，优先 agent 默认链获得 failover）：`CEO Weekly Briefing` 切 gemini-3.1-flash 07-27 ok；`Validation Tracker` 清除 gpt-5.5 覆盖 08-05 ok。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）
+- 08-11 为周日系统巡检、coach 双周审计、CEO Weekly Briefing 切到已验证可用的 `google/gemini-3.5-flash` 并清空任务级 fallback；周日巡检 08-16 已运行 ok，另两项待下一次计划运行验证。
 - 日志辨识：`wecom_mcp` allowlist 告警行 = 工具插件未启用，**不是** wecom 用户私聊被拒，勿误报审批
 
-## Pending（待 Bruce，2026-08-09 起）
-- 周日系统巡检 cron 连续因模型额度/账单失败（ZenMux 额度耗尽 + OpenAI 账户未激活；`openai-codex/gpt-5.5` 被白名单拒），属外部计费问题非配置可修，单任务模型覆盖已撤销。需 Bruce 充值/激活账单后自愈。
+## Promoted From Short-Term Memory (2026-08-17)
 
-## Promoted From Short-Term Memory (2026-08-16)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:2:5 -->
-- 08:00 每日自检: Gateway 正常，连通性探测通过；日志一度报告 RSS 1.31 GiB，复查已降至约 765 MiB，未重启。; 发现 3 个 cron 失败：周日系统巡检 7 次、双周综合审计 4 次（模型配额/认证），CEO Weekly Briefing 1 次（错误的图片模型工具调用）。; 安全修复：验证 `google/gemini-3.5-flash` 可用，将其加入允许模型并设为上述 3 个任务的专用模型，清除任务级 fallback。; 当前 daily-self-check 的历史错误来自上次 Gateway draining；本次 Gateway 正常，待本轮成功后状态自动清零。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:2-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-11.md:9:11 -->
-- 08:18 heartbeat maintenance: 将满 14 天的 `2026-07-28.md` 合并提炼进 `memory/archive.md` 的 07-27~28 条目，使 07 月段维持 20 条。; `MEMORY.md` 85→78 行：删除 2026-08-11 自动晋升的日常自检/heartbeat 重复块。; archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 拒绝/拦截。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-11.md:9-11]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-12.md:3:5 -->
+- 08:18 heartbeat maintenance: 将满 14 天的 `2026-07-29.md` 合并提炼进 `memory/archive.md` 的 07-27~29 条目，使 07 月段维持 20 条。; `MEMORY.md` 85→78 行：删除 2026-08-12 自动晋升的日常自检/heartbeat 重复块。; archive 无超过 6 个月段落；Gateway 正常，近 24h 未发现 WeCom DM 拒绝/拦截。命中的两条 `wecom_mcp` allowlist 日志只是未启用工具插件告警，并非用户私聊被拒。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-12.md:3-5]

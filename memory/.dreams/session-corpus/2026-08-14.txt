@@ -52,3 +52,27 @@
 [main/sessions/main/5bc7ff5f-77c7-4eaf-accd-a40cf2679c8f.jsonl#L227] Assistant: 继续排查后，结论已经坐实： - 腾讯官方确认：个人微信 ClawBot 只允许在用户主动发消息后的 24 小时内回复。[官方 issue #185](https://github.com/Tencent/openclaw-weixin/issues/185) - 延长窗口、静默保活仍只是待评估需求，尚未实现。[官方 issue #202](https://github.com/Tencent/openclaw-weixin/issues/202) - `getConfig`、无 token、正确 bot ID、`sendT
 [main/sessions/main/5bc7ff5f-77c7-4eaf-accd-a40cf2679c8f.jsonl#L228] User: Server酱？有没有人提到不安全的问题？
 [main/sessions/main/5bc7ff5f-77c7-4eaf-accd-a40cf2679c8f.jsonl#L259] Assistant: 有安全顾虑，而且是合理的。 我没有查到可信来源证实 Server酱发生过大规模入侵或数据泄露，但它存在几项明确风险： - 消息正文会经过 Server酱服务器，官方说明免费版保留约1天、会员约3天。 - SendKey 相当于发送凭证；泄露后别人可以向你的微信推送垃圾或钓鱼消息。 - SendKey 位于请求 URL 路径，可能被代理日志、错误日志、Shell 历史或第三方软件记录。 - 微信扫码登录意味着第三方持有与你微信身份相关的标识。 - 它是托管服务，服务方、服务器入侵者理论上都可能看到未加密内容。 - 官方虽有端
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28549] Assistant: Still 90 — checking for other bloat:
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28551] Assistant: All content is load-bearing, but two closed cron fixes can merge and stray blanks can go:
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28555] Assistant: Maintenance done: - Archived & deleted `2026-07-31.md` (all-green self-check → one line under `## 2026-07`). - MEMORY.md 98→88: replaced the 2026-08-14 promotion block with one Pending line (Sunday patrol cron blocked on external billing — ZenMux quota + OpenAI 
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28558] Assistant: Full maintenance completed 30 minutes ago; nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28561] Assistant: Morning maintenance completed at 08:18 (archived 07-31, MEMORY.md at 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28564] Assistant: Morning maintenance already completed at 08:18 (archived 07-31, MEMORY.md at 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28567] Assistant: Morning maintenance already completed today (08:18 run: archived 07-31, MEMORY.md at 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28570] Assistant: Morning maintenance already completed today (08:18 run — archived 07-31, MEMORY.md at 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28573] Assistant: Morning maintenance already completed today (08:18 run: archived 07-31, MEMORY.md at 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28576] Assistant: Morning maintenance already completed today (archived 07-31, MEMORY.md consolidated to 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28579] Assistant: Morning maintenance already completed today (archived 07-31, MEMORY.md at 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28582] Assistant: Morning maintenance completed at 08:18 (archived 07-31, MEMORY.md at 88, pending items tracked). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28585] Assistant: Morning maintenance already done today (archived 07-31, MEMORY.md at 88, pending items tracked). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28588] Assistant: Morning maintenance already done today (archived 07-31, MEMORY.md at 88, no wecom blocks). Nothing new since. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28591] Assistant: Morning maintenance already completed today; pending items (Sunday patrol billing) await Bruce/Sunday's run. Nothing new. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28600] Assistant: No changes since this morning's maintenance run. Nothing actionable. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28603] Assistant: No changes since this morning's maintenance run. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28606] Assistant: No changes since this morning's maintenance run. Nothing actionable. HEARTBEAT_OK
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28609] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28623] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28633] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28641] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28649] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/d58694b3-0728-482e-8342-885228c32fef.jsonl#L28657] Assistant: [assistant turn failed before producing content]
