@@ -5,6 +5,7 @@
 ## 2026-08
 - 08-01: 日常自检正常；Validation Tracker 清除固定 `openai-codex/gpt-5.5` 覆盖、恢复 chief 默认模型链（08-05 已验证 ok）；OpenClaw 2026.7.1-2 当时为最新稳定版
 - 08-02: 日常自检正常；Validation Tracker 当时的模型额度/账单历史失败已于 08-05 验证恢复
+- 08-03: 日常自检正常；Validation Tracker 改用可用 Gemini 后重跑恢复；`daily-self-check` 日志命令固化为 `openclaw logs --limit 50 --plain --no-color`
 
 ## 2026-07
 - 07-31: 日常自检全绿
