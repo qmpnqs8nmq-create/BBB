@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-08
+- 08-04: 日常自检正常；此前自检因 cron 列表 jq 命令失败反复超时，改用已验证的 60 秒内筛选命令后恢复
 - 08-01: 日常自检正常；Validation Tracker 清除固定 `openai-codex/gpt-5.5` 覆盖、恢复 chief 默认模型链（08-05 已验证 ok）；OpenClaw 2026.7.1-2 当时为最新稳定版
 - 08-02: 日常自检正常；Validation Tracker 当时的模型额度/账单历史失败已于 08-05 验证恢复
 - 08-03: 日常自检正常；Validation Tracker 改用可用 Gemini 后重跑恢复；`daily-self-check` 日志命令固化为 `openclaw logs --limit 50 --plain --no-color`
