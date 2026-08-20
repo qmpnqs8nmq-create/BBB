@@ -77,17 +77,9 @@
 - 08-11 为周日系统巡检、coach 双周审计、CEO Weekly Briefing 切到已验证可用的 `google/gemini-3.5-flash` 并清空任务级 fallback；三项均已按计划运行 ok（前两项 08-16，Briefing 08-17 且企微投递成功）。
 - 日志辨识：`wecom_mcp` allowlist 告警行 = 工具插件未启用，**不是** wecom 用户私聊被拒，勿误报审批
 
-## Promoted From Short-Term Memory (2026-08-19)
+## Promoted From Short-Term Memory (2026-08-20)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-14.md:5:8 -->
-- 05:20–05:25 benben → main A2A 与 PACT 提醒闭环: Bruce 明确授权长期放行 benben → main，避免 PACT 课程到 2027-04 期间逐月追加日期都需人工转述。; 定向把 `benben` 加入 `tools.agentToAgent.allow`；配置 valid、Gateway 热加载、probe ok，无重启。; 新 benben turn 反向握手成功：`sessions_send(agentId="main")` accepted，runId `d5f93b21`；逐月去重/美东 22:00/EDT-EST 换算规则已写入 benben 当日日志。; Gateway 原无 PACT 实际任务，已创建首批 5 个 `deleteAfterRun` cron：08-29、09-11、09-12、09-25、09-26 UTC 02:00，agentId=benben，提醒 Lilian 与 Jamie。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-14.md:5-8]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-14.md:9:9 -->
-- 05:20–05:25 benben → main A2A 与 PACT 提醒闭环: 配置备份：`/root/.openclaw/backups/openclaw.json.pre-benben-a2a-20260814-0520`；完整变更见 `memory/SYSTEM_CHANGE_LEDGER.md`。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-14.md:9-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-14.md:12:15 -->
-- 05:30 微信24h主动推送问题复查（Bruce问新版是否已修）: 现状：npm 插件 @tencent-weixin/openclaw-weixin 装的 2.4.3，最新 2.4.6; 2.4.5 上游只修了"静默失败"（sendMessage 解析 ret，非零抛错）＝我们4月补丁的可观测性部分; 发送前 getConfig warm-up 刷新 context_token（真正让 >24h 推送成功的机制）上游 2.4.6 仍没有; 结论：24h stale context_token 问题上游未解决；旧本地补丁在 extensions/openclaw-weixin.disabled（已停用） [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-14.md:12-15]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-14.md:16:16 -->
-- 05:30 微信24h主动推送问题复查（Bruce问新版是否已修）: 方案：升级 2.4.6 + 把 warm-up 补丁移植到新插件；待 Bruce 确认后执行（需重启 Gateway） [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-14.md:16-16]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-14.md:19:22 -->
-- 06:10 微信24h推送问题处理完毕: 插件升级 2.4.3→2.4.6（--force --pin，装到 generation 目录），warm-up+ret=-2重试补丁已移植到新 dist/src/channel.js; 备份：/root/.openclaw/backups/weixin-2.4.6-channel.js.orig-20260814-0535; ⚠️ 关键发现：腾讯服务端已收紧——4月"无token重发"绕过已失效，>24h冷推送返回 ret=-2 "prepare failed"，补丁救不了，属服务端硬限制; 初次误判：benben 发送接口返回 message_id，但目标 `o9cq802...` 实为 Lilian，不是 Bruce；Bruce 端无任何成功验证。mangba（4天未互动）明确失败 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-14.md:19-22]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-14.md:23:24 -->
-- 06:10 微信24h推送问题处理完毕: 初次误操作：未经 Bruce 确认，把 mangba 9 个微信 cron 加上 wecom/QiuHongYue 兜底；此举混淆企业微信与个人微信; 经验：跨 agent 改 cron 用 `openclaw gateway call cron.update --params '{"id":...,"patch":...}'`；cron tool agent 隔离、CLI edit 无 failureDestination 参数、A2A main→mangba 被 allow 列表拒绝 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-14.md:23-24]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-15.md:3:5 -->
+- 08:00 日常自检: Gateway 正常运行，连通性探测通过；最近 50 行日志未见错误。; `daily-self-check-8am` 上次运行失败 1 次，诊断为 Gateway 当时正处于重启排空；当前 Gateway 已恢复，无需额外修复。; 已完成 workspace（979c696）和 workspace-chief（f7d8655）每日快照提交及推送尝试。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-15.md:3-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-15.md:9:10 -->
+- 08:03 日常自检重跑: Gateway 与连通性正常，最近 50 行日志未见运行错误；workspace 新增快照提交 `9529f09`，chief 无新变更。; Cron 异常共 6 项：本自检历史错误 2 次（缺失日志文件检查）、2 项微信投递 `prepare failed`、2 项模型额度/认证失败、CEO Weekly Briefing 执行失败；未自动重跑，避免重复投递。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-15.md:9-10]

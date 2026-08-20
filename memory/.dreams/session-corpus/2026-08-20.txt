@@ -1,0 +1,1 @@
+[main/sessions/main/1670d99d-b635-481b-98bd-2af33791a45a.jsonl#L12] Assistant: 巡检完成，全部正常：symlink 无断链、CTX 规则同步一致、无流浪 git remote、沙箱 egress=none、容器镜像最新（8ef0febba319）。无需处理。
