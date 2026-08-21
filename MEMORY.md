@@ -77,9 +77,7 @@
 - 08-11 为周日系统巡检、coach 双周审计、CEO Weekly Briefing 切到已验证可用的 `google/gemini-3.5-flash` 并清空任务级 fallback；三项均已按计划运行 ok（前两项 08-16，Briefing 08-17 且企微投递成功）。
 - 日志辨识：`wecom_mcp` allowlist 告警行 = 工具插件未启用，**不是** wecom 用户私聊被拒，勿误报审批
 
-## Promoted From Short-Term Memory (2026-08-20)
+## Promoted From Short-Term Memory (2026-08-21)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-15.md:3:5 -->
-- 08:00 日常自检: Gateway 正常运行，连通性探测通过；最近 50 行日志未见错误。; `daily-self-check-8am` 上次运行失败 1 次，诊断为 Gateway 当时正处于重启排空；当前 Gateway 已恢复，无需额外修复。; 已完成 workspace（979c696）和 workspace-chief（f7d8655）每日快照提交及推送尝试。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-15.md:3-5]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-15.md:9:10 -->
-- 08:03 日常自检重跑: Gateway 与连通性正常，最近 50 行日志未见运行错误；workspace 新增快照提交 `9529f09`，chief 无新变更。; Cron 异常共 6 项：本自检历史错误 2 次（缺失日志文件检查）、2 项微信投递 `prepare failed`、2 项模型额度/认证失败、CEO Weekly Briefing 执行失败；未自动重跑，避免重复投递。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-15.md:9-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-16.md:3:5 -->
+- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-08-02.md` 提炼为 1 行写入 `memory/archive.md` 后删除（可从 git 历史恢复）。; `MEMORY.md` 87→78 行：将 08-16 自动晋升块压成 1 条 cron 修复状态；周日系统巡检已于今晨运行 ok，coach 双周审计与 CEO Weekly Briefing 待下一次计划运行验证。; archive 无超过 6 个月段落；近 10h 未发现 WeCom DM 拒绝/拦截，`wecom_mcp` allowlist 行仍是插件未启用告警。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-16.md:3-5]
