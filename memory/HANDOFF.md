@@ -1,11 +1,11 @@
 # HANDOFF
-- 最后活跃：2026-08-14 11:00（webchat, Bruce）
-- 当前话题：服务器过期安装/备份清理已完成
-- 本阶段：删除旧 Codex、未使用 npm 依赖、Chrome 131、已停用插件/临时迁移/旧备份、Snap 下载缓存
-- 本阶段精确回收：3,519,983,616 bytes；根盘 68%→61%，可用19G
-- 当日累计：三次清理按记录共回收约18.5GB；根盘由98%降至61%
-- 安全门禁：逐项核对当前注册路径、文件类型、打开句柄及新版本存在性
-- 验证：Gateway runtime/probe正常；5个插件从保留的新版路径加载；main/chief FTS ready
-- 保留：当前插件、Chrome 148、两套当前 VS Code Server、当前 Snap/Docker、121MiB备份及全部 agent 数据
-- 恢复性：删除项不可原地恢复，但均为过期安装副本或可重下载缓存
-- 记录：memory/2026-08-14.md、memory/SYSTEM_CHANGE_LEDGER.md、INCIDENT_LOG.md
+- 最后活跃：2026-09-01（webchat, Bruce）
+- 当前话题：删除客服后的系统只读审计已完成
+- 删除验证：无 kefu agent/binding/cron/路径/Wiki source；无断裂 workspace symlink
+- 首要故障：8 个 cron 连败；OpenAI 路由出现 account inactive，ZenMux Fable 5 报订阅不含模型
+- 更新债务：OpenClaw 2026.8.1 可用；apt 78 项（26 security）；系统要求重启
+- 清理债务：chief 407 个 orphan transcripts，sessions 目录 326M
+- 安全审计：0 critical / 4 warn / 1 info；UFW 正常，22/80/443 对外，18789 由 nginx 反代
+- 重点告警：明文 secrets、全 agent exec full、自签 TLS、Codex spec 未 pin
+- 当前状态：Gateway runtime/probe 正常；审计未做任何修复或重启
+- 记录：`memory/2026-09-01.md`、`memory/SYSTEM_CHANGE_LEDGER.md`

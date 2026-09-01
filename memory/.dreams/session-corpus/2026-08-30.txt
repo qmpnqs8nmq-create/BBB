@@ -1,0 +1,14 @@
+[main/sessions/main/a34e5b85-f82c-4f86-8d95-8988f0ce66fb.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a34e5b85-f82c-4f86-8d95-8988f0ce66fb.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/a34e5b85-f82c-4f86-8d95-8988f0ce66fb.jsonl#L12] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0f96b78e-ad8c-435a-8dec-8d537f89975f.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0f96b78e-ad8c-435a-8dec-8d537f89975f.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/0f96b78e-ad8c-435a-8dec-8d537f89975f.jsonl#L12] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1.jsonl#L98] Assistant: 今日日报已生成并归档。 业务侧完成双周审计：近两周无新增业务决策；普通文本触达已连续42天无反馈。Route 1 Explore Gate逾期116天、暂停期回看逾期45天、决策日志118天未更新。建议将关键治理事项改为交互卡片或待办，直接收集选择并写回决策日志。 系统侧今日无新增日志；main 状态仍停留在8月14日的服务器清理结果。 遗留事项：决定 Route 1 去留、完成暂停期复盘、确认是否采用“连续4周无回应即更换触达方式”的规则。
+[main/sessions/main/815543dd-79a7-426f-91d1-ce5c69dfbc98.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/815543dd-79a7-426f-91d1-ce5c69dfbc98.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/815543dd-79a7-426f-91d1-ce5c69dfbc98.jsonl#L12] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/9951fb3e-5254-4054-9413-e61ee2cfdaed.jsonl#L18] Assistant: 今日日报已生成并归档。 业务侧完成双周审计：近两周无新增业务决策；普通文本触达已连续42天无反馈。Route 1 Explore Gate逾期116天、暂停期回看逾期45天、决策日志118天未更新。建议将关键治理事项改为交互卡片或待办，直接收集选择并写回决策日志。 系统侧今日无新增日志；main 状态仍停留在8月14日的服务器清理结果。 遗留事项：决定 Route 1 去留、完成暂停期复盘、确认是否采用“连续4周无回应即更换触达方式”的规则。
+[main/sessions/main/b04c3a65-74ad-44bf-9d93-ffc6b5cd0199.jsonl#L6] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/b04c3a65-74ad-44bf-9d93-ffc6b5cd0199.jsonl#L9] Assistant: [assistant turn failed before producing content]
+[main/sessions/main/b04c3a65-74ad-44bf-9d93-ffc6b5cd0199.jsonl#L12] Assistant: [assistant turn failed before producing content]

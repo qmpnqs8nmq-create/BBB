@@ -3,6 +3,14 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-08
+- 08-14: 长期放行 benben→main A2A 并创建首批 PACT 一次性提醒；个人微信插件升至 2.4.6 并移植补丁，但确认腾讯 24h 冷推送为服务端硬限制，误加的 WeCom 兜底已回滚
+- 08-14: 三轮清理旧索引/缓存/迁移包/过期安装共回收约 18.5GB，根盘 98%→61%；Gateway、当前插件、main/chief FTS 与 benben sandbox 验证正常
+- 08-15: Gateway 健康；历史 cron 错误主要来自重启排空、个人微信 24h 窗口、模型额度/认证及 Briefing 读取链，避免重复投递而未手动重跑
+- 08-16~17: heartbeat 归档与 MEMORY 去重；内存压力重启后 Gateway 正常，周日巡检、coach 审计及 CEO Briefing 均用 Gemini 3.5 Flash 验证运行成功
+- 08-12~13: heartbeat 完成旧日志归档与 MEMORY 去重；Gateway 健康，重启 draining 导致的自检瞬时错误后续自清零
+- 08-11: 三项 cron 因模型额度/认证及图片模型误调用连败；统一改用已验证的 `google/gemini-3.5-flash` 并清空任务级 fallback，后续 08-16/17 均验证恢复
+- 08-09~10: 周日巡检因 ZenMux 额度耗尽与 OpenAI 账户未激活失败，撤销无效任务级模型覆盖；heartbeat 完成旧日志归档与 MEMORY 去重
+- 08-08: heartbeat 完成 07-25 日志归档并清理 MEMORY 自动晋升噪音；确认 `wecom_mcp` allowlist 行只是插件未启用告警，并非企微 DM 被拒
 - 08-07: 日常自检正常；RSS 3.34GiB 内存告警自行回落，未干预
 - 08-06: 日常自检正常；自检提示词修复（改直接创建日志文件，避免 tail 不存在文件报错）
 - 08-05: 日常自检正常；先创建当日日志再读取，消除日志尚不存在导致的自检假失败

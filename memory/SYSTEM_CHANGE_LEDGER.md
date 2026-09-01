@@ -148,3 +148,18 @@
 - 精确回收 3,519,983,616 bytes；根盘 68%→61%，当前可用19G。连同当日前两次清理，按删除记录累计回收约18.5GB。
 - 验证：Gateway probe ok；当前5个插件均从保留的新 generation 加载；main/chief FTS ready；Snap、Docker、inode 健康。
 - 删除项不可原地恢复，但均是过期安装副本或可重新下载的缓存；当前版本、当前备份及 agent 数据未动。
+
+## 2026-09-01 · GPT-5.6 Sol 提升为全局默认模型
+
+- 按 Bruce 要求，将 `agents.defaults.model` 调整为 `openai/gpt-5.6-sol` → ZenMux key1/Fable 5 → ZenMux key2/Fable 5。
+- `api-worker`、`market` 的 agent 级模型覆盖保持不变；其余未覆盖 agent 继承新默认链。
+- 配置 dry-run 与写入校验通过，Gateway 热加载，无重启；`openclaw models list` 标记顺序正确，runtime/probe 正常。
+- 回滚备份：`/root/.openclaw/backups/openclaw.json.pre-gpt56sol-default-20260901`。
+
+## 2026-09-01 · 永久删除客服 agent
+
+- 按 Bruce 明确要求永久删除 `kefu`，且不创建备份；执行前确认其无 binding、无专属 cron、无运行进程或沙箱容器。
+- 通过 `openclaw agents delete kefu --force` 删除注册项、workspace、agent 状态/会话；清理 6 个旧备份中的客服专属子目录和 1 个建客服前的专属配置备份。
+- 清理 Wiki 中 370 个 `bridge-workspace-kefu-*` source，执行 compile + lint 更新索引；共享历史日志中偶发文字提及未作为删除目标。
+- 共享 `symlink-integrity-check` cron 仅移除客服同步、remote 与 sandbox 检查，其他 agent 检查保持不变；10 份共享配置备份仅移除 `kefu` agent 对象。
+- 最终验证：agent/binding/cron/命名路径与 Wiki 索引均无客服活动残留；Gateway runtime/probe 正常。删除不可恢复。

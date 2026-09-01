@@ -3210,10 +3210,151 @@ Small poem in the margin: restart, then bloom — / the heartbeat checks itself 
 
 I sketched a doodle there too: a gateway shaped like a torii, five paper cranes perched on top, one still slightly crooked, all of them breathing.
 
+
+---
+
+*August 23, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 23, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 23, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 24, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 24, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 25, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 25, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 26, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 26, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 27, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 27, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 28, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 29, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 29, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 29, 2026 at 5:00 AM GMT+8*
+
+A memory trace surfaced, but details were unavailable in this run.
+
+
+---
+
+*August 30, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*August 31, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*September 1, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*September 1, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*September 1, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
 <!-- openclaw:dreaming:diary:end -->
 
 ## Deep Sleep
 <!-- openclaw:dreaming:deep:start -->
-- Ranked 3 candidate(s) for durable promotion.
-- Promoted 3 candidate(s) into MEMORY.md.
+- Repaired recall artifacts: rewrote recall store.
+- Ranked 1 candidate(s) for durable promotion.
+- Promoted 1 candidate(s) into MEMORY.md.
 <!-- openclaw:dreaming:deep:end -->

@@ -24,7 +24,7 @@
 - benben 沙箱安全基线（2026-04-20）：docker.network=none（无 egress，web_fetch 走 Gateway）+ 每日 03:00 cron 审计（git remote 白名单 qmpnqs8nmq-create/ + network 配置漂移检测 + 容器镜像陈旧检测）
 - Jamie 频率上限硬规则：24h ≤ 1 主动、 7d ≤ 3 主动，无日志则默认不发（fail-safe）；见 workspace-benben/jamie-weekly-companion-cron.md Step 2.5
 - market agent 模型规则：用 Sonnet 5（不用 Fable/Opus，轻量场景），主/备跨 ZenMux key，GPT-5.5 兜底；2026-07-19 已将活动配置中的 Sonnet 4.6 全量迁移为 Sonnet 5
-- **ZenMux/OpenAI 模型路由（2026-07-19）**：default = key1/`anthropic/claude-fable-5`；fallback#1 = `openai/gpt-5.6-sol`（ChatGPT Pro OAuth/Codex harness，250k）；fallback#2 = key2/Fable 5。两个 ZenMux key 均登记 Fable 5、Sonnet 5、Opus 4.8，Sonnet 4.6 已从活动配置移除；OpenAI 保留 GPT-5.6 Sol/5.5。当前两个 ZenMux key 实际请求均因额度 402，已验证自动由 5.6 Sol 接管。
+- **ZenMux/OpenAI 模型路由（2026-09-01）**：default = `openai/gpt-5.6-sol`（ChatGPT Pro OAuth/Codex harness，250k）；fallback#1 = key1/`anthropic/claude-fable-5`；fallback#2 = key2/Fable 5。两个 ZenMux key 均登记 Fable 5、Sonnet 5、Opus 4.8，Sonnet 4.6 已从活动配置移除；OpenAI 保留 GPT-5.6 Sol/5.5。`api-worker`、`market` 保留各自 agent 级模型覆盖。
 - **memory_search embedding = Gemini（2026-05-30 切换）**：`agents.defaults.memorySearch` 必须写 provider `gemini`（不是 google）+ `gemini-embedding-001`（3072 维），auth 走 google:default(api_key)；OpenAI OAuth 不能做 embedding。改配置后须 restart Gateway，并对**每个 agent**分别 `openclaw memory index --agent <id> --force`；索引 `providerKey` 含实际凭据 hash，各 agent 凭据解析不同也会触发 settings changed
 - **⚠️ 改模型配置必须三层同步**：Gateway 会合并 (1) openclaw.json (2) 顶层 models/auth-profiles.json (3) 各 agent 的 models/auth-profiles.json；只改一处会让旧 key/版本复活。ZenMux 正确 base URL 为 `https://zenmux.ai/api/v1`（不是 `/v1`）。统一脚本批量处理、全量备份后验证 `openclaw models list`
 
@@ -77,11 +77,7 @@
 - 08-11 为周日系统巡检、coach 双周审计、CEO Weekly Briefing 切到已验证可用的 `google/gemini-3.5-flash` 并清空任务级 fallback；三项均已按计划运行 ok（前两项 08-16，Briefing 08-17 且企微投递成功）。
 - 日志辨识：`wecom_mcp` allowlist 告警行 = 工具插件未启用，**不是** wecom 用户私聊被拒，勿误报审批
 
-## Promoted From Short-Term Memory (2026-08-22)
+## Promoted From Short-Term Memory (2026-09-01)
 
-<!-- openclaw-memory-promotion:memory:memory/2026-08-17.md:2:4 -->
-- 08:00 每日自检: Gateway 运行且连通；日志出现内存压力告警（RSS 峰值 1.34 GiB，复查约 807 MiB），已安排 2 分钟后安全重启，避免中断本次投递。; 发现 5 个 cron 处于错误状态：daily-self-check（上次重启排空）、CEO Weekly Briefing（读取链失败）、每日价值投资学习提醒与芒巴晚报（微信投递 prepare failed）、价值投资机会雷达周报（Yahoo 429）。; 渠道探测均在运行；两处 workspace 已完成每日快照提交与推送尝试。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-17.md:2-4]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-17.md:7:9 -->
-- 08:18 heartbeat 记忆维护: 将满 14 天的 `2026-08-03.md` 提炼为 1 行写入 `memory/archive.md` 后删除（可从 git 历史恢复）。; `MEMORY.md` 83→78 行：删除重复自动晋升块；周日巡检与 coach 双周审计已验证 Gemini 3.5 Flash 运行 ok，CEO Weekly Briefing 等待今早计划运行验证。; archive 无超过 6 个月段落；近 10h 未发现 WeCom DM 拒绝/拦截，`wecom_mcp` allowlist 行仍仅为插件未启用告警。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-17.md:7-9]
-<!-- openclaw-memory-promotion:memory:memory/2026-08-17.md:12:14 -->
-- 08:48 heartbeat 复核: CEO Weekly Briefing 08:30 使用 Gemini 3.5 Flash 运行 ok，企微投递成功；三项 cron 模型切换验证闭环。; Gateway 重启后运行/探针正常；daily-self-check 当前 3 次错误分别来自工具超时与两次 Gateway 重启排空，非持续运行故障。; 无 14 天以上日志、MEMORY.md 78 行、archive 无超过 6 个月段落；近 24h 未发现 WeCom DM 拒绝/拦截。 [score=0.803 recalls=0 avg=0.620 source=memory/2026-08-17.md:12-14]
+<!-- openclaw-memory-promotion:memory:memory/2026-08-28.md:4:6 -->
+- 15:18 heartbeat maintenance: 将满 14 天的 `2026-08-12.md`、`2026-08-13.md`、`2026-08-14.md` 提炼进 `memory/archive.md` 后删除。; `MEMORY.md` 83→78 行：删除纯维护型的 2026-08-27 自动晋升块。; archive 无超过 6 个月段落；Gateway 近 72h 未发现 WeCom DM 拒绝/拦截。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-08-28.md:4-6]
