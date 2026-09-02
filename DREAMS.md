@@ -3350,11 +3350,25 @@ A memory trace surfaced, but details were unavailable in this run.
 
 [assistant turn failed before producing content]
 
+
+---
+
+*September 2, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
+
+---
+
+*September 2, 2026 at 5:00 AM GMT+8*
+
+[assistant turn failed before producing content]
+
 <!-- openclaw:dreaming:diary:end -->
 
 ## Deep Sleep
 <!-- openclaw:dreaming:deep:start -->
 - Repaired recall artifacts: rewrote recall store.
-- Ranked 1 candidate(s) for durable promotion.
-- Promoted 1 candidate(s) into MEMORY.md.
+- Ranked 0 candidate(s) for durable promotion.
+- Promoted 0 candidate(s) into MEMORY.md.
 <!-- openclaw:dreaming:deep:end -->

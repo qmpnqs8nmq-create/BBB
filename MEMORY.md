@@ -76,8 +76,3 @@
 - cron 连败修复已闭环（教训：cron 少用固定模型覆盖，优先 agent 默认链获得 failover）：`CEO Weekly Briefing` 切 gemini-3.1-flash 07-27 ok；`Validation Tracker` 清除 gpt-5.5 覆盖 08-05 ok。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）
 - 08-11 为周日系统巡检、coach 双周审计、CEO Weekly Briefing 切到已验证可用的 `google/gemini-3.5-flash` 并清空任务级 fallback；三项均已按计划运行 ok（前两项 08-16，Briefing 08-17 且企微投递成功）。
 - 日志辨识：`wecom_mcp` allowlist 告警行 = 工具插件未启用，**不是** wecom 用户私聊被拒，勿误报审批
-
-## Promoted From Short-Term Memory (2026-09-01)
-
-<!-- openclaw-memory-promotion:memory:memory/2026-08-28.md:4:6 -->
-- 15:18 heartbeat maintenance: 将满 14 天的 `2026-08-12.md`、`2026-08-13.md`、`2026-08-14.md` 提炼进 `memory/archive.md` 后删除。; `MEMORY.md` 83→78 行：删除纯维护型的 2026-08-27 自动晋升块。; archive 无超过 6 个月段落；Gateway 近 72h 未发现 WeCom DM 拒绝/拦截。 [score=0.834 recalls=0 avg=0.620 source=memory/2026-08-28.md:4-6]
