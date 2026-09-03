@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-08
+- 08-19: Gateway 正常、RSS 峰值自行回落；修复 security-audit 提示词，改用 cron delivery 而非不存在的 `openclaw message`，其余投递/行情源故障未冒险重跑
 - 08-18: Gateway 与连通性正常；此前自检因 Gateway 重启中断的历史错误已自愈，heartbeat 仅做归档与去重
 - 08-14: 长期放行 benben→main A2A 并创建首批 PACT 一次性提醒；个人微信插件升至 2.4.6 并移植补丁，但确认腾讯 24h 冷推送为服务端硬限制，误加的 WeCom 兜底已回滚
 - 08-14: 三轮清理旧索引/缓存/迁移包/过期安装共回收约 18.5GB，根盘 98%→61%；Gateway、当前插件、main/chief FTS 与 benben sandbox 验证正常
@@ -87,28 +88,6 @@
 - 06-02/03: 日常自检正常（Gateway v2026.5.27 healthy / git pushed）；openclaw-weixin (4d5b593c) session expired errcode -14 每小时 pause 60min，认证失效非可自修复，已报 Bruce（wecom 渠道正常）
 
 - 06-01: 日常自检正常（Gateway ok、cron lastStatus=ok、git 已提交）；周度安全巡检 0 critical / 6 warn / 1 info（均为既有可接受姿态）；weixin errcode -14 每小时 session-expired 持续项
-
-## 2026-03（至今）
-
-- 03-13: 身份设定(Kaopuge/🐎)、Docker安装、模型切换至openai-codex/gpt-5.4 OAuth、飞书通道启用
-- 03-14: 企业微信私聊场景确定，助手名"服务员Bruce"，默认简洁风格
-- 03-22: Session延续机制上线（HANDOFF+边聊边写+tasks/+5轮强制检查）；OpenClaw原生能力启用；weekly-governance-review cron创建；OpenRouter key异常→临时切gpt-5.4
-- 03-16: 三套 Gateway 入口架构（local/team/remote），8888 局域网 HTTPS 代理 + session 隔离上线
-- 03-17: 三套 token 核清，pairing 批准流程确立，发现 WebChat 默认共享主会话问题
-- 03-18: 每日 8 点自检 cron 创建，安全自查修复无效字段，应急修复资料建立，8888 pairing watcher 上线
-- 03-19: 自检正常运行，pairing-required 反复排查（WebSocket 代理 + trustedProxies），scope 基线不完整待修
-- 03-20: 8888 代理架构定稿（直连主 Gateway :18789），废弃独立 team gateway :8899
-- 03-21: Bruce 明确工作态度要求（先试再说、报方案不报困难、穷尽三条路径），写入长期记忆
-- 03-22: Session 延续机制定稿（HANDOFF + 增量写入 + 归档闭环），安全巡检归 main
-- 03-23: 单 Gateway 架构定稿，5-Agent symlink 同步重构，废弃 8888/8899/team 全套
-- 03-24: Daily self-check 正常，多个 cron job 因 LLM 超时/网络报错，git push 超时
-- 03-25: Chief系统全面核查（sandbox安全矩阵定稿、weixin清除保留wecom、zenmux 402正则monkey-patch、webchat elevated不可靠→引导终端操作）
-- 03-26: Zenmux 3-key 轮换系统性重构（MRU sticky + 冷却轮换 + 跨 provider fallback 三级方案），402 仍泄露到 UI 待 upstream 修复
-- 03-27: 152 SSH 隧道自动重连方案落地（LaunchAgent+wrapper脚本）；WORKING_RULES.md+INCIDENT_LOG.md最小治理闭环上线；webchat approval链路故障止血（缩回单key）；OpenClaw升级 3.23-2→3.24+monkey-patch重打；patch-openclaw.sh自动化脚本+上游issue#55897
-- 03-28: 记忆系统重构（main+chief）——单日单文件、MEMORY.md 五分区、archive.md；OpenClaw 升级 3.24→3.28+monkey-patch重打；doctor --fix 迁移飞书配置；cron 超时修复；35个 topic-split+20个废弃脚本清理
-- 03-29: 迁移日——git secret scanning 修复(filter-repo)、model fallback 配置定稿(opus→openrouter sonnet→gpt-5.4)、models.json 是派生文件不要手改、微信 session expired 修复
-- 03-30: WORKING_RULES精简为流程路由；双路径分裂修复(symlink统一)；Nginx反代HTTPS；反馈系统设计；权限教训+角色漂移防护
-- 03-31: Agent权限审计+sandbox加固（chief-user sandbox=all+ro，子agent deny write，间接写入攻击链切断）；Docker 28.2.2安装
 
 ## 2026-05
 

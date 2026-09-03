@@ -10,8 +10,9 @@ Background (2026-06-12, Bruce / Kaopuge):
   optional quote:  [:=]\\s*402\\b  ->  [:=]\\s*["']?402\\b
 
 Why this script exists:
-  The fix lives inside node_modules (dist/errors-<hash>.js). The hash changes
-  per release and any OpenClaw upgrade overwrites it. This script is run as an
+  The fix lives inside node_modules (the bundle name/hash changes between
+  releases; for example errors-<hash>.js or classify-<hash>.js). Any OpenClaw
+  upgrade overwrites it. This script is run as an
   ExecStartPre hook by the gateway systemd unit (via a drop-in), so the patch
   is re-applied automatically on every (re)start, including right after an
   upgrade. It is idempotent and safe to run repeatedly.
@@ -33,7 +34,9 @@ FIXED = "[:=]\\s*[\"']?402\\b"
 
 
 def main() -> int:
-    files = glob.glob(os.path.join(DIST_DIR, "errors-*.js"))
+    # Search all top-level bundles by marker instead of guessing the hashed
+    # filename. OpenClaw 2026.8.2 moved this regex from errors-* to classify-*.
+    files = glob.glob(os.path.join(DIST_DIR, "*.js"))
     targets = []
     for f in files:
         try:
@@ -45,18 +48,22 @@ def main() -> int:
             targets.append((f, txt))
 
     if not targets:
-        print(f"[patch-402] no file containing {MARKER} found in {DIST_DIR}; nothing to do")
-        # Not fatal: gateway must still start.
-        return 0
+        print(f"[patch-402] ERROR: no file containing {MARKER} found in {DIST_DIR}; review required")
+        # The systemd hook currently prefixes ExecStartPre with '-', so this is
+        # an alert rather than an availability outage. Manual preflight treats
+        # the non-zero result as a release gate.
+        return 2
 
     changed = 0
+    failed = 0
     for f, txt in targets:
         if FIXED in txt:
             print(f"[patch-402] already patched: {os.path.basename(f)}")
             continue
         if NEEDLE not in txt:
-            print(f"[patch-402] WARN: marker present but expected needle not found in {os.path.basename(f)}; "
+            print(f"[patch-402] ERROR: marker present but expected needle not found in {os.path.basename(f)}; "
                   f"regex shape may have changed upstream — skipping (review manually)")
+            failed += 1
             continue
         # Backup once (never overwrite an existing .orig backup).
         bak = f + ".orig-402patch"
@@ -72,8 +79,8 @@ def main() -> int:
         changed += 1
         print(f"[patch-402] patched {os.path.basename(f)} (backup: {os.path.basename(bak)})")
 
-    print(f"[patch-402] done: {changed} file(s) patched, {len(targets)} candidate(s) total")
-    return 0
+    print(f"[patch-402] done: {changed} file(s) patched, {len(targets)} candidate(s) total, {failed} failure(s)")
+    return 0 if failed == 0 else 3
 
 
 if __name__ == "__main__":

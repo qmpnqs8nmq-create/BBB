@@ -200,3 +200,11 @@
 - **安全门禁**：逐项核对当前插件注册路径、新版本存在性、目标类型及打开句柄；活动 Snap、Docker、VS Code Server、当前备份均保留。
 - **结果**：回收 3,519,983,616 bytes，根盘 68%→61%，可用19G。
 - **验证**：Gateway、5个当前插件、main/chief Memory Search、Snap 和 benben Docker sandbox 均正常。
+
+### [2026-09-02] 8.2 升级后个人微信断链、402 自愈脚本静默失效
+- **现象**：核心 CLI/npm/Gateway 已一致到 2026.8.2，但个人微信 5 个账号循环报 `plugin-sdk/channel-runtime` export 不存在后 not-running；402 ExecStartPre 返回成功却未修改新版正则。
+- **触发条件**：主程序 2026.7.1-2 → 2026.8.2；第三方微信插件仍为 2.4.6，官方插件 Feishu/Perplexity 仍为 2026.7.1；核心正则文件从 `errors-*` 迁移到 `classify-*`。
+- **根因层级**：版本兼容层 + 治理层。升级门禁只验证核心版本/服务启动，未把真实 channel runtime、官方插件 drift、monkey-patch 命中数设为完成条件；补丁脚本 fail-open 且退出 0。
+- **修复**：微信 pin 到 2.4.8 并重移植 warm-up/ret=-2 补丁；Feishu/Perplexity pin 到 2026.8.2；402 脚本改为 marker 定位并对零候选/形状变化返回非零；补齐 contact-delivery 工具契约与 WeCom 会话 hook 显式授权。
+- **验证**：新 Gateway PID 1913334 为 2026.8.2，12/12 插件兼容检查通过；5 个微信账号、飞书、企业微信均运行，真实微信消息已完成处理；cgroup 从修复前 5.16G 回落至约 1.1G，后续无通道重启或 memory pressure。
+- **预防**：以后升级完成条件必须同时包含核心/插件版本、插件 doctor、真实 channel probe、monkey-patch 非零候选与幂等检查、重启后资源回落；`ExecStartPre=-` 只能保可用性，人工 preflight 必须把补丁非零退出视为 release gate。

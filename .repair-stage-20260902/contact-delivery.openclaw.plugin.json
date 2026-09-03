@@ -1,0 +1,13 @@
+{
+  "id": "contact-delivery",
+  "contracts": {
+    "tools": [
+      "send_contact"
+    ]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

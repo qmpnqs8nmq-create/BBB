@@ -24,7 +24,7 @@
 - benben 沙箱安全基线（2026-04-20）：docker.network=none（无 egress，web_fetch 走 Gateway）+ 每日 03:00 cron 审计（git remote 白名单 qmpnqs8nmq-create/ + network 配置漂移检测 + 容器镜像陈旧检测）
 - Jamie 频率上限硬规则：24h ≤ 1 主动、 7d ≤ 3 主动，无日志则默认不发（fail-safe）；见 workspace-benben/jamie-weekly-companion-cron.md Step 2.5
 - market agent 模型规则：用 Sonnet 5（不用 Fable/Opus，轻量场景），主/备跨 ZenMux key，GPT-5.5 兜底；2026-07-19 已将活动配置中的 Sonnet 4.6 全量迁移为 Sonnet 5
-- **ZenMux/OpenAI 模型路由（2026-09-01）**：default = `openai/gpt-5.6-sol`（ChatGPT Pro OAuth/Codex harness，250k）；fallback#1 = key1/`anthropic/claude-fable-5`；fallback#2 = key2/Fable 5。两个 ZenMux key 均登记 Fable 5、Sonnet 5、Opus 4.8，Sonnet 4.6 已从活动配置移除；OpenAI 保留 GPT-5.6 Sol/5.5。`api-worker`、`market` 保留各自 agent 级模型覆盖。
+- **ZenMux/OpenAI 模型路由（2026-09-02）**：default = `openai/gpt-5.6-sol`（当前 WebChat/Codex harness OAuth，250k）；唯一 default fallback = key2/`anthropic/claude-fable-5`。key1/Fable 5 因订阅 404 已从默认链移除；`api-worker`、`market` 保留 agent 级覆盖。注意：当前 Codex OAuth 不能直接供 chief 独立 cron 使用。
 - **memory_search embedding = Gemini（2026-05-30 切换）**：`agents.defaults.memorySearch` 必须写 provider `gemini`（不是 google）+ `gemini-embedding-001`（3072 维），auth 走 google:default(api_key)；OpenAI OAuth 不能做 embedding。改配置后须 restart Gateway，并对**每个 agent**分别 `openclaw memory index --agent <id> --force`；索引 `providerKey` 含实际凭据 hash，各 agent 凭据解析不同也会触发 settings changed
 - **⚠️ 改模型配置必须三层同步**：Gateway 会合并 (1) openclaw.json (2) 顶层 models/auth-profiles.json (3) 各 agent 的 models/auth-profiles.json；只改一处会让旧 key/版本复活。ZenMux 正确 base URL 为 `https://zenmux.ai/api/v1`（不是 `/v1`）。统一脚本批量处理、全量备份后验证 `openclaw models list`
 
@@ -48,7 +48,7 @@
 - **成熟切换时机**：系统连续 2 周无架构级变更、日均话题 ≤3 个时，执行容量回收
 
 ## Recent State（近期状态，可滚动覆盖）
-- 本机版本 OpenClaw `2026.7.1-2`，channel=stable（2026-07-19 从 beta.6 切换）；Feishu/Perplexity 为各自 stable `2026.7.1`，Codex 为其 latest `2026.7.1-1`（内含 Codex 0.144.1）。CLI/Gateway probe 正常，402 自愈补丁会在 Gateway 启动前自动重打
+- 本机核心已升级为 OpenClaw `2026.8.2` stable（2026-09-02）；宿主机 reboot 后 CLI/Gateway、12/12 插件、三类通道、402 补丁与安全审计均闭环。微信 2.4.8、Feishu/Perplexity/Codex 2026.8.2；Codex spec 已 pin。
 - 持续性已知项（非故障，待 Bruce）：weixin 账号 4d5b593c4a1b getUpdates errcode -14 每小时 pause（孤儿账号，未绑 agent，可重登或清理）；wecom admin WSClient bestEffort 投递偶发失败（cron e463b042 疑似孤儿）；两个 ZenMux key 当前均 402，由 GPT-5.6 Sol 自动接管
 - cron timeout 治理：`daily-self-check-8am` 与 chief 周日系统巡检反复 timeout；已用 `openclaw doctor --fix` + 周日巡检 `lightContext=true`/timeout 900s/thinking=minimal + coach audit `lightContext=true`/timeout 360s；禁用两个 2026-05 陈旧 NVDA reminder cron。装 bubblewrap 0.9.0 修 Codex sandbox 告警
 - 周度安全巡检最新为 0 critical / 4 warn / 1 info（2026-07-13；均既有姿态：多 agent `exec security=full`、main allowlist 的 find/sed 缺 strictInlineEval、weixin 读文件+网络发送启发式、飞书建文档可授请求者权限）。可选加固需 Bruce 确认，未自动改安全/全局配置
@@ -60,7 +60,7 @@
 ## ⚠️ 个人微信24h窗口（2026-08-14 定性）+ weixin 补丁（升级后必重打）
 - 个人微信 `openclaw-weixin` 与企业微信 `wecom` 是两条独立链路，禁止混作验证或未经确认互设兜底
 - 腾讯服务端限制：个人微信用户 >24h 未发 inbound → 冷推送实测 ret=-2 "prepare failed"；4月无token重发绕过已失效，当前问题未修复
-- weixin 插件（现 2.4.6 pinned）dist/src/channel.js 有本地 warm-up+ret=-2重试补丁；它改善错误可见性，但不能突破24h窗口。插件升级会覆盖，备份 backups/weixin-2.4.6-channel.js.orig-20260814-0535
+- weixin 插件（现 2.4.8 pinned）dist/src/channel.js 已移植 warm-up+ret=-2 重试补丁；它改善错误可见性，但不能突破24h窗口。插件升级会覆盖，原 2.4.6 备份仍在 backups/weixin-2.4.6-channel.js.orig-20260814-0535
 - 2026-08-14 曾误把发给 Lilian 的 benben 测试当成发给 Bruce，并误加 mangba 9个 wecom 兜底；均已纠正/回滚
 
 ## ⚠️ 402/failover 本地补丁（2026-06-12，升级后必重打）

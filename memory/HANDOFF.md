@@ -1,11 +1,12 @@
 # HANDOFF
-- 最后活跃：2026-09-01（webchat, Bruce）
-- 当前话题：删除客服后的系统只读审计已完成
-- 删除验证：无 kefu agent/binding/cron/路径/Wiki source；无断裂 workspace symlink
-- 首要故障：8 个 cron 连败；OpenAI 路由出现 account inactive，ZenMux Fable 5 报订阅不含模型
-- 更新债务：OpenClaw 2026.8.1 可用；apt 78 项（26 security）；系统要求重启
-- 清理债务：chief 407 个 orphan transcripts，sessions 目录 326M
-- 安全审计：0 critical / 4 warn / 1 info；UFW 正常，22/80/443 对外，18789 由 nginx 反代
-- 重点告警：明文 secrets、全 agent exec full、自签 TLS、Codex spec 未 pin
-- 当前状态：Gateway runtime/probe 正常；审计未做任何修复或重启
-- 记录：`memory/2026-09-01.md`、`memory/SYSTEM_CHANGE_LEDGER.md`
+- 最后活跃：2026-09-02（webchat, Bruce）
+- 当前状态：OpenClaw 8.2 最终升级后审计已闭环，无待执行重启或修复
+- 核心：CLI/Gateway/stable 2026.8.2；插件/通道/模型/索引/补丁门禁通过
+- 宿主机：61 个更新完成，fwupd 修复，AppArmor 后重启完成；SSH/UFW/nginx 正常
+- 安全：0 critical / 2 warn / 1 info；exec=full 与 Feishu doc 为保留的信任边界
+- 回滚：`/root/.openclaw/backups/openclaw-8.2-final-audit-pre-20260902-1400`（SHA-256 全通过）
+- 边界：46 条历史 outbound dead-letter 无官方安全删除 API；Secrets 需掩码迁移
+- 边界：chief OpenAI 仍 reroute，Validation Tracker 暂留 Gemini
+- 已知：plugin registry 多 workspace stale 为 8.2 元数据判定问题，differences=[]、运行不受影响
+- 今日记录：`memory/2026-09-02.md`
+

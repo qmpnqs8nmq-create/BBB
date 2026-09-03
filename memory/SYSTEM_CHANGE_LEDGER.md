@@ -163,3 +163,46 @@
 - 清理 Wiki 中 370 个 `bridge-workspace-kefu-*` source，执行 compile + lint 更新索引；共享历史日志中偶发文字提及未作为删除目标。
 - 共享 `symlink-integrity-check` cron 仅移除客服同步、remote 与 sandbox 检查，其他 agent 检查保持不变；10 份共享配置备份仅移除 `kefu` agent 对象。
 - 最终验证：agent/binding/cron/命名路径与 Wiki 索引均无客服活动残留；Gateway runtime/probe 正常。删除不可恢复。
+
+## 2026-09-02 · OpenClaw 2026.8.2 升级与中断后审计
+
+- OpenClaw 从 `2026.7.1-2` 升级到 stable `2026.8.2`；安装后曾短暂出现磁盘 8.2 / Gateway 旧进程错位，Bruce 通过 SSH 重启 Gateway，09:29:27 起 CLI/npm/runtime 均为 8.2。
+- 只读验证：systemd active、probe ok、单一 Gateway PID；回滚目录 81M，6 个 tgz 均通过 gzip 校验，目录/敏感文件权限为 700/600。
+- 升级后阻塞项：个人微信 2.4.6 导入 8.2 已移除的 `plugin-sdk/channel-runtime` export 失败，所有账号 not-running；Feishu/Perplexity 仍为 2026.7.1；plugin registry stale。
+- 402 自愈脚本只扫描 `dist/errors-*.js`，而 8.2 的 `RAW_402_MARKER_RE` 位于 `classify-*.js`，ExecStartPre 虽返回成功但日志显示未找到目标，补丁未生效。
+- 企业微信与飞书连接日志正常；安全审计保持 `0 critical / 4 warn / 1 info`，防火墙/端口暴露面无回归。Gateway cgroup current/peak 达 5.16G/5.67G，微信 5 账号累计 40 次失败并继续重试。
+- npm latest 微信插件 2.4.8 已移除旧 `channel-runtime` import，具备 8.2 兼容修复方向；但不含现有 warm-up/ret=-2 本地补丁，升级时需重移植。
+- 本轮仅审计，未修改配置/插件/服务；后续插件更新、补丁适配与 Gateway restart 必须经 Bruce 确认。
+
+## 2026-09-02 · OpenClaw 2026.8.2 升级后集中修复
+
+- 经 Bruce 明确批准，创建修复前快照 `/root/.openclaw/backups/openclaw-2026.8.2-repair-pre-20260902-094821`，包含 npm generations、主配置、微信原文件、脚本/systemd 与 contact-delivery 元数据；压缩包与权限校验通过。
+- `@tencent-weixin/openclaw-weixin` 升级并 pin 到 2.4.8，`@openclaw/feishu`、`@openclaw/perplexity-plugin` pin 到 2026.8.2；微信 warm-up/ret=-2 补丁已移植，文件语法与 12/12 插件加载检查通过。
+- `scripts/patch-402-failover.py` 不再猜测 `errors-*` 文件名，改为扫描含 `RAW_402_MARKER_RE` 的顶层 bundle；8.2 `classify-*` 已补可选引号，零候选/正则形状变化返回非零，systemd 重启前后均验证幂等。
+- 为本地 `contact-delivery` manifest 增加 `contracts.tools=["send_contact"]`；为现有 WeCom 2026.5.7 增加 `plugins.entries.wecom-openclaw-plugin.hooks.allowConversationAccess=true`，未升级会替换整套技能的 WeCom 2026.8.17。
+- 09:56:43 systemd 重启完成，新 PID 1913334；CLI/Gateway 2026.8.2、probe ok、Result=success、NRestarts=0。重启切断旧 Codex app-server turn 属预期维护中断，新会话已正常运行。
+- 飞书/企业微信均 running+works，5 个个人微信账号均 running，且重启后真实微信消息完成处理；Memory Search 543/543、Dirty=no、FTS ready。
+- Gateway cgroup 首次数据库校验短时峰值 4.07G，worker 退出后约 1.1G，低于修复前 5.16G；后续无 memory pressure/channel restart。安全审计维持 0 critical / 4 warn / 1 info。
+- 未处理的独立治理项：Codex npm spec 未 pin、doctor 工具策略提示、Google 图像模型显式注册缺口与 ZenMux 订阅错误、宿主机 OS 待重启；本次未扩大权限、未改模型链。
+
+## 2026-09-02 · 宿主机重启闭环与 OpenAI 迁移回滚
+
+- 经 Bruce 已批准的维护窗口完成宿主机 reboot；新 boot_id `69b59229-f859-4c44-9cd3-77ad34861c26`，libc6 的 reboot-required 标记已清除。
+- OpenClaw/Gateway 2026.8.2、12/12 插件、Feishu/WeCom/5 Weixin、Google 模型、key2 fallback、402 marker 与防火墙姿态均复测通过；安全审计 0 critical / 3 warn / 1 info。
+- Bruce 要求把 Validation Tracker 从 Gemini 迁到 OpenAI。确认该任务纯文本；系统默认 imageModel 已是 OpenAI GPT-5.5，先前 `MODEL_OK` 仅验证文本请求。
+- 真实后台请求显示：OpenAI 5.6 Sol 无 chief usable profile，OpenAI 5.5 账户 inactive，OpenAI-Codex 与 OpenRouter/OpenAI 均 HTTP 403。临时 allowlist/model 试验项已全部删除。
+- 为保证生产任务可用，Validation Tracker 已回滚至 `google/gemini-3.1-flash-image-preview`，并真实返回 `POST_REBOOT_GOOGLE_OK`；OpenAI 迁移待受保护认证可用后再执行。
+- 回滚/恢复基线仍为 `/root/openclaw-backups/openclaw-post-8.2-{config,sqlite,metadata}-pre-20260902-101915*`。
+
+## 2026-09-02 · OpenClaw 8.2 最终升级后审计与宿主机加固
+
+- 创建并验证回滚点 `/root/.openclaw/backups/openclaw-8.2-final-audit-pre-20260902-1400`；所有 SHA-256 与 gzip 数据校验通过。
+- 修复 8.2 升级后插件 registry/CLI metadata、402 marker、memory provenance identity、api-worker/market 路由；11 个 agent FTS/vector/embedding 全可用。
+- 微信插件持久化生成独立 `cli-metadata.js`，未知 CLI 命令不再加载 runtime；个人微信向 Bruce 的升级测试消息真实 delivered，临时 cron 已删除。
+- 安装 61 个 Ubuntu 更新并修复 fwupd 2.0.20 daemon/lib 一致性；因 AppArmor 更新完成整机重启。最终 failed units=0、reboot-required=no、Node 24.20.0。
+- SSH 保持仅密钥认证，关闭 X11、MaxAuthTries=3；UFW 仅 22/80/443，nginx/AppArmor/unattended-upgrades 正常，18789 无公网防火墙放行。
+- 最终门禁：OpenClaw/CLI/Gateway/stable=2026.8.2，plugins doctor/三通道/health/event loop 正常；安全审计 0 critical / 2 warn / 1 info。
+- Registry stale 的剩余原因是 8.2 多 workspace 元数据不一致（persisted main/current chief，differences=[]），不影响插件加载；未修改核心代码。
+- 46 条历史 outbound dead-letter 无官方安全清理 API；128 条 plaintext secret finding 均位于权限 700/600 的受限状态文件，0 unresolved，不能绕过掩码录入自动搬迁。
+- chief OpenAI cron 仍无法直用 OpenAI，测试实际 reroute 到 ZenMux；Validation Tracker 保留 Gemini。heartbeat 在本轮长 main turn 中排队超时，既有成功历史与主模型实测证明非配置故障。
+
