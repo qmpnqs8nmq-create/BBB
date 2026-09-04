@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-08
+- 08-20: 完整性巡检、Gateway 与双 workspace 快照均正常；C3 镜像检查临时改用 docker inspect 验证，永久修正继续由 Active Commitments 跟踪
 - 08-19: Gateway 正常、RSS 峰值自行回落；修复 security-audit 提示词，改用 cron delivery 而非不存在的 `openclaw message`，其余投递/行情源故障未冒险重跑
 - 08-18: Gateway 与连通性正常；此前自检因 Gateway 重启中断的历史错误已自愈，heartbeat 仅做归档与去重
 - 08-14: 长期放行 benben→main A2A 并创建首批 PACT 一次性提醒；个人微信插件升至 2.4.6 并移植补丁，但确认腾讯 24h 冷推送为服务端硬限制，误加的 WeCom 兜底已回滚

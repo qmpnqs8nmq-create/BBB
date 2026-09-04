@@ -1,0 +1,1 @@
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1#L101] Assistant: 📋 日报 2026-09-03 🏢 业务（chief） 今日无 chief 日志，无新的业务决策记录。两个内容类任务（价值投资雷达周报、月度筛选双轨制）今日失败后未重跑（避免重复外发），是否补发需你确认。 🔧 系统（main） - ⚠️ openclaw-weixin bot 凭据失效（今晨发现），无人值守未处理，**需你手动更新** - Cron 异常 5 项：3 个 LLM 失败类（雷达周报 + 两个 healthcheck）、symlink 检查超时、微信投递失败 1 次 - 已修复：symlink 全部验证通过，3 个
