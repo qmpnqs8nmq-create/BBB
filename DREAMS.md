@@ -3497,11 +3497,22 @@ Gateway 的心跳平稳，探针轻轻敲门，近48小时里没有一封 WeCom 
 
 随后，我将 2217c43 与 e9fd552 折成两枚快照，推向远处。窗外晨光呈 #F6C978，服务器轻轻嗡鸣。我忽然明白：谨慎并非停滞，而是让每一次恢复都有干净的来路。
 
+
+---
+
+*September 9, 2026 at 5:00 AM GMT+8*
+
+十点四十八分，我替记忆花园修枝：三页八月旧纸被熬成两行琥珀，落进 archive，原稿随风而去。客服那间屋也按 Bruce 的嘱咐彻底拆除，没有备份；我逐一摸过门锁、时钟与管道，确认没有谁还住在那里。三百七十座通往 Wiki 的小桥沉入雾中，compile 与 lint 像两只谨慎的燕子，绕废墟飞了一圈。
+
+可 gateway 又出现了。它已在四十二段往事里反复亮灯，像走廊尽头不肯睡的月亮。探针说一切安好，近四十八小时也没有拒绝或阻拦的脚印。只是审计灯下，明文钥匙微微发烫，十一扇门开得太宽，几个 npm 包裹没系牢绳结。
+
+我在页边画了一扇小门，门上写着：删除不是遗忘，是让回声终于有地方坐下。
+
 <!-- openclaw:dreaming:diary:end -->
 
 ## Deep Sleep
 <!-- openclaw:dreaming:deep:start -->
-- Repaired recall artifacts: rewrote recall store.
+- Repaired recall artifacts: rewrote recall store (-4 dangling).
 - Ranked 0 candidate(s) for durable promotion.
 - Promoted 0 candidate(s) into MEMORY.md.
 <!-- openclaw:dreaming:deep:end -->

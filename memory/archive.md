@@ -3,6 +3,7 @@
 > 由 heartbeat 自动维护。每月一段，≤20 行。超过 6 个月的段落可删除。
 
 ## 2026-08
+- 08-25: heartbeat 归档 08-09~11 到期日志并将 MEMORY 从 83 行精简至 78 行；近 48 小时未发现 WeCom DM 拒绝或拦截
 - 08-22: heartbeat 完成到期日志归档与 MEMORY 去重；Gateway 与探针正常，近 48 小时未发现企业微信 DM 拒绝或拦截
 - 08-20: 完整性巡检、Gateway 与双 workspace 快照均正常；C3 镜像检查临时改用 docker inspect 验证，永久修正继续由 Active Commitments 跟踪
 - 08-19: Gateway 正常、RSS 峰值自行回落；修复 security-audit 提示词，改用 cron delivery 而非不存在的 `openclaw message`，其余投递/行情源故障未冒险重跑

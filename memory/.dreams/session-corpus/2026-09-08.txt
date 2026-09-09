@@ -1,0 +1,1 @@
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1#L106] Assistant: # 9月8日日报摘要 **业务侧：** 今日无 chief 日志，未发现新增业务决策或项目进展。现有快照仍为 ADR-012 回滚同步已闭环、Route 1/2/3 + 5-agent 为主线，chief 暂无待执行动作。 **系统侧：** Gateway 运行及连通性正常。发现 openclaw-weixin token 已失效，导致“月度筛选 v2.0 双轨制”投递失败 1 次，需人工重新认证。已提交并尝试推送 main/chief workspace 快照，但尚需核验远端推送结果。完成过期日志归档与记忆维护，未发现企业微信私聊
