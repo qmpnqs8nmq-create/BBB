@@ -1,0 +1,1 @@
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1#L107] Assistant: # 日报 2026-09-09 🏢 **业务进展** 今日未发现 chief 日志，暂无可核实的业务决策、经营动作或项目进展；chief 状态快照仍停留在 2026-05-04。 🔧 **系统运维** Gateway 运行正常，OpenClaw 为 2026.8.2。发现微信账号 token 持续 stale、Control UI 缺少 gateway token；Cron 本体正常，但因 admin 未连接且未配置 Agent 模式导致投递失败。自动修复因处于 gateway 进程树内被安全机制拒绝。两个 workspace 
