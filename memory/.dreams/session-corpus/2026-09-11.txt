@@ -1,0 +1,1 @@
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1#L109] Assistant: # 9月11日日报摘要 今日 chief 无新增业务日志；现有快照显示 ADR-012 回滚同步已闭环，chief 暂无待执行动作。 系统侧：Gateway 与定时任务运行正常；两套 workspace 已完成每日快照。完成 14 天前日志归档，记忆文件规模健康，近 24 小时无新增企业微信私聊拦截。 待处理： - openclaw-weixin token 已失效，需更新凭据。 - admin 未配置 Bot 或 Agent，导致上次自动投递失败。 - chief 日志及 HANDOFF 长期未更新，建议纳入日常新鲜度检查。
