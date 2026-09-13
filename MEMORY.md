@@ -1,78 +1,50 @@
 # MEMORY.md
-<!-- 硬上限 120 行。超限时压缩：具体事实下沉 memory/*.md，Hot 层只留模式和结论。 -->
+<!-- 成熟期硬上限 80 行；只保留稳定、长期、可复用信息。具体历史见 memory/archive.md 与 daily notes。 -->
 
-长期记忆。只写值得长期保留、未来反复有用的内容。按分区管理，新信息替换旧信息而非追加。
+## Identity & Preferences
+- User: Bruce（Asia/Shanghai）；Assistant: Kaopuge 🐎（企业微信名“服务员Bruce”），冷静带幽默。
+- 工作偏好：先动手验证再下结论，报方案不报困难；优先 Dashboard + 本地 Gateway，先核心后原生 app。
+- 当前优先企业微信私聊；每天 08:00 自检，正常不打扰、异常先修再报。
 
-## Identity & Preferences（身份与偏好）
+## Architecture Decisions
+- 单 Gateway :18789；企业微信 Bruce(QiuHongYue)→chief、其他→chief-user；飞书 Bruce→chief、其他→chief-user（peer binding 带 accountId: "*"）；个人微信/本地浏览器→chief。
+- CEO 阵列：chief 是默认业务入口，main 是系统主脑/平台维护；平台级变更 DRI 归 main。
+- 权限边界：对 chief/CEO 阵列只披露结论与对方所需动作，不披露 main 内部台账、全局审计过程或其他 agent 状态。
+- CEO 5-Agent 用 symlink 同步，chief workspace 为业务 single source of truth；独立沙箱 agent 不走 symlink，全球治理规则由每日 03:00 cron 从 main 同步。
+- 私有 workspace 仓库：https://github.com/qmpnqs8nmq-create/BBB.git。
+- Sandbox 镜像 openclaw-sandbox:bookworm-slim 必须包含 python3；benben/mangba/mangba-guest 默认无网络，web_fetch 走 Gateway。
+- benben→main A2A 长期放行；PACT 新课表由 benben 去重、换算 America/New_York 前一晚 22:00 后交 main 创建 deleteAfterRun 一次性 cron。
+- Jamie 主动联系上限：24h≤1、7d≤3；无日志默认不发。
 
-- User: Bruce（Asia/Shanghai）；Assistant: Kaopuge 🐎（企业微信名“服务员Bruce”），冷静带幽默
-- 工作：先动手试再下结论，报方案不报困难；优先 Dashboard + 本地 Gateway，先核心后原生 app
-- 当前优先企业微信私聊；每天 08:00 自检，正常不打扰、异常先修再报
+## Models & Memory
+- 当前默认模型为 openai/gpt-5.6-sol（Codex OAuth，250k），唯一默认 fallback 为 key2/anthropic/claude-fable-5；Codex OAuth 不能直接供 chief 独立 cron 使用。
+- market agent 使用 Sonnet 5，主备跨 ZenMux key，GPT-5.5 兜底。
+- 模型配置需同步 openclaw.json、顶层 models/auth-profiles.json、各 agent models/auth-profiles.json；ZenMux base URL 是 https://zenmux.ai/api/v1。
+- memory_search embedding 使用 Gemini：provider=gemini、model=gemini-embedding-001；配置/凭据指纹变化后逐 agent 备份 SQLite、强制重建索引并真实检索验证。
+- benben 检索超时曾由同步 MMR 放大候选集导致；仅对 benben 关闭 MMR 后恢复，其他 agent 保持默认。
 
-## Architecture Decisions（架构决策）
+## Operations
+- 安全巡检归 main；main 周日 05:00 做平台复盘，chief 10:00 做业务复盘。
+- 会话 context 60–70% 建议 /new，70%+ 必须切；长内容先写文件，HANDOFF 承接。
+- 日志成熟期：daily ≤60 行、MEMORY ≤80 行、7 天归档；当前 heartbeat 仍按 14 天归档规则执行，直至治理规则正式切换。
+- 可能中断服务、改变安全边界或修改全局配置的操作必须先获 Bruce 确认；禁止在 main 会话直接 stop/restart Gateway。
+- 高频 cron（<60 秒）必须人工 review，并有删除/终止条件；轮询优先后台脚本 + 低频 cron 关门。
+- 插件升级后若 plugins update 误报 up-to-date，直接 plugins install @openclaw/{codex,feishu}@版本 --force --pin，再按变更门禁重启验证。
 
-- 单 Gateway :18789，按用户 bindings 路由：企业微信 Bruce(QiuHongYue)→chief、其他→chief-user；飞书 Bruce(ou_2057df7422741af99b3f14f79fd527f6)→chief、其他→chief-user（peer binding 须带 `accountId: "*"`）；微信/本地浏览器→chief
-- 已废弃：team gateway (:8899)、8888 HTTPS 代理、ai.openclaw.team / ai.openclaw.lan8888-proxy（2026-03-23 全删）
-- CEO 阵列：chief 是默认业务入口，main 是系统主脑/平台维护
-- **权限边界**：main = 平台最高权限 + 全局 OpenClaw 可见性（cron / workspace / 其他 agent 资源）。chief 无权知晓 main 内部台账、全局审计过程、其他 agent workspace 状态。对 chief / 任何 CEO 阵列成员回复时：只曝露 “结论 + 对对方的要求”，不曝露审计过程 / 其他 agent 状态 / 平台内部机制。
-- CEO 5-Agent 同步：symlink 方案（setup-symlinks.sh），chief workspace 为 single source of truth
-- symlink-integrity-check cron 每天 03:00（main 负责）
-- Workspace 私有仓库：`https://github.com/qmpnqs8nmq-create/BBB.git`
-- Sandbox 镜像 `openclaw-sandbox:bookworm-slim` 必须装 python3（pinned mutation helper 依赖）。2026-04-20 加装；重建基础镜像时要沿用
-- 独立沙箱 agent（benben/mangba/mangba-guest）的 workspace 不走 symlink，CTX-CONTROL-RULES.md 由每日 03:00 cron 自动 rsync 同步（main 为权威副本）
-- **benben → main A2A 长期放行（2026-08-14）**：`tools.agentToAgent.allow` 包含 `main` 与 `benben`，`sessions.visibility=all`；PACT 逐月新课表由 benben 去重并按 America/New_York 前一晚 22:00 换算后 A2A 交 main，main 创建 `deleteAfterRun` 一次性 cron，无需 Bruce 转述。
-- benben 沙箱安全基线（2026-04-20）：docker.network=none（无 egress，web_fetch 走 Gateway）+ 每日 03:00 cron 审计（git remote 白名单 qmpnqs8nmq-create/ + network 配置漂移检测 + 容器镜像陈旧检测）
-- Jamie 频率上限硬规则：24h ≤ 1 主动、 7d ≤ 3 主动，无日志则默认不发（fail-safe）；见 workspace-benben/jamie-weekly-companion-cron.md Step 2.5
-- market agent 模型规则：用 Sonnet 5（不用 Fable/Opus，轻量场景），主/备跨 ZenMux key，GPT-5.5 兜底；2026-07-19 已将活动配置中的 Sonnet 4.6 全量迁移为 Sonnet 5
-- **ZenMux/OpenAI 模型路由（2026-09-02）**：default = `openai/gpt-5.6-sol`（当前 WebChat/Codex harness OAuth，250k）；唯一 default fallback = key2/`anthropic/claude-fable-5`。key1/Fable 5 因订阅 404 已从默认链移除；`api-worker`、`market` 保留 agent 级覆盖。注意：当前 Codex OAuth 不能直接供 chief 独立 cron 使用。
-- **memory_search embedding = Gemini（2026-05-30 切换）**：`agents.defaults.memorySearch` 必须写 provider `gemini`（不是 google）+ `gemini-embedding-001`（3072 维），auth 走 google:default(api_key)；OpenAI OAuth 不能做 embedding。改配置后须 restart Gateway，并对**每个 agent**分别 `openclaw memory index --agent <id> --force`；索引 `providerKey` 含实际凭据 hash，各 agent 凭据解析不同也会触发 settings changed
-- **⚠️ 改模型配置必须三层同步**：Gateway 会合并 (1) openclaw.json (2) 顶层 models/auth-profiles.json (3) 各 agent 的 models/auth-profiles.json；只改一处会让旧 key/版本复活。ZenMux 正确 base URL 为 `https://zenmux.ai/api/v1`（不是 `/v1`）。统一脚本批量处理、全量备份后验证 `openclaw models list`
+## Channels
+- 企业微信 wecom 与个人微信 openclaw-weixin 是独立链路，禁止混作验证或未经确认互设兜底。
+- 个人微信 liteapp.weixin.qq.com/q/ 登录链接仅几分钟有效；Bruce 说“发链接”后现场启动 login、autobind 监听与通知流程。
+- 老用户可能走 binded_redirect、不生成新账号文件；以 Gateway dispatch 日志确认路由，不以新文件或 sessions_list 活跃数判断。
+- 个人微信用户超过 24h 无 inbound 时冷推送可能 ret=-2；warm-up/重试补丁只改善可见性，不能突破服务端窗口。
+- wecom_mcp allowlist 告警表示工具插件未启用，不代表企业微信 DM 被拒，勿误报审批。
 
-## Operations（运维经验）
+## Upgrade-Sensitive Patches
+- openclaw-weixin 2.4.8 的 channel.js 已移植 warm-up + ret=-2 重试补丁；插件升级会覆盖，升级后复核。
+- ZenMux 402 failover 补丁：OpenClaw 的 RAW_402_MARKER_RE 需容忍带引号的 "402"；升级会覆盖，升级后 grep 定位、单点重打并用子 agent 真实 failover 验证。
+- 编译文件补丁必须先备份、只改一处；不要用 reload 叠补丁规避 upstream bug。
 
-- 安全巡检 (healthcheck) 归 main，不归 chief（2026-03-22 定稿）
-- 两层周日复盘：main 05:00 平台层 (PLATFORM_ITERATION_LOG.md)，chief 10:00 业务层 (SYSTEM_ITERATION_LOG.md)
-- 会话/归档：context 60–70% 建议 `/new`、70%+ 必须切；reset idle 24h 仅兜底，compaction 前 memoryFlush；日志建设期 14 天、成熟后 7 天，由 heartbeat 蒸馏删除（详见 CTX-CONTROL-RULES.md）
-- Docker: docker.io 28.2.2 (apt)，用于 agent sandbox
-
-## Active Commitments（进行中的承诺）
-
-- 跟踪 openclaw/openclaw#55897
-- chief 业务层改善：启动流程、探索熔断、Exploration Discipline 具体化
-- 修正 `symlink-integrity-check` cron `e463b042` 的 C3 镜像检查：`docker ps --format '{{.ImageID}}'` 不受支持，应逐容器改用 `docker inspect --format '{{.Image}}'`
-
-## Misc
-- openclaw-weixin 新用户接入：`liteapp.weixin.qq.com/q/` 链接有效期只有几分钟，必须朋友人在旁边能立刻点时才生成。协作模式：Bruce 说"发链接" → 我起 `openclaw channels login --channel openclaw-weixin` + autobind 监听脚本 + 通知 cron，一条龙自动绑 agent（如 mangba-guest），不要提前生成囤着。
-- 记忆系统 2026-03-28 重构：单日单文件 + 五分区 + 禁止 topic-split，详见 AGENTS.md
-- 建设期容量策略：每日 ≤150 行、MEMORY ≤120 行、14 天归档；成熟后收紧到 60/80/7
-- **成熟切换时机**：系统连续 2 周无架构级变更、日均话题 ≤3 个时，执行容量回收
-
-## Recent State（近期状态，可滚动覆盖）
-- 本机核心已升级为 OpenClaw `2026.8.2` stable（2026-09-02）；宿主机 reboot 后 CLI/Gateway、12/12 插件、三类通道、402 补丁与安全审计均闭环。微信 2.4.8、Feishu/Perplexity/Codex 2026.8.2；Codex spec 已 pin。
-- 持续性已知项（非故障，待 Bruce）：weixin 账号 4d5b593c4a1b getUpdates errcode -14 每小时 pause（孤儿账号，未绑 agent，可重登或清理）；wecom admin WSClient bestEffort 投递偶发失败（cron e463b042 疑似孤儿）；两个 ZenMux key 当前均 402，由 GPT-5.6 Sol 自动接管
-- cron timeout 治理：`daily-self-check-8am` 与 chief 周日系统巡检反复 timeout；已用 `openclaw doctor --fix` + 周日巡检 `lightContext=true`/timeout 900s/thinking=minimal + coach audit `lightContext=true`/timeout 360s；禁用两个 2026-05 陈旧 NVDA reminder cron。装 bubblewrap 0.9.0 修 Codex sandbox 告警
-- 周度安全巡检最新为 0 critical / 4 warn / 1 info（2026-07-13；均既有姿态：多 agent `exec security=full`、main allowlist 的 find/sed 缺 strictInlineEval、weixin 读文件+网络发送启发式、飞书建文档可授请求者权限）。可选加固需 Bruce 确认，未自动改安全/全局配置
-- benben 排障：① web_search 用 Perplexity 别配 `webSearch.model=sonar-pro`（带 max_tokens 走 legacy 报 unsupported_content_budget），保留 key + `timeoutSeconds=60`；② "failed before producing a reply"=会话历史 Anthropic thinking 签名损坏（`Invalid signature in thinking block`），`/new` 开新会话解；③ `dummy` MCP 报错=工具路由误调占位名，非配置缺失
-- 日志噪音（已知非故障）：`[agent] run ... stopReason=stop` 以 ERROR 记录但实为 dream cycle 正常完成（isError=false）；`EmbeddedAttemptSessionTakeoverError` = chief dreaming-narrative 多 lane 并发抢 session 文件锁，反复出现但暂无害，均可忽略
-- 接入老用户经验（刘董事长 mangba-guest 2026-06-08）：老用户走 binded_redirect 不产新账号文件→链接误判"过期"；直接看网关 dispatch 日志确认路由，别等新文件/别只信 sessions_list 活跃数；确认网关 pid 用 `openclaw gateway status`（pgrep 会误匹配 exec shell）
-- 插件漂移经验：升级后 codex/feishu 若 doctor 报旧版且 `plugins update` 误报 up-to-date → 直接 `openclaw plugins install @openclaw/{codex,feishu}@版本 --force --pin` + restart；systemd 单元旧版本号非致命
-
-## ⚠️ 个人微信24h窗口（2026-08-14 定性）+ weixin 补丁（升级后必重打）
-- 个人微信 `openclaw-weixin` 与企业微信 `wecom` 是两条独立链路，禁止混作验证或未经确认互设兜底
-- 腾讯服务端限制：个人微信用户 >24h 未发 inbound → 冷推送实测 ret=-2 "prepare failed"；4月无token重发绕过已失效，当前问题未修复
-- weixin 插件（现 2.4.8 pinned）dist/src/channel.js 已移植 warm-up+ret=-2 重试补丁；它改善错误可见性，但不能突破24h窗口。插件升级会覆盖，原 2.4.6 备份仍在 backups/weixin-2.4.6-channel.js.orig-20260814-0535
-- 2026-08-14 曾误把发给 Lilian 的 benben 测试当成发给 Bruce，并误加 mangba 9个 wecom 兜底；均已纠正/回滚
-
-## ⚠️ 402/failover 本地补丁（2026-06-12，升级后必重打）
-- 根因：OpenClaw 的 RAW_402_MARKER_RE 入口正则不认带引号码值（ZenMux 返 `"code":"402"` 字符串）→ 撞 402 后 errCount 恒 0、零 failover、子 agent 0token 秒死。
-- 补丁：定位 dist 中 `RAW_402_MARKER_RE`，把 `[:=]\s*402\b` / `[:=]\s*` 这类入口补成可容忍引号的 `[:=]\s*["']?402\b` / `[:=]\s*["']?`。只改 1 处。2026-06-12 备份 `/root/.openclaw/backups/errors-DcOiGp7S.js.orig-*`；2026-06-24 升级 6.10 后重打到 `dist/errors-BmvajW3H.js`，备份 `backups/errors-BmvajW3H.js.orig-20260624-214119`。
-- ⚠️ 改的是 node_modules 编译文件，**OpenClaw 升级会覆盖→升级后需 grep `RAW_402_MARKER_RE` 重打同一补丁**。验证：子agent key1→402→failover decision reason=rate_limit→自动切→run done。
-- 另修：billingBackoffHoursByProvider key 从不存在的 "custom-zenmux-ai" → 真实 zenmux-key1/key2=1h（保留）。子 agent model 覆盖实测无效（报告值≠执行值）已回滚。上游 issue 草稿：memory/tasks/openclaw-402-subagent-failover-issue.md（Bug1=正则已本地修 / Bug2=收敛丢 status / Bug3=subagents.model 执行不一致）。
-- 配置保留：primary=key1，fallbacks=[codex/gpt-5.5, key2]。生产验证：2026-07-17 自检中撞 402 已自动切备用模型，补丁生效。
-
-## Recent Fixes（可滚动）
-- memory index identity mismatched（报 `index provider settings changed`）：根因是 7/13 beta.6 升级后 provider/凭据指纹变化，旧 providerKey 残留 SQLite。修复套路（逐 agent）：先备份该 agent SQLite → `openclaw memory index --agent <name> --force` → 真实检索验证。main/chief 7/15 已修，benben 7/20 已修（备份 backups/benben-memory-reindex-20260720-1405）；`dirty=true` 但 issues=[] 且检索成功属正常。
-- benben `memory_search timed out after 15s` 与索引 identity 无关：根因是 hybrid 候选并集进入同步 MMR 后随 `maxResults` 急剧放大并阻塞事件循环；仅对 benben 关闭 MMR（备份后热加载）即将 `maxResults=20` 从约 47s 降至约 6s，真实 Gateway 工具调用成功，其他 agent 默认配置不变。
-- cron 连败修复已闭环（教训：cron 少用固定模型覆盖，优先 agent 默认链获得 failover）：`CEO Weekly Briefing` 切 gemini-3.1-flash 07-27 ok；`Validation Tracker` 清除 gpt-5.5 覆盖 08-05 ok。Codex 项目信任告警已修（main codex-home/config.toml 加 /root trusted）
-- 08-11 为周日系统巡检、coach 双周审计、CEO Weekly Briefing 切到已验证可用的 `google/gemini-3.5-flash` 并清空任务级 fallback；三项均已按计划运行 ok（前两项 08-16，Briefing 08-17 且企微投递成功）。
-- 日志辨识：`wecom_mcp` allowlist 告警行 = 工具插件未启用，**不是** wecom 用户私聊被拒，勿误报审批
+## Active Commitments
+- 跟踪 openclaw/openclaw#55897。
+- chief 业务层改善：启动流程、探索熔断、Exploration Discipline 具体化。
+- 修正 symlink-integrity-check cron C3：不要用不受支持的 docker ps --format '{{.ImageID}}'，改为逐容器 docker inspect --format '{{.Image}}'。
+- 持续已知项：openclaw-weixin 账号 4d5b593c token/session 已失效；wecom admin WSClient best-effort 投递偶发失败；均不自动改凭据或安全边界。
