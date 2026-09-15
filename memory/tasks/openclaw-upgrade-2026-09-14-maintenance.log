@@ -1,0 +1,1328 @@
+Mon Sep 14 10:40:11 PM CST 2026
+Starting isolated OpenClaw 2026.9.4 maintenance completion
+[update finalize] {"step":"finalize:preflight","status":"in_progress","startedAtMs":1789396826092}
+[update finalize] {"step":"finalize:preflight","status":"completed","endedAtMs":1789396827092}
+[update finalize] {"step":"finalize:targetConfigValidation","status":"in_progress","startedAtMs":1789396827232}
+[state/db] state database schema migration pending; verifying integrity first
+[update finalize] {"step":"finalize:targetConfigValidation","status":"completed","endedAtMs":1789396828960}
+[update finalize] {"step":"finalize:configSnapshot","status":"in_progress","startedAtMs":1789396829098}
+[update finalize] {"step":"finalize:configSnapshot","status":"completed","endedAtMs":1789396829233}
+[update finalize] {"step":"finalize:doctor","status":"in_progress","startedAtMs":1789396829367}
+[update finalize] Could not refresh the update heartbeat; continuing: another OpenClaw process owns state-lifecycle
+[update finalize] {"step":"warning:finalize:doctor:0","status":"completed","detail":"core/doctor/node-hosting-preconditions: The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.","endedAtMs":1789396990868}
+[update finalize] {"step":"warning:finalize:doctor:1","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.chief-user.tools.allow does not include \"skill_workshop\".","endedAtMs":1789396991006}
+[update finalize] {"step":"warning:finalize:doctor:2","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.api-worker.tools.allow does not include \"skill_workshop\".","endedAtMs":1789396991143}
+[update finalize] {"step":"warning:finalize:doctor:3","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.market.tools.profile: \"minimal\" does not include \"skill_workshop\".","endedAtMs":1789396991279}
+[update finalize] {"step":"warning:finalize:doctor:4","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.mangba-guest.tools.profile: \"minimal\" does not include \"skill_workshop\".","endedAtMs":1789396991416}
+[update finalize] {"step":"warning:finalize:doctor:5","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.benben.tools.allow does not include \"skill_workshop\".","endedAtMs":1789396991551}
+┌  OpenClaw doctor
+[state-migrations] Auto-migrated legacy state:
+- Relocated 2 Skill Workshop skills, retargeted 2 proposals, marked 0 stale, and migrated 2 legacy collection backup roots.
+│
+◇  Doctor changes ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  - Relocated 2 Skill Workshop skills, retargeted 2 proposals, marked 0  │
+│    stale, and migrated 2 legacy collection backup roots.                │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────────────╮
+│                                                                │
+│  Migrated stored auth profile aliases in                       │
+│  ~/.openclaw/agents/execution/agent/openclaw-agent.sqlite.     │
+│  Migrated stored auth profile aliases in                       │
+│  ~/.openclaw/agents/mangba-guest/agent/openclaw-agent.sqlite.  │
+│                                                                │
+├────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  Legacy Codex provider routes require manual reconciliation before       │
+│  matching refs can migrate.- models.providers.openai-codex cannot be     │
+│  merged automatically into models.providers.openai because               │
+│  provider-level defaults cannot be represented safely on merged models:  │
+│  models.providers.openai-codex.apiKey.- Doctor retained matching legacy  │
+│  refs in config, sessions, and cron. These refs will not execute until   │
+│  reconciled: fix the model route/auth metadata, remove the legacy        │
+│  provider entry, then rerun `openclaw doctor --fix`.                     │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - channels.feishu.groupPolicy is "allowlist" but groupAllowFrom (and    │
+│    allowFrom) is empty — all group messages will be silently dropped.    │
+│    Add sender IDs to channels.feishu.groupAllowFrom or                   │
+│    channels.feishu.allowFrom, or set groupPolicy to "open".              │
+│  - channels.feishu.accounts.admin.groupPolicy is "allowlist" but         │
+│    groupAllowFrom (and allowFrom) is empty — all group messages will be  │
+│    silently dropped. Add sender IDs to                                   │
+│    channels.feishu.accounts.admin.groupAllowFrom or                      │
+│    channels.feishu.accounts.admin.allowFrom, or set groupPolicy to       │
+│    "open".                                                               │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ───────────────────────────────────────────────────────╮
+│                                                                         │
+│  Kept auth profile openai-codex:default unchanged because its provider  │
+│  realm or identity is unresolved.                                       │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Update Doctor scope ──────────────────────────────────────────────────╮
+│                                                                        │
+│  Omitted during update: Active tool schema warnings, Project clones,   │
+│  SQLite database size, GitHub projects, Bootstrap size, Workspace      │
+│  suggestions.                                                          │
+│  Run `openclaw doctor` after the update to inspect these diagnostics.  │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+◇  Model catalog credentials ──────────────────────────────────────────────╮
+│                                                                          │
+│  Found 2 plaintext model credentials. Run openclaw doctor --fix to copy  │
+│  and verify them in agent SQLite before plaintext catalog                │
+│  authentication is retired.                                              │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ────────────────────────────────────────────────────╮
+│                                                                     │
+│  Copied and verified 2 model credentials in agent SQLite. Existing  │
+│  catalog values remain active until the runtime migration lands.    │
+│                                                                     │
+├─────────────────────────────────────────────────────────────────────╯
+[warning] core/doctor/node-hosting-preconditions plugins.entries.device-pair.enabled - The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.
+  fix: Set plugins.entries.device-pair.enabled: true, ensure device-pair is not denied or excluded by plugins.allow, then restart the Gateway.
+│
+◇  Command owner ──────────────────────────────────────────────────────────╮
+│                                                                          │
+│  No command owner is configured.                                         │
+│  A command owner is the human operator account allowed to run            │
+│  owner-only commands and approve dangerous actions, including            │
+│  /diagnostics, /export-session, /export-trajectory, /config, and exec    │
+│  approvals.                                                              │
+│  CLI pairing approval records the first command owner. Control UI        │
+│  approval has an owner checkbox; otherwise set commands.ownerAllowFrom.  │
+│  Fix: set commands.ownerAllowFrom to your channel user id, for example   │
+│  openclaw config set commands.ownerAllowFrom '["telegram:123456789"]'    │
+│  Restart the gateway after changing this if it is already running.       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Plugin session repair ──────────────────────────────────╮
+│                                                          │
+│  Removed 1 orphaned Codex app-server session binding(s)  │
+│                                                          │
+├──────────────────────────────────────────────────────────╯
+│
+◇  Plugin registry ───────────────────────────────────────────╮
+│                                                             │
+│  Plugin registry refreshed: 12/65 enabled plugins indexed.  │
+│                                                             │
+├─────────────────────────────────────────────────────────────╯
+│
+◇  State integrity ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - Found stale Google session routing state in 5 sessions outside the    │
+│    current configured model/runtime route.                               │
+│    This can keep later message-channel runs pinned to an old             │
+│    runtime/provider after defaults move elsewhere.                       │
+│    Examples: agent:chief:cron:0621489c-5f92-44bd-975a-082d6de599e2       │
+│    (runtime model state, auto auth profile override),                    │
+│    agent:chief:cron:7a59f223-bb9c-4eaa-8941-57b49b9aa576 (runtime model  │
+│    state, auto auth profile override),                                   │
+│    agent:chief:cron:7f1dacbb-d21b-4e46-9519-47fecef2c516 (runtime model  │
+│    state, auto auth profile override)                                    │
+│  - Found stale OpenAI session routing state in 2 sessions outside the    │
+│    current configured model/runtime route.                               │
+│    This can keep later message-channel runs pinned to an old             │
+│    runtime/provider after defaults move elsewhere.                       │
+│    Examples:                                                             │
+│    agent:api-worker:dashboard:f388f09b-4913-4257-900a-bb70f163d785       │
+│    (auto auth profile override),                                         │
+│    agent:api-worker:dashboard:f4d0ea16-4c43-4e99-9968-bf69b5334199       │
+│    (auto auth profile override)                                          │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ────────────────────────────────────────────────────────────────╮
+│                                                                       │
+│  Automation model overrides detected.                                 │
+│  - 4 jobs set `payload.model` and will not inherit                    │
+│    `agents.defaults.model` (openai/gpt-5.6-sol)                       │
+│  - Provider namespaces: google=4                                      │
+│  - 4 jobs use a different model than `agents.defaults.model`          │
+│    (openai/gpt-5.6-sol)                                               │
+│  - Examples: 7f1dacbb-d21b-4e46-9519-47fecef2c516 ->                  │
+│    google/gemini-3.1-flash-image-preview,                             │
+│    d9f78e66-c741-4a30-a4ad-dd372a82d41d -> google/gemini-3.5-flash,   │
+│    7a59f223-bb9c-4eaa-8941-57b49b9aa576 -> google/gemini-3.5-flash    │
+│  Review with openclaw automations list and openclaw automations show  │
+│  <job-id>; remove `payload.model` from jobs that should inherit the   │
+│  default.                                                             │
+│                                                                       │
+├───────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  1 automation has failed 3+ runs in a row (`state.consecutiveErrors`),   │
+│  so the scheduler only re-fires it on error backoff.                     │
+│  - The count resets on the next successful run and also counts runs      │
+│    interrupted by a gateway restart, so a lasting streak means repeated  │
+│    task failures, repeatedly interrupted runs, or a mix. Failure alerts  │
+│    are opt-in, so this may be the only notice.                           │
+│  - Review with openclaw automations list or openclaw automations show    │
+│    <id>.                                                                 │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  4 isolated automations drive shell/process tools from the agent prompt  │
+│  and keep running as-is: `symlink-integrity-check`, `Monthly Process     │
+│  Review`, `gateway-restart-after-rollback-20260419`,                     │
+│  `价值投资机会雷达周报 v3.0`.                                            │
+│  - This is a supported shape, not a legacy store row, so the doctor fix  │
+│    path cannot convert it and the finding is informational only.         │
+│  - For a deterministic run, recreate it as a command automation          │
+│    (`openclaw automations add ... --command "<shell>"`).                 │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  32 tool-bearing cron jobs keep legacy sender-policy resolution because  │
+│  stored account authority is not provable: `daily-self-check-8am`,       │
+│  `healthcheck:security-audit`, `healthcheck:update-status`,              │
+│  `symlink-integrity-check`, `Quarterly Domain Review` (+27 more).        │
+│  - These jobs continue through restrictive sender-policy resolution;     │
+│    doctor will not infer authority from delivery or current              │
+│    configuration.                                                        │
+│  - Reauthorize with an exact explicit cap: `openclaw cron edit <id>      │
+│    --tools <tool,...>`.                                                  │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Host desktop ──────────────────────────────────────────────────────────╮
+│                                                                         │
+│  disabled; enable the Desktop lab with desktop.host.enabled=true, then  │
+│  restart the gateway                                                    │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Security ─────────────────────────────────────────────────────────────╮
+│                                                                        │
+│  - WARNING: openclaw.json contains plaintext secret-bearing config     │
+│    fields.                                                             │
+│    Paths: gateway.auth.token, models.providers.openrouter.apiKey,      │
+│    models.providers.zenmux-key1.apiKey,                                │
+│    models.providers.zenmux-key2.apiKey,                                │
+│    models.providers.openai-codex.apiKey (+2 more)                      │
+│    Agents or workspace tools that can read config files may see these  │
+│    API keys/tokens.                                                    │
+│    Migrate them to SecretRefs with openclaw secrets configure or       │
+│    openclaw secrets apply, then verify with openclaw secrets audit     │
+│    --check.                                                            │
+│  - WARNING: Gateway bound to "lan" (0.0.0.0) (network-accessible).     │
+│    Ensure your auth credentials are strong and not exposed.            │
+│    Safer remote access: keep bind loopback and use Tailscale           │
+│    Serve/Funnel or an SSH tunnel.                                      │
+│    Example tunnel: ssh -N -L 18789:127.0.0.1:18789 user@gateway-host   │
+│    Docs: https://docs.openclaw.ai/gateway/remote                       │
+│  - Run: openclaw security audit --deep                                 │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+◇  Browser relay authentication ──────────────────────────────────────────╮
+│                                                                         │
+│  - Legacy Browser Relay Authentication is enabled                       │
+│    (browser.extensionRelay.allowLegacyAuth=true).                       │
+│  - Update paired Chrome extensions and external CDP clients to Browser  │
+│    Relay Authentication v2, then set                                    │
+│    browser.extensionRelay.allowLegacyAuth=false.                        │
+│  - V2 clients never downgrade to legacy authentication.                 │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - agents.entries.chief-user.tools.allow does not include                │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.chief-user.tools.allow                           │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.chief-user.tools.allow.   │
+│  - agents.entries.api-worker.tools.allow does not include                │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.api-worker.tools.allow                           │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.api-worker.tools.allow.   │
+│  - agents.entries.market.tools.profile: "minimal" does not include       │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.market.tools.profile                             │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add agents.entries.market.tools.alsoAllow: ["skill_workshop"].   │
+│  - agents.entries.mangba-guest.tools.profile: "minimal" does not         │
+│    include "skill_workshop".                                             │
+│    path: agents.entries.mangba-guest.tools.profile                       │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add agents.entries.mangba-guest.tools.alsoAllow:                 │
+│    ["skill_workshop"].                                                   │
+│  - agents.entries.benben.tools.allow does not include "skill_workshop".  │
+│    path: agents.entries.benben.tools.allow                               │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.benben.tools.allow.       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Plugin restart readiness ────────────────────────────────────────╮
+│                                                                   │
+│  3 active official plugins not on post-restart OpenClaw 2026.9.4  │
+│  - codex: 2026.8.2 (npm) -> expected 2026.9.4                     │
+│  - feishu: 2026.8.2 (npm) -> expected 2026.9.4                    │
+│  - perplexity: 2026.8.2 (npm) -> expected 2026.9.4                │
+│  Fix each drifted plugin:                                         │
+│  - openclaw plugins update @openclaw/codex@2026.9.4               │
+│  - openclaw plugins update @openclaw/feishu@2026.9.4              │
+│  - openclaw plugins update @openclaw/perplexity-plugin@2026.9.4   │
+│  Then run openclaw gateway restart.                               │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────╯
+│
+◇  Gateway ─────────────────────────────────────────────╮
+│                                                       │
+│  Gateway health will be checked after Doctor repair.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────╮
+│                                                        │
+│  Cron store normalized at ~/.openclaw/cron/jobs.json.  │
+│                                                        │
+├────────────────────────────────────────────────────────╯
+│
+└  Doctor complete.
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[sqlite/transaction] slow SQLite transaction hold
+[tools] tools.allow allowlist contains unknown entries (wecom_mcp). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.chief-user.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.api-worker.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] tools.profile (minimal) allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.market.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.benben.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[update finalize] {"step":"finalize:doctor","status":"completed","endedAtMs":1789396991712}
+[update finalize] {"step":"finalize:plugins","status":"in_progress","startedAtMs":1789396991846}
+[update finalize] {"step":"finalize:plugins","status":"completed","endedAtMs":1789397009126}
+[update finalize] {"step":"finalize:targetConfigConvergence","status":"in_progress","startedAtMs":1789397009262}
+[update finalize] {"step":"warning:finalize:doctor:0","status":"completed","detail":"core/doctor/node-hosting-preconditions: The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.","endedAtMs":1789397168196}
+[update finalize] {"step":"warning:finalize:doctor:1","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.chief-user.tools.allow does not include \"skill_workshop\".","endedAtMs":1789397168332}
+[update finalize] {"step":"warning:finalize:doctor:2","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.api-worker.tools.allow does not include \"skill_workshop\".","endedAtMs":1789397168467}
+[update finalize] {"step":"warning:finalize:doctor:3","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.market.tools.profile: \"minimal\" does not include \"skill_workshop\".","endedAtMs":1789397168603}
+[update finalize] {"step":"warning:finalize:doctor:4","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.mangba-guest.tools.profile: \"minimal\" does not include \"skill_workshop\".","endedAtMs":1789397168738}
+[update finalize] {"step":"warning:finalize:doctor:5","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.benben.tools.allow does not include \"skill_workshop\".","endedAtMs":1789397168873}
+┌  OpenClaw doctor
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update 6e059331-10b0-4297-92fa-a28630e3995d (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  Legacy Codex provider routes require manual reconciliation before       │
+│  matching refs can migrate.- models.providers.openai-codex cannot be     │
+│  merged automatically into models.providers.openai because               │
+│  provider-level defaults cannot be represented safely on merged models:  │
+│  models.providers.openai-codex.apiKey.- Doctor retained matching legacy  │
+│  refs in config, sessions, and cron. These refs will not execute until   │
+│  reconciled: fix the model route/auth metadata, remove the legacy        │
+│  provider entry, then rerun `openclaw doctor --fix`.                     │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - channels.feishu.groupPolicy is "allowlist" but groupAllowFrom (and    │
+│    allowFrom) is empty — all group messages will be silently dropped.    │
+│    Add sender IDs to channels.feishu.groupAllowFrom or                   │
+│    channels.feishu.allowFrom, or set groupPolicy to "open".              │
+│  - channels.feishu.accounts.admin.groupPolicy is "allowlist" but         │
+│    groupAllowFrom (and allowFrom) is empty — all group messages will be  │
+│    silently dropped. Add sender IDs to                                   │
+│    channels.feishu.accounts.admin.groupAllowFrom or                      │
+│    channels.feishu.accounts.admin.allowFrom, or set groupPolicy to       │
+│    "open".                                                               │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ───────────────────────────────────────────────────────╮
+│                                                                         │
+│  Kept auth profile openai-codex:default unchanged because its provider  │
+│  realm or identity is unresolved.                                       │
+│  Kept auth profile codex:default unchanged because its provider realm   │
+│  or identity is unresolved.                                             │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Update Doctor scope ──────────────────────────────────────────────────╮
+│                                                                        │
+│  Omitted during update: Active tool schema warnings, Project clones,   │
+│  SQLite database size, GitHub projects, Bootstrap size, Workspace      │
+│  suggestions.                                                          │
+│  Run `openclaw doctor` after the update to inspect these diagnostics.  │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+[warning] core/doctor/node-hosting-preconditions plugins.entries.device-pair.enabled - The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.
+  fix: Set plugins.entries.device-pair.enabled: true, ensure device-pair is not denied or excluded by plugins.allow, then restart the Gateway.
+│
+◇  Command owner ──────────────────────────────────────────────────────────╮
+│                                                                          │
+│  No command owner is configured.                                         │
+│  A command owner is the human operator account allowed to run            │
+│  owner-only commands and approve dangerous actions, including            │
+│  /diagnostics, /export-session, /export-trajectory, /config, and exec    │
+│  approvals.                                                              │
+│  CLI pairing approval records the first command owner. Control UI        │
+│  approval has an owner checkbox; otherwise set commands.ownerAllowFrom.  │
+│  Fix: set commands.ownerAllowFrom to your channel user id, for example   │
+│  openclaw config set commands.ownerAllowFrom '["telegram:123456789"]'    │
+│  Restart the gateway after changing this if it is already running.       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Plugin registry ───────────────────────────────────────────╮
+│                                                             │
+│  Plugin registry refreshed: 12/65 enabled plugins indexed.  │
+│                                                             │
+├─────────────────────────────────────────────────────────────╯
+│
+◇  State integrity ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - Found stale Google session routing state in 5 sessions outside the    │
+│    current configured model/runtime route.                               │
+│    This can keep later message-channel runs pinned to an old             │
+│    runtime/provider after defaults move elsewhere.                       │
+│    Examples: agent:chief:cron:0621489c-5f92-44bd-975a-082d6de599e2       │
+│    (runtime model state, auto auth profile override),                    │
+│    agent:chief:cron:7a59f223-bb9c-4eaa-8941-57b49b9aa576 (runtime model  │
+│    state, auto auth profile override),                                   │
+│    agent:chief:cron:7f1dacbb-d21b-4e46-9519-47fecef2c516 (runtime model  │
+│    state, auto auth profile override)                                    │
+│  - Found stale OpenAI session routing state in 2 sessions outside the    │
+│    current configured model/runtime route.                               │
+│    This can keep later message-channel runs pinned to an old             │
+│    runtime/provider after defaults move elsewhere.                       │
+│    Examples:                                                             │
+│    agent:api-worker:dashboard:f388f09b-4913-4257-900a-bb70f163d785       │
+│    (auto auth profile override),                                         │
+│    agent:api-worker:dashboard:f4d0ea16-4c43-4e99-9968-bf69b5334199       │
+│    (auto auth profile override)                                          │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ────────────────────────────────────────────────────────────────╮
+│                                                                       │
+│  Automation model overrides detected.                                 │
+│  - 4 jobs set `payload.model` and will not inherit                    │
+│    `agents.defaults.model` (openai/gpt-5.6-sol)                       │
+│  - Provider namespaces: google=4                                      │
+│  - 4 jobs use a different model than `agents.defaults.model`          │
+│    (openai/gpt-5.6-sol)                                               │
+│  - Examples: 7f1dacbb-d21b-4e46-9519-47fecef2c516 ->                  │
+│    google/gemini-3.1-flash-image-preview,                             │
+│    d9f78e66-c741-4a30-a4ad-dd372a82d41d -> google/gemini-3.5-flash,   │
+│    7a59f223-bb9c-4eaa-8941-57b49b9aa576 -> google/gemini-3.5-flash    │
+│  Review with openclaw automations list and openclaw automations show  │
+│  <job-id>; remove `payload.model` from jobs that should inherit the   │
+│  default.                                                             │
+│                                                                       │
+├───────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  1 automation has failed 3+ runs in a row (`state.consecutiveErrors`),   │
+│  so the scheduler only re-fires it on error backoff.                     │
+│  - The count resets on the next successful run and also counts runs      │
+│    interrupted by a gateway restart, so a lasting streak means repeated  │
+│    task failures, repeatedly interrupted runs, or a mix. Failure alerts  │
+│    are opt-in, so this may be the only notice.                           │
+│  - Review with openclaw automations list or openclaw automations show    │
+│    <id>.                                                                 │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  4 isolated automations drive shell/process tools from the agent prompt  │
+│  and keep running as-is: `symlink-integrity-check`, `Monthly Process     │
+│  Review`, `gateway-restart-after-rollback-20260419`,                     │
+│  `价值投资机会雷达周报 v3.0`.                                            │
+│  - This is a supported shape, not a legacy store row, so the doctor fix  │
+│    path cannot convert it and the finding is informational only.         │
+│  - For a deterministic run, recreate it as a command automation          │
+│    (`openclaw automations add ... --command "<shell>"`).                 │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  32 tool-bearing cron jobs keep legacy sender-policy resolution because  │
+│  stored account authority is not provable: `daily-self-check-8am`,       │
+│  `healthcheck:security-audit`, `healthcheck:update-status`,              │
+│  `symlink-integrity-check`, `Quarterly Domain Review` (+27 more).        │
+│  - These jobs continue through restrictive sender-policy resolution;     │
+│    doctor will not infer authority from delivery or current              │
+│    configuration.                                                        │
+│  - Reauthorize with an exact explicit cap: `openclaw cron edit <id>      │
+│    --tools <tool,...>`.                                                  │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Host desktop ──────────────────────────────────────────────────────────╮
+│                                                                         │
+│  disabled; enable the Desktop lab with desktop.host.enabled=true, then  │
+│  restart the gateway                                                    │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Security ─────────────────────────────────────────────────────────────╮
+│                                                                        │
+│  - WARNING: openclaw.json contains plaintext secret-bearing config     │
+│    fields.                                                             │
+│    Paths: gateway.auth.token, models.providers.openrouter.apiKey,      │
+│    models.providers.zenmux-key1.apiKey,                                │
+│    models.providers.zenmux-key2.apiKey,                                │
+│    models.providers.openai-codex.apiKey (+2 more)                      │
+│    Agents or workspace tools that can read config files may see these  │
+│    API keys/tokens.                                                    │
+│    Migrate them to SecretRefs with openclaw secrets configure or       │
+│    openclaw secrets apply, then verify with openclaw secrets audit     │
+│    --check.                                                            │
+│  - WARNING: Gateway bound to "lan" (0.0.0.0) (network-accessible).     │
+│    Ensure your auth credentials are strong and not exposed.            │
+│    Safer remote access: keep bind loopback and use Tailscale           │
+│    Serve/Funnel or an SSH tunnel.                                      │
+│    Example tunnel: ssh -N -L 18789:127.0.0.1:18789 user@gateway-host   │
+│    Docs: https://docs.openclaw.ai/gateway/remote                       │
+│  - Run: openclaw security audit --deep                                 │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+◇  Browser relay authentication ──────────────────────────────────────────╮
+│                                                                         │
+│  - Legacy Browser Relay Authentication is enabled                       │
+│    (browser.extensionRelay.allowLegacyAuth=true).                       │
+│  - Update paired Chrome extensions and external CDP clients to Browser  │
+│    Relay Authentication v2, then set                                    │
+│    browser.extensionRelay.allowLegacyAuth=false.                        │
+│  - V2 clients never downgrade to legacy authentication.                 │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - agents.entries.chief-user.tools.allow does not include                │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.chief-user.tools.allow                           │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.chief-user.tools.allow.   │
+│  - agents.entries.api-worker.tools.allow does not include                │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.api-worker.tools.allow                           │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.api-worker.tools.allow.   │
+│  - agents.entries.market.tools.profile: "minimal" does not include       │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.market.tools.profile                             │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add agents.entries.market.tools.alsoAllow: ["skill_workshop"].   │
+│  - agents.entries.mangba-guest.tools.profile: "minimal" does not         │
+│    include "skill_workshop".                                             │
+│    path: agents.entries.mangba-guest.tools.profile                       │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add agents.entries.mangba-guest.tools.alsoAllow:                 │
+│    ["skill_workshop"].                                                   │
+│  - agents.entries.benben.tools.allow does not include "skill_workshop".  │
+│    path: agents.entries.benben.tools.allow                               │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.benben.tools.allow.       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Plugin restart readiness ────────────────────────────────────────╮
+│                                                                   │
+│  2 active official plugins not on post-restart OpenClaw 2026.9.4  │
+│  - feishu: 2026.8.2 (npm) -> expected 2026.9.4                    │
+│  - perplexity: 2026.8.2 (npm) -> expected 2026.9.4                │
+│  Fix each drifted plugin:                                         │
+│  - openclaw plugins update @openclaw/feishu@2026.9.4              │
+│  - openclaw plugins update @openclaw/perplexity-plugin@2026.9.4   │
+│  Then run openclaw gateway restart.                               │
+│                                                                   │
+├───────────────────────────────────────────────────────────────────╯
+│
+◇  Gateway ─────────────────────────────────────────────╮
+│                                                       │
+│  Gateway health will be checked after Doctor repair.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────╮
+│                                                        │
+│  Cron store normalized at ~/.openclaw/cron/jobs.json.  │
+│                                                        │
+├────────────────────────────────────────────────────────╯
+│
+└  Doctor complete.
+[sqlite/transaction] slow SQLite transaction hold
+[tools] tools.allow allowlist contains unknown entries (wecom_mcp). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.chief-user.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.api-worker.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] tools.profile (minimal) allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.market.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.benben.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[sqlite/transaction] slow SQLite transaction lock wait
+[update finalize] {"step":"finalize:targetConfigConvergence","status":"completed","endedAtMs":1789397258008}
+[update finalize] {"step":"finalize:completionCache","status":"in_progress","startedAtMs":1789397258144}
+[update finalize] {"step":"finalize:completionCache","status":"completed","endedAtMs":1789397261800}
+{
+  "status": "warning",
+  "mode": "finalize",
+  "root": "/usr/lib/node_modules/openclaw",
+  "channel": "stable",
+  "restart": false,
+  "phaseTimings": [
+    {
+      "phase": "preflight",
+      "startedOffsetMs": 0,
+      "durationMs": 999,
+      "outcome": "completed"
+    },
+    {
+      "phase": "targetConfigValidation",
+      "startedOffsetMs": 1139,
+      "durationMs": 1729,
+      "outcome": "completed"
+    },
+    {
+      "phase": "configSnapshot",
+      "startedOffsetMs": 3006,
+      "durationMs": 135,
+      "outcome": "completed"
+    },
+    {
+      "phase": "doctor",
+      "startedOffsetMs": 3275,
+      "durationMs": 162345,
+      "outcome": "completed"
+    },
+    {
+      "phase": "plugins",
+      "startedOffsetMs": 165754,
+      "durationMs": 17281,
+      "outcome": "warning"
+    },
+    {
+      "phase": "targetConfigConvergence",
+      "startedOffsetMs": 183170,
+      "durationMs": 248746,
+      "outcome": "warning"
+    },
+    {
+      "phase": "completionCache",
+      "startedOffsetMs": 432052,
+      "durationMs": 3656,
+      "outcome": "completed"
+    }
+  ],
+  "postUpdate": {
+    "doctor": {
+      "status": "warning",
+      "warnings": [
+        "core/doctor/node-hosting-preconditions: The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.chief-user.tools.allow does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.api-worker.tools.allow does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.market.tools.profile: \"minimal\" does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.mangba-guest.tools.profile: \"minimal\" does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.benben.tools.allow does not include \"skill_workshop\"."
+      ]
+    },
+    "plugins": {
+      "status": "warning",
+      "changed": true,
+      "warnings": [
+        {
+          "pluginId": "feishu",
+          "reason": "retained-plugin-pin",
+          "message": "Plugin update retained an official plugin pin: feishu is pinned to @openclaw/feishu@2026.8.2 (installed 2026.8.2); registry latest resolves to 2026.9.4. Pass `openclaw plugins update @openclaw/feishu@latest` to replace this version pin.",
+          "guidance": [
+            "Keep the pin if intentional; replacing it is an explicit operator choice."
+          ]
+        },
+        {
+          "pluginId": "perplexity",
+          "reason": "retained-plugin-pin",
+          "message": "Plugin update retained an official plugin pin: perplexity is pinned to @openclaw/perplexity-plugin@2026.8.2 (installed 2026.8.2); registry latest resolves to 2026.9.4. Pass `openclaw plugins update @openclaw/perplexity-plugin@latest` to replace this version pin.",
+          "guidance": [
+            "Keep the pin if intentional; replacing it is an explicit operator choice."
+          ]
+        },
+        {
+          "pluginId": "wecom-openclaw-plugin",
+          "reason": "retained-plugin-pin",
+          "message": "Plugin update retained an official plugin pin: wecom-openclaw-plugin is pinned to @wecom/wecom-openclaw-plugin@2026.5.7 (installed 2026.5.7); registry latest resolves to 2026.8.17. Pass `openclaw plugins update @wecom/wecom-openclaw-plugin@latest` to replace this version pin.",
+          "guidance": [
+            "Keep the pin if intentional; replacing it is an explicit operator choice."
+          ]
+        }
+      ],
+      "sync": {
+        "changed": false,
+        "switchedToBundled": [],
+        "switchedToNpm": [],
+        "warnings": [],
+        "errors": []
+      },
+      "npm": {
+        "changed": false,
+        "outcomes": [
+          {
+            "pluginId": "codex",
+            "status": "unchanged",
+            "currentVersion": "2026.8.2",
+            "nextVersion": "2026.9.4",
+            "message": "codex is pinned to @openclaw/codex@2026.8.2 (installed 2026.8.2); registry latest resolves to 2026.9.4. Pass `openclaw plugins update @openclaw/codex@latest` to replace this version pin."
+          },
+          {
+            "pluginId": "feishu",
+            "status": "unchanged",
+            "currentVersion": "2026.8.2",
+            "nextVersion": "2026.9.4",
+            "message": "feishu is pinned to @openclaw/feishu@2026.8.2 (installed 2026.8.2); registry latest resolves to 2026.9.4. Pass `openclaw plugins update @openclaw/feishu@latest` to replace this version pin."
+          },
+          {
+            "pluginId": "openclaw-weixin",
+            "status": "unchanged",
+            "currentVersion": "2.4.8",
+            "nextVersion": "2.4.8",
+            "message": "openclaw-weixin is up to date (2.4.8)."
+          },
+          {
+            "pluginId": "perplexity",
+            "status": "unchanged",
+            "currentVersion": "2026.8.2",
+            "nextVersion": "2026.9.4",
+            "message": "perplexity is pinned to @openclaw/perplexity-plugin@2026.8.2 (installed 2026.8.2); registry latest resolves to 2026.9.4. Pass `openclaw plugins update @openclaw/perplexity-plugin@latest` to replace this version pin."
+          },
+          {
+            "pluginId": "wecom-openclaw-plugin",
+            "status": "unchanged",
+            "currentVersion": "2026.5.7",
+            "nextVersion": "2026.8.17",
+            "message": "wecom-openclaw-plugin is pinned to @wecom/wecom-openclaw-plugin@2026.5.7 (installed 2026.5.7); registry latest resolves to 2026.8.17. Pass `openclaw plugins update @wecom/wecom-openclaw-plugin@latest` to replace this version pin."
+          }
+        ]
+      },
+      "integrityDrifts": []
+    }
+  }
+}
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update 6e059331-10b0-4297-92fa-a28630e3995d (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+codex is up to date (2026.9.4).
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update 6e059331-10b0-4297-92fa-a28630e3995d (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+Installing to /root/.openclaw/npm/projects/openclaw-feishu-dc69f44688__openclaw-generation__g-f03320b93d435e7f…
+Installing @openclaw/feishu@2026.9.4 into /root/.openclaw/npm/projects/.openclaw-install-stage-oU9O3x…
+Linked peerDependency "openclaw" -> /usr/lib/node_modules/openclaw
+Restart the gateway to load plugins and hooks.
+Updated feishu: 2026.8.2 -> 2026.9.4.
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update 6e059331-10b0-4297-92fa-a28630e3995d (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+Installing to /root/.openclaw/npm/projects/openclaw-perplexity-plugin-9e59921123__openclaw-generation__g-b4c7f7988ae1119b…
+Installing @openclaw/perplexity-plugin@2026.9.4 into /root/.openclaw/npm/projects/.openclaw-install-stage-fT2hWB…
+Linked peerDependency "openclaw" -> /usr/lib/node_modules/openclaw
+Plugin manifest id "perplexity" differs from npm package name "@openclaw/perplexity-plugin"; using manifest id as the config key.
+Restart the gateway to load plugins and hooks.
+Updated perplexity: 2026.8.2 -> 2026.9.4.
+[patch-402] ERROR: no file containing RAW_402_MARKER_RE found in /usr/lib/node_modules/openclaw/dist; review required
+[patch-weixin-cli] already patched: /root/.openclaw/npm/projects/tencent-weixin-openclaw-weixin-7783ac86ba__openclaw-generation__g-4c8fb8b9606bb108/node_modules/@tencent-weixin/openclaw-weixin/cli-metadata.js
+[patch-weixin-cli] done: 0 changed, 1 candidate(s), 0 failure(s)
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update 6e059331-10b0-4297-92fa-a28630e3995d (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+Plugin registry refreshed: 12/65 enabled plugins indexed.
+Config valid: ~/.openclaw/openclaw.json
+{
+  "probesRun": [
+    "plugin.index_unavailable",
+    "plugin.entry_unresolved",
+    "plugin.manifest_drift",
+    "plugin.version_drift"
+  ],
+  "findings": []
+}
+Mon Sep 14 10:48:13 PM CST 2026
+Maintenance completion exit status: 2
+Mon Sep 14 10:52:13 PM CST 2026
+Starting isolated OpenClaw 2026.9.4 maintenance completion
+[update finalize] {"step":"finalize:preflight","status":"in_progress","startedAtMs":1789397538262}
+[update finalize] {"step":"finalize:preflight","status":"completed","endedAtMs":1789397539255}
+[update finalize] {"step":"finalize:targetConfigValidation","status":"in_progress","startedAtMs":1789397539392}
+[update finalize] {"step":"finalize:targetConfigValidation","status":"completed","endedAtMs":1789397540724}
+[update finalize] {"step":"finalize:configSnapshot","status":"in_progress","startedAtMs":1789397540858}
+[update finalize] {"step":"finalize:configSnapshot","status":"completed","endedAtMs":1789397540990}
+[update finalize] {"step":"finalize:doctor","status":"in_progress","startedAtMs":1789397541123}
+[update finalize] Could not refresh the update heartbeat; continuing: another OpenClaw process owns state-lifecycle
+[update finalize] {"step":"warning:finalize:doctor:0","status":"completed","detail":"core/doctor/node-hosting-preconditions: The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.","endedAtMs":1789397696342}
+[update finalize] {"step":"warning:finalize:doctor:1","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.chief-user.tools.allow does not include \"skill_workshop\".","endedAtMs":1789397696477}
+[update finalize] {"step":"warning:finalize:doctor:2","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.api-worker.tools.allow does not include \"skill_workshop\".","endedAtMs":1789397696612}
+[update finalize] {"step":"warning:finalize:doctor:3","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.market.tools.profile: \"minimal\" does not include \"skill_workshop\".","endedAtMs":1789397696747}
+[update finalize] {"step":"warning:finalize:doctor:4","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.mangba-guest.tools.profile: \"minimal\" does not include \"skill_workshop\".","endedAtMs":1789397696882}
+[update finalize] {"step":"warning:finalize:doctor:5","status":"completed","detail":"core/doctor/skill-workshop-tool-policy: agents.entries.benben.tools.allow does not include \"skill_workshop\".","endedAtMs":1789397697017}
+┌  OpenClaw doctor
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  Legacy Codex provider routes require manual reconciliation before       │
+│  matching refs can migrate.- models.providers.openai-codex cannot be     │
+│  merged automatically into models.providers.openai because               │
+│  provider-level defaults cannot be represented safely on merged models:  │
+│  models.providers.openai-codex.apiKey.- Doctor retained matching legacy  │
+│  refs in config, sessions, and cron. These refs will not execute until   │
+│  reconciled: fix the model route/auth metadata, remove the legacy        │
+│  provider entry, then rerun `openclaw doctor --fix`.                     │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - channels.feishu.groupPolicy is "allowlist" but groupAllowFrom (and    │
+│    allowFrom) is empty — all group messages will be silently dropped.    │
+│    Add sender IDs to channels.feishu.groupAllowFrom or                   │
+│    channels.feishu.allowFrom, or set groupPolicy to "open".              │
+│  - channels.feishu.accounts.admin.groupPolicy is "allowlist" but         │
+│    groupAllowFrom (and allowFrom) is empty — all group messages will be  │
+│    silently dropped. Add sender IDs to                                   │
+│    channels.feishu.accounts.admin.groupAllowFrom or                      │
+│    channels.feishu.accounts.admin.allowFrom, or set groupPolicy to       │
+│    "open".                                                               │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Doctor warnings ───────────────────────────────────────────────────────╮
+│                                                                         │
+│  Kept auth profile openai-codex:default unchanged because its provider  │
+│  realm or identity is unresolved.                                       │
+│  Kept auth profile codex:default unchanged because its provider realm   │
+│  or identity is unresolved.                                             │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Update Doctor scope ──────────────────────────────────────────────────╮
+│                                                                        │
+│  Omitted during update: Active tool schema warnings, Project clones,   │
+│  SQLite database size, GitHub projects, Bootstrap size, Workspace      │
+│  suggestions.                                                          │
+│  Run `openclaw doctor` after the update to inspect these diagnostics.  │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+[warning] core/doctor/node-hosting-preconditions plugins.entries.device-pair.enabled - The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.
+  fix: Set plugins.entries.device-pair.enabled: true, ensure device-pair is not denied or excluded by plugins.allow, then restart the Gateway.
+│
+◇  Command owner ──────────────────────────────────────────────────────────╮
+│                                                                          │
+│  No command owner is configured.                                         │
+│  A command owner is the human operator account allowed to run            │
+│  owner-only commands and approve dangerous actions, including            │
+│  /diagnostics, /export-session, /export-trajectory, /config, and exec    │
+│  approvals.                                                              │
+│  CLI pairing approval records the first command owner. Control UI        │
+│  approval has an owner checkbox; otherwise set commands.ownerAllowFrom.  │
+│  Fix: set commands.ownerAllowFrom to your channel user id, for example   │
+│  openclaw config set commands.ownerAllowFrom '["telegram:123456789"]'    │
+│  Restart the gateway after changing this if it is already running.       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Plugin registry ───────────────────────────────────────────╮
+│                                                             │
+│  Plugin registry refreshed: 12/65 enabled plugins indexed.  │
+│                                                             │
+├─────────────────────────────────────────────────────────────╯
+│
+◇  State integrity ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - Found stale Google session routing state in 5 sessions outside the    │
+│    current configured model/runtime route.                               │
+│    This can keep later message-channel runs pinned to an old             │
+│    runtime/provider after defaults move elsewhere.                       │
+│    Examples: agent:chief:cron:0621489c-5f92-44bd-975a-082d6de599e2       │
+│    (runtime model state, auto auth profile override),                    │
+│    agent:chief:cron:7a59f223-bb9c-4eaa-8941-57b49b9aa576 (runtime model  │
+│    state, auto auth profile override),                                   │
+│    agent:chief:cron:7f1dacbb-d21b-4e46-9519-47fecef2c516 (runtime model  │
+│    state, auto auth profile override)                                    │
+│  - Found stale OpenAI session routing state in 2 sessions outside the    │
+│    current configured model/runtime route.                               │
+│    This can keep later message-channel runs pinned to an old             │
+│    runtime/provider after defaults move elsewhere.                       │
+│    Examples:                                                             │
+│    agent:api-worker:dashboard:f388f09b-4913-4257-900a-bb70f163d785       │
+│    (auto auth profile override),                                         │
+│    agent:api-worker:dashboard:f4d0ea16-4c43-4e99-9968-bf69b5334199       │
+│    (auto auth profile override)                                          │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ────────────────────────────────────────────────────────────────╮
+│                                                                       │
+│  Automation model overrides detected.                                 │
+│  - 4 jobs set `payload.model` and will not inherit                    │
+│    `agents.defaults.model` (openai/gpt-5.6-sol)                       │
+│  - Provider namespaces: google=4                                      │
+│  - 4 jobs use a different model than `agents.defaults.model`          │
+│    (openai/gpt-5.6-sol)                                               │
+│  - Examples: 7f1dacbb-d21b-4e46-9519-47fecef2c516 ->                  │
+│    google/gemini-3.1-flash-image-preview,                             │
+│    d9f78e66-c741-4a30-a4ad-dd372a82d41d -> google/gemini-3.5-flash,   │
+│    7a59f223-bb9c-4eaa-8941-57b49b9aa576 -> google/gemini-3.5-flash    │
+│  Review with openclaw automations list and openclaw automations show  │
+│  <job-id>; remove `payload.model` from jobs that should inherit the   │
+│  default.                                                             │
+│                                                                       │
+├───────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  4 isolated automations drive shell/process tools from the agent prompt  │
+│  and keep running as-is: `symlink-integrity-check`, `Monthly Process     │
+│  Review`, `gateway-restart-after-rollback-20260419`,                     │
+│  `价值投资机会雷达周报 v3.0`.                                            │
+│  - This is a supported shape, not a legacy store row, so the doctor fix  │
+│    path cannot convert it and the finding is informational only.         │
+│  - For a deterministic run, recreate it as a command automation          │
+│    (`openclaw automations add ... --command "<shell>"`).                 │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Cron ───────────────────────────────────────────────────────────────────╮
+│                                                                          │
+│  32 tool-bearing cron jobs keep legacy sender-policy resolution because  │
+│  stored account authority is not provable: `daily-self-check-8am`,       │
+│  `healthcheck:security-audit`, `healthcheck:update-status`,              │
+│  `symlink-integrity-check`, `Quarterly Domain Review` (+27 more).        │
+│  - These jobs continue through restrictive sender-policy resolution;     │
+│    doctor will not infer authority from delivery or current              │
+│    configuration.                                                        │
+│  - Reauthorize with an exact explicit cap: `openclaw cron edit <id>      │
+│    --tools <tool,...>`.                                                  │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Host desktop ──────────────────────────────────────────────────────────╮
+│                                                                         │
+│  disabled; enable the Desktop lab with desktop.host.enabled=true, then  │
+│  restart the gateway                                                    │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+│
+◇  Security ─────────────────────────────────────────────────────────────╮
+│                                                                        │
+│  - WARNING: openclaw.json contains plaintext secret-bearing config     │
+│    fields.                                                             │
+│    Paths: gateway.auth.token, models.providers.openrouter.apiKey,      │
+│    models.providers.zenmux-key1.apiKey,                                │
+│    models.providers.zenmux-key2.apiKey,                                │
+│    models.providers.openai-codex.apiKey (+2 more)                      │
+│    Agents or workspace tools that can read config files may see these  │
+│    API keys/tokens.                                                    │
+│    Migrate them to SecretRefs with openclaw secrets configure or       │
+│    openclaw secrets apply, then verify with openclaw secrets audit     │
+│    --check.                                                            │
+│  - WARNING: Gateway bound to "lan" (0.0.0.0) (network-accessible).     │
+│    Ensure your auth credentials are strong and not exposed.            │
+│    Safer remote access: keep bind loopback and use Tailscale           │
+│    Serve/Funnel or an SSH tunnel.                                      │
+│    Example tunnel: ssh -N -L 18789:127.0.0.1:18789 user@gateway-host   │
+│    Docs: https://docs.openclaw.ai/gateway/remote                       │
+│  - Run: openclaw security audit --deep                                 │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+◇  Browser relay authentication ──────────────────────────────────────────╮
+│                                                                         │
+│  - Legacy Browser Relay Authentication is enabled                       │
+│    (browser.extensionRelay.allowLegacyAuth=true).                       │
+│  - Update paired Chrome extensions and external CDP clients to Browser  │
+│    Relay Authentication v2, then set                                    │
+│    browser.extensionRelay.allowLegacyAuth=false.                        │
+│  - V2 clients never downgrade to legacy authentication.                 │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+[mcp] registerTool ctx: sessionKey="undefined", messageChannel="undefined", requesterSenderId="undefined", agentAccountId="undefined", sessionChat=undefined
+│
+◇  Doctor warnings ────────────────────────────────────────────────────────╮
+│                                                                          │
+│  - agents.entries.chief-user.tools.allow does not include                │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.chief-user.tools.allow                           │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.chief-user.tools.allow.   │
+│  - agents.entries.api-worker.tools.allow does not include                │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.api-worker.tools.allow                           │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.api-worker.tools.allow.   │
+│  - agents.entries.market.tools.profile: "minimal" does not include       │
+│    "skill_workshop".                                                     │
+│    path: agents.entries.market.tools.profile                             │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add agents.entries.market.tools.alsoAllow: ["skill_workshop"].   │
+│  - agents.entries.mangba-guest.tools.profile: "minimal" does not         │
+│    include "skill_workshop".                                             │
+│    path: agents.entries.mangba-guest.tools.profile                       │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add agents.entries.mangba-guest.tools.alsoAllow:                 │
+│    ["skill_workshop"].                                                   │
+│  - agents.entries.benben.tools.allow does not include "skill_workshop".  │
+│    path: agents.entries.benben.tools.allow                               │
+│    issue: Autonomous Skill Workshop review requires the skill_workshop   │
+│    tool.                                                                 │
+│    fix: Add "skill_workshop" to agents.entries.benben.tools.allow.       │
+│                                                                          │
+├──────────────────────────────────────────────────────────────────────────╯
+│
+◇  Gateway ─────────────────────────────────────────────╮
+│                                                       │
+│  Gateway health will be checked after Doctor repair.  │
+│                                                       │
+├───────────────────────────────────────────────────────╯
+│
+◇  Doctor changes ───────────────────────────────────────╮
+│                                                        │
+│  Cron store normalized at ~/.openclaw/cron/jobs.json.  │
+│                                                        │
+├────────────────────────────────────────────────────────╯
+│
+└  Doctor complete.
+[sqlite/transaction] slow SQLite transaction hold
+[tools] tools.allow allowlist contains unknown entries (wecom_mcp). These entries won't match any tool unless the plugin is enabled.
+[tools] agents.chief-user.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.api-worker.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] tools.profile (minimal) allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.market.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[tools] agents.benben.tools.allow allowlist contains unknown entries (view_image). These entries are shipped core tools but unavailable in the current runtime/provider/model/config.
+[update finalize] {"step":"finalize:doctor","status":"completed","endedAtMs":1789397697175}
+[update finalize] {"step":"finalize:plugins","status":"in_progress","startedAtMs":1789397697310}
+[update finalize] {"step":"finalize:plugins","status":"completed","endedAtMs":1789397701386}
+[update finalize] {"step":"finalize:targetConfigConvergence","status":"in_progress","startedAtMs":1789397701523}
+[sqlite/transaction] slow SQLite transaction lock wait
+[update finalize] {"step":"finalize:targetConfigConvergence","status":"completed","endedAtMs":1789397790475}
+[update finalize] {"step":"finalize:completionCache","status":"in_progress","startedAtMs":1789397790608}
+[update finalize] {"step":"finalize:completionCache","status":"completed","endedAtMs":1789397793198}
+{
+  "status": "warning",
+  "mode": "finalize",
+  "root": "/usr/lib/node_modules/openclaw",
+  "channel": "stable",
+  "restart": false,
+  "phaseTimings": [
+    {
+      "phase": "preflight",
+      "startedOffsetMs": 0,
+      "durationMs": 992,
+      "outcome": "completed"
+    },
+    {
+      "phase": "targetConfigValidation",
+      "startedOffsetMs": 1130,
+      "durationMs": 1332,
+      "outcome": "completed"
+    },
+    {
+      "phase": "configSnapshot",
+      "startedOffsetMs": 2596,
+      "durationMs": 133,
+      "outcome": "completed"
+    },
+    {
+      "phase": "doctor",
+      "startedOffsetMs": 2861,
+      "durationMs": 156052,
+      "outcome": "completed"
+    },
+    {
+      "phase": "plugins",
+      "startedOffsetMs": 159048,
+      "durationMs": 4076,
+      "outcome": "warning"
+    },
+    {
+      "phase": "targetConfigConvergence",
+      "startedOffsetMs": 163261,
+      "durationMs": 88952,
+      "outcome": "warning"
+    },
+    {
+      "phase": "completionCache",
+      "startedOffsetMs": 252346,
+      "durationMs": 2590,
+      "outcome": "completed"
+    }
+  ],
+  "postUpdate": {
+    "doctor": {
+      "status": "warning",
+      "warnings": [
+        "core/doctor/node-hosting-preconditions: The device-pair plugin is not enabled; node onboarding join codes and openclaw connect are unavailable.",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.chief-user.tools.allow does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.api-worker.tools.allow does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.market.tools.profile: \"minimal\" does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.mangba-guest.tools.profile: \"minimal\" does not include \"skill_workshop\".",
+        "core/doctor/skill-workshop-tool-policy: agents.entries.benben.tools.allow does not include \"skill_workshop\"."
+      ]
+    },
+    "plugins": {
+      "status": "warning",
+      "changed": false,
+      "warnings": [
+        {
+          "pluginId": "wecom-openclaw-plugin",
+          "reason": "retained-plugin-pin",
+          "message": "Plugin update retained an official plugin pin: wecom-openclaw-plugin is pinned to @wecom/wecom-openclaw-plugin@2026.5.7 (installed 2026.5.7); registry latest resolves to 2026.8.17. Pass `openclaw plugins update @wecom/wecom-openclaw-plugin@latest` to replace this version pin.",
+          "guidance": [
+            "Keep the pin if intentional; replacing it is an explicit operator choice."
+          ]
+        }
+      ],
+      "sync": {
+        "changed": false,
+        "switchedToBundled": [],
+        "switchedToNpm": [],
+        "warnings": [],
+        "errors": []
+      },
+      "npm": {
+        "changed": false,
+        "outcomes": [
+          {
+            "pluginId": "codex",
+            "status": "unchanged",
+            "currentVersion": "2026.9.4",
+            "nextVersion": "2026.9.4",
+            "message": "codex is up to date (2026.9.4)."
+          },
+          {
+            "pluginId": "feishu",
+            "status": "unchanged",
+            "currentVersion": "2026.9.4",
+            "nextVersion": "2026.9.4",
+            "message": "feishu is up to date (2026.9.4)."
+          },
+          {
+            "pluginId": "openclaw-weixin",
+            "status": "unchanged",
+            "currentVersion": "2.4.8",
+            "nextVersion": "2.4.8",
+            "message": "openclaw-weixin is up to date (2.4.8)."
+          },
+          {
+            "pluginId": "perplexity",
+            "status": "unchanged",
+            "currentVersion": "2026.9.4",
+            "nextVersion": "2026.9.4",
+            "message": "perplexity is up to date (2026.9.4)."
+          },
+          {
+            "pluginId": "wecom-openclaw-plugin",
+            "status": "unchanged",
+            "currentVersion": "2026.5.7",
+            "nextVersion": "2026.8.17",
+            "message": "wecom-openclaw-plugin is pinned to @wecom/wecom-openclaw-plugin@2026.5.7 (installed 2026.5.7); registry latest resolves to 2026.8.17. Pass `openclaw plugins update @wecom/wecom-openclaw-plugin@latest` to replace this version pin."
+          }
+        ]
+      },
+      "integrityDrifts": []
+    }
+  }
+}
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update df00a63f-ce2e-49bf-ae97-98b38c26a672 (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+codex is up to date (2026.9.4).
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update df00a63f-ce2e-49bf-ae97-98b38c26a672 (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+feishu is up to date (2026.9.4).
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update df00a63f-ce2e-49bf-ae97-98b38c26a672 (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+perplexity is up to date (2026.9.4).
+[patch-402] ERROR: no file containing RAW_402_MARKER_RE found in /usr/lib/node_modules/openclaw/dist; review required
+[patch-weixin-cli] already patched: /root/.openclaw/npm/projects/tencent-weixin-openclaw-weixin-7783ac86ba__openclaw-generation__g-4c8fb8b9606bb108/node_modules/@tencent-weixin/openclaw-weixin/cli-metadata.js
+[patch-weixin-cli] done: 0 changed, 1 candidate(s), 0 failure(s)
+│
+◇  Update history ────────────────────────────────────────────────────────╮
+│                                                                         │
+│  Recorded warnings from update df00a63f-ce2e-49bf-ae97-98b38c26a672 (a  │
+│  later repair may have resolved them):                                  │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.market.tools.profile: "minimal" does not include        │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.mangba-guest.tools.profile: "minimal" does not include  │
+│  "skill_workshop".                                                      │
+│  core/doctor/skill-workshop-tool-policy:                                │
+│  agents.entries.benben.tools.allow does not include "skill_workshop".   │
+│                                                                         │
+├─────────────────────────────────────────────────────────────────────────╯
+Plugin registry refreshed: 12/65 enabled plugins indexed.
+Config valid: ~/.openclaw/openclaw.json
+{
+  "probesRun": [
+    "plugin.index_unavailable",
+    "plugin.entry_unresolved",
+    "plugin.manifest_drift",
+    "plugin.version_drift"
+  ],
+  "findings": []
+}
+Mon Sep 14 10:56:51 PM CST 2026
+Maintenance completion exit status: 2

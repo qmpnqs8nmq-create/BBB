@@ -36,7 +36,10 @@ FIXED = "[:=]\\s*[\"']?402\\b"
 def main() -> int:
     # Search all top-level bundles by marker instead of guessing the hashed
     # filename. OpenClaw 2026.8.2 moved this regex from errors-* to classify-*.
-    files = glob.glob(os.path.join(DIST_DIR, "*.js"))
+    # Current releases may emit either .js or .mjs bundles.
+    files = []
+    for ext in ("*.js", "*.mjs"):
+        files.extend(glob.glob(os.path.join(DIST_DIR, ext)))
     targets = []
     for f in files:
         try:
