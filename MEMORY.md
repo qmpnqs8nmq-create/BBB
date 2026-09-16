@@ -17,7 +17,8 @@
 - Jamie 主动联系上限：24h≤1、7d≤3；无日志默认不发。
 
 ## Models & Memory
-- 当前默认模型为 openai/gpt-5.6-sol（Codex OAuth，250k），唯一默认 fallback 为 key2/anthropic/claude-fable-5；Codex OAuth 不能直接供 chief 独立 cron 使用。
+- 默认 thinking level：medium（agents.defaults.thinkingDefault，2026-09-15 Bruce 指定）。
+- 当前默认模型为 openai/gpt-6-astra（2026-09-15 实际调用已验证），唯一默认 fallback 为 key2/anthropic/claude-fable-5；Codex OAuth 不能直接供 chief 独立 cron 使用。
 - market agent 使用 Sonnet 5，主备跨 ZenMux key，GPT-5.5 兜底。
 - 模型配置需同步 openclaw.json、顶层 models/auth-profiles.json、各 agent models/auth-profiles.json；ZenMux base URL 是 https://zenmux.ai/api/v1。
 - memory_search embedding 使用 Gemini：provider=gemini、model=gemini-embedding-001；配置/凭据指纹变化后逐 agent 备份 SQLite、强制重建索引并真实检索验证。
@@ -40,7 +41,7 @@
 
 ## Upgrade-Sensitive Patches
 - openclaw-weixin 2.4.8 的 channel.js 已移植 warm-up + ret=-2 重试补丁；插件升级会覆盖，升级后复核。
-- ZenMux 402 failover 补丁：OpenClaw 的 RAW_402_MARKER_RE 需容忍带引号的 "402"；升级会覆盖，升级后 grep 定位、单点重打并用子 agent 真实 failover 验证。
+- OpenClaw 2026.9.4 已上游修复 quoted/bare 402 与 quota 分类；本地 402 patcher 现作升级门禁，升级后须对最终运行 bundle 做 billing/billing/rate_limit 语义回归，不能只看 grep/退出码。
 - 编译文件补丁必须先备份、只改一处；不要用 reload 叠补丁规避 upstream bug。
 
 ## Active Commitments

@@ -208,3 +208,28 @@
 - **修复**：微信 pin 到 2.4.8 并重移植 warm-up/ret=-2 补丁；Feishu/Perplexity pin 到 2026.8.2；402 脚本改为 marker 定位并对零候选/形状变化返回非零；补齐 contact-delivery 工具契约与 WeCom 会话 hook 显式授权。
 - **验证**：新 Gateway PID 1913334 为 2026.8.2，12/12 插件兼容检查通过；5 个微信账号、飞书、企业微信均运行，真实微信消息已完成处理；cgroup 从修复前 5.16G 回落至约 1.1G，后续无通道重启或 memory pressure。
 - **预防**：以后升级完成条件必须同时包含核心/插件版本、插件 doctor、真实 channel probe、monkey-patch 非零候选与幂等检查、重启后资源回落；`ExecStartPre=-` 只能保可用性，人工 preflight 必须把补丁非零退出视为 release gate。
+
+### [2026-09-15] 9.4 在线升级被 activation ownership 阻断，402 门禁瞬时误判
+- **现象**：Gateway cgroup 内运行 updater 被安全门禁拒绝；独立 updater 写入 9.4 后，旧 8.2 Gateway 仍持有 activation ownership，懒加载出现旧 chunk ENOENT；维护脚本又曾把新版 402 marker 误报为缺失并退出 2。
+- **根因层级**：升级编排层 + 检测时序。核心磁盘替换与旧运行时并存期间不能继续依赖 Gateway 动态 exec；marker 检查发生在最终核心激活前，不能代表重启后的实际 bundle。
+- **修复**：用 detached user-systemd 维护单元协调停旧 Gateway、完成 updater/插件/补丁收敛、再启动新 Gateway；重启后针对实际 `classify-*` bundle 复核。
+- **验证**：CLI/package/Gateway/RPC 均为 2026.9.4，PID 单一且 NRestarts=0；插件/通道/memory 门禁通过；402 patcher 报 already patched，quoted/bare/quota 语义测试通过。
+- **预防**：在线升级必须从 Gateway cgroup 外运行并把停服/激活作为同一维护事务；补丁门禁以最终运行 bundle 的语义测试为准，不能只依赖中途 grep 或脚本退出码。
+
+### [2026-09-15] Codex session catalog 超大多行 JSON 帧触发解析告警
+- 现象：Control UI 周期性 `sessions.catalog.list` 约 17–61s，Gateway 报 `Unterminated string ... position 8567xxx`，随后把会话 preview 正文误当 JSON 逐行告警。
+- 触发条件：UI 固定 `limitPerHost=40`，Codex 插件上游 `PAGE_LIMIT=100`；多个旧会话 preview 聚合后超过客户端 8 MiB 解析缓冲。
+- 根因层级：产品缺口 + 性能层。候选 benben rollout 的 27 行 JSON 全部合法；隔离该文件告警仍复现，排除单文件损坏。
+- 临时止血：10 条分页及后续 cursor 穿透均成功，无需删除/改写历史；已保留候选独立校验备份并恢复原件。
+- 永久修复 / 待验证：建议服务端把 Codex `thread/list` 上游页限制为10而非放大缓冲；待批准后补丁、重启并验证 UI 40 条请求延迟与新增告警为0。
+
+
+## 14:18 默认模型切换 GPT-6 完成
+- 按 Bruce 要求，primary 已从 `openai/gpt-5.6-sol` 改为 `openai/gpt-6-astra`。
+- 唯一 fallback 保持 `zenmux-key2/anthropic/claude-fable-5`。
+- 隔离验证返回 GPT6_ROUTE_OK；归档 assistant 元数据 provider=openai、model=gpt-6-astra、stopReason=stop，未走 fallback。
+- Gateway health OK（16ms）；无需重启。
+
+## 14:29 默认 thinking level
+- Bruce 指定默认 thinking level 为 medium；已设置 agents.defaults.thinkingDefault=medium，CLI 确认无需重启。
+- primary/fallback 及独立会话覆盖保持不变。

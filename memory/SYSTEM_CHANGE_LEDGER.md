@@ -206,3 +206,40 @@
 - 46 条历史 outbound dead-letter 无官方安全清理 API；128 条 plaintext secret finding 均位于权限 700/600 的受限状态文件，0 unresolved，不能绕过掩码录入自动搬迁。
 - chief OpenAI cron 仍无法直用 OpenAI，测试实际 reroute 到 ZenMux；Validation Tracker 保留 Gemini。heartbeat 在本轮长 main turn 中排队超时，既有成功历史与主模型实测证明非配置故障。
 
+## 2026-09-15 · OpenClaw stable 2026.9.4 升级
+
+- 经 Bruce 统一授权，OpenClaw 从 2026.8.2 升级至 npm stable/latest 2026.9.4；官方 updater 在独立 user-systemd 维护单元执行，完成核心安装、插件收敛与 Gateway 重启。
+- 最终 CLI/package/Gateway/RPC 均为 2026.9.4；systemd active/running，PID 699618，NRestarts=0，配置有效，plugin drift=[]，plugins doctor 0 错误。
+- 官方 Codex/Feishu/Perplexity 等插件为 2026.9.4；Weixin 2.4.8 的 warm-up/ret=-2 补丁运行文件与升级前哈希一致；WeCom 2026.5.7 因兼容且新版本会替换工具契约而保留。
+- 9.4 上游已包含带引号/裸 402 与 quota rate-limit 分类修复；本地补丁脚本识别为 already patched，语义测试 `billing/billing/rate_limit` 通过。
+- Feishu admin、WeCom、5 个 Weixin 账号运行且无 status issue；main memory dirty=false、FTS/vector/identity 健康；安全审计维持 0 critical/2 warn/1 info。
+- 回滚点 `/root/.openclaw/backups/openclaw-2026.9.4-pre-20260914-2235` 保留 8.2 核心/插件/配置服务，3 个归档的 SHA-256、gzip 与 tar 清单均已验证。
+- 既有非阻塞项单独保留：Gateway 周期性内存压力、旧 benben Codex rollout 解析告警、宿主机 reboot-required；本轮未删除历史会话、未扩大权限、未执行整机重启。
+
+## 2026-09-15 · 宿主机重启与 9.4 后置收敛
+
+- 经 Bruce 明确批准完成宿主机 reboot；新 boot ID `f299bd93-bf82-4fde-93fe-b35b3e1fe728`，`reboot-required` 消失，failed units=0，Aegis 与 Docker active。
+- OpenClaw package/CLI/Gateway/RPC 均为 2026.9.4；Gateway PID 2086、NRestarts=0、单进程，配置、health、plugin doctor、Feishu/WeCom/5 Weixin 探针均通过。
+- 启动日志确认 402 与 Weixin CLI 两个 pre-start patcher 均为 already patched、0 failure；安全审计保持 0 critical/2 warn/1 info。
+- 发现 9.4 chunking 版本使 10 个非 main agent memory identity mismatch；全量强制重建 11 个 agent 后 identity 全 valid、vector complete，chief/benben 检索抽测成功。
+- 重建期间磁盘最低余量 6.0GB、WAL 峰值约 2.6GB，checkpoint 后恢复 11GB；cgroup 高值主要为可回收文件缓存，匿名内存约 1.28GB，主机 available 28GB、swap 0。
+- 非阻塞遗留：symlink-integrity-check 4 次超时、51 条历史 dead-letter、旧 Codex session catalog 大帧解析告警；未扩大权限、未删除历史、未修改业务路由。
+
+## 2026-09-15 · 保守磁盘清理
+
+- Bruce 选择方案 2，永久删除 main 最旧 memory reindex 快照 `openclaw-agent.sqlite.memory-reindex-0ccf49b0-54b2-4eb1-9b32-ca804f801c2d`。
+- 同时删除 3 套被 2026.9.4 回滚点替代的旧安装备份：`openclaw-2026.8.2-repair-pre-20260902-094821`、`openclaw-2026.8.2-pre-20260902-T2gi9b`、`openclaw-stable-20260719-154611`。
+- 精确回收 1,317,904,921 bytes；根盘 78%→76%、可用 11G→12G，备份目录 1.8G→1.5G。
+- 保留当前在线 main 索引、较新 795,688,960-byte reindex 快照和 9.4→8.2 回滚目录；Gateway probe ok，main identity/FTS/vector 正常。
+- 删除项不可恢复，但均是过期副本；未修改业务数据、当前配置、在线索引或通道。
+
+
+## 14:18 默认模型切换 GPT-6 完成
+- 按 Bruce 要求，primary 已从 `openai/gpt-5.6-sol` 改为 `openai/gpt-6-astra`。
+- 唯一 fallback 保持 `zenmux-key2/anthropic/claude-fable-5`。
+- 隔离验证返回 GPT6_ROUTE_OK；归档 assistant 元数据 provider=openai、model=gpt-6-astra、stopReason=stop，未走 fallback。
+- Gateway health OK（16ms）；无需重启。
+
+## 14:29 默认 thinking level
+- Bruce 指定默认 thinking level 为 medium；已设置 agents.defaults.thinkingDefault=medium，CLI 确认无需重启。
+- primary/fallback 及独立会话覆盖保持不变。
