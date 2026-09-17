@@ -233,3 +233,9 @@
 ## 14:29 默认 thinking level
 - Bruce 指定默认 thinking level 为 medium；已设置 agents.defaults.thinkingDefault=medium，CLI 确认无需重启。
 - primary/fallback 及独立会话覆盖保持不变。
+
+### [2026-09-16] Validation Tracker：Google 余额耗尽被重试掩盖为 timeout
+- 现象：周中检查连续4轮120秒超时，企业微信收到失败告警。
+- 根因层级：运行层/API billing + 错误分类；Google 429 prepayment credits depleted 被当作临时 rate_limit，超时前未进入 fallback。
+- 临时止血：建议充值或切换任务专属模型，尚未执行变更。
+- 永久修复 / 待验证：余额耗尽应快速进入 billing/fallback；另需恢复 Gemini embeddings billing。

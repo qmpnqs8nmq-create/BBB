@@ -1,9 +1,8 @@
 # HANDOFF
-- 最后活跃：2026-09-15 14:18
-- 当前任务：系统 primary model 切换 GPT-6，已完成
-- primary：`openai/gpt-6-astra`
-- fallback：`zenmux-key2/anthropic/claude-fable-5`（未变）
-- 隔离调用元数据已核验：openai / gpt-6-astra，成功且未走 fallback
-- Gateway health OK，无需重启
-- 今日记录：`memory/2026-09-15.md`
-- 默认 thinking level 已设为 `medium`，无需重启。
+- 最后活跃：2026-09-16 12:25
+- 当前话题：Google 充值后可用性验证完成。
+- Gemini embedding 真实检索成功，memory/wiki 均 ok。
+- 原任务模型 gemini-3.1-flash-image-preview 实测 HTTP 200，1.30s，GOOGLE_BILLING_OK。
+- 未修改配置、未重启、未补跑或补发企业微信。
+- Validation Tracker 历史4次失败尚保留，下次计划09-23 10:00。
+- 详情：memory/2026-09-16.md。
