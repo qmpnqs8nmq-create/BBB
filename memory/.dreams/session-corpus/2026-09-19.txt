@@ -1,0 +1,3 @@
+[main/sessions/main/812d643f-2af0-4931-9a06-9d4d7cd286a1#L119] Assistant: Bruce，今日检查未全部完成： - 符号链接检查被执行策略拒绝，未能检查或修复。 - benben 网络配置检查两次超时，无法确认是否为 `none`。 - CTX 规则无需同步；Git origin 未发现异常。 - 原镜像检查命令的 `.ImageID` 字段不受支持；已改用 Docker inspect，确认 1 个运行中沙箱使用最新镜像。
+[main/sessions/main/b4c0b0e4-f514-413e-8204-703b500d1100#L8] Assistant: 符号链接检查命令被执行策略拒绝；其余检查尚未返回结果。
+[main/sessions/main/b4c0b0e4-f514-413e-8204-703b500d1100#L18] Assistant: Bruce，今日检查未全部完成： - 符号链接检查被执行策略拒绝，未能检查或修复。 - benben 网络配置检查两次超时，无法确认是否为 `none`。 - CTX 规则无需同步；Git origin 未发现异常。 - 原镜像检查命令的 `.ImageID` 字段不受支持；已改用 Docker inspect，确认 1 个运行中沙箱使用最新镜像。
